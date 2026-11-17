@@ -20,10 +20,17 @@ Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, 
 - `robots.txt` explicitly allows AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended…)
 - "Answer-first" summary paragraph at the top of every page, a facts table (founded, insurance, rating, area, phones) and FAQs written as quotable answers
 
+## SEO/GEO pass 2 (added)
+- 14 city landing pages (`/pressure-washing-<city>/`) with local neighbourhoods, services, FAQs and City-scoped Service schema
+- 6 expert guides (`/guides/`) written answer-first for AI search, with Article + FAQPage schema
+- WebPage schema with `speakable`, `dateModified` and breadcrumbs on every page; per-page 1200×630 social images
+- Image sitemap (every photo + alt text), `_redirects` (old WordPress URLs → new pages, 301), `_headers` (1-year asset caching, security headers, `noindex` on the *.pages.dev preview)
+- `llms-full.txt` (full site text for AI crawlers) and an IndexNow key + `tools/indexnow.sh` to ping Bing after updates
+
 ## Before going live — to do
 1. **Quote form**: uses formsubmit.co (free). Submit the form once after launch, then click the activation link sent to info@livingwater-pws.com.
 2. **Business address**: if you have a public address, add `streetAddress` + `postalCode` in `tools/gen.py` (BUSINESS → address). Make sure name/phone match your Google Business Profile exactly.
-3. **Google Business Profile URL**: add it to `sameAs` in the schema, plus Facebook/Instagram/etc.
+3. **Google Business Profile URL** (most important local-SEO signal): add it to `sameAs` in the schema, plus Facebook/Instagram/etc.
 4. Submit `https://livingwater-pws.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 5. Safety Policy PDF: drop the PDF in `/assets/` and link it from `/safety-policy/` if you want it downloadable.
 

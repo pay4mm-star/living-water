@@ -1,0 +1,20 @@
+# Old WordPress URLs -> new pages (301)
+/thankyou /thank-you/ 301
+/thankyou/ /thank-you/ 301
+/power-washing-services-2/ /power-washing-services/ 301
+/home-old/ / 301
+/testimonials/ /about-us/ 301
+/category/* / 301
+/feed/ / 301
+/feed / 301
+/comments/feed/ / 301
+/home/ / 301
+/services/ /power-washing-services/ 301
+/services /power-washing-services/ 301
+/fire-damage-restoration/ /disaster-restoration/ 301
+/water-damage-restoration/ /disaster-restoration/ 301
+/specialised-cleaning-services/ /power-washing-services/ 301
+/wp-login.php / 301
+/wp-admin/* / 301
+/wp-content/uploads/* /gallery/ 301
+/index.php / 301

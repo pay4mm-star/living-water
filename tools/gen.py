@@ -1,8 +1,13 @@
 import json, os, html, sys, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import *
 
 OUT = sys.argv[1]
-M = json.load(open("/home/claude/build/manifest.json"))
+HERE = os.path.dirname(os.path.abspath(__file__))
+M = json.load(open(os.path.join(HERE, "manifest.json")))
+from content_local import CITIES, GUIDES
+CITY = {c["slug"]: c for c in CITIES}
+GUIDE = {g["slug"]: g for g in GUIDES}
 TODAY = datetime.date.today().isoformat()
 PAGES = []  # (path, priority)
 esc = html.escape
@@ -72,7 +77,7 @@ BUSINESS = {
 WEBSITE = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME, "publisher": {"@id": ORG_ID}, "inLanguage": "en-CA"}
 
 def crumbs_ld(trail):
-    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": SITE + trail[-1][1] + "#breadcrumb", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + p} for i, (n, p) in enumerate(trail)]}
 
 def faq_ld(faqs):
@@ -97,8 +102,10 @@ def nav_html(current):
 <li>{a("/", "Home")}</li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-services">Services ▾</button>
 <ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised Cleaning</li>{spec}</ul></li>
-<li>{a("/service-areas/", "Service Areas")}</li>
-<li>{a("/about-us/", "About Us")}</li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
+<ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
+<li>{a("/guides/", "Guides")}</li>
+<li>{a("/about-us/", "About")}</li>
 <li>{a("/gallery/", "Gallery")}</li>
 <li>{a("/contact/", "Contact")}</li>
 </ul></nav>'''
@@ -114,7 +121,8 @@ def footer_html():
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul>{core}</ul></div>
-<div><h3>Specialised</h3><ul>{spec}<li><a href="/service-areas/">Service Areas</a></li><li><a href="/gallery/">Project Gallery</a></li></ul></div>
+<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Service Areas</h3><ul>{"".join(f'<li><a href="/pressure-washing-{c["slug"]}/">{c["name"]}</a></li>' for c in CITIES)}<li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li>
 <li>Toll Free<br><a href="tel:{PHONE_TOLL[0]}">{PHONE_TOLL[1]}</a></li>
@@ -127,8 +135,32 @@ def footer_html():
 </footer>
 <a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>'''
 
-def page(path, title, desc, body, schema=(), og_img="og-living-water-pressure-washing.jpg", preload=None, priority="0.7", noindex=False):
+OG_DONE = set()
+def og_for(key):
+    """1200x630 JPEG social card cropped from a page's hero photo."""
+    from PIL import Image, ImageOps
+    fn = f"og/{key}.jpg"
+    if key not in OG_DONE:
+        os.makedirs(OUT + "/assets/img/og", exist_ok=True)
+        src = OUT + best(key)
+        ImageOps.fit(Image.open(src).convert("RGB"), (1200, 630), Image.LANCZOS).save(OUT + "/assets/img/" + fn, quality=80, optimize=True)
+        OG_DONE.add(key)
+    return fn
+
+PAGE_META = {}
+def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority="0.7", noindex=False, page_type="WebPage", crumbs=None):
     canonical = SITE + path
+    if og_img is None:
+        og_img = og_for(preload) if preload else "og-living-water-pressure-washing.jpg"
+    imgs = []
+    for k in __import__("re").findall(r"/assets/img/([a-z0-9-]+)-\d+\.webp", body):
+        if k in M and k not in imgs: imgs.append(k)
+    webpage = {"@context": "https://schema.org", "@type": page_type, "@id": canonical + "#webpage", "url": canonical, "name": title,
+               "description": desc, "isPartOf": {"@id": SITE + "/#website"}, "about": {"@id": ORG_ID}, "inLanguage": "en-CA",
+               "dateModified": TODAY, "primaryImageOfPage": {"@type": "ImageObject", "url": SITE + "/assets/img/" + og_img},
+               "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".answer"]}}
+    if crumbs: webpage["breadcrumb"] = {"@id": canonical + "#breadcrumb"}
+    schema = [webpage] + list(schema)
     pre = f'<link rel="preload" as="image" href="{best(preload, 960)}" imagesrcset="{srcset(preload)}" imagesizes="100vw" fetchpriority="high">' if preload else ""
     og_url = og_img if og_img.startswith("http") else f"{SITE}/assets/img/{og_img}"
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1"
@@ -178,6 +210,7 @@ def page(path, title, desc, body, schema=(), og_img="og-living-water-pressure-wa
     open(fn, "w").write(doc)
     if not noindex:
         PAGES.append((path, priority))
+        PAGE_META[path] = {"title": title, "desc": desc, "imgs": imgs}
 
 # ------------------------------------------------------------ shared blocks
 def service_cards(slugs, tag_attr="short"):
@@ -196,8 +229,17 @@ def reviews_block():
 <p class="center" style="margin-top:30px"><a class="btn line" href="https://www.google.com/search?q=Living+Water+Pressure+Wash+Services+reviews" rel="noopener" target="_blank">Read more reviews on Google</a></p>
 </div></section>'''
 
+def area_url(a):
+    for c in CITIES:
+        if a == c["name"] or a in c["name"].split(" & "):
+            return f"/pressure-washing-{c['slug']}/"
+    return None
+
+def guides_for(slug):
+    return [g for g in GUIDES if slug in g["related"]]
+
 def areas_block(dark=True):
-    lis = "".join(f"<li>{a}</li>" for a in AREAS)
+    lis = "".join(f'<li><a href="{area_url(a)}">{a}</a></li>' if area_url(a) else f"<li>{a}</li>" for a in AREAS)
     return f'''<section class="{'dark' if dark else 'soft'}"><div class="wrap center">
 <span class="pill">GTA Coverage</span><h2>Serving Toronto &amp; the Greater Toronto Area</h2>
 <p style="max-width:720px;margin:0 auto 26px">Our pressure washing fleet is dispatched daily across GTA municipalities, fully equipped with high-volume hot-water systems.</p>
@@ -289,15 +331,23 @@ def home():
 {facts_block()}</div>
 </div></section>
 
+<section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Expert Guides</span><h2>Straight answers from 28 years on the tools</h2></div>
+<div class="grid g3">{"".join(f'<article class="card"><div class="body"><span class="tag">Guide</span><h3><a href="/guides/{g["slug"]}/">{esc(g["title"])}</a></h3><p>{esc(g["answer"][:170].rsplit(" ",1)[0])}…</p><span class="more">Read guide →</span></div></article>' for g in GUIDES[:3])}</div>
+<p class="center" style="margin-top:30px"><a class="btn line" href="/guides/">All guides</a></p></div></section>
 {reviews_block()}
 {areas_block()}
 {faq_block(GENERAL_FAQ)}
 {cta_block()}'''
     page("/", "Pressure Washing & Sandblasting Toronto & GTA | Living Water",
-         "Living Water: pressure washing, sandblasting, brick cleaning, heritage and disaster restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
+         "Pressure washing, sandblasting, brick cleaning, heritage and disaster restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
          body, schema=[faq_ld(GENERAL_FAQ)], preload="heritage-stone-wall-pressure-washing-toronto", priority="1.0")
 
 # ------------------------------------------------------------ SERVICE PAGES
+def guide_aside(s):
+    gs = guides_for(s)
+    if not gs: return ""
+    return '<div><h3>Expert guides</h3><nav class="related" aria-label="Guides">' + "".join(f'<a href="/guides/{g["slug"]}/">{esc(g["title"])}</a>' for g in gs) + "</nav></div>"
+
 def service_page(s):
     d = SERVICES[s]
     group = "Specialised Cleaning" if d["group"] == "special" else "Services"
@@ -314,7 +364,7 @@ def service_page(s):
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
 <article class="prose"><p class="answer">{esc(d["answer"])}</p>{d["body"]}</article>
-<aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div></aside>
+<aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
 <div class="grid g3">{photos}</div></div></section>
@@ -330,7 +380,6 @@ def service_page(s):
                   "offers": {"@type": "Offer", "priceCurrency": "CAD", "description": "Free assessment and fixed written quote"}}
     page(f"/{s}/", d["title"], d["desc"], body,
          schema=[service_ld, crumbs_ld(trail), faq_ld(d["faqs"])],
-         og_img=best(d["hero"]).replace("/assets/img/", "") if False else "og-living-water-pressure-washing.jpg",
          preload=d["hero"], priority="0.9")
 
 # ------------------------------------------------------------ SERVICES HUB
@@ -359,7 +408,7 @@ def services_hub():
     items = {"@context": "https://schema.org", "@type": "ItemList", "name": "Living Water services",
              "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{s}/", "name": SERVICES[s]["nav"]} for i, s in enumerate(SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL)]}
     page("/power-washing-services/", "Power Washing Services Toronto & GTA | Living Water",
-         "Residential, commercial and industrial power washing, sandblasting, brick cleaning, graffiti, efflorescence, elevator pit and restoration services across Toronto & the GTA.",
+         "Residential, commercial and industrial power washing, sandblasting, brick cleaning, graffiti, efflorescence and elevator pit services across Toronto & the GTA.",
          body, schema=[items, crumbs_ld(trail), faq_ld(GENERAL_FAQ)], preload="rooftop-terrace-pressure-washing-crew", priority="0.9")
 
 # ------------------------------------------------------------ ABOUT
@@ -387,7 +436,7 @@ def about():
 {cta_block()}'''
     about_ld = {"@context": "https://schema.org", "@type": "AboutPage", "url": SITE + "/about-us/", "name": "About Living Water Pressure Wash Services", "mainEntity": {"@id": ORG_ID}}
     page("/about-us/", "About Living Water | GTA Pressure Washing Since 1998",
-         "Living Water Pressure Wash Services Ltd. has cleaned and restored 7,500+ GTA properties since 1998. $5M insured, WSIB covered, ISSA-GBAC certified, 4.9★ on Google.",
+         "Living Water has cleaned and restored 7,500+ GTA properties since 1998. $5M insured, WSIB covered, ISSA-GBAC certified and rated 4.9★ on Google.",
          body, schema=[about_ld, crumbs_ld(trail), faq_ld(GENERAL_FAQ)], preload="century-home-pressure-washing", priority="0.8")
 
 # ------------------------------------------------------------ GALLERY
@@ -405,8 +454,8 @@ def gallery():
 {cta_block()}'''
     gal_ld = {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Living Water project gallery", "url": SITE + "/gallery/",
               "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M]}
-    page("/gallery/", "Before & After Gallery | Pressure Washing Toronto | Living Water",
-         "Before and after photos of Living Water pressure washing, brick cleaning, paint removal, efflorescence and heritage restoration projects across Toronto and the GTA.",
+    page("/gallery/", "Before & After Gallery | Living Water Pressure Washing",
+         "Before and after photos of pressure washing, brick cleaning, paint removal, efflorescence and heritage restoration projects across Toronto and the GTA.",
          body, schema=[gal_ld, crumbs_ld(trail)], preload="yellow-brick-heritage-building-cleaning", priority="0.7")
 
 # ------------------------------------------------------------ SERVICE AREAS
@@ -415,7 +464,7 @@ def service_areas():
     blocks = ""
     for region, towns in REGIONS.items():
         rid = region.lower().replace(" & ", "-").replace(", ", "-").replace(" ", "-")
-        lis = "".join(f'<li id="{t.lower().replace(" ", "-").replace(".", "")}">{t}</li>' for t in towns)
+        lis = "".join(f'<li id="{t.lower().replace(" ", "-").replace(".", "")}">' + (f'<a href="{area_url(t)}">{t}</a>' if area_url(t) else t) + "</li>" for t in towns)
         blocks += f'<div class="card" style="padding:26px"><h2 style="font-size:1.4rem" id="{rid}">{region}</h2><p>Pressure washing, sandblasting, brick cleaning and restoration in {", ".join(towns[:-1]) + " and " + towns[-1] if len(towns) > 1 else towns[0]}.</p><ul class="areas" style="justify-content:flex-start">{lis}</ul></div>'
     links = "".join(f'<li><a href="/{s}/">{SERVICES[s]["nav"]}</a></li>' for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL)
     faqs = [("Do you serve my city?", "Living Water serves the City of Toronto (including North York, Scarborough, Etobicoke and East York), Peel and Halton (Mississauga, Brampton, Oakville, Burlington, Milton), York Region (Vaughan, Woodbridge, Maple, Kleinburg, Richmond Hill, Markham, King City, Aurora, Newmarket, Georgina), Durham Region (Pickering, Ajax, Whitby, Oshawa), Hamilton, Niagara, Guelph, Cambridge, Barrie and Simcoe County."),
@@ -430,8 +479,8 @@ def service_areas():
 <section class="soft"><div class="wrap split"><div><h2>Every service, in every community</h2><ul class="ticks cols">{links}</ul></div><div>{facts_block()}</div></div></section>
 {faq_block(faqs, "Service area FAQ")}
 {cta_block()}'''
-    page("/service-areas/", "Service Areas | Pressure Washing Toronto, Mississauga, Vaughan & GTA",
-         "Living Water provides pressure washing, sandblasting and restoration in Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Oshawa, Hamilton, Barrie and more.",
+    page("/service-areas/", "Service Areas | Pressure Washing Across the GTA | Living Water",
+         "Pressure washing, sandblasting and restoration in Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Oshawa, Hamilton and more.",
          body, schema=[crumbs_ld(trail), faq_ld(faqs)], preload="brick-storefront-boom-lift-washing", priority="0.8")
 
 # ------------------------------------------------------------ CONTACT
@@ -510,6 +559,8 @@ def legal():
 <section><div class="wrap">{service_cards(SERVICE_ORDER_CORE[:3])}</div></section>'''
     page("/404.html", "Page Not Found | Living Water", "Page not found.", body, noindex=True)
 
+exec(open(os.path.join(HERE, "gen_local.py")).read())
+
 # ------------------------------------------------------------ technical SEO / GEO files
 def tech():
     urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority></url>\n" for p, pr in PAGES)
@@ -577,5 +628,8 @@ Sitemap: {SITE}/sitemap.xml
 
 home(); services_hub()
 for s in SERVICES: service_page(s)
-about(); gallery(); service_areas(); contact(); legal(); tech()
+for c in CITIES: city_page(c)
+guides_hub()
+for g in GUIDES: guide_page(g)
+about(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")
