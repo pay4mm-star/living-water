@@ -2,11 +2,11 @@
 import re as _re
 
 TRUST = """<div class="trust"><div class="wrap"><ul>
-<li><b>Since 1998</b><span>28 years in business</span></li>
-<li><b>7,500+</b><span>properties cleaned</span></li>
-<li><b>$5M</b><span>liability insured</span></li>
-<li><b>WSIB</b><span>covered &amp; ISSA-GBAC</span></li>
-<li><b>4.9★</b><span>on Google</span></li>
+<li><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="tt"><b>Since 1998</b><small>28 years in business</small></span></li>
+<li><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span><span class="tt"><b>7,500+</b><small>properties cleaned</small></span></li>
+<li><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></span><span class="tt"><b>$5M</b><small>liability insured</small></span></li>
+<li><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><span class="tt"><b>WSIB</b><small>covered &amp; ISSA-GBAC</small></span></li>
+<li><span class="ti"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><span class="tt"><b>4.9 / 5</b><small>rated on Google</small></span></li>
 </ul></div></div>"""
 
 

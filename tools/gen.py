@@ -12,6 +12,9 @@ CITY = {c["slug"]: c for c in CITIES}
 GUIDE = {g["slug"]: g for g in GUIDES}
 TODAY = datetime.date.today().isoformat()
 PAGES = []  # (path, priority)
+import hashlib as _h
+def _ver(f): return _h.md5(open(os.path.join(OUT, f.lstrip("/")), "rb").read()).hexdigest()[:8]
+CSS_V, JS_V = _ver("/assets/css/styles.css"), _ver("/assets/js/site.js")
 esc = html.escape
 
 # ------------------------------------------------------------ helpers
@@ -191,7 +194,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <link rel="preload" href="/assets/fonts/josefin-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
-<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/styles.css?v={CSS_V}">
 <link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt">
 {ld(BUSINESS) if path == "/" else ""}{ld(WEBSITE) if path == "/" else ""}{"".join(ld(s) for s in schema)}
 </head>
@@ -209,7 +212,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 </main>
 {footer_html()}
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button type="button" aria-label="Close">×</button><img alt=""><p></p></div>
-<script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/site.js?v={JS_V}" defer></script>
 </body>
 </html>'''
     fn = OUT + path + ("index.html" if path.endswith("/") else "")
