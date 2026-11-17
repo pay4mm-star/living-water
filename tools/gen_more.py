@@ -112,3 +112,51 @@ def industries_page():
     page(path, "Industries We Serve | Commercial & Industrial Cleaning GTA",
          "Pressure washing and restoration for property managers, condo boards, industrial plants, contractors, elevator companies, municipalities and homeowners.",
          body, schema=[crumbs_ld(trail)], preload="boom-lift-brick-facade-cleaning", priority="0.7", crumbs=True)
+
+
+def seasonal_bar(path):
+    if not SEASONAL.get("on") or path == SEASONAL["link"]:
+        return ""
+    return f'<a class="season" href="{SEASONAL["link"]}"><span>{esc(SEASONAL["text"])}</span><b>{esc(SEASONAL["cta"])} →</b></a>'
+
+
+def winter_feature():
+    if not SEASONAL.get("on"):
+        return ""
+    return f"""<section class="winter"><div class="wrap split">
+<div><span class="pill">Winter service · Condos &amp; commercial buildings</span>
+<h2>Elevator pit cleaning for condo &amp; property managers</h2>
+<p>Salt slush, meltwater and debris end up in elevator pits all winter. We pump, clean and sanitize pits after hours, coordinate with your elevator contractor, and send a before-and-after photo report — with COI and WSIB clearance included.</p>
+<ul class="ticks"><li>After-hours scheduling, minimal downtime</li><li>Water, oil, sludge and sewage clean-up</li><li>Seasonal programs for multi-building portfolios</li><li>24/7 emergency line: {PHONE_EMERG[1]}</li></ul>
+<div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/elevator-pit-cleaning/#pm-quote">Get an elevator pit quote</a><a class="btn line" href="/guides/winter-elevator-pit-checklist/">Winter pit checklist</a></div></div>
+<div>{img("elevator-pit-cleaning-toronto", "(max-width:1000px) 100vw, 45vw")}</div>
+</div></section>"""
+
+
+def pm_form_block(slug):
+    emergency = slug == "elevator-pit-water-removal"
+    return f"""<section class="soft" id="pm-quote"><div class="wrap split" style="align-items:start">
+<div><span class="pill light">For condo &amp; property managers</span>
+<h2>{"Emergency pump-out request" if emergency else "Request an elevator pit quote"}</h2>
+<p>{"For active flooding call <a href='tel:" + PHONE_EMERG[0] + "'>" + PHONE_EMERG[1] + "</a> now — then send details here." if emergency else "Tell us about your building and we'll send a fixed written quote with our COI and WSIB clearance, usually within one business day."}</p>
+<ul class="ticks"><li>Fixed price per pit, or a portfolio program</li><li>After-hours scheduling with your elevator contractor</li><li>Before-and-after photo report for the board</li></ul>
+{facts_block()}</div>
+<div class="contact-card">
+<form action="https://formsubmit.co/{EMAIL}" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="{"EMERGENCY elevator pit" if emergency else "Elevator pit quote"} — livingwater-pws.com">
+<input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="hidden" name="_template" value="table">
+<input type="hidden" name="service" value="{"Elevator Pit Water Removal" if emergency else "Elevator Pit Cleaning"}">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="row"><div class="field"><label for="pm-n">Name *</label><input id="pm-n" name="name" autocomplete="name" required></div>
+<div class="field"><label for="pm-r">Role</label><select id="pm-r" name="role"><option>Property manager</option><option>Condo board member</option><option>Building superintendent</option><option>Elevator contractor</option><option>Owner</option><option>Other</option></select></div></div>
+<div class="row"><div class="field"><label for="pm-e">Email *</label><input id="pm-e" type="email" name="email" autocomplete="email" required></div>
+<div class="field"><label for="pm-p">Phone *</label><input id="pm-p" type="tel" name="phone" autocomplete="tel" required></div></div>
+<div class="row"><div class="field"><label for="pm-b">Building / company</label><input id="pm-b" name="building" autocomplete="organization"></div>
+<div class="field"><label for="pm-a">Address or postal code *</label><input id="pm-a" name="address" required></div></div>
+<div class="row"><div class="field"><label for="pm-c">Number of elevators</label><input id="pm-c" type="number" min="1" name="elevators" inputmode="numeric"></div>
+<div class="field"><label for="pm-i">Pit condition</label><select id="pm-i" name="condition"><option>Routine cleaning</option><option>Standing water</option><option>Oil / hydraulic fluid</option><option>Sewage backup</option><option>Debris / garbage</option><option>Not sure</option></select></div></div>
+<div class="field"><label for="pm-t">Preferred timing</label><select id="pm-t" name="timing"><option>After hours / overnight</option><option>Weekday daytime</option><option>Weekend</option><option>As soon as possible</option></select></div>
+<div class="field"><label for="pm-f">Pit photo (optional)</label><input id="pm-f" type="file" name="attachment" accept="image/*"></div>
+<div class="field"><label for="pm-m">Notes</label><textarea id="pm-m" name="message" rows="3"></textarea></div>
+<button class="btn" type="submit">{"Send emergency request" if emergency else "Get my elevator pit quote"}</button>
+</form></div></div></section>"""

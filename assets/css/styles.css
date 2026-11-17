@@ -221,3 +221,7 @@ h2[id]{scroll-margin-top:100px}
   body{padding-bottom:56px}
 }
 @media (min-width:1001px){.nav #sub-areas{min-width:460px}.nav .has-sub:hover #sub-areas,.nav .has-sub:focus-within #sub-areas,.nav .has-sub.open #sub-areas{display:grid;grid-template-columns:1fr 1fr}.nav #sub-areas li:first-child{grid-column:1/-1}}
+.season{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;background:var(--gold);color:var(--ink);text-decoration:none;font-size:.88rem;font-weight:600;padding:8px 16px;text-align:center}
+.season b{white-space:nowrap;text-decoration:underline}.season:hover{color:var(--ink);background:#e6b955}
+.winter{background:linear-gradient(135deg,#eaf6f8,#f7fbff);border-bottom:1px solid var(--line)}
+.winter img{border-radius:var(--r);box-shadow:var(--shadow)}

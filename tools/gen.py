@@ -124,7 +124,7 @@ def nav_html(current):
 
 def footer_html():
     core = "".join(f'<li><a href="/{s}/">{SERVICES[s]["nav"]}</a></li>' for s in SERVICE_ORDER_CORE)
-    spec = "".join(f'<li><a href="/{s}/">{SERVICES[s]["nav"]}</a></li>' for s in SERVICE_ORDER_SPECIAL)
+    spec = "".join(f'<li><a href="/{s}/">{SERVICES[s]["nav"]}</a></li>' for s in SERVICE_ORDER_SPECIAL) + '<li><a href="/elevator-pit-water-removal/">Elevator Pit Water Removal (24/7)</a></li>'
     return f'''<footer class="site-footer">
 <div class="wrap fgrid">
 <div>
@@ -207,6 +207,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+{seasonal_bar(path)}
 <div class="topbar"><div class="wrap"><span><a href="mailto:{EMAIL}">{EMAIL}</a><span class="hide-sm"> | Serving Toronto &amp; the GTA since 1998</span></span><span>24/7 Emergency: <a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></span></div></div>
 <header class="site-header"><div class="wrap">
 <a class="logo" href="/" aria-label="Living Water Pressure Wash Services home"><img src="/assets/img/living-water-logo-440.webp" width="440" height="70" alt="Living Water Pressure Wash Services" fetchpriority="high"></a>
@@ -313,6 +314,8 @@ def home():
 <p class="lead">Living Water has cleaned and restored more than 7,500 homes, commercial buildings, industrial sites and heritage landmarks across the Greater Toronto Area since 1998 — $5M insured, WSIB covered and rated 4.9★ on Google.</p>
 <div class="cta-row"><a class="btn" href="/contact/#quote">Get Your Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div>
 </div></section>
+{TRUST}
+{winter_feature()}
 
 <section><div class="wrap">
 <div class="section-head"><span class="pill light">Comprehensive Capabilities</span><h2>Professional Pressure Washing, Restoration &amp; Sandblasting Services</h2>
@@ -378,7 +381,7 @@ def service_page(s):
     body = f'''
 <section class="page-hero"><picture>{hero_img(d["hero"], "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(group)}</span><h1>{esc(d["h1"])}</h1><p>{esc(d["sub"])}</p>
-<div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
+<div class="cta-row" style="justify-content:flex-start"><a class="btn" href="{"#pm-quote" if s.startswith("elevator-pit") else "/contact/#quote"}">{"Get an Elevator Pit Quote" if s.startswith("elevator-pit") else "Get a Free Quote"}</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
 <article class="prose"><p class="answer">{esc(d["answer"])}</p>{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
 <aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
@@ -386,6 +389,7 @@ def service_page(s):
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
 <div class="grid g3">{photos}</div></div></section>
 {process_block() if d["group"]=="core" else ""}
+{pm_form_block(s) if s.startswith("elevator-pit") else ""}
 {faq_block(d["faqs"], esc(d["nav"]) + " FAQ")}
 {reviews_block()}
 {areas_block()}
@@ -503,7 +507,7 @@ def service_areas():
 # ------------------------------------------------------------ CONTACT
 def contact():
     trail = [("Home", "/"), ("Contact", "/contact/")]
-    opts = ["Residential Power Wash", "Commercial Power Wash", "Industrial Power Wash", "Sandblasting", "Brick Cleaning & Paint Removal", "Historical Remediation", "Disaster Restoration", "Elevator Pit Cleaning", "Efflorescence Removal", "Graffiti Removal", "Stone Restoration", "Metal Restoration", "Other"]
+    opts = ["Residential Power Wash", "Commercial Power Wash", "Industrial Power Wash", "Sandblasting", "Brick Cleaning & Paint Removal", "Historical Remediation", "Disaster Restoration", "Elevator Pit Cleaning", "Elevator Pit Water Removal (emergency)", "Efflorescence Removal", "Graffiti Removal", "Stone Restoration", "Metal Restoration", "Other"]
     opt_html = "".join(f"<option>{esc(o)}</option>" for o in opts)
     body = f'''
 <section class="page-hero"><picture>{hero_img("custom-home-exterior-washing", "100vw", eager=True, alt="")}</picture>

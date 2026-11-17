@@ -257,26 +257,71 @@ svc("disaster-restoration",
 
 svc("elevator-pit-cleaning",
     group="special", nav="Elevator Pit Cleaning", short="Elevator Pits",
-    title="Elevator Pit Cleaning Toronto & GTA | Living Water",
-    desc="Elevator pit cleaning, sludge and oil spill clean-up, sewage backup sanitizing and pit painting for GTA buildings. Trusted by Ontario elevator companies.",
-    h1="Elevator Pit Cleaning in Toronto & the GTA",
-    sub="Oil spills, sludge, flooding and sewage backups cleaned from elevator pits — trusted by Ontario's leading elevator service providers.",
+    title="Elevator Pit Cleaning Toronto & GTA | Condos & Buildings",
+    desc="Elevator pit cleaning for condos and commercial buildings in Toronto & the GTA: water, oil, sludge and debris removal, after hours, COI + WSIB, 24/7.",
+    h1="Elevator Pit Cleaning for Condos & Commercial Buildings",
+    sub="Winter is pit season. Salt slush, meltwater and debris end up in your elevator pits — we clean, pump and sanitize them after hours, with the paperwork property managers need.",
     hero="elevator-pit-cleaning-toronto", card="elevator-pit-pressure-washing",
-    card_text="Oil, sludge and flood clean-up — the trusted referral of large GTA elevator companies.",
-    answer="Living Water cleans and sanitizes elevator pits across Toronto and the GTA — pressure washing, sludge and oil spill removal, hazardous waste disposal, crack repair, painting, deodorizing and sewage backup clean-up — and is a trusted referral for major Ontario elevator service companies.",
+    card_text="Water, oil, sludge and debris removed — the trusted referral of large GTA elevator companies.",
+    answer="Living Water cleans elevator pits for condominium corporations, property managers and commercial buildings across Toronto and the GTA — removing debris, standing water, oil, sludge and sewage, then pressure washing, sanitizing and deodorizing the pit. Work is coordinated with your elevator contractor, scheduled after hours, and documented with before-and-after photos. Emergency line: (647) 833-4343, 24/7.",
     body="""
-<p>Elevator pits are easy to forget, but garbage, dirt, oil and standing water build up over time. A dirty pit is a fire hazard, an environmental hazard and a problem for maintenance crews — and must be cleaned regularly.</p>
-<p>Signs your pit needs cleaning: leaks, cracks, foul odours, accumulated garbage, or standing water and mud. Some of Ontario's leading elevator service providers count on us for their most challenging projects, including oil spills and flood clean-ups.</p>
-<h2>Elevator pit services</h2>
-<ul class="ticks cols">
-<li>Elevator pit power washing</li><li>Sludge removal</li><li>Oil spill clean-up</li><li>Hazardous waste disposal</li><li>Crack repair</li><li>Elevator pit painting</li><li>Deodorization</li><li>Cleaning and sanitizing after sewage backup</li>
-</ul>
+<h2>Why winter is elevator pit season</h2>
+<p>From December to April, GTA buildings track in snow, slush and road salt every day. Meltwater runs through door sills and into the hoistway, salt and grit settle in the pit, and freeze-thaw cycles and spring melt push groundwater through cracks and failing sumps. Left alone, that mix becomes corrosive sludge around buffers, rails and pit equipment — and a slip hazard for the mechanics who have to work there.</p>
+<ul class="ticks"><li>Salt-laden meltwater corrodes pit steel, buffers and rail brackets</li><li>Wet debris and garbage become a fire and odour problem</li><li>Groundwater seepage and sump failures peak during thaws</li><li>Frozen and burst pipes flood lower levels and pits</li></ul>
+<h2>Built for condo boards and property managers</h2>
+<div class="grid g2">
+<div><h3>Paperwork ready</h3><p>Certificate of Insurance ($5M CGL) and WSIB clearance sent with every quote — ready for your contractor files.</p></div>
+<div><h3>Coordinated with your elevator contractor</h3><p>We schedule with your elevator company so the car is taken out of service and locked out safely before anyone enters the pit.</p></div>
+<div><h3>After-hours & minimal downtime</h3><p>Overnight, early-morning and weekend scheduling keeps residents and tenants moving. Most routine pits are done in a single visit.</p></div>
+<div><h3>Photo report for your records</h3><p>Before-and-after photos of every pit for board reports, reserve-fund studies, warranty claims and insurance.</p></div>
+<div><h3>Multi-building portfolios</h3><p>One contractor for every building in your portfolio, with seasonal or recurring programs.</p></div>
+<div><h3>Trusted by elevator companies</h3><p>Some of Ontario's leading elevator service providers refer their most difficult pits to us — oil spills, floods and sewage backups.</p></div>
+</div>
+<h2>What's included</h2>
+<ul class="ticks cols"><li>Debris, garbage and dust removal</li><li>Standing water pump-out</li><li>Sludge and salt residue removal</li><li>Oil and hydraulic fluid spill clean-up</li><li>Proper disposal of oily and hazardous waste</li><li>Pressure washing and degreasing</li><li>Sanitizing and deodorizing</li><li>Sewage backup clean-up</li><li>Crack repair</li><li>Elevator pit painting</li></ul>
+<h2>How a pit cleaning works</h2>
+<ol class="ticks"><li><strong>Quote</strong> — send the number of elevators, pit photos if you have them, and the building address. Fixed written price.</li><li><strong>Schedule</strong> — we book a time with you and your elevator contractor, often after hours.</li><li><strong>Lock-out</strong> — the elevator contractor takes the car out of service and secures it.</li><li><strong>Clean</strong> — debris and water removed, oil and sludge cleaned up, pit washed, degreased and sanitized.</li><li><strong>Report</strong> — before-and-after photos and notes on anything we see, such as leaks, cracks or sump issues.</li></ol>
+<h2>Standards and warranty context in Ontario</h2>
+<p>Elevating devices in Ontario are regulated by the Technical Standards and Safety Authority (TSSA) under the CSA B44 safety code. TSSA's elevator pre-inspection checklist calls for permanent means to prevent groundwater accumulating in the pit, and for sumps in pits to be covered. For newer condominiums, Tarion's construction performance guidelines state that elevator pits should be clear of standing water or fluids and cleaned of construction debris after construction — useful to document during first-year warranty inspections.</p>
+<p>Your elevator contractor remains responsible for the equipment itself; Living Water handles the cleaning, pumping and sanitizing so the pit stays clean, dry and safe to work in.</p>
+<h2>Buildings we serve</h2>
+<ul class="ticks cols"><li>Condominium towers and townhouse complexes</li><li>Rental apartment buildings</li><li>Office towers and commercial buildings</li><li>Retail plazas and shopping centres</li><li>Hospitals, schools and institutions</li><li>Industrial and warehouse facilities</li></ul>
+<p><strong>Water in a pit right now?</strong> See <a href="/elevator-pit-water-removal/">emergency elevator pit water removal</a> or call <a href="tel:+1-647-833-4343">(647) 833-4343</a>, 24/7.</p>
 """,
-    photos=["elevator-pit-cleaning-toronto", "elevator-pit-pressure-washing", "elevator-pit-buffer-cleaning", "elevator-pit-springs-cleaned"],
-    faqs=[("How often should elevator pits be cleaned?", "Pits should be inspected during routine elevator maintenance and cleaned whenever debris, oil or water is present — and immediately after any flood or sewage backup."),
-          ("Do you dispose of oil and hazardous waste?", "Yes. Oil, sludge and contaminated material are removed and disposed of properly."),
-          ("Do you work with elevator contractors?", "Yes. Elevator service companies regularly refer and subcontract pit cleaning to Living Water.")],
+    photos=["elevator-pit-cleaning-toronto", "elevator-pit-pressure-washing", "elevator-pit-buffer-cleaning", "elevator-pit-springs-cleaned", "condo-column-pressure-washing", "commercial-building-exterior-washing"],
+    faqs=[("How often should a condo clean its elevator pits?", "At least once a year, and more often in high-traffic buildings. Many property managers book a cleaning after winter to remove salt and meltwater residue, and immediately after any flood, leak or sewage backup."),
+          ("Who is responsible for cleaning the elevator pit?", "The building owner or property manager usually arranges pit cleaning. The elevator contractor maintains the equipment and controls access, so the cleaning is coordinated with them."),
+          ("Do you work after hours?", "Yes. We regularly schedule overnight, early-morning and weekend pit cleaning so residents and tenants are not inconvenienced."),
+          ("How long is the elevator out of service?", "Routine pit cleaning is usually completed in a few hours per elevator. Flood, oil or sewage clean-ups take longer depending on volume and disposal."),
+          ("Do you provide insurance and WSIB documents?", "Yes. We send our Certificate of Insurance ($5M commercial general liability) and WSIB clearance with every quote."),
+          ("Can you clean pits in multiple buildings?", "Yes. We set up one-time, seasonal or recurring programs across property management portfolios in Toronto and the GTA."),
+          ("What causes water in an elevator pit?", "Common causes are groundwater seepage, failed sump pumps, meltwater and salt slush tracked in during winter, sprinkler discharge, burst pipes and floor-washing water entering the hoistway.")],
     service_type="Elevator pit cleaning")
+
+svc("elevator-pit-water-removal",
+    group="special", nav="Elevator Pit Water Removal", short="Emergency",
+    title="Water in Elevator Pit? 24/7 Pump-Out & Clean-Up | GTA",
+    desc="Emergency elevator pit water removal in Toronto & the GTA: 24/7 pump-out, sludge, oil and sewage clean-up with photo documentation. Call (647) 833-4343.",
+    h1="Emergency Elevator Pit Water Removal — 24/7",
+    sub="Flooded pit, sewage backup or oil spill? We pump it out, clean it up and document it so your elevator contractor can get the car back in service.",
+    hero="elevator-pit-pressure-washing", card="elevator-pit-buffer-cleaning",
+    card_text="24/7 pump-out, sludge, oil and sewage clean-up for flooded elevator pits.",
+    answer="If an elevator pit has standing water, take the elevator out of service, call your elevator contractor, and call Living Water's 24/7 line at (647) 833-4343. We pump out the water, remove sludge, oil and debris, sanitize after sewage backups, and provide before-and-after photos for your records and insurance.",
+    body="""
+<h2>What to do right now</h2>
+<ol class="ticks"><li><strong>Stop using the elevator.</strong> TSSA warns never to use elevators in a flooded building or where water has leaked onto elevator components.</li><li><strong>Call your elevator contractor</strong> to take the car out of service and assess the equipment.</li><li><strong>Find and stop the source</strong> if it is safe to do so — a burst pipe, sprinkler, sump or roof drain.</li><li><strong>Call Living Water 24/7</strong> on (647) 833-4343 for pump-out and clean-up.</li><li><strong>Take photos</strong> and notify your insurer if damage is significant.</li></ol>
+<h2>What we do</h2>
+<ul class="ticks cols"><li>Pump out standing water</li><li>Remove sludge, silt and debris</li><li>Contain and clean up oil and hydraulic fluid</li><li>Dispose of contaminated water and waste properly</li><li>Clean and sanitize after sewage backups</li><li>Pressure wash and deodorize the pit</li><li>Photo documentation for insurance and the board</li><li>Notes on leaks, cracks or sump problems we find</li></ul>
+<h2>Common causes of a flooded pit</h2>
+<ul class="ticks"><li>Groundwater seepage during thaws and heavy rain</li><li>Failed or undersized sump pumps</li><li>Burst or frozen pipes and sprinkler discharge</li><li>Salt slush and meltwater tracked in during winter</li><li>Floor-washing water running into the hoistway</li><li>Sewer backups into lower levels</li></ul>
+<h2>Preventing the next one</h2>
+<p>TSSA's pre-inspection checklist calls for permanent means to prevent groundwater accumulating in pits. Talk to your elevator contractor and building engineer about sump capacity, drains and sealing cracks — and book a routine pit cleaning after winter so problems are spotted early.</p>
+""",
+    photos=["elevator-pit-pressure-washing", "elevator-pit-cleaning-toronto", "elevator-pit-springs-cleaned"],
+    faqs=[("Is it safe to use an elevator with water in the pit?", "No. Take it out of service and have your elevator contractor inspect it. TSSA advises never using elevators in a flooded building or where water has reached elevator components."),
+          ("How fast can you respond?", "Our emergency line, (647) 833-4343, is answered 24/7 for commercial and condominium clients across the GTA."),
+          ("Do you handle sewage in elevator pits?", "Yes. We remove sewage-contaminated water and debris, then clean, sanitize and deodorize the pit.")],
+    service_type="Elevator pit water removal")
 
 svc("efflorescence-removal",
     group="special", nav="Efflorescence Removal", short="Efflorescence",
@@ -382,3 +427,5 @@ GALLERY_PAIRS = [
     ("boat-deck-mobile-power-wash-before", "boat-deck-mobile-power-wash-after", "Mobile power wash, boat deck", "Our mobile unit cleaning a sailboat deck."),
     ("painted-building-paint-removal-before", "painted-building-paint-removal-after", "Paint stripping, downtown Toronto", "Painted masonry stripped to reveal the original brick."),
 ]
+
+SEASONAL = dict(on=True, text="❄ Winter booking now open: elevator pit cleaning for condos & commercial buildings", link="/elevator-pit-cleaning/", cta="Book now")

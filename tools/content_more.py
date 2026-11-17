@@ -41,7 +41,8 @@ SERVICE_FACTS = {
     "brick-cleaning-paint-removal": ("Interior and exterior brick, painted masonry, mortar smears", "Chemical cleaning, neutralised acid washing, controlled rinsing, micro blasting", "Homeowners, builders, commercial owners", "Test patch before full work"),
     "historical-remediation": ("Heritage brick, stone, statues, monuments, copper and aluminium", "Steam, soda and micro blasting, poultices, lead paint removal", "Conservators, architects, municipalities, owners", "Test panels for approval"),
     "disaster-restoration": ("Fire, smoke, water, wind and mould damage", "Securing, extraction, drying, soot remediation, antimicrobial treatment, rebuild", "Homeowners, businesses, property managers", "24/7 emergency line (647) 833-4343"),
-    "elevator-pit-cleaning": ("Elevator pits with debris, oil, sludge, flooding or sewage", "Pressure washing, sludge and oil removal, sanitizing, painting", "Elevator companies, property managers", "Emergency flood and spill response"),
+    "elevator-pit-cleaning": ("Condo, rental, office, retail and institutional elevator pits", "Debris and water removal, oil and sludge clean-up, pressure washing, sanitizing", "Condo boards, property managers, elevator contractors", "After-hours scheduling; 24/7 emergency line"),
+    "elevator-pit-water-removal": ("Flooded pits, sewage backups, oil and hydraulic spills", "Pump-out, sludge and oil removal, sanitizing, photo documentation", "Condo boards, property managers, elevator contractors", "24/7 emergency: (647) 833-4343"),
     "efflorescence-removal": ("Brick, stone, precast, concrete and interlock", "Material-specific masonry cleaners, pre-wetting, controlled rinsing", "Homeowners, builders, stone manufacturers", "Warranty service for Ontario manufacturers"),
     "graffiti-removal": ("Brick, concrete, stone, metal, glass and painted surfaces", "Bio-friendly removers, controlled pressure, poultices, anti-graffiti coating", "Businesses, municipalities, property managers", "Same-week removal"),
     "stone-restoration": ("Marble, granite, limestone, sandstone, natural stone, precast", "pH-appropriate cleaners, low pressure, stain removal, sealing", "Homeowners, commercial and heritage owners", "Assessment before cleaning"),
@@ -49,6 +50,32 @@ SERVICE_FACTS = {
 }
 
 GUIDES_MORE = [
+    dict(slug="winter-elevator-pit-checklist",
+         title="Winter Elevator Pit Checklist for Condo & Property Managers",
+         meta="A winter checklist for condo boards and property managers: how salt, meltwater and thaws affect elevator pits, what to check monthly, and when to book a cleaning.",
+         hero="elevator-pit-cleaning-toronto", related=["elevator-pit-cleaning", "elevator-pit-water-removal"],
+         answer="In winter, condo and property managers should ask their elevator contractor to report pit conditions at every maintenance visit, watch for water, salt residue, odours and debris, keep entrance matting and sill areas clean to limit meltwater, test sump pumps before the thaw, and book a professional pit cleaning after winter — or immediately after any flood, leak or sewage backup.",
+         body="""
+<h2>Why winter is hard on elevator pits</h2>
+<p>Snow and slush tracked into lobbies melts at the elevator sill and runs into the hoistway, carrying road salt and grit. Freeze-thaw cycles and spring melt raise groundwater, and frozen pipes and sprinklers can flood lower levels. The result is corrosive, salty sludge around buffers and rail brackets.</p>
+<h2>Monthly winter checklist</h2>
+<ol class="ticks">
+<li>Ask your elevator contractor to note pit condition (water, debris, oil) on every service report.</li>
+<li>Check lobby and garage entrances: matting in place, sill areas swept and dry.</li>
+<li>Watch for odours, damp marks or salt staining at landing doors.</li>
+<li>Confirm the pit sump pump (if present) runs and its cover is secure.</li>
+<li>Check for leaks from garage ceilings, sprinkler lines and drains near the hoistway.</li>
+<li>Keep a log with photos — useful for reserve-fund planning and warranty or insurance claims.</li>
+</ol>
+<h2>When to book a pit cleaning</h2>
+<ul class="ticks"><li>After winter, to remove salt, grit and meltwater residue</li><li>Immediately after any flood, leak, sewage backup or oil spill</li><li>When your elevator contractor reports debris, water or oil</li><li>Before first-year Tarion warranty inspections in new condominiums</li></ul>
+<h2>What the rules say</h2>
+<p>Ontario elevators are regulated by TSSA under the CSA B44 code. TSSA's pre-inspection checklist calls for permanent means to prevent groundwater accumulating in pits and for sumps to be covered, and TSSA warns never to use elevators in a flooded building. Tarion's guidelines for new condominiums state pits should be clear of standing water and cleaned of construction debris.</p>
+<h2>Budgeting tip</h2>
+<p>Ask for a fixed written quote per pit and a seasonal program across all your buildings. A post-winter clean and an annual clean are a common pattern; emergency pump-outs are billed separately.</p>
+""",
+         faqs=[("Should elevator pits be cleaned in winter or spring?", "Both have a place: emergency pump-outs happen whenever water appears, and a scheduled clean after winter removes the season's salt and meltwater residue."),
+               ("Can our cleaning staff clean the elevator pit?", "Entering a pit requires the elevator to be taken out of service and secured by the elevator contractor, so pit cleaning should be coordinated with them and done by trained contractors.")]),
     dict(slug="interlock-cleaning-and-resanding",
          title="How to Clean and Re-Sand Interlock Pavers",
          meta="How professionals clean interlock driveways and patios, remove moss, weeds and stains, re-sand joints with polymeric sand and decide whether to seal.",

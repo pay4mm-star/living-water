@@ -29,3 +29,8 @@
   }
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 })();
+// preselect service on contact form from ?service=
+(function () {
+  var p = new URLSearchParams(location.search).get('service'), sel = document.getElementById('sv');
+  if (p && sel) { [].forEach.call(sel.options, function (o) { if (o.text.toLowerCase().indexOf(p.toLowerCase()) === 0) sel.value = o.value || o.text; }); }
+})();
