@@ -57,7 +57,7 @@ def reviews_page():
     trail = [("Home", "/"), ("Reviews", path)]
     items = "".join(f'<figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{esc(t)}”</blockquote><figcaption><cite>{esc(n)}</cite><small>Google review</small></figcaption></figure>' for n, t in REVIEWS_FULL)
     body = f"""
-<section class="page-hero"><picture>{img("stone-patio-cleaning-after", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("stone-patio-cleaning-after", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Verified Feedback</span><h1>Living Water Reviews</h1><p>Rated 4.9 out of 5 on Google by homeowners, property managers and businesses across Toronto and the GTA.</p></div></section>
 <section><div class="wrap">
 <p class="answer">Living Water Pressure Wash Services is rated 4.9 / 5 on Google. Customers most often mention meticulous work, professionalism, fair pricing and results that make old patios, driveways and stone look new again.</p>
@@ -102,7 +102,7 @@ def industries_page():
         links = " · ".join(f'<a href="/{x}/">{SERVICES[x]["nav"]}</a>' for x in svcs)
         cards += f'<article class="card ind">{img(im, "(max-width: 640px) 100vw, 33vw")}<div class="body"><h2 style="font-size:1.3rem">{esc(name)}</h2><p>{esc(text)}</p><p class="svc-links">{links}</p></div></article>'
     body = f"""
-<section class="page-hero"><picture>{img("boom-lift-brick-facade-cleaning", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("boom-lift-brick-facade-cleaning", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Who we serve</span><h1>Industries We Serve</h1><p>From homeowners to elevator companies, municipalities and heritage conservators — one insured, WSIB-covered team for every surface.</p></div></section>
 <section><div class="wrap">
 <p class="answer">Living Water works for homeowners, property managers and condominium boards, commercial and retail owners, industrial plants, general contractors and builders, elevator service companies, stone and paver manufacturers, municipalities and heritage conservators across Toronto and the GTA.</p>

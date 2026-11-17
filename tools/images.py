@@ -80,7 +80,7 @@ IMAGES = {
     "roof-moss-washing-ladder": ("slider/cache/f209caf2aa3a9be969e9f011eaabfa73/slide-5.webp", "Technician on a ladder washing moss off a roof"),
 }
 
-WIDTHS = [480, 960, 1600]
+WIDTHS = [320, 640, 960, 1280, 1600]
 manifest = {}
 for key, (src, alt) in IMAGES.items():
     im = ImageOps.exif_transpose(Image.open(SRC + src)).convert("RGB")
@@ -91,7 +91,7 @@ for key, (src, alt) in IMAGES.items():
             break
         tw = min(tw, w)
         th = round(h * tw / w)
-        im.resize((tw, th), Image.LANCZOS).save(f"{OUT}{key}-{tw}.webp", "WEBP", quality=78, method=6)
+        im.resize((tw, th), Image.LANCZOS).save(f"{OUT}{key}-{tw}.webp", "WEBP", quality=72, method=6)
         sizes.append(tw)
         if tw == w:
             break
@@ -104,6 +104,7 @@ og.save(OUT + "og-living-water-pressure-washing.jpg", quality=82)
 # logos / icons (copied as-is, they are brand assets)
 Image.open(SRC + "2026/08/logo-1.png").save(OUT + "living-water-logo.png", optimize=True)
 Image.open(SRC + "2026/08/logo-1.png").save(OUT + "living-water-logo.webp", "WEBP", quality=90)
+Image.open(SRC + "2026/08/logo-1.png").resize((440, 70), Image.LANCZOS).save(OUT + "living-water-logo-440.webp", "WEBP", quality=90)
 Image.open(SRC + "2026/07/Living-Water-logo_28-2.webp").save(OUT + "living-water-28-years-logo.webp", "WEBP", quality=90)
 Image.open(SRC + "2026/08/80b5b04f8328fb7d00e570e90fa968922541d53d.png").save(OUT + "living-water-logo-footer.png", optimize=True)
 for s in (180, 192, 270):
@@ -111,5 +112,5 @@ for s in (180, 192, 270):
 Image.open(SRC + "2026/05/logo270.png").resize((512, 512), Image.LANCZOS).save(sys.argv[1] + "/assets/icons/icon-512.png", optimize=True)
 Image.open(SRC + "2026/05/logo192.png").resize((32, 32), Image.LANCZOS).save(sys.argv[1] + "/favicon.ico", sizes=[(32, 32)])
 
-json.dump(manifest, open("/home/claude/build/manifest.json", "w"), indent=1)
+json.dump(manifest, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "manifest.json"), "w"), indent=1)
 print(len(manifest), "images")

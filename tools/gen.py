@@ -15,6 +15,8 @@ PAGES = []  # (path, priority)
 import hashlib as _h
 def _ver(f): return _h.md5(open(os.path.join(OUT, f.lstrip("/")), "rb").read()).hexdigest()[:8]
 CSS_V, JS_V = _ver("/assets/css/styles.css"), _ver("/assets/js/site.js")
+import re as _r0
+CSS_INLINE = _r0.sub(r"\s*\n\s*", "", _r0.sub(r"/\*.*?\*/", "", open(os.path.join(OUT, "assets/css/styles.css")).read(), flags=_r0.S))
 esc = html.escape
 
 # ------------------------------------------------------------ helpers
@@ -30,14 +32,19 @@ def img(k, sizes="(max-width: 700px) 100vw, 50vw", cls="", eager=False, alt=None
     w = m["sizes"][-1]; h = round(m["h"] * w / m["w"])
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
-    return (f'<img src="{best(k, 960)}" srcset="{srcset(k)}" sizes="{sizes}" width="{w}" height="{h}" '
+    return (f'<img src="{best(k, 640)}" srcset="{srcset(k)}" sizes="{sizes}" width="{w}" height="{h}" '
             f'alt="{esc(alt or m["alt"])}" {load}{c}>')
+
+def hero_img(k, sizes="100vw", eager=True, alt=""):
+    # dimmed page-hero backgrounds don't need full resolution
+    return img(k, "(max-width: 640px) 100vw, 75vw", eager=eager, alt=alt)
 
 def ba(before, after, title="", caption=""):
     cap = f"<figcaption><strong>{esc(title)}</strong>{esc(caption)}</figcaption>" if title else ""
+    bs = "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 380px"
     return f'''<figure><div class="ba">
-{img(before)}
-<div class="after">{img(after)}</div>
+{img(before, bs)}
+<div class="after">{img(after, bs)}</div>
 <span class="lbl b">Before</span><span class="lbl a">After</span><div class="bar"></div>
 <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after: {esc(title or M[after]["alt"])}">
 </div>{cap}</figure>'''
@@ -45,7 +52,7 @@ def ba(before, after, title="", caption=""):
 def photo(spec):
     if "|" in spec:
         b, a = spec.split("|"); return ba(b, a, "Before & after", " — " + M[a]["alt"])
-    return f'<figure>{img(spec, "(max-width: 700px) 100vw, 33vw")}<figcaption>{esc(M[spec]["alt"])}</figcaption></figure>'
+    return f'<figure>{img(spec, "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 380px")}<figcaption>{esc(M[spec]["alt"])}</figcaption></figure>'
 
 def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False, separators=(",", ":")) + "</script>"
@@ -171,7 +178,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
                "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".answer"]}}
     if crumbs: webpage["breadcrumb"] = {"@id": canonical + "#breadcrumb"}
     schema = [webpage] + list(schema)
-    pre = f'<link rel="preload" as="image" href="{best(preload, 960)}" imagesrcset="{srcset(preload)}" imagesizes="100vw" fetchpriority="high">' if preload else ""
+    pre = f'<link rel="preload" as="image" href="{best(preload, 640)}" imagesrcset="{srcset(preload)}" imagesizes="{"100vw" if path == "/" else "(max-width: 640px) 100vw, 75vw"}" fetchpriority="high">' if preload else ""
     og_url = og_img if og_img.startswith("http") else f"{SITE}/assets/img/{og_img}"
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1"
     doc = f'''<!doctype html>
@@ -194,7 +201,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <link rel="preload" href="/assets/fonts/josefin-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 {pre}
-<link rel="stylesheet" href="/assets/css/styles.css?v={CSS_V}">
+<style>{CSS_INLINE}</style>
 <link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt">
 {ld(BUSINESS) if path == "/" else ""}{ld(WEBSITE) if path == "/" else ""}{"".join(ld(s) for s in schema)}
 </head>
@@ -202,7 +209,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><div class="wrap"><span><a href="mailto:{EMAIL}">{EMAIL}</a><span class="hide-sm"> | Serving Toronto &amp; the GTA since 1998</span></span><span>24/7 Emergency: <a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></span></div></div>
 <header class="site-header"><div class="wrap">
-<a class="logo" href="/" aria-label="Living Water Pressure Wash Services home"><img src="/assets/img/living-water-logo.webp" width="880" height="140" alt="Living Water Pressure Wash Services"></a>
+<a class="logo" href="/" aria-label="Living Water Pressure Wash Services home"><img src="/assets/img/living-water-logo-440.webp" width="440" height="70" alt="Living Water Pressure Wash Services" fetchpriority="high"></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu ☰</button>
 {nav_html(path)}
 <a class="btn sm header-cta" href="/contact/#quote">Get a Free Quote</a>
@@ -369,7 +376,7 @@ def service_page(s):
     related = sorted(related, key=lambda x: SERVICES[x]["group"] != d["group"])[:5]
     rel_html = "".join(f'<a href="/{x}/">{SERVICES[x]["nav"]} →</a>' for x in related)
     body = f'''
-<section class="page-hero"><picture>{img(d["hero"], "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img(d["hero"], "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(group)}</span><h1>{esc(d["h1"])}</h1><p>{esc(d["sub"])}</p>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
@@ -400,7 +407,7 @@ def services_hub():
             ("Graffiti & paint removal", "Affected surfaces restored without damage."), ("Seasonal deep cleaning", "A refresh after harsh weather, ready for the season ahead.")]
     deep_html = "".join(f'<div class="step" style="padding-top:22px"><h3>{t}</h3><p>{x}</p></div>' for t, x in deep)
     body = f'''
-<section class="page-hero"><picture>{img("rooftop-terrace-pressure-washing-crew", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("rooftop-terrace-pressure-washing-crew", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Our Professional Services</span><h1>Power Washing Services in Toronto &amp; the GTA</h1>
 <p>Where professional cleaning meets proven expertise — power washing, sandblasting and restoration for residential, commercial and industrial properties.</p>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
@@ -425,7 +432,7 @@ def services_hub():
 def about():
     trail = [("Home", "/"), ("About Us", "/about-us/")]
     body = f'''
-<section class="page-hero"><picture>{img("century-home-pressure-washing", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("century-home-pressure-washing", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Who we are</span><h1>About Living Water Pressure Wash Services</h1><p>Meticulous care for every surface — professional pressure washing and sandblasting in Toronto and the GTA since 1998.</p></div></section>
 <section><div class="wrap split">
 <div><p class="answer">{LEGAL} is a Toronto-area pressure washing, sandblasting and surface restoration company founded in 1998. It has cleaned 7,500+ residential, commercial, industrial and heritage properties, and is $5M insured, WSIB covered and ISSA-GBAC certified.</p>
@@ -457,7 +464,7 @@ def gallery():
     singles = [k for k in M if k not in used_pairs]
     grid = "".join(f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>' for k in singles)
     body = f'''
-<section class="page-hero"><picture>{img("yellow-brick-heritage-building-cleaning", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("yellow-brick-heritage-building-cleaning", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Project Gallery</span><h1>Pressure Washing &amp; Restoration Gallery</h1><p>Real before-and-after photos from Living Water projects across Toronto and the GTA — homes, commercial buildings, industrial sites and heritage landmarks.</p></div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Before &amp; After</span><h2>Drag to compare</h2></div><div class="grid g3">{pairs}</div></div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">On the job</span><h2>Our crews at work</h2><p>Click any photo to enlarge.</p></div><div class="masonry">{grid}</div></div></section>
@@ -481,7 +488,7 @@ def service_areas():
             ("Do you charge extra for travel outside Toronto?", "Your quote is a fixed written price that already accounts for location. Call us for projects outside the listed areas — larger commercial and heritage projects across Ontario are considered."),
             ("How quickly can you get to my property?", "Residential work is usually booked within 2–5 days across the GTA. Emergency and disaster restoration is answered 24/7 on (647) 833-4343.")]
     body = f'''
-<section class="page-hero"><picture>{img("brick-storefront-boom-lift-washing", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("brick-storefront-boom-lift-washing", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">GTA Coverage</span><h1>Pressure Washing Service Areas — Toronto &amp; the GTA</h1><p>Our crews and hot-water pressure washing units are dispatched daily across Toronto, Peel, Halton, York and Durham regions, plus Hamilton, Niagara, Waterloo-Wellington and Simcoe County.</p></div></section>
 <section><div class="wrap">
 <p class="answer">Living Water Pressure Wash Services serves 30+ communities across the Greater Toronto Area and southern Ontario, from Oshawa to Hamilton and north to Barrie, offering every service — residential, commercial and industrial pressure washing, sandblasting, brick and heritage restoration and 24/7 disaster restoration — in each one.</p>
@@ -499,7 +506,7 @@ def contact():
     opts = ["Residential Power Wash", "Commercial Power Wash", "Industrial Power Wash", "Sandblasting", "Brick Cleaning & Paint Removal", "Historical Remediation", "Disaster Restoration", "Elevator Pit Cleaning", "Efflorescence Removal", "Graffiti Removal", "Stone Restoration", "Metal Restoration", "Other"]
     opt_html = "".join(f"<option>{esc(o)}</option>" for o in opts)
     body = f'''
-<section class="page-hero"><picture>{img("custom-home-exterior-washing", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("custom-home-exterior-washing", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Contact Us</span><h1>Get a Free Pressure Washing Quote</h1><p>Tell us about your project and we'll come back with a fixed written quote. We'd love to hear from you.</p></div></section>
 <section><div class="wrap split" style="align-items:start">
 <div class="contact-card" id="quote">

@@ -21,7 +21,7 @@ Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, 
 - "Answer-first" summary paragraph at the top of every page, a facts table (founded, insurance, rating, area, phones) and FAQs written as quotable answers
 
 ## SEO/GEO pass 2 (added)
-- 14 city landing pages (`/pressure-washing-<city>/`) with local neighbourhoods, services, FAQs and City-scoped Service schema
+- 19 city landing pages (`/pressure-washing-<city>/`) with local neighbourhoods, services, FAQs and City-scoped Service schema
 - 6 expert guides (`/guides/`) written answer-first for AI search, with Article + FAQPage schema
 - WebPage schema with `speakable`, `dateModified` and breadcrumbs on every page; per-page 1200×630 social images
 - Image sitemap (every photo + alt text), `_redirects` (old WordPress URLs → new pages, 301), `_headers` (1-year asset caching, security headers, `noindex` on the *.pages.dev preview)

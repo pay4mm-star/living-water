@@ -28,7 +28,7 @@ def city_page(c):
     ]
     intro = "".join(f"<p>{esc(p)}</p>" for p in c["intro"])
     body = f"""
-<section class="page-hero"><picture>{img(c["hero"], "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img(c["hero"], "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(c["region"])}</span><h1>Pressure Washing &amp; Restoration in {esc(name)}</h1>
 <p>Residential, commercial and industrial pressure washing, sandblasting, brick and stone restoration in {esc(name)} — $5M insured, WSIB covered, rated 4.9★ on Google, serving the GTA since 1998.</p>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
@@ -68,7 +68,7 @@ def guide_page(g):
     other = "".join(f'<a href="/guides/{o["slug"]}/">{esc(o["title"])}</a>' for o in GUIDES if o["slug"] != g["slug"])
     updated = datetime.date.today().strftime("%B %Y")
     body = f"""
-<section class="page-hero"><picture>{img(g["hero"], "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img(g["hero"], "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Expert Guide</span><h1>{esc(g["title"])}</h1>
 <p>By the Living Water team · 28 years cleaning and restoring GTA properties · Updated {updated}</p></div></section>
 <section><div class="wrap layout">
@@ -97,7 +97,7 @@ def guides_hub():
         cards += (f'<article class="card">{img(g["hero"], "(max-width: 640px) 100vw, 33vw")}<div class="body"><span class="tag">Guide</span>'
                   f'<h3><a href="/guides/{g["slug"]}/">{esc(g["title"])}</a></h3><p>{esc(g["meta"])}</p><span class="more">Read guide →</span></div></article>')
     body = f"""
-<section class="page-hero"><picture>{img("brick-wall-cleaning-technician", "100vw", eager=True, alt="")}</picture>
+<section class="page-hero"><picture>{hero_img("brick-wall-cleaning-technician", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Expert Guides</span><h1>Pressure Washing &amp; Restoration Guides</h1><p>Straight answers from a GTA contractor with 28 years of experience — methods, schedules, and what to ask before you hire.</p></div></section>
 <section><div class="wrap"><div class="grid g3">{cards}</div></div></section>
 {cta_block()}"""
