@@ -27,6 +27,12 @@ Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, 
 - Image sitemap (every photo + alt text), `_redirects` (old WordPress URLs → new pages, 301), `_headers` (1-year asset caching, security headers, `noindex` on the *.pages.dev preview)
 - `llms-full.txt` (full site text for AI crawlers) and an IndexNow key + `tools/indexnow.sh` to ping Bing after updates
 
+## Pass 3 (added)
+- New pages: `/reviews/`, `/faq/` (all FAQs, FAQPage schema), `/industries/`, plus 5 more guides (11 total)
+- Trust bar under every hero, "At a glance" facts on service pages, "On this page" jump links on long pages
+- Mobile sticky Call / 24/7 / Free Quote bar; quote form now accepts a photo
+- Anchor ids on every H2 (deep links for Google and AI citations), Article `og:type` on guides
+
 ## Before going live — to do
 1. **Quote form**: uses formsubmit.co (free). Submit the form once after launch, then click the activation link sent to info@livingwater-pws.com.
 2. **Business address**: if you have a public address, add `streetAddress` + `postalCode` in `tools/gen.py` (BUSINESS → address). Make sure name/phone match your Google Business Profile exactly.

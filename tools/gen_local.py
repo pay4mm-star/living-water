@@ -72,7 +72,7 @@ def guide_page(g):
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Expert Guide</span><h1>{esc(g["title"])}</h1>
 <p>By the Living Water team · 28 years cleaning and restoring GTA properties · Updated {updated}</p></div></section>
 <section><div class="wrap layout">
-<article class="prose"><p class="answer"><strong>Short answer:</strong> {esc(g["answer"])}</p>{g["body"]}
+<article class="prose"><p class="answer"><strong>Short answer:</strong> {esc(g["answer"])}</p>{toc(g["body"])}{g["body"]}
 <h2>Need help with your property?</h2><p>Living Water has cleaned and restored 7,500+ properties across Toronto and the GTA since 1998. Call <a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a> or <a href="/contact/#quote">request a free quote</a>.</p></article>
 <aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel}</nav></div><div><h3>More guides</h3><nav class="related" aria-label="More guides">{other}</nav></div></aside>
 </div></section>
@@ -85,8 +85,8 @@ def guide_page(g):
            "publisher": {"@id": ORG_ID}, "mainEntityOfPage": SITE + path, "inLanguage": "en-CA",
            "about": [SERVICES[x]["service_type"] for x in g["related"]]}
     t = g["title"] if len(g["title"]) <= 48 else short
-    page(path, t + " | Living Water", g["meta"][:160], body, schema=[art, crumbs_ld(trail), faq_ld(g["faqs"])],
-         preload=g["hero"], priority="0.7", crumbs=True)
+    page(path, (t + " | Living Water") if len(t) <= 47 else g["title"], g["meta"][:160], body, schema=[art, crumbs_ld(trail), faq_ld(g["faqs"])],
+         preload=g["hero"], priority="0.7", crumbs=True, og_type="article")
 
 
 def guides_hub():
@@ -124,7 +124,7 @@ def tech_extra():
 /thankyou/ /thank-you/ 301
 /power-washing-services-2/ /power-washing-services/ 301
 /home-old/ / 301
-/testimonials/ /about-us/ 301
+/testimonials/ /reviews/ 301
 /category/* / 301
 /feed/ / 301
 /feed / 301

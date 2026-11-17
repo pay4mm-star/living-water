@@ -36,8 +36,8 @@
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
 <ul class="sub" id="sub-areas"><li><a href="/service-areas/"><strong>All Service Areas</strong></a></li><li><a href="/pressure-washing-toronto/">Toronto</a></li><li><a href="/pressure-washing-north-york/">North York</a></li><li><a href="/pressure-washing-scarborough/">Scarborough</a></li><li><a href="/pressure-washing-etobicoke/">Etobicoke</a></li><li><a href="/pressure-washing-mississauga/">Mississauga</a></li><li><a href="/pressure-washing-brampton/">Brampton</a></li><li><a href="/pressure-washing-vaughan/">Vaughan</a></li><li><a href="/pressure-washing-markham/">Markham</a></li><li><a href="/pressure-washing-richmond-hill/">Richmond Hill</a></li><li><a href="/pressure-washing-oakville/">Oakville</a></li><li><a href="/pressure-washing-burlington/">Burlington</a></li><li><a href="/pressure-washing-oshawa/">Oshawa</a></li><li><a href="/pressure-washing-pickering/">Pickering & Ajax</a></li><li><a href="/pressure-washing-hamilton/">Hamilton</a></li></ul></li>
 <li><a href="/guides/">Guides</a></li>
-<li><a href="/about-us/">About</a></li>
-<li><a href="/gallery/">Gallery</a></li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-about">About ▾</button>
+<ul class="sub" id="sub-about"><li><a href="/about-us/">About Living Water</a></li><li><a href="/reviews/">Customer Reviews</a></li><li><a href="/industries/">Industries We Serve</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/faq/">FAQ</a></li></ul></li>
 <li><a href="/contact/" aria-current="page">Contact</a></li>
 </ul></nav>
 <a class="btn sm header-cta" href="/contact/#quote">Get a Free Quote</a>
@@ -45,11 +45,17 @@
 <main id="main">
 
 <section class="page-hero"><picture><img src="/assets/img/custom-home-exterior-washing-413.webp" srcset="/assets/img/custom-home-exterior-washing-413.webp 413w" sizes="100vw" width="413" height="200" alt="Custom home exterior with Living Water vans on site" fetchpriority="high"></picture>
-<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span aria-current="page">Contact</span></nav><span class="pill">Contact Us</span><h1>Get a Free Pressure Washing Quote</h1><p>Tell us about your project and we'll come back with a fixed written quote. We'd love to hear from you.</p></div></section>
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span aria-current="page">Contact</span></nav><span class="pill">Contact Us</span><h1>Get a Free Pressure Washing Quote</h1><p>Tell us about your project and we'll come back with a fixed written quote. We'd love to hear from you.</p></div></section><div class="trust"><div class="wrap"><ul>
+<li><b>Since 1998</b><span>28 years in business</span></li>
+<li><b>7,500+</b><span>properties cleaned</span></li>
+<li><b>$5M</b><span>liability insured</span></li>
+<li><b>WSIB</b><span>covered &amp; ISSA-GBAC</span></li>
+<li><b>4.9★</b><span>on Google</span></li>
+</ul></div></div>
 <section><div class="wrap split" style="align-items:start">
 <div class="contact-card" id="quote">
-<h2>Request a free quote</h2><p>Takes two minutes. We reply within one business day.</p>
-<form action="https://formsubmit.co/info@livingwater-pws.com" method="POST">
+<h2 id="request-a-free-quote">Request a free quote</h2><p>Takes two minutes. We reply within one business day.</p>
+<form action="https://formsubmit.co/info@livingwater-pws.com" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="New quote request — livingwater-pws.com">
 <input type="hidden" name="_next" value="https://livingwater-pws.com/thank-you/">
 <input type="hidden" name="_template" value="table">
@@ -60,11 +66,12 @@
 <div class="field"><label for="ph">Phone *</label><input id="ph" type="tel" name="phone" autocomplete="tel" required></div></div>
 <div class="row"><div class="field"><label for="sv">Service *</label><select id="sv" name="service" required><option value="">Choose a service…</option><option>Residential Power Wash</option><option>Commercial Power Wash</option><option>Industrial Power Wash</option><option>Sandblasting</option><option>Brick Cleaning &amp; Paint Removal</option><option>Historical Remediation</option><option>Disaster Restoration</option><option>Elevator Pit Cleaning</option><option>Efflorescence Removal</option><option>Graffiti Removal</option><option>Stone Restoration</option><option>Metal Restoration</option><option>Other</option></select></div>
 <div class="field"><label for="pc">Postal code / city</label><input id="pc" name="location" autocomplete="postal-code"></div></div>
-<div class="field"><label for="msg">Tell us about the surface and project</label><textarea id="msg" name="message" rows="5"></textarea></div>
+<div class="field"><label for="msg">Tell us about the surface and project</label><textarea id="msg" name="message" rows="5" placeholder="e.g. interlock driveway about 600 sq ft, moss and oil stains"></textarea></div>
+<div class="field"><label for="att">Photo of the area (optional — helps us quote faster)</label><input id="att" type="file" name="attachment" accept="image/*"></div>
 <button class="btn" type="submit">Send my quote request</button>
 <p style="font-size:.85rem;margin-top:12px">We never share or sell your information. See our <a href="/privacy-policy/">privacy policy</a>.</p>
 </form></div>
-<div><h2>Call or email</h2>
+<div><h2 id="call-or-email">Call or email</h2>
 <ul class="contact-list">
 <li><b>Main office</b><a href="tel:+1-416-663-8000">(416) 663-8000</a></li>
 <li><b>Toll free</b><a href="tel:+1-833-456-2978">1-833-456-2978</a></li>
@@ -75,12 +82,12 @@
 <div style="margin-top:26px"><img src="/assets/img/living-water-van-residential-pressure-washing-960.webp" srcset="/assets/img/living-water-van-residential-pressure-washing-480.webp 480w, /assets/img/living-water-van-residential-pressure-washing-960.webp 960w" sizes="(max-width:1000px) 100vw, 45vw" width="960" height="420" alt="Living Water Pressure Wash Services van at a residential job in the GTA" loading="lazy" decoding="async"></div>
 </div></div></section>
 <section class="soft"><div class="wrap">
-<div class="section-head"><span class="pill light">Verified Feedback</span><h2>What Our Clients Say</h2><p>Rated 4.9 / 5 on Google by homeowners, property management firms, condominium boards and facility managers across the GTA.</p></div>
+<div class="section-head"><span class="pill light">Verified Feedback</span><h2 id="what-our-clients-say">What Our Clients Say</h2><p>Rated 4.9 / 5 on Google by homeowners, property management firms, condominium boards and facility managers across the GTA.</p></div>
 <div class="reviews"><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“We had an amazing experience with Navid and his team. They expertly pressure washed our backyard stones and applied a sealer to the pool coping. They stand by their work.”</blockquote><figcaption><cite>Mark Sampson</cite><small>Google review</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“After 11 years we decided it was time to pressure wash our patio and pool deck. He was meticulous in ensuring every patio stone was completely clean. The end result looked like the original 11 years ago.”</blockquote><figcaption><cite>Des Hunter</cite><small>Google review</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“I thought my patio and driveway pavers needed replacing. Instead I called Living Water — when they finished, my walkways and drive looked better than new!”</blockquote><figcaption><cite>Brian Flaherty</cite><small>Google review</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Our company hired Living Water to clean up product sent to a job site. Naveed and his team were great to work with and made sure everything went smoothly.”</blockquote><figcaption><cite>Mason Carter</cite><small>Google review</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Navid and his colleague power washed our driveway and backyard. Excellent job, excellent service and very professional. Would definitely recommend.”</blockquote><figcaption><cite>Raaz Alakoozi</cite><small>Google review</small></figcaption></figure><figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Professional, personable and a service that performs beyond your expectations. I would highly recommend their services to every one of my customers.”</blockquote><figcaption><cite>Shawn Vanderyagt</cite><small>Google review</small></figcaption></figure></div>
-<p class="center" style="margin-top:30px"><a class="btn line" href="https://www.google.com/search?q=Living+Water+Pressure+Wash+Services+reviews" rel="noopener" target="_blank">Read more reviews on Google</a></p>
+<p class="center" style="margin-top:30px"><a class="btn line" href="/reviews/">Read all reviews</a></p>
 </div></section>
 <section class="dark"><div class="wrap center">
-<span class="pill">GTA Coverage</span><h2>Serving Toronto &amp; the Greater Toronto Area</h2>
+<span class="pill">GTA Coverage</span><h2 id="serving-toronto-the-greater-toronto-area">Serving Toronto &amp; the Greater Toronto Area</h2>
 <p style="max-width:720px;margin:0 auto 26px">Our pressure washing fleet is dispatched daily across GTA municipalities, fully equipped with high-volume hot-water systems.</p>
 <ul class="areas"><li><a href="/pressure-washing-toronto/">Toronto</a></li><li><a href="/pressure-washing-north-york/">North York</a></li><li><a href="/pressure-washing-scarborough/">Scarborough</a></li><li><a href="/pressure-washing-etobicoke/">Etobicoke</a></li><li>East York</li><li><a href="/pressure-washing-mississauga/">Mississauga</a></li><li><a href="/pressure-washing-brampton/">Brampton</a></li><li><a href="/pressure-washing-vaughan/">Vaughan</a></li><li>Woodbridge</li><li>Maple</li><li>Kleinburg</li><li><a href="/pressure-washing-richmond-hill/">Richmond Hill</a></li><li><a href="/pressure-washing-markham/">Markham</a></li><li>King City</li><li>Aurora</li><li>Newmarket</li><li>Georgina</li><li><a href="/pressure-washing-pickering/">Pickering</a></li><li><a href="/pressure-washing-pickering/">Ajax</a></li><li>Whitby</li><li><a href="/pressure-washing-oshawa/">Oshawa</a></li><li><a href="/pressure-washing-oakville/">Oakville</a></li><li><a href="/pressure-washing-burlington/">Burlington</a></li><li>Milton</li><li><a href="/pressure-washing-hamilton/">Hamilton</a></li><li>Guelph</li><li>Cambridge</li><li>St. Catharines</li><li>Niagara Falls</li><li>Barrie</li><li>Simcoe County</li></ul>
 <p style="margin-top:24px"><a class="btn ghost" href="/service-areas/">See all service areas</a></p>
@@ -94,7 +101,7 @@
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul><li><a href="/residential-power-washing/">Residential Power Washing</a></li><li><a href="/commercial-power-washing/">Commercial Power Washing</a></li><li><a href="/industrial-power-washing/">Industrial Power Washing</a></li><li><a href="/sandblasting-services/">Sandblasting & Media Blasting</a></li><li><a href="/brick-cleaning-paint-removal/">Brick Cleaning & Paint Removal</a></li><li><a href="/historical-remediation/">Historical Remediation</a></li><li><a href="/disaster-restoration/">Disaster Restoration</a></li></ul></div>
-<div><h3>Specialised</h3><ul><li><a href="/elevator-pit-cleaning/">Elevator Pit Cleaning</a></li><li><a href="/efflorescence-removal/">Efflorescence Removal</a></li><li><a href="/graffiti-removal/">Graffiti Removal</a></li><li><a href="/stone-restoration/">Stone Restoration</a></li><li><a href="/metal-restoration/">Metal Restoration</a></li></ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Specialised</h3><ul><li><a href="/elevator-pit-cleaning/">Elevator Pit Cleaning</a></li><li><a href="/efflorescence-removal/">Efflorescence Removal</a></li><li><a href="/graffiti-removal/">Graffiti Removal</a></li><li><a href="/stone-restoration/">Stone Restoration</a></li><li><a href="/metal-restoration/">Metal Restoration</a></li></ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
 <div><h3>Service Areas</h3><ul><li><a href="/pressure-washing-toronto/">Toronto</a></li><li><a href="/pressure-washing-north-york/">North York</a></li><li><a href="/pressure-washing-scarborough/">Scarborough</a></li><li><a href="/pressure-washing-etobicoke/">Etobicoke</a></li><li><a href="/pressure-washing-mississauga/">Mississauga</a></li><li><a href="/pressure-washing-brampton/">Brampton</a></li><li><a href="/pressure-washing-vaughan/">Vaughan</a></li><li><a href="/pressure-washing-markham/">Markham</a></li><li><a href="/pressure-washing-richmond-hill/">Richmond Hill</a></li><li><a href="/pressure-washing-oakville/">Oakville</a></li><li><a href="/pressure-washing-burlington/">Burlington</a></li><li><a href="/pressure-washing-oshawa/">Oshawa</a></li><li><a href="/pressure-washing-pickering/">Pickering & Ajax</a></li><li><a href="/pressure-washing-hamilton/">Hamilton</a></li><li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:+1-416-663-8000">(416) 663-8000</a></li>
@@ -107,6 +114,7 @@
 <span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
 </footer>
 <a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>
+<nav class="mobile-bar" aria-label="Quick contact"><a href="tel:+1-416-663-8000">📞 Call</a><a href="tel:+1-647-833-4343">🚨 24/7</a><a class="q" href="/contact/#quote">Free Quote</a></nav>
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button type="button" aria-label="Close">×</button><img alt=""><p></p></div>
 <script src="/assets/js/site.js" defer></script>
 </body>

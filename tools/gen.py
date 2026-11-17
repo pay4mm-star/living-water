@@ -6,6 +6,8 @@ OUT = sys.argv[1]
 HERE = os.path.dirname(os.path.abspath(__file__))
 M = json.load(open(os.path.join(HERE, "manifest.json")))
 from content_local import CITIES, GUIDES
+from content_more import REVIEWS_FULL, INDUSTRIES, SERVICE_FACTS, GUIDES_MORE
+GUIDES.extend(GUIDES_MORE)
 CITY = {c["slug"]: c for c in CITIES}
 GUIDE = {g["slug"]: g for g in GUIDES}
 TODAY = datetime.date.today().isoformat()
@@ -105,8 +107,8 @@ def nav_html(current):
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
 <ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
 <li>{a("/guides/", "Guides")}</li>
-<li>{a("/about-us/", "About")}</li>
-<li>{a("/gallery/", "Gallery")}</li>
+<li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-about">About ▾</button>
+<ul class="sub" id="sub-about"><li>{a("/about-us/", "About Living Water")}</li><li>{a("/reviews/", "Customer Reviews")}</li><li>{a("/industries/", "Industries We Serve")}</li><li>{a("/gallery/", "Project Gallery")}</li><li>{a("/faq/", "FAQ")}</li></ul></li>
 <li>{a("/contact/", "Contact")}</li>
 </ul></nav>'''
 
@@ -121,7 +123,7 @@ def footer_html():
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul>{core}</ul></div>
-<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
 <div><h3>Service Areas</h3><ul>{"".join(f'<li><a href="/pressure-washing-{c["slug"]}/">{c["name"]}</a></li>' for c in CITIES)}<li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li>
@@ -133,7 +135,8 @@ def footer_html():
 <div class="wrap copy"><span>© <span id="year">2026</span> {LEGAL} All rights reserved.</span>
 <span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
 </footer>
-<a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>'''
+<a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>
+<nav class="mobile-bar" aria-label="Quick contact"><a href="tel:{PHONE_MAIN[0]}">📞 Call</a><a href="tel:{PHONE_EMERG[0]}">🚨 24/7</a><a class="q" href="/contact/#quote">Free Quote</a></nav>'''
 
 OG_DONE = set()
 def og_for(key):
@@ -148,8 +151,12 @@ def og_for(key):
     return fn
 
 PAGE_META = {}
-def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority="0.7", noindex=False, page_type="WebPage", crumbs=None):
+def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority="0.7", noindex=False, page_type="WebPage", crumbs=None, og_type="website"):
     canonical = SITE + path
+    body = add_h2_ids(body)
+    if not noindex and path != "/" and ('<section class="page-hero"' in body):
+        i = body.index("</section>") + len("</section>")
+        body = body[:i] + TRUST + body[i:]
     if og_img is None:
         og_img = og_for(preload) if preload else "og-living-water-pressure-washing.jpg"
     imgs = []
@@ -174,7 +181,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
 <meta name="geo.region" content="CA-ON"><meta name="geo.placename" content="Toronto">
-<meta property="og:type" content="website"><meta property="og:locale" content="en_CA"><meta property="og:site_name" content="{NAME}">
+<meta property="og:type" content="{og_type}"><meta property="og:locale" content="en_CA"><meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}"><meta property="og:image" content="{og_url}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og_url}">
@@ -226,7 +233,7 @@ def reviews_block():
     return f'''<section class="soft"><div class="wrap">
 <div class="section-head"><span class="pill light">Verified Feedback</span><h2>What Our Clients Say</h2><p>Rated 4.9 / 5 on Google by homeowners, property management firms, condominium boards and facility managers across the GTA.</p></div>
 <div class="reviews">{items}</div>
-<p class="center" style="margin-top:30px"><a class="btn line" href="https://www.google.com/search?q=Living+Water+Pressure+Wash+Services+reviews" rel="noopener" target="_blank">Read more reviews on Google</a></p>
+<p class="center" style="margin-top:30px"><a class="btn line" href="/reviews/">Read all reviews</a></p>
 </div></section>'''
 
 def area_url(a):
@@ -363,7 +370,7 @@ def service_page(s):
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(group)}</span><h1>{esc(d["h1"])}</h1><p>{esc(d["sub"])}</p>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
-<article class="prose"><p class="answer">{esc(d["answer"])}</p>{d["body"]}</article>
+<article class="prose"><p class="answer">{esc(d["answer"])}</p>{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
 <aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
@@ -494,7 +501,7 @@ def contact():
 <section><div class="wrap split" style="align-items:start">
 <div class="contact-card" id="quote">
 <h2>Request a free quote</h2><p>Takes two minutes. We reply within one business day.</p>
-<form action="https://formsubmit.co/{EMAIL}" method="POST">
+<form action="https://formsubmit.co/{EMAIL}" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_subject" value="New quote request — livingwater-pws.com">
 <input type="hidden" name="_next" value="{SITE}/thank-you/">
 <input type="hidden" name="_template" value="table">
@@ -505,7 +512,8 @@ def contact():
 <div class="field"><label for="ph">Phone *</label><input id="ph" type="tel" name="phone" autocomplete="tel" required></div></div>
 <div class="row"><div class="field"><label for="sv">Service *</label><select id="sv" name="service" required><option value="">Choose a service…</option>{opt_html}</select></div>
 <div class="field"><label for="pc">Postal code / city</label><input id="pc" name="location" autocomplete="postal-code"></div></div>
-<div class="field"><label for="msg">Tell us about the surface and project</label><textarea id="msg" name="message" rows="5"></textarea></div>
+<div class="field"><label for="msg">Tell us about the surface and project</label><textarea id="msg" name="message" rows="5" placeholder="e.g. interlock driveway about 600 sq ft, moss and oil stains"></textarea></div>
+<div class="field"><label for="att">Photo of the area (optional — helps us quote faster)</label><input id="att" type="file" name="attachment" accept="image/*"></div>
 <button class="btn" type="submit">Send my quote request</button>
 <p style="font-size:.85rem;margin-top:12px">We never share or sell your information. See our <a href="/privacy-policy/">privacy policy</a>.</p>
 </form></div>
@@ -560,6 +568,7 @@ def legal():
     page("/404.html", "Page Not Found | Living Water", "Page not found.", body, noindex=True)
 
 exec(open(os.path.join(HERE, "gen_local.py")).read())
+exec(open(os.path.join(HERE, "gen_more.py")).read())
 
 # ------------------------------------------------------------ technical SEO / GEO files
 def tech():
@@ -619,6 +628,9 @@ Sitemap: {SITE}/sitemap.xml
 - [About]({SITE}/about-us/)
 - [Gallery of before & after projects]({SITE}/gallery/)
 - [Contact / free quote]({SITE}/contact/)
+- [Customer reviews]({SITE}/reviews/)
+- [FAQ]({SITE}/faq/)
+- [Industries served]({SITE}/industries/)
 
 ## FAQ
 {faq_lines}""")
@@ -631,5 +643,6 @@ for s in SERVICES: service_page(s)
 for c in CITIES: city_page(c)
 guides_hub()
 for g in GUIDES: guide_page(g)
+reviews_page(); faq_page(); industries_page()
 about(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")

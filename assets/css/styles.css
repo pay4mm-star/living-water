@@ -189,3 +189,27 @@ aside.side{position:sticky;top:100px;display:flex;flex-direction:column;gap:20px
 .dark .areas a{color:#fff}
 @media (max-width:1000px){.fgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.fgrid{grid-template-columns:1fr}.prose table{display:block;overflow-x:auto}}
+/* pass 3 */
+.trust{background:var(--navy);color:#cfe3e6}
+.trust ul{list-style:none;margin:0;padding:14px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:center}
+.trust b{display:block;color:#fff;font:700 1.25rem var(--head)}.trust span{font-size:.8rem}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:0 0 26px;font-size:.95rem}
+.toc strong{color:var(--navy);display:block;margin-bottom:6px}.toc ol{margin:0;padding-left:20px}.toc li{margin:4px 0}
+.toc a{text-decoration:none}.toc a:hover{text-decoration:underline}
+.glance{margin:0 0 26px}.glance dl{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0}
+.glance dl>div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:12px 14px}
+.glance dt{font:700 .72rem var(--body);text-transform:uppercase;letter-spacing:.06em;color:var(--teal)}.glance dd{margin:2px 0 0;color:var(--navy);font-size:.95rem}
+.svc-links{font-size:.88rem;margin-top:auto}.card.ind h2 a,.card.ind .svc-links a{position:relative;z-index:1}
+.faq-page h2{margin-top:1.6em}.faq-page .faq{max-width:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.mobile-bar{display:none}
+h2[id]{scroll-margin-top:100px}
+@media (max-width:1000px){.trust ul{grid-template-columns:repeat(3,1fr)}.trust li:nth-child(n+4){display:none}}
+@media (max-width:640px){
+  .glance dl{grid-template-columns:1fr}
+  .float-cta{display:none}
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;box-shadow:0 -4px 18px rgba(0,0,0,.15)}
+  .mobile-bar a{padding:14px 6px;text-align:center;font-weight:700;color:var(--navy);text-decoration:none;font-size:.95rem;border-right:1px solid var(--line)}
+  .mobile-bar a.q{background:var(--teal);color:#fff;border:0}
+  body{padding-bottom:56px}
+}
