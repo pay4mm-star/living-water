@@ -1,0 +1,594 @@
+{
+ "heritage-stone-wall-pressure-washing-toronto": {
+  "alt": "Living Water technician pressure washing a heritage stone church wall in Toronto",
+  "w": 1280,
+  "h": 960,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "living-water-van-residential-pressure-washing": {
+  "alt": "Living Water Pressure Wash Services van at a residential job in the GTA",
+  "w": 1440,
+  "h": 630,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "industrial-pressure-washing-crew-gta": {
+  "alt": "Living Water industrial pressure washing van and equipment on site",
+  "w": 1440,
+  "h": 630,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "roof-moss-removal-soft-wash": {
+  "alt": "Technician removing moss from a shingle roof with low-pressure soft washing",
+  "w": 1440,
+  "h": 630,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "commercial-lobby-entrance-pressure-washing": {
+  "alt": "Pressure washing the entrance and walkway of a commercial building",
+  "w": 1640,
+  "h": 664,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "brick-wall-paint-removal-pressure-washing": {
+  "alt": "Controlled pressure washing removing paint from a commercial brick wall",
+  "w": 1640,
+  "h": 664,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "efflorescence-removal-front-steps-before": {
+  "alt": "Front porch steps covered in white efflorescence before cleaning",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "efflorescence-removal-front-steps-after": {
+  "alt": "Front porch steps after professional efflorescence removal",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "brick-masonry-house-cleaning-before": {
+  "alt": "Brick house rear facade stained with mortar and grime before masonry cleaning",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "brick-masonry-house-cleaning-after": {
+  "alt": "Brick house rear facade after professional masonry cleaning",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "boat-deck-mobile-power-wash-before": {
+  "alt": "Sailboat deck with dirt and staining before mobile power washing",
+  "w": 900,
+  "h": 1200,
+  "sizes": [
+   480
+  ]
+ },
+ "boat-deck-mobile-power-wash-after": {
+  "alt": "Sailboat deck bright and clean after mobile power washing",
+  "w": 900,
+  "h": 1200,
+  "sizes": [
+   480
+  ]
+ },
+ "commercial-brick-paint-removal-before": {
+  "alt": "Commercial brick building with patchy paint before paint removal",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "commercial-brick-paint-removal-after": {
+  "alt": "Commercial brick building after paint removal, uniform clean brick",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "stone-patio-cleaning-before": {
+  "alt": "Stone patio and loggia with grime before residential pressure washing",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "stone-patio-cleaning-after": {
+  "alt": "Stone patio and loggia after residential pressure washing",
+  "w": 1200,
+  "h": 900,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "heritage-facade-restoration-before": {
+  "alt": "Ornate heritage building entrance darkened by decades of soot before restoration",
+  "w": 592,
+  "h": 789,
+  "sizes": [
+   480
+  ]
+ },
+ "heritage-facade-restoration-after": {
+  "alt": "Heritage building entrance after gentle facade cleaning and restoration",
+  "w": 592,
+  "h": 789,
+  "sizes": [
+   480
+  ]
+ },
+ "painted-building-paint-removal-before": {
+  "alt": "Downtown Toronto building with painted masonry before paint stripping",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "painted-building-paint-removal-after": {
+  "alt": "Downtown Toronto building with original brick revealed after paint removal",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "heritage-red-brick-building-cleaning": {
+  "alt": "Red brick heritage building partly cleaned, showing the difference professional brick cleaning makes",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "concrete-surface-cleaning-residue-removal": {
+  "alt": "Concrete surface with residue being cleaned by a Living Water crew",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "ornamental-balcony-stone-restoration": {
+  "alt": "Contained stone balcony and wrought iron railing during restoration",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "media-blasting-stone-technician": {
+  "alt": "Technician in protective suit media blasting a stone surface",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "elevator-pit-cleaning-toronto": {
+  "alt": "Elevator pit cleaning and sludge removal in a Toronto building",
+  "w": 1200,
+  "h": 638,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "historical-building-remediation-ontario": {
+  "alt": "Historic red brick building with clock tower after exterior remediation",
+  "w": 1200,
+  "h": 638,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "rooftop-concrete-deck-pressure-washing": {
+  "alt": "Rooftop concrete deck being pressure washed",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "commercial-column-cleaning-ladder": {
+  "alt": "Cleaning a commercial building column from a ladder",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "modern-stone-home-exterior-cleaning": {
+  "alt": "Modern stone and wood home exterior during cleaning",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "modern-stone-home-exterior-clean": {
+  "alt": "Modern stone home exterior after professional cleaning",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "limestone-wall-hand-cleaning": {
+  "alt": "Technician hand cleaning a limestone wall with drop sheets protecting the ground",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "boom-lift-brick-facade-cleaning": {
+  "alt": "Crew on a boom lift cleaning a multi-storey brick facade",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "new-build-construction-cleanup": {
+  "alt": "Post-construction exterior cleanup at a new modern home",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "brick-arch-window-cleaning": {
+  "alt": "Brick arch and window surround partly cleaned showing original colour",
+  "w": 1600,
+  "h": 1067,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "precast-stone-coping-cleaning": {
+  "alt": "Precast stone copings side by side showing cleaned versus uncleaned",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "dustless-sandblasting-concrete": {
+  "alt": "Technician performing dustless sandblasting on concrete",
+  "w": 1200,
+  "h": 638,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "estate-home-exterior-restoration": {
+  "alt": "Estate home with contained work area during exterior restoration",
+  "w": 644,
+  "h": 580,
+  "sizes": [
+   480
+  ]
+ },
+ "rooftop-terrace-pressure-washing-crew": {
+  "alt": "Living Water crew pressure washing a rooftop terrace",
+  "w": 644,
+  "h": 580,
+  "sizes": [
+   480
+  ]
+ },
+ "custom-home-exterior-washing": {
+  "alt": "Custom home exterior with Living Water vans on site",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "industrial-tank-pressure-washing": {
+  "alt": "Industrial storage tanks being pressure washed from a boom lift",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "commercial-column-restoration": {
+  "alt": "Commercial column and storefront cleaning in Toronto",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "stone-house-exterior-cleaning": {
+  "alt": "Stone house exterior after professional washing",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "elevator-pit-pressure-washing": {
+  "alt": "Technician pressure washing inside an elevator pit",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "elevator-pit-buffer-cleaning": {
+  "alt": "Elevator pit buffer springs and floor after cleaning",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "silo-tank-exterior-cleaning-boom-lift": {
+  "alt": "Silo tank exterior being cleaned from a boom lift",
+  "w": 975,
+  "h": 1300,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "silo-tank-wash-progress": {
+  "alt": "Tall silo tank with cleaned and uncleaned sections visible",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "condo-column-pressure-washing": {
+  "alt": "Condo building column being pressure washed from a ladder",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "graffiti-removal-house-wall": {
+  "alt": "Living Water technician removing graffiti from a house wall",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "brick-wall-cleaning-technician": {
+  "alt": "Living Water technician cleaning a light brick wall",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "crane-heavy-equipment-washing": {
+  "alt": "Crawler crane being pressure washed on a construction site",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "slate-pathway-cleaning-before": {
+  "alt": "Slate garden pathway covered in grime and organic growth",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "garden-stone-pathway-cleaned": {
+  "alt": "Garden stone pathway after pressure washing",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "yellow-brick-wall-cleaning": {
+  "alt": "Yellow brick wall cleaning on a commercial building",
+  "w": 413,
+  "h": 200,
+  "sizes": [
+   413
+  ]
+ },
+ "commercial-building-exterior-washing": {
+  "alt": "Commercial building exterior and entrance washing in Toronto",
+  "w": 651,
+  "h": 488,
+  "sizes": [
+   480
+  ]
+ },
+ "elevator-pit-springs-cleaned": {
+  "alt": "Elevator pit springs and equipment after decontamination",
+  "w": 305,
+  "h": 280,
+  "sizes": [
+   305
+  ]
+ },
+ "paint-stripping-wall-surface": {
+  "alt": "Wall surface with peeling paint during paint stripping",
+  "w": 480,
+  "h": 640,
+  "sizes": [
+   480
+  ]
+ },
+ "century-home-pressure-washing": {
+  "alt": "Century brick home with Living Water van parked out front",
+  "w": 780,
+  "h": 585,
+  "sizes": [
+   480
+  ]
+ },
+ "estate-home-driveway-washing": {
+  "alt": "Estate home driveway and front steps being pressure washed",
+  "w": 639,
+  "h": 853,
+  "sizes": [
+   480
+  ]
+ },
+ "heritage-building-scaffolding-restoration": {
+  "alt": "Heritage building wrapped and contained for restoration with a boom lift",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "heritage-building-contained-blasting": {
+  "alt": "Heritage building facade under containment for blasting",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   480,
+   960
+  ]
+ },
+ "yellow-brick-heritage-building-cleaning": {
+  "alt": "Yellow brick heritage building being cleaned with boom lifts",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   480,
+   960,
+   1600
+  ]
+ },
+ "wind-damage-deck-tree": {
+  "alt": "Fallen tree on a backyard deck after a wind storm",
+  "w": 800,
+  "h": 533,
+  "sizes": [
+   480
+  ]
+ },
+ "parking-lot-pressure-washing-crew": {
+  "alt": "Two technicians pressure washing a parking lot",
+  "w": 550,
+  "h": 413,
+  "sizes": [
+   480
+  ]
+ },
+ "brick-storefront-boom-lift-washing": {
+  "alt": "Brick storefront being washed from a boom lift",
+  "w": 550,
+  "h": 413,
+  "sizes": [
+   480
+  ]
+ },
+ "crane-track-degreasing": {
+  "alt": "Technician degreasing crane tracks",
+  "w": 550,
+  "h": 413,
+  "sizes": [
+   480
+  ]
+ },
+ "brick-wall-low-pressure-wash": {
+  "alt": "Technician washing a brick wall in high-visibility gear",
+  "w": 550,
+  "h": 413,
+  "sizes": [
+   480
+  ]
+ },
+ "roof-moss-washing-ladder": {
+  "alt": "Technician on a ladder washing moss off a roof",
+  "w": 550,
+  "h": 413,
+  "sizes": [
+   480
+  ]
+ }
+}

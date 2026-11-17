@@ -1,0 +1,34 @@
+# Living Water Pressure Wash Services — livingwater-pws.com
+
+Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, no plugins, no database — plain HTML/CSS/JS that can be hosted anywhere (GitHub Pages, Netlify, Cloudflare Pages, or any web host).
+
+## What's included
+- 20 indexable pages, same URL slugs as the old WordPress site (no ranking loss from changed URLs)
+- New `/service-areas/` page covering 31 GTA / Ontario communities
+- Only original Living Water job photos, renamed with descriptive filenames, descriptive alt text, responsive WebP (480/960/1600px)
+- Before/after drag sliders + lightbox gallery
+- Self-hosted fonts (Josefin Sans + Public Sans), same teal/navy theme as the original
+
+## SEO
+- Unique title, meta description, canonical, Open Graph and Twitter tags on every page
+- JSON-LD: LocalBusiness/HomeAndConstructionBusiness (NAP, 3 phone lines, 24/7 emergency, areaServed, credentials, service catalog), WebSite, Service (per service page), BreadcrumbList, FAQPage, ImageGallery, AboutPage, ContactPage
+- `sitemap.xml`, `robots.txt`, 404 page, internal linking (related services, breadcrumbs, footer)
+- Core Web Vitals: preloaded hero image + fonts, lazy-loaded images with width/height, ~4 KB of JS
+
+## GEO (AI search: ChatGPT, Perplexity, Google AI Overviews, Claude)
+- `llms.txt` with company facts, services and FAQ
+- `robots.txt` explicitly allows AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended…)
+- "Answer-first" summary paragraph at the top of every page, a facts table (founded, insurance, rating, area, phones) and FAQs written as quotable answers
+
+## Before going live — to do
+1. **Quote form**: uses formsubmit.co (free). Submit the form once after launch, then click the activation link sent to info@livingwater-pws.com.
+2. **Business address**: if you have a public address, add `streetAddress` + `postalCode` in `tools/gen.py` (BUSINESS → address). Make sure name/phone match your Google Business Profile exactly.
+3. **Google Business Profile URL**: add it to `sameAs` in the schema, plus Facebook/Instagram/etc.
+4. Submit `https://livingwater-pws.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+5. Safety Policy PDF: drop the PDF in `/assets/` and link it from `/safety-policy/` if you want it downloadable.
+
+## Hosting on GitHub Pages
+Settings → Pages → Deploy from branch → `main` / root. Then set custom domain `livingwater-pws.com` and point DNS (A records to GitHub Pages IPs, or CNAME `www` to `pay4mm-star.github.io`).
+
+## Editing
+Content lives in `tools/content.py`; layout in `tools/gen.py`. Rebuild with `python3 tools/gen.py .` (requires `tools/manifest.json`; images are already in `assets/img`). Or edit the HTML directly.
