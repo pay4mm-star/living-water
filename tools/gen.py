@@ -323,6 +323,8 @@ def home():
 <div class="section-head"><span class="pill light">Comprehensive Capabilities</span><h2>Professional Pressure Washing, Restoration &amp; Sandblasting Services</h2>
 <p>From residential driveways to heritage facades and industrial hydro jetting — every service has its own method, its own specialists and its own quote.</p></div>
 {service_cards(SERVICE_ORDER_CORE[:6])}
+<h3 class="center" style="margin:50px 0 24px">Most-Requested Services</h3>
+{service_cards(SERVICE_ORDER_SUB)}
 <h3 class="center" style="margin:50px 0 24px">Specialised Cleaning Services</h3>
 {service_cards(SERVICE_ORDER_SPECIAL[:3])}
 <p class="center" style="margin-top:34px"><a class="btn line" href="/power-washing-services/">View all services</a></p>
