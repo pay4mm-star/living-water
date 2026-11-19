@@ -286,6 +286,8 @@ svc("elevator-pit-cleaning",
 <p>Your elevator contractor remains responsible for the equipment itself; Living Water handles the cleaning, pumping and sanitizing so the pit stays clean, dry and safe to work in.</p>
 <h2>Buildings we serve</h2>
 <ul class="ticks cols"><li>Condominium towers and townhouse complexes</li><li>Rental apartment buildings</li><li>Office towers and commercial buildings</li><li>Retail plazas and shopping centres</li><li>Hospitals, schools and institutions</li><li>Industrial and warehouse facilities</li></ul>
+<h2>Elevator pit cleaning across the GTA</h2>
+<p>We clean elevator pits in condominium towers and commercial buildings across <a href="/pressure-washing-toronto/">downtown Toronto</a>, <a href="/pressure-washing-north-york/">North York</a> along the Yonge corridor, <a href="/pressure-washing-etobicoke/">Etobicoke</a>'s Humber Bay Shores, <a href="/pressure-washing-scarborough/">Scarborough</a>, <a href="/pressure-washing-mississauga/">Mississauga</a> City Centre, <a href="/pressure-washing-vaughan/">Vaughan</a> Metropolitan Centre, <a href="/pressure-washing-markham/">Markham</a>, <a href="/pressure-washing-richmond-hill/">Richmond Hill</a>, <a href="/pressure-washing-oakville/">Oakville</a>, <a href="/pressure-washing-burlington/">Burlington</a> and <a href="/pressure-washing-hamilton/">Hamilton</a>.</p>
 <p><strong>Water in a pit right now?</strong> See <a href="/elevator-pit-water-removal/">emergency elevator pit water removal</a> or call <a href="tel:+1-647-833-4343">(647) 833-4343</a>, 24/7.</p>
 """,
     photos=["elevator-pit-cleaning-toronto", "elevator-pit-pressure-washing", "elevator-pit-buffer-cleaning", "elevator-pit-springs-cleaned", "condo-column-pressure-washing", "commercial-building-exterior-washing"],
@@ -428,4 +430,5 @@ GALLERY_PAIRS = [
     ("painted-building-paint-removal-before", "painted-building-paint-removal-after", "Paint stripping, downtown Toronto", "Painted masonry stripped to reveal the original brick."),
 ]
 
+# Spring campaign (switch on in March): SEASONAL = dict(on=True, text="🌱 Spring cleaning season: driveways, interlock & salt damage clean-up", link="/residential-power-washing/", cta="Get a quote")
 SEASONAL = dict(on=True, text="❄ Winter booking now open: elevator pit cleaning for condos & commercial buildings", link="/elevator-pit-cleaning/", cta="Book now")

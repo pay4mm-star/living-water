@@ -33,6 +33,18 @@ Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, 
 - Mobile sticky Call / 24/7 / Free Quote bar; quote form now accepts a photo
 - Anchor ids on every H2 (deep links for Google and AI citations), Article `og:type` on guides
 
+## Adding new job photos (case studies)
+1. Put each job in its own folder: `before.jpg` + `after.jpg` (or `before-1`/`after-1`, `before-2`/`after-2`…), any extra photos, and an optional `notes.txt`:
+   ```
+   title: Condo elevator pit clean-up after winter
+   service: elevator-pit-cleaning
+   location: North York
+   date: 2026-11
+   description: Two-elevator condo pit with salt sludge and standing water.
+   ```
+2. `python3 tools/add_photos.py /path/to/photos` then `python3 tools/gen.py .`
+3. Each job becomes a `/projects/<name>/` case study, appears on its service page and matching city page, and is added to the sitemap.
+
 ## Before going live — to do
 1. **Quote form**: uses formsubmit.co (free). Submit the form once after launch, then click the activation link sent to info@livingwater-pws.com.
 2. **Business address**: if you have a public address, add `streetAddress` + `postalCode` in `tools/gen.py` (BUSINESS → address). Make sure name/phone match your Google Business Profile exactly.

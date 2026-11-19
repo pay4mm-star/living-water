@@ -34,6 +34,7 @@ def city_page(c):
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
 <article class="prose"><p class="answer">Living Water Pressure Wash Services provides professional pressure washing, soft washing, sandblasting, brick and stone cleaning, efflorescence and graffiti removal, and 24/7 disaster restoration in {esc(name)}, Ontario. Call {PHONE_MAIN[1]} for a free, fixed written quote.</p>
+{reviewed_line()}
 {intro}
 <h2>Neighbourhoods we serve in {esc(name)}</h2><ul class="areas" style="justify-content:flex-start">{hoods}</ul>
 <h2>Why {esc(name)} property owners choose Living Water</h2>
@@ -44,6 +45,7 @@ def city_page(c):
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Services in {esc(name)}</span><h2>Most requested services in {esc(name)}</h2></div>{service_cards(c["services"])}</div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>Recent Living Water projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div><div class="grid g3">{photos}</div></div></section>
 {process_block()}
+{projects_section(location=name.split(" & ")[0])}
 {faq_block(faqs, "Pressure washing in " + esc(name) + ": FAQ")}
 {reviews_block()}
 {cta_block()}"""

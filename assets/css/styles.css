@@ -225,3 +225,5 @@ h2[id]{scroll-margin-top:100px}
 .season b{white-space:nowrap;text-decoration:underline}.season:hover{color:var(--ink);background:#e6b955}
 .winter{background:linear-gradient(135deg,#eaf6f8,#f7fbff);border-bottom:1px solid var(--line)}
 .winter img{border-radius:var(--r);box-shadow:var(--shadow)}
+.reviewed{font-size:.85rem;color:var(--muted);margin:-14px 0 22px;padding-left:4px}
+.prose p a,.prose li a{text-decoration-thickness:1px;text-underline-offset:2px}

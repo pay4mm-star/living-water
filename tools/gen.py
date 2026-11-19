@@ -118,7 +118,7 @@ def nav_html(current):
 <ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
 <li>{a("/guides/", "Guides")}</li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-about">About ▾</button>
-<ul class="sub" id="sub-about"><li>{a("/about-us/", "About Living Water")}</li><li>{a("/reviews/", "Customer Reviews")}</li><li>{a("/industries/", "Industries We Serve")}</li><li>{a("/gallery/", "Project Gallery")}</li><li>{a("/faq/", "FAQ")}</li></ul></li>
+<ul class="sub" id="sub-about"><li>{a("/about-us/", "About Living Water")}</li><li>{a("/reviews/", "Customer Reviews")}</li><li>{a("/industries/", "Industries We Serve")}</li><li>{a("/gallery/", "Project Gallery")}</li>{("<li>" + a("/projects/", "Case Studies") + "</li>") if PROJECTS else ""}<li>{a("/faq/", "FAQ")}</li></ul></li>
 <li>{a("/contact/", "Contact")}</li>
 </ul></nav>'''
 
@@ -164,6 +164,7 @@ PAGE_META = {}
 def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority="0.7", noindex=False, page_type="WebPage", crumbs=None, og_type="website"):
     canonical = SITE + path
     body = add_h2_ids(body)
+    body = autolink(body, path)
     if not noindex and path != "/" and ('<section class="page-hero"' in body):
         i = body.index("</section>") + len("</section>")
         body = body[:i] + TRUST + body[i:]
@@ -383,12 +384,13 @@ def service_page(s):
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(group)}</span><h1>{esc(d["h1"])}</h1><p>{esc(d["sub"])}</p>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="{"#pm-quote" if s.startswith("elevator-pit") else "/contact/#quote"}">{"Get an Elevator Pit Quote" if s.startswith("elevator-pit") else "Get a Free Quote"}</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
-<article class="prose"><p class="answer">{esc(d["answer"])}</p>{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
+<article class="prose"><p class="answer">{esc(d["answer"])}</p>{reviewed_line()}{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
 <aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
 <div class="grid g3">{photos}</div></div></section>
 {process_block() if d["group"]=="core" else ""}
+{projects_section(service=s)}
 {pm_form_block(s) if s.startswith("elevator-pit") else ""}
 {faq_block(d["faqs"], esc(d["nav"]) + " FAQ")}
 {reviews_block()}
@@ -422,6 +424,20 @@ def services_hub():
 <div>{img("parking-lot-pressure-washing-crew", "(max-width:1000px) 100vw, 45vw")}</div></div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Comprehensive Capabilities</span><h2>Pressure Washing, Restoration &amp; Sandblasting</h2></div>{service_cards(SERVICE_ORDER_CORE)}</div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Specialised Cleaning</span><h2>Specialised Cleaning Services</h2><p>The right technique for each surface — elevator pits, efflorescence, graffiti, stone and metal.</p></div>{service_cards(SERVICE_ORDER_SPECIAL)}</div></section>
+<section><div class="wrap"><div class="section-head"><span class="pill light">Compare</span><h2>Which service do you need?</h2><p>A quick guide to matching the problem to the right method.</p></div>
+<div class="prose" style="max-width:1000px;margin:0 auto"><table>
+<thead><tr><th>Problem</th><th>Best service</th><th>Typical method</th></tr></thead><tbody>
+<tr><td>Dirty driveway, interlock, siding or roof</td><td><a href="/residential-power-washing/">Residential power washing</a></td><td>Soft wash or hot-water pressure wash</td></tr>
+<tr><td>Gum, grease and grime at a plaza or garage</td><td><a href="/commercial-power-washing/">Commercial power washing</a></td><td>Hot-water pressure wash, degreaser</td></tr>
+<tr><td>Tanks, silos, plant equipment, condenser pipes</td><td><a href="/industrial-power-washing/">Industrial power washing</a></td><td>High pressure, hydro jetting</td></tr>
+<tr><td>Rust, epoxy or failing paint on metal, concrete or pools</td><td><a href="/sandblasting-services/">Sandblasting</a></td><td>Dustless, soda, micro or dry ice blasting</td></tr>
+<tr><td>Painted or stained brick</td><td><a href="/brick-cleaning-paint-removal/">Brick cleaning &amp; paint removal</a></td><td>Chemical stripping, low-pressure rinse</td></tr>
+<tr><td>White powder on brick, stone or pavers</td><td><a href="/efflorescence-removal/">Efflorescence removal</a></td><td>Material-specific cleaner, controlled rinse</td></tr>
+<tr><td>Tags and spray paint</td><td><a href="/graffiti-removal/">Graffiti removal</a></td><td>Bio-friendly remover, anti-graffiti coat</td></tr>
+<tr><td>Water, oil or debris in an elevator pit</td><td><a href="/elevator-pit-cleaning/">Elevator pit cleaning</a></td><td>Pump-out, degrease, sanitize</td></tr>
+<tr><td>Historic building or monument</td><td><a href="/historical-remediation/">Historical remediation</a></td><td>Steam, soda or micro blasting, poultices</td></tr>
+<tr><td>Fire, flood, wind or mould damage</td><td><a href="/disaster-restoration/">Disaster restoration</a></td><td>24/7 securing, extraction, remediation</td></tr>
+</tbody></table></div></div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Deep Surface Cleaning</span><h2>From routine cleaning to tough restoration</h2></div><div class="grid g3">{deep_html}</div></div></section>
 {areas_block()}
 {faq_block(GENERAL_FAQ)}
@@ -583,6 +599,8 @@ def legal():
 
 exec(open(os.path.join(HERE, "gen_local.py")).read())
 exec(open(os.path.join(HERE, "gen_more.py")).read())
+exec(open(os.path.join(HERE, "gen_links.py")).read())
+exec(open(os.path.join(HERE, "gen_projects.py")).read())
 
 # ------------------------------------------------------------ technical SEO / GEO files
 def tech():
@@ -657,6 +675,6 @@ for s in SERVICES: service_page(s)
 for c in CITIES: city_page(c)
 guides_hub()
 for g in GUIDES: guide_page(g)
-reviews_page(); faq_page(); industries_page()
+reviews_page(); faq_page(); industries_page(); projects_hub()
 about(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")
