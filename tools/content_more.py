@@ -175,3 +175,27 @@ GUIDES_MORE = [
          faqs=[("Can smoke-damaged brick be cleaned?", "Yes. Exterior soot on brick and stone is cleaned with suitable cleaners and controlled washing, or gentle media blasting for heavy deposits."),
                ("How quickly should restoration start?", "As soon as the property is declared safe and your insurer is notified. Delays let soot, odour and water damage spread.")]),
 ]
+
+GLOSSARY = [
+    ("Abrasive blasting", "Driving a stream of abrasive media (sand, glass, garnet, soda, walnut shell and others) at a surface under pressure to strip rust, paint, scale or coatings.", "/sandblasting-services/"),
+    ("Acid wash", "Cleaning masonry with a diluted acid-based cleaner to dissolve mortar smears and mineral stains. It must be tested, correctly diluted and neutralised.", "/brick-cleaning-paint-removal/"),
+    ("Anti-graffiti coating", "A clear protective coating that makes graffiti easier to remove. Sacrificial coatings come off with the graffiti; permanent coatings stay in place.", "/graffiti-removal/"),
+    ("Buffer (elevator)", "The spring or oil device at the bottom of an elevator pit that stops a car or counterweight travelling past its normal limit. Pit debris and corrosion around buffers is a common clean-up item.", "/elevator-pit-cleaning/"),
+    ("Dry ice blasting", "Blasting with frozen carbon dioxide pellets that turn to gas on impact, removing coatings and residue without leaving abrasive media behind.", "/sandblasting-services/"),
+    ("Dustless blasting", "Wet abrasive blasting where water is mixed with the media to suppress airborne dust.", "/sandblasting-services/"),
+    ("Efflorescence", "A white, powdery salt deposit left on brick, concrete, stone or pavers when water moves through the material and evaporates at the surface.", "/efflorescence-removal/"),
+    ("Elevator pit", "The space at the bottom of an elevator hoistway, below the lowest landing, housing buffers and other equipment. It collects debris, water and oil.", "/elevator-pit-cleaning/"),
+    ("Hot-water pressure washing", "Pressure washing with heated water, often called power washing, which cuts through oil, grease and gum faster than cold water.", "/commercial-power-washing/"),
+    ("Hydro jetting", "Using very high-pressure water streams to scour build-up from inside pipes, condensers and lines.", "/industrial-power-washing/"),
+    ("Lime run", "Hard white calcium carbonate deposits that streak from mortar joints, harder to remove than ordinary efflorescence.", "/efflorescence-removal/"),
+    ("Micro blasting", "Precision blasting with very fine media at low pressure, used on detailed or delicate masonry and stubborn coatings.", "/historical-remediation/"),
+    ("Poultice", "A paste applied to stone or brick that draws stains or paint ghosting out of the pores as it dries.", "/stone-restoration/"),
+    ("Polymeric sand", "Joint sand for interlock pavers mixed with binders that harden when misted with water, resisting washout and weeds.", "/guides/interlock-cleaning-and-resanding/"),
+    ("Pressure washing", "Cleaning with high-pressure water to remove dirt, grime and stains from durable surfaces like concrete and interlock.", "/residential-power-washing/"),
+    ("Soda blasting", "Blasting with sodium bicarbonate, a soft media suited to delicate surfaces, soot and light coatings.", "/guides/is-sandblasting-safe-for-brick/"),
+    ("Soft washing", "Low-pressure cleaning that uses biodegradable cleaners to kill and remove algae, mould and mildew from siding, stucco and roofs.", "/guides/soft-washing-vs-pressure-washing/"),
+    ("Spalling", "Flaking or popping of the surface of brick, stone or concrete, often caused by trapped moisture freezing and thawing.", "/brick-cleaning-paint-removal/"),
+    ("Sump pump", "A pump in a pit or basin that removes collected water. In elevator pits, sumps must be covered and working to prevent flooding.", "/elevator-pit-water-removal/"),
+    ("Surface cleaner", "A rotary attachment for pressure washers that cleans flat surfaces evenly without the stripes a bare wand leaves.", "/guides/interlock-cleaning-and-resanding/"),
+    ("WSIB clearance certificate", "A document from Ontario's Workplace Safety and Insurance Board confirming a contractor's account is in good standing.", "/guides/hiring-a-pressure-washing-contractor/"),
+]

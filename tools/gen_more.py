@@ -160,3 +160,34 @@ def pm_form_block(slug):
 <div class="field"><label for="pm-m">Notes</label><textarea id="pm-m" name="message" rows="3"></textarea></div>
 <button class="btn" type="submit">{"Send emergency request" if emergency else "Get my elevator pit quote"}</button>
 </form></div></div></section>"""
+
+
+def glossary_page():
+    from content_more import GLOSSARY
+    path = "/glossary/"
+    trail = [("Home", "/"), ("Glossary", path)]
+    items = "".join(f'<div class="term" id="{_slug(t)}"><dt>{esc(t)}</dt><dd>{esc(d)} <a href="{u}">Learn more →</a></dd></div>' for t, d, u in GLOSSARY)
+    letters = "".join(f'<a href="#{_slug(t)}">{esc(t)}</a>' for t, _, _ in GLOSSARY)
+    body = f"""
+<section class="page-hero"><div class="wrap">{crumbs_html(trail)}<span class="pill">Reference</span><h1>Pressure Washing &amp; Restoration Glossary</h1><p>Plain-English definitions of the terms used in pressure washing, blasting, masonry restoration and elevator pit cleaning.</p></div></section>
+<section><div class="wrap layout"><article class="prose"><dl class="glossary">{items}</dl></article>
+<aside class="side"><nav class="toc glossary-jump" aria-label="Terms"><strong>Terms</strong>{letters}</nav>{quote_aside()}</aside></div></section>
+{cta_block()}"""
+    terms = {"@context": "https://schema.org", "@type": "DefinedTermSet", "@id": SITE + path + "#terms", "name": "Pressure washing and restoration glossary",
+             "hasDefinedTerm": [{"@type": "DefinedTerm", "name": t, "description": d, "url": SITE + path + "#" + _slug(t)} for t, d, _ in GLOSSARY]}
+    page(path, "Pressure Washing & Restoration Glossary | Living Water",
+         "Definitions of efflorescence, soft washing, hydro jetting, soda and dry ice blasting, poultices, spalling, elevator pits and more.",
+         body, schema=[terms, crumbs_ld(trail)], priority="0.6", crumbs=True)
+
+
+def html_sitemap():
+    path = "/sitemap/"
+    trail = [("Home", "/"), ("Sitemap", path)]
+    groups = [("Services", [(SERVICES[s]["nav"], f"/{s}/") for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL] + [("Elevator Pit Water Removal", "/elevator-pit-water-removal/")]),
+              ("Service areas", [("All service areas", "/service-areas/")] + [(c["name"], f"/pressure-washing-{c['slug']}/") for c in CITIES]),
+              ("Guides", [("All guides", "/guides/")] + [(g["title"], f"/guides/{g['slug']}/") for g in GUIDES]),
+              ("Company", [("About", "/about-us/"), ("Reviews", "/reviews/"), ("Industries", "/industries/"), ("Gallery", "/gallery/"), ("FAQ", "/faq/"), ("Glossary", "/glossary/"), ("Contact", "/contact/"), ("Safety policy", "/safety-policy/"), ("Privacy policy", "/privacy-policy/")])]
+    cols = "".join(f'<div><h2 style="font-size:1.3rem">{n}</h2><ul class="ticks">{"".join(f"<li><a href={chr(34)}{u}{chr(34)}>{esc(t)}</a></li>" for t, u in links)}</ul></div>' for n, links in groups)
+    body = f"""<section class="page-hero"><div class="wrap">{crumbs_html(trail)}<h1>Sitemap</h1></div></section>
+<section><div class="wrap grid g2">{cols}</div></section>"""
+    page(path, "Sitemap | Living Water Pressure Wash Services", "Every page on the Living Water website: services, service areas, guides and company information.", body, schema=[crumbs_ld(trail)], priority="0.3", crumbs=True)

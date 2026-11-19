@@ -133,7 +133,7 @@ def footer_html():
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul>{core}</ul></div>
-<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
 <div><h3>Service Areas</h3><ul>{"".join(f'<li><a href="/pressure-washing-{c["slug"]}/">{c["name"]}</a></li>' for c in CITIES)}<li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li>
@@ -143,7 +143,7 @@ def footer_html():
 </ul></div>
 </div>
 <div class="wrap copy"><span>© <span id="year">2026</span> {LEGAL} All rights reserved.</span>
-<span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
+<span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap/">Sitemap</a></span></div>
 </footer>
 <a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>
 <nav class="mobile-bar" aria-label="Quick contact"><a href="tel:{PHONE_MAIN[0]}">📞 Call</a><a href="tel:{PHONE_EMERG[0]}">🚨 24/7</a><a class="q" href="/contact/#quote">Free Quote</a></nav>'''
@@ -401,6 +401,9 @@ def service_page(s):
                   "url": f"{SITE}/{s}/", "provider": {"@id": ORG_ID}, "image": f"{SITE}{best(d['hero'])}",
                   "areaServed": [{"@type": "City", "name": a} for a in AREAS],
                   "offers": {"@type": "Offer", "priceCurrency": "CAD", "description": "Free assessment and fixed written quote"}}
+    if s.startswith("elevator-pit"):
+        service_ld["audience"] = {"@type": "BusinessAudience", "audienceType": "Condominium corporations, property managers, building owners and elevator contractors"}
+        service_ld["hoursAvailable"] = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}
     page(f"/{s}/", d["title"], d["desc"], body,
          schema=[service_ld, crumbs_ld(trail), faq_ld(d["faqs"])],
          preload=d["hero"], priority="0.9")
@@ -663,6 +666,7 @@ Sitemap: {SITE}/sitemap.xml
 - [Customer reviews]({SITE}/reviews/)
 - [FAQ]({SITE}/faq/)
 - [Industries served]({SITE}/industries/)
+- [Glossary of terms]({SITE}/glossary/)
 
 ## FAQ
 {faq_lines}""")
@@ -675,6 +679,6 @@ for s in SERVICES: service_page(s)
 for c in CITIES: city_page(c)
 guides_hub()
 for g in GUIDES: guide_page(g)
-reviews_page(); faq_page(); industries_page(); projects_hub()
+reviews_page(); faq_page(); industries_page(); projects_hub(); glossary_page(); html_sitemap()
 about(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")

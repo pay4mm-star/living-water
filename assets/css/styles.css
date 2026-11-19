@@ -227,3 +227,6 @@ h2[id]{scroll-margin-top:100px}
 .winter img{border-radius:var(--r);box-shadow:var(--shadow)}
 .reviewed{font-size:.85rem;color:var(--muted);margin:-14px 0 22px;padding-left:4px}
 .prose p a,.prose li a{text-decoration-thickness:1px;text-underline-offset:2px}
+.glossary{margin:0}.glossary .term{padding:16px 0;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+.glossary dt{font:700 1.15rem var(--head);color:var(--navy)}.glossary dd{margin:6px 0 0}
+.glossary-jump{display:flex;flex-wrap:wrap;gap:6px 12px}.glossary-jump strong{width:100%}

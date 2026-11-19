@@ -37,6 +37,7 @@
 - [Customer reviews](https://livingwater-pws.com/reviews/)
 - [FAQ](https://livingwater-pws.com/faq/)
 - [Industries served](https://livingwater-pws.com/industries/)
+- [Glossary of terms](https://livingwater-pws.com/glossary/)
 
 ## FAQ
 **How quickly can Living Water start?**
