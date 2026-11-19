@@ -36,6 +36,7 @@ def city_page(c):
 <article class="prose"><p class="answer">Living Water Pressure Wash Services provides professional pressure washing, soft washing, sandblasting, brick and stone cleaning, efflorescence and graffiti removal, and 24/7 disaster restoration in {esc(name)}, Ontario. Call {PHONE_MAIN[1]} for a free, fixed written quote.</p>
 {reviewed_line()}
 {intro}
+<h2>Local considerations in {esc(name)}</h2><ul class="ticks">{"".join(f"<li>{esc(x)}</li>" for x in LOCAL.get(c["slug"], []))}</ul>
 <h2>Neighbourhoods we serve in {esc(name)}</h2><ul class="areas" style="justify-content:flex-start">{hoods}</ul>
 <h2>Why {esc(name)} property owners choose Living Water</h2>
 <ul class="ticks"><li>28 years of experience and 7,500+ properties cleaned across the GTA</li><li>Surface-specific methods — soft wash, hot-water pressure, steam and media blasting</li><li>$5M liability insurance, WSIB coverage and ISSA-GBAC certification</li><li>Fixed written quotes, before-and-after photos and a free re-clean guarantee</li><li>24/7 emergency line for commercial, industrial and disaster restoration</li></ul>
@@ -44,10 +45,8 @@ def city_page(c):
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Services in {esc(name)}</span><h2>Most requested services in {esc(name)}</h2></div>{service_cards(c["services"])}</div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>Recent Living Water projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div><div class="grid g3">{photos}</div></div></section>
-{process_block()}
 {projects_section(location=name.split(" & ")[0])}
 {faq_block(faqs, "Pressure washing in " + esc(name) + ": FAQ")}
-{reviews_block()}
 {cta_block()}"""
     svc_ld = {"@context": "https://schema.org", "@type": "Service", "@id": SITE + path + "#service",
               "name": f"Pressure washing and restoration in {name}", "serviceType": "Pressure washing",
@@ -58,7 +57,11 @@ def city_page(c):
     title = f"Pressure Washing {name} | Sandblasting & Restoration"
     if len(title) > 60:
         title = f"Pressure Washing {name} | Living Water"
+    if len(title) > 60:
+        title = f"Pressure Washing {name}"
     desc = f"Pressure washing, sandblasting, brick & stone cleaning in {name}. Since 1998, $5M insured, 4.9★ Google. Free fixed quotes: {PHONE_MAIN[1]}."
+    if len(desc) > 158:
+        desc = f"Pressure washing, sandblasting and brick & stone cleaning in {name}. Since 1998, $5M insured, 4.9★ on Google. Free quotes."
     page(path, title, desc, body, schema=[svc_ld, crumbs_ld(trail), faq_ld(faqs)], preload=c["hero"], priority="0.8", crumbs=True)
 
 
@@ -76,7 +79,7 @@ def guide_page(g):
 <section><div class="wrap layout">
 <article class="prose"><p class="answer"><strong>Short answer:</strong> {esc(g["answer"])}</p>{toc(g["body"])}{g["body"]}
 <h2>Need help with your property?</h2><p>Living Water has cleaned and restored 7,500+ properties across Toronto and the GTA since 1998. Call <a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a> or <a href="/contact/#quote">request a free quote</a>.</p></article>
-<aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel}</nav></div><div><h3>More guides</h3><nav class="related" aria-label="More guides">{other}</nav></div></aside>
+<aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel}</nav></div><div><h3>More guides</h3><nav class="related" aria-label="More guides">{other}</nav></div><div><h3>Resources</h3><nav class="related" aria-label="Resources"><a href="/faq/">All FAQs →</a><a href="/glossary/">Glossary of terms →</a><a href="/gallery/">Before &amp; after gallery →</a><a href="/about-us/">About Living Water →</a></nav></div></aside>
 </div></section>
 {faq_block(g["faqs"], "Related questions")}
 {cta_block()}"""
@@ -87,7 +90,7 @@ def guide_page(g):
            "publisher": {"@id": ORG_ID}, "mainEntityOfPage": SITE + path, "inLanguage": "en-CA",
            "about": [SERVICES[x]["service_type"] for x in g["related"]]}
     t = g["title"] if len(g["title"]) <= 48 else short
-    page(path, (t + " | Living Water") if len(t) <= 47 else g["title"], g["meta"][:160], body, schema=[art, crumbs_ld(trail), faq_ld(g["faqs"])],
+    page(path, (t + " | Living Water") if len(t) <= 47 else (g["title"] if len(g["title"]) <= 60 else t), g["meta"][:160], body, schema=[art, crumbs_ld(trail), faq_ld(g["faqs"])],
          preload=g["hero"], priority="0.7", crumbs=True, og_type="article")
 
 
@@ -101,7 +104,7 @@ def guides_hub():
     body = f"""
 <section class="page-hero"><picture>{hero_img("brick-wall-cleaning-technician", "100vw", eager=True, alt="")}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Expert Guides</span><h1>Pressure Washing &amp; Restoration Guides</h1><p>Straight answers from a GTA contractor with 28 years of experience — methods, schedules, and what to ask before you hire.</p></div></section>
-<section><div class="wrap"><div class="grid g3">{cards}</div></div></section>
+<section><div class="wrap"><h2 class="sr-only">All guides</h2><div class="grid g3">{cards}</div></div></section>
 {cta_block()}"""
     lst = {"@context": "https://schema.org", "@type": "ItemList",
            "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/guides/{g['slug']}/", "name": g["title"]} for i, g in enumerate(GUIDES)]}

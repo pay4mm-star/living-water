@@ -230,3 +230,5 @@ h2[id]{scroll-margin-top:100px}
 .glossary{margin:0}.glossary .term{padding:16px 0;border-bottom:1px solid var(--line);scroll-margin-top:100px}
 .glossary dt{font:700 1.15rem var(--head);color:var(--navy)}.glossary dd{margin:6px 0 0}
 .glossary-jump{display:flex;flex-wrap:wrap;gap:6px 12px}.glossary-jump strong{width:100%}
+.h3{font-size:1.3rem}
+.answer a,.glance a{color:var(--teal-d)}

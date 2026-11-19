@@ -5,7 +5,7 @@ from content import *
 OUT = sys.argv[1]
 HERE = os.path.dirname(os.path.abspath(__file__))
 M = json.load(open(os.path.join(HERE, "manifest.json")))
-from content_local import CITIES, GUIDES
+from content_local import CITIES, GUIDES, LOCAL
 from content_more import REVIEWS_FULL, INDUSTRIES, SERVICE_FACTS, GUIDES_MORE
 GUIDES.extend(GUIDES_MORE)
 CITY = {c["slug"]: c for c in CITIES}
@@ -293,7 +293,7 @@ def facts_block():
 </dl></div>'''
 
 def quote_aside():
-    return f'''<div class="contact-card"><h3>Get a free quote</h3><p>Fixed written price before any work starts.</p>
+    return f'''<div class="contact-card"><h2 class="h3">Get a free quote</h2><p>Fixed written price before any work starts.</p>
 <p><a class="btn" style="width:100%;justify-content:center" href="/contact/#quote">Request a quote</a></p>
 <ul class="contact-list"><li><b>Main office</b><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li><li><b>24/7 emergency</b><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li></ul></div>'''
 
@@ -385,7 +385,7 @@ def service_page(s):
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="{"#pm-quote" if s.startswith("elevator-pit") else "/contact/#quote"}">{"Get an Elevator Pit Quote" if s.startswith("elevator-pit") else "Get a Free Quote"}</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
 <article class="prose"><p class="answer">{esc(d["answer"])}</p>{reviewed_line()}{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
-<aside class="side">{quote_aside()}<div><h3>Related services</h3><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
+<aside class="side">{quote_aside()}<div><h2 class="h3">Related services</h2><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
 <div class="grid g3">{photos}</div></div></section>
@@ -448,7 +448,7 @@ def services_hub():
     items = {"@context": "https://schema.org", "@type": "ItemList", "name": "Living Water services",
              "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/{s}/", "name": SERVICES[s]["nav"]} for i, s in enumerate(SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL)]}
     page("/power-washing-services/", "Power Washing Services Toronto & GTA | Living Water",
-         "Residential, commercial and industrial power washing, sandblasting, brick cleaning, graffiti, efflorescence and elevator pit services across Toronto & the GTA.",
+         "Residential, commercial and industrial power washing, sandblasting, brick cleaning, graffiti, efflorescence and elevator pit services across the GTA.",
          body, schema=[items, crumbs_ld(trail), faq_ld(GENERAL_FAQ)], preload="rooftop-terrace-pressure-washing-crew", priority="0.9")
 
 # ------------------------------------------------------------ ABOUT
@@ -461,6 +461,7 @@ def about():
 <div><p class="answer">{LEGAL} is a Toronto-area pressure washing, sandblasting and surface restoration company founded in 1998. It has cleaned 7,500+ residential, commercial, industrial and heritage properties, and is $5M insured, WSIB covered and ISSA-GBAC certified.</p>
 <p>When your property needs expert care, you want a team that shows up prepared and delivers results that last. That is what Living Water has done for more than 28 years. From residential driveways to heritage building facades, we bring the same precision and professionalism to every job.</p>
 <p>Our clients — homeowners, business owners, property managers and heritage conservators — trust us with their most valuable assets, and we take that responsibility seriously.</p>
+<p>See our <a href="/gallery/">before-and-after gallery</a>, read <a href="/reviews/">customer reviews</a>, browse the <a href="/industries/">industries we serve</a>, or get answers in our <a href="/faq/">FAQ</a> and <a href="/glossary/">glossary</a>.</p>
 <h2>What sets us apart</h2>
 <ul class="ticks"><li><strong>Honesty</strong> in everything we say and quote</li><li><strong>Expert technique</strong> with top-quality equipment matched to each surface</li><li><strong>Environmentally responsible</strong> methods that protect the spaces around your property</li><li><strong>Long-term relationships</strong> — many clients have been with us for decades</li></ul></div>
 <div>{img("estate-home-exterior-restoration", "(max-width:1000px) 100vw, 45vw")}<div style="margin-top:24px">{facts_block()}</div></div>
@@ -519,7 +520,7 @@ def service_areas():
 <section class="soft"><div class="wrap split"><div><h2>Every service, in every community</h2><ul class="ticks cols">{links}</ul></div><div>{facts_block()}</div></div></section>
 {faq_block(faqs, "Service area FAQ")}
 {cta_block()}'''
-    page("/service-areas/", "Service Areas | Pressure Washing Across the GTA | Living Water",
+    page("/service-areas/", "Service Areas | Pressure Washing Across the GTA",
          "Pressure washing, sandblasting and restoration in Toronto, Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Oshawa, Hamilton and more.",
          body, schema=[crumbs_ld(trail), faq_ld(faqs)], preload="brick-storefront-boom-lift-washing", priority="0.8")
 
@@ -576,13 +577,13 @@ def simple(path, title, desc, h1, html_body, trail_name, noindex=False, priority
 
 def legal():
     simple("/safety-policy/", "Health & Safety Policy | Living Water Pressure Wash Services",
-           "Living Water's health and safety commitment to employees, clients and the public on every job.",
+           "Living Water's health and safety commitment: WSIB coverage, $5M insurance, certified lift operators, site hazard assessments and safe chemical handling.",
            "Health &amp; Safety Policy", f'''
 <p class="answer">Living Water is committed to protecting our employees, clients and the public on every job we undertake. Safety is planned into every quote, not added afterwards.</p>
 <ul class="ticks"><li>Full WSIB coverage and $5M commercial general liability insurance</li><li>Certificate of Insurance and WSIB clearance supplied before work starts</li><li>Certified boom and scissor lift operators</li><li>Site-specific hazard assessment, containment and protection of people, plants and property</li><li>Proper handling and disposal of chemicals, oil and hazardous waste</li><li>ISSA-GBAC certified cleaning and disinfection practices</li></ul>
 <p>The policy applies to all employees, subcontractors and on-site personnel across all service divisions. To request the full Health &amp; Safety Policy document, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>''', "Safety Policy")
     simple("/privacy-policy/", "Privacy Policy | Living Water Pressure Wash Services",
-           "How Living Water Pressure Wash Services collects, uses and protects your personal information.",
+           "How Living Water Pressure Wash Services collects, uses and protects the personal information you share when requesting a quote or contacting us.",
            "Privacy Policy", f'''
 <h2>Who we are</h2><p>This website, {SITE}/, is operated by {LEGAL}</p>
 <h2>Information we collect</h2><p>When you request a quote we collect the details you provide — name, email, phone number, location and project information — so we can respond. Our web host may log standard technical data such as IP address and browser type for security.</p>

@@ -52,7 +52,7 @@ SERVICE_FACTS = {
 GUIDES_MORE = [
     dict(slug="winter-elevator-pit-checklist",
          title="Winter Elevator Pit Checklist for Condo & Property Managers",
-         meta="A winter checklist for condo boards and property managers: how salt, meltwater and thaws affect elevator pits, what to check monthly, and when to book a cleaning.",
+         meta="A winter elevator pit checklist for condo boards and property managers: salt, meltwater and thaws, monthly checks, and when to book.",
          hero="elevator-pit-cleaning-toronto", related=["elevator-pit-cleaning", "elevator-pit-water-removal"],
          answer="In winter, condo and property managers should ask their elevator contractor to report pit conditions at every maintenance visit, watch for water, salt residue, odours and debris, keep entrance matting and sill areas clean to limit meltwater, test sump pumps before the thaw, and book a professional pit cleaning after winter — or immediately after any flood, leak or sewage backup.",
          body="""
@@ -78,7 +78,7 @@ GUIDES_MORE = [
                ("Can our cleaning staff clean the elevator pit?", "Entering a pit requires the elevator to be taken out of service and secured by the elevator contractor, so pit cleaning should be coordinated with them and done by trained contractors.")]),
     dict(slug="interlock-cleaning-and-resanding",
          title="How to Clean and Re-Sand Interlock Pavers",
-         meta="How professionals clean interlock driveways and patios, remove moss, weeds and stains, re-sand joints with polymeric sand and decide whether to seal.",
+         meta="How pros clean interlock driveways and patios, remove moss and stains, re-sand joints with polymeric sand and decide whether to seal.",
          hero="garden-stone-pathway-cleaned", related=["residential-power-washing", "efflorescence-removal"],
          answer="Interlock is cleaned by pre-treating stains and organic growth, washing with a rotary surface cleaner (not a bare wand) to avoid stripes, flushing out old joint sand and debris, letting the pavers dry completely, then sweeping new polymeric sand into the joints and activating it with a light mist. Sealing is optional and protects colour and helps resist stains.",
          body="""
@@ -93,7 +93,7 @@ GUIDES_MORE = [
                ("Should I seal my interlock?", "Sealing is optional. It can enrich colour and make stains easier to clean, but it must be applied to clean, dry pavers with no efflorescence.")]),
     dict(slug="remove-paint-from-brick",
          title="How to Remove Paint from Brick Without Damaging It",
-         meta="Safe ways to strip paint from interior and exterior brick — chemical strippers, low-pressure rinsing and micro blasting — and the methods that ruin brick.",
+         meta="Safe ways to strip paint from interior and exterior brick — chemical strippers, low-pressure rinsing and micro blasting — and what to avoid.",
          hero="painted-building-paint-removal-after", related=["brick-cleaning-paint-removal", "historical-remediation", "sandblasting-services"],
          answer="The safest way to remove paint from brick is a chemical paint stripper matched to the coating, left to dwell (often under a cover), then removed with low-pressure rinsing or scraping — with gentle micro or soda blasting only for stubborn residue. Avoid high-pressure washing and coarse sandblasting, which strip the brick's fired face and lead to water damage.",
          body="""
@@ -116,7 +116,7 @@ GUIDES_MORE = [
                ("Is it better to repaint brick instead?", "Painted brick needs repainting every several years and can trap moisture. Stripping restores a low-maintenance, breathable surface.")]),
     dict(slug="graffiti-removal-guide",
          title="Graffiti Removal Guide: Brick, Concrete, Stone & Metal",
-         meta="How graffiti is removed from brick, concrete, stone, metal and glass without ghosting or damage, why speed matters, and how anti-graffiti coatings work.",
+         meta="How graffiti is removed from brick, concrete, stone, metal and glass without ghosting or damage, and how anti-graffiti coatings work.",
          hero="graffiti-removal-house-wall", related=["graffiti-removal", "brick-cleaning-paint-removal"],
          answer="Graffiti is best removed quickly with a remover matched to the paint and the surface — solvent-based removers for spray paint and markers, followed by controlled low-to-medium pressure rinsing — rather than high pressure alone, which drives paint deeper into porous brick and concrete. Anti-graffiti coatings make future tags much easier to remove.",
          body="""
@@ -137,7 +137,7 @@ GUIDES_MORE = [
                ("Who removes graffiti on private property in Toronto?", "Property owners are generally responsible for removing graffiti from their buildings; check your municipality's current graffiti bylaw for timelines.")]),
     dict(slug="pressure-washing-cost-factors",
          title="What Affects the Cost of Pressure Washing in Toronto?",
-         meta="The factors that set the price of pressure washing, sandblasting and restoration in the GTA — size, surface, staining, access, method, sealing and scheduling.",
+         meta="What sets the price of pressure washing, sandblasting and restoration in the GTA: size, surface, staining, access, method and timing.",
          hero="living-water-van-residential-pressure-washing", related=["residential-power-washing", "commercial-power-washing", "sandblasting-services"],
          answer="Pressure washing prices in the GTA depend mainly on the area and type of surface, how heavy the staining or growth is, the cleaning method required (soft wash, hot water, chemical or blasting), access and height (ladders, lifts, containment), extras like re-sanding or sealing, and scheduling such as after-hours or emergency work. A site-specific, fixed written quote is the only reliable number.",
          body="""
@@ -161,7 +161,7 @@ GUIDES_MORE = [
                ("Can I get a quote from photos?", "Yes — for most straightforward residential work we can quote from photos and dimensions. Commercial, industrial and restoration projects usually need a site visit.")]),
     dict(slug="fire-smoke-damage-first-steps",
          title="After a Fire: First Steps for Property Owners",
-         meta="What to do in the first hours and days after a house or commercial fire — safety, insurance, securing the property, and smoke and soot clean-up.",
+         meta="What to do in the first hours and days after a home or commercial fire: safety, insurance, securing the property, smoke and soot clean-up.",
          hero="heritage-building-scaffolding-restoration", related=["disaster-restoration"],
          answer="After a fire, wait until the fire department confirms the building is safe to enter, contact your insurance company right away, document the damage with photos before anything is moved, secure the property against weather and entry, and start professional smoke, soot and water clean-up quickly — soot and firefighting water keep causing damage the longer they sit.",
          body="""

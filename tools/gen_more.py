@@ -190,4 +190,4 @@ def html_sitemap():
     cols = "".join(f'<div><h2 style="font-size:1.3rem">{n}</h2><ul class="ticks">{"".join(f"<li><a href={chr(34)}{u}{chr(34)}>{esc(t)}</a></li>" for t, u in links)}</ul></div>' for n, links in groups)
     body = f"""<section class="page-hero"><div class="wrap">{crumbs_html(trail)}<h1>Sitemap</h1></div></section>
 <section><div class="wrap grid g2">{cols}</div></section>"""
-    page(path, "Sitemap | Living Water Pressure Wash Services", "Every page on the Living Water website: services, service areas, guides and company information.", body, schema=[crumbs_ld(trail)], priority="0.3", crumbs=True)
+    page(path, "Sitemap | Living Water Pressure Wash Services", "Every page on the Living Water website: pressure washing services, 19 GTA service areas, expert guides, FAQ, glossary and company information.", body, schema=[crumbs_ld(trail)], priority="0.3", crumbs=True)
