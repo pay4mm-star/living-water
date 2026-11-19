@@ -75,7 +75,7 @@ def faq_page():
     path = "/faq/"
     trail = [("Home", "/"), ("FAQ", path)]
     groups = [("General", GENERAL_FAQ)]
-    for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL:
+    for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL + SERVICE_ORDER_SUB:
         groups.append((SERVICES[s]["nav"], SERVICES[s]["faqs"]))
     allq = []
     sections = ""
@@ -183,7 +183,7 @@ def glossary_page():
 def html_sitemap():
     path = "/sitemap/"
     trail = [("Home", "/"), ("Sitemap", path)]
-    groups = [("Services", [(SERVICES[s]["nav"], f"/{s}/") for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL] + [("Elevator Pit Water Removal", "/elevator-pit-water-removal/")]),
+    groups = [("Services", [(SERVICES[s]["nav"], f"/{s}/") for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL] + [("Elevator Pit Water Removal", "/elevator-pit-water-removal/")] + [(SERVICES[s]["nav"], f"/{s}/") for s in SERVICE_ORDER_SUB]),
               ("Service areas", [("All service areas", "/service-areas/")] + [(c["name"], f"/pressure-washing-{c['slug']}/") for c in CITIES]),
               ("Guides", [("All guides", "/guides/")] + [(g["title"], f"/guides/{g['slug']}/") for g in GUIDES]),
               ("Company", [("About", "/about-us/"), ("Reviews", "/reviews/"), ("Industries", "/industries/"), ("Gallery", "/gallery/"), ("FAQ", "/faq/"), ("Glossary", "/glossary/"), ("Contact", "/contact/"), ("Safety policy", "/safety-policy/"), ("Privacy policy", "/privacy-policy/")])]

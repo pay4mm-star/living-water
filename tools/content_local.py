@@ -168,7 +168,7 @@ GUIDES = [
                ("Is soda blasting safe for brick?", "Soda is much softer than sand and is often suitable for brick and stone, but pressure and nozzle distance still matter, and sodium residue must be rinsed well."),
                ("Does dustless blasting create dust?", "It greatly reduces airborne dust by wetting the media, making it better suited to occupied or urban sites.")]),
     dict(slug="how-often-to-pressure-wash-ontario",
-         title="How Often Should You Pressure Wash in Ontario? A Seasonal Schedule",
+         title="How Often Should You Pressure Wash in Ontario?",
          meta="A seasonal pressure washing schedule for GTA homes and commercial properties: what to clean in spring, summer and fall, and how often.",
          hero="living-water-van-residential-pressure-washing", related=["residential-power-washing", "commercial-power-washing"],
          answer="Most GTA homes should have driveways, walkways and interlock pressure washed once a year — ideally in spring after road salt season — with house siding and roofs soft washed every one to three years as algae appears, and decks cleaned annually before sealing. Commercial entrances, sidewalks and parking areas typically need cleaning monthly to quarterly depending on foot traffic.",

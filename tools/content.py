@@ -291,6 +291,7 @@ svc("elevator-pit-cleaning",
 <ul class="ticks"><li><strong>Number of elevators</strong> and pits per building — multi-pit and multi-building programs are priced together</li><li><strong>Condition</strong> — routine debris versus standing water, oil, sludge or sewage</li><li><strong>Waste disposal</strong> — oily or contaminated water and material must be disposed of properly</li><li><strong>Pit size and depth</strong>, and access for pumps and equipment</li><li><strong>Timing</strong> — overnight, weekend or 24/7 emergency response</li><li><strong>Extras</strong> — pit painting, crack repair or deodorizing</li></ul>
 <h2>Elevator pit cleaning across the GTA</h2>
 <p>We clean elevator pits in condominium towers and commercial buildings across <a href="/pressure-washing-toronto/">downtown Toronto</a>, <a href="/pressure-washing-north-york/">North York</a> along the Yonge corridor, <a href="/pressure-washing-etobicoke/">Etobicoke</a>'s Humber Bay Shores, <a href="/pressure-washing-scarborough/">Scarborough</a>, <a href="/pressure-washing-mississauga/">Mississauga</a> City Centre, <a href="/pressure-washing-vaughan/">Vaughan</a> Metropolitan Centre, <a href="/pressure-washing-markham/">Markham</a>, <a href="/pressure-washing-richmond-hill/">Richmond Hill</a>, <a href="/pressure-washing-oakville/">Oakville</a>, <a href="/pressure-washing-burlington/">Burlington</a> and <a href="/pressure-washing-hamilton/">Hamilton</a>.</p>
+<p>Many buildings pair pit cleaning with a spring <a href="/parking-garage-cleaning/">parking garage wash</a> to remove the winter's road salt from slabs, ramps and drains in the same visit.</p>
 <p><strong>Water in a pit right now?</strong> See <a href="/elevator-pit-water-removal/">emergency elevator pit water removal</a> or call <a href="tel:+1-647-833-4343">(647) 833-4343</a>, 24/7.</p>
 """,
     photos=["elevator-pit-cleaning-toronto", "elevator-pit-pressure-washing", "elevator-pit-buffer-cleaning", "elevator-pit-springs-cleaned", "condo-column-pressure-washing", "commercial-building-exterior-washing"],
@@ -301,6 +302,7 @@ svc("elevator-pit-cleaning",
           ("Do you provide insurance and WSIB documents?", "Yes. We send our Certificate of Insurance ($5M commercial general liability) and WSIB clearance with every quote."),
           ("Can you clean pits in multiple buildings?", "Yes. We set up one-time, seasonal or recurring programs across property management portfolios in Toronto and the GTA."),
           ("What causes water in an elevator pit?", "Common causes are groundwater seepage, failed sump pumps, meltwater and salt slush tracked in during winter, sprinkler discharge, burst pipes and floor-washing water entering the hoistway.")],
+    related=["parking-garage-cleaning", "elevator-pit-water-removal", "commercial-power-washing"],
     service_type="Elevator pit cleaning")
 
 svc("elevator-pit-water-removal",
@@ -435,3 +437,147 @@ GALLERY_PAIRS = [
 
 # Spring campaign (switch on in March): SEASONAL = dict(on=True, text="🌱 Spring cleaning season: driveways, interlock & salt damage clean-up", link="/residential-power-washing/", cta="Get a quote")
 SEASONAL = dict(on=True, text="❄ Winter booking now open: elevator pit cleaning for condos & commercial buildings", link="/elevator-pit-cleaning/", cta="Book now")
+
+# ---------------------------------------------------------------- focused sub-services (high-volume search intents)
+svc("driveway-interlock-cleaning", group="sub", parent="residential-power-washing", nav="Driveway & Interlock Cleaning", short="Driveways",
+    title="Driveway & Interlock Cleaning Toronto & GTA | Living Water",
+    desc="Driveway, interlock and paver cleaning in Toronto & the GTA: moss, oil and salt stain removal, re-sanding with polymeric sand and optional sealing.",
+    h1="Driveway & Interlock Cleaning in Toronto & the GTA",
+    sub="Moss, oil stains, tire marks and winter salt lifted from driveways, walkways and patios — then re-sanded so weeds stay out.",
+    hero="estate-home-driveway-washing", card="garden-stone-pathway-cleaned",
+    card_text="Moss, oil and salt stains removed, joints re-sanded with polymeric sand.",
+    answer="Living Water cleans concrete driveways, interlock, pavers and stone walkways across Toronto and the GTA using rotary surface cleaners and hot water for an even, stripe-free finish, pre-treats oil and rust stains, flushes out weedy joints, re-sands with polymeric sand and can seal the surface once dry.",
+    body="""
+<p>Driveways take the worst of Ontario weather: road salt and slush all winter, oil drips, tire marks, rust from furniture and planters, and moss and weeds wherever joint sand has washed out. A professional clean restores the colour and helps the surface last longer.</p>
+<h2>What's included</h2>
+<ul class="ticks cols"><li>Concrete, asphalt-edge and exposed-aggregate driveways</li><li>Interlock and paver driveways, walkways and patios</li><li>Natural stone and flagstone paths</li><li>Oil, rust and tire mark pre-treatment</li><li>Moss, algae and weed removal from joints</li><li>Winter salt and calcium residue removal</li><li>Re-sanding with polymeric sand</li><li>Optional sealing once fully dry</li><li>Removal of old, failing sealer</li><li>Efflorescence treatment on new pavers</li></ul>
+<h2>Why a surface cleaner matters</h2>
+<p>A bare pressure-washer wand leaves stripes and can erode the paver face. We use rotary surface cleaners with hot water, which clean evenly at a safe distance and lift oil far better than cold water.</p>
+<h2>Re-sanding and sealing</h2>
+<p>Cleaning flushes out old joint sand along with the dirt. Re-sanding with polymeric sand locks pavers in place and resists weeds and ants. Sealing is optional — it enriches colour and makes stains easier to clean — and is applied only to clean, dry pavers with no efflorescence.</p>
+<h2>Best time to book</h2>
+<p>Spring is the most popular time, right after salt season. Late summer and early fall are ideal for sealing because pavers dry quickly.</p>
+""",
+    photos=["estate-home-driveway-washing", "garden-stone-pathway-cleaned", "slate-pathway-cleaning-before", "stone-patio-cleaning-before|stone-patio-cleaning-after", "concrete-surface-cleaning-residue-removal"],
+    faqs=[("How often should a driveway be pressure washed?", "Most GTA driveways benefit from a clean once a year, ideally in spring after road salt season."),
+          ("Can oil stains be removed from interlock?", "Fresh and moderate oil stains usually come out with degreaser and hot water. Old, deep stains can lighten significantly but may not disappear completely on porous pavers."),
+          ("Will pressure washing damage my interlock?", "Not with a surface cleaner at the right pressure. We then replace the joint sand that washing removes."),
+          ("Should I seal my interlock driveway?", "Sealing is optional. It protects colour and resists stains, but needs clean, dry pavers and periodic re-application.")],
+    service_type="Driveway and interlock cleaning")
+
+svc("house-washing", group="sub", parent="residential-power-washing", nav="House Washing (Siding, Brick & Stucco)", short="House Washing",
+    title="House Washing & Siding Cleaning Toronto | Living Water",
+    desc="Soft-wash house washing for vinyl siding, aluminium, brick, stone and stucco across Toronto & the GTA — algae, mildew and grime removed safely.",
+    h1="House Washing: Siding, Brick, Stone & Stucco",
+    sub="Green algae, black mildew, spider webs and road grime removed from your home's exterior with low-pressure soft washing.",
+    hero="century-home-pressure-washing", card="custom-home-exterior-washing",
+    card_text="Soft washing for siding, brick, stone and stucco — no damage, longer-lasting results.",
+    answer="Living Water washes house exteriors across Toronto and the GTA — vinyl and aluminium siding, brick, stone, stucco, soffits, fascia and trim — using low-pressure soft washing with biodegradable cleaners that kill algae and mildew instead of blasting them, protecting siding, mortar and window seals.",
+    body="""
+<p>Shaded walls turn green with algae, north faces collect black mildew, and every home picks up road dust and spider webs. High-pressure washing can crack siding, force water behind panels and wash out mortar — so we soft wash.</p>
+<h2>Surfaces we wash</h2>
+<ul class="ticks cols"><li>Vinyl and aluminium siding</li><li>Brick and natural stone</li><li>Stucco and EIFS</li><li>Soffits, fascia and trim</li><li>Gutter exteriors (tiger-striping)</li><li>Windows and frames</li><li>Porches, columns and railings</li><li>Garage doors</li></ul>
+<h2>How soft washing works</h2>
+<ol class="ticks"><li>Plants, fixtures and outlets are protected and pre-wet.</li><li>A biodegradable cleaning solution is applied at low pressure.</li><li>It dwells to kill algae, mould and mildew at the root.</li><li>Surfaces are gently rinsed top to bottom.</li></ol>
+<p>Because the growth is killed rather than knocked off, results typically last much longer than a pressure-only wash.</p>
+""",
+    photos=["century-home-pressure-washing", "custom-home-exterior-washing", "modern-stone-home-exterior-clean", "brick-masonry-house-cleaning-before|brick-masonry-house-cleaning-after", "stone-house-exterior-cleaning"],
+    faqs=[("Is soft washing safe for vinyl siding?", "Yes. Soft washing uses low pressure, so it won't crack panels or force water behind them."),
+          ("How long does a house wash last?", "Because soft washing kills algae and mildew, homes typically stay clean considerably longer than with pressure alone; shaded or wooded lots need cleaning more often."),
+          ("Do you clean brick and stucco too?", "Yes — brick, stone and stucco are washed with methods suited to each material.")],
+    service_type="House washing")
+
+svc("roof-cleaning", group="sub", parent="residential-power-washing", nav="Roof Cleaning & Moss Removal", short="Roofs",
+    title="Roof Cleaning & Moss Removal Toronto & GTA | Living Water",
+    desc="Roof cleaning and moss removal in Toronto & the GTA: soft washing for asphalt shingles, cedar shakes, ceramic tile and metal roofs. No high pressure.",
+    h1="Roof Cleaning & Moss Removal",
+    sub="Moss, algae streaks and lichen removed from asphalt, cedar, ceramic and metal roofs — with low-pressure soft washing, never a high-pressure wand.",
+    hero="roof-moss-removal-soft-wash", card="roof-moss-washing-ladder",
+    card_text="Soft-wash moss and algae removal for shingle, cedar, ceramic and metal roofs.",
+    answer="Living Water removes moss, algae and lichen from asphalt shingle, cedar shake, ceramic tile and metal roofs across Toronto and the GTA using low-pressure soft washing with cleaners that kill growth at the root. High-pressure washing is not used on roofs because it strips shingle granules and splits cedar.",
+    body="""
+<p>Black streaks on shingles are algae; green cushions are moss. Both hold moisture against the roof, lift shingle edges and speed up wear — especially on north-facing and tree-shaded slopes common across the GTA.</p>
+<h2>Roofs we clean</h2>
+<ul class="ticks cols"><li>Asphalt shingle roofs</li><li>Cedar shake and shingle roofs</li><li>Ceramic and clay tile</li><li>Metal roofs</li><li>Flat roofs and rooftop terraces</li><li>Gutters and downspouts</li></ul>
+<h2>Why we never pressure wash shingles</h2>
+<ul class="ticks"><li>High pressure blasts off protective granules, shortening roof life.</li><li>It can lift and break shingles and force water under them.</li><li>Cedar shakes split and fur when hit with high pressure.</li></ul>
+<h2>Our soft-wash process</h2>
+<p>Treatment is applied at low pressure, dwells to kill moss and algae, and the dead growth is gently rinsed or left to weather away. Landscaping is pre-wet and protected, and gutters are cleared of debris.</p>
+""",
+    photos=["roof-moss-removal-soft-wash", "roof-moss-washing-ladder", "rooftop-concrete-deck-pressure-washing"],
+    faqs=[("Does moss damage a roof?", "Yes. Moss holds moisture, lifts shingle edges and can let water in, shortening the life of the roof."),
+          ("Is roof soft washing safe for shingles?", "Yes. Low pressure and the right cleaner remove growth without stripping granules."),
+          ("When is the best time to clean a roof?", "Spring and fall, when moss is actively growing and temperatures are above freezing.")],
+    service_type="Roof cleaning")
+
+svc("deck-fence-cleaning", group="sub", parent="residential-power-washing", nav="Deck & Fence Cleaning", short="Decks",
+    title="Deck & Fence Cleaning Toronto & GTA | Living Water",
+    desc="Deck and fence cleaning in Toronto & the GTA: wood, composite and PVC washed at safe pressure to remove grey, mildew and stains before staining.",
+    h1="Deck & Fence Cleaning",
+    sub="Grey, weathered wood, mildew and stains removed from decks, fences, railings and pergolas — ready for stain or sealer.",
+    hero="rooftop-terrace-pressure-washing-crew", card="rooftop-terrace-pressure-washing-crew",
+    card_text="Wood, composite and PVC decks and fences cleaned at safe pressure, ready to stain.",
+    answer="Living Water cleans wood, composite and PVC decks, fences, railings and pergolas across Toronto and the GTA using low pressure and wood-safe cleaners that remove greying, mildew and stains without raising or furring the grain, leaving the wood ready for stain or sealer.",
+    body="""
+<p>Sun and rain turn wood grey, shade grows mildew, and composite boards collect mould and pollen in their texture. Too much pressure gouges and furs wood, so decks and fences need a gentler approach than concrete.</p>
+<h2>What we clean</h2>
+<ul class="ticks cols"><li>Pressure-treated and cedar decks</li><li>Composite and PVC decking</li><li>Wood, vinyl and composite fences</li><li>Railings, stairs and pergolas</li><li>Rooftop terraces and balconies</li><li>Patio furniture moved and replaced</li></ul>
+<h2>Our approach</h2>
+<ol class="ticks"><li>Apply a wood-safe cleaner to lift grey fibres, mildew and stains.</li><li>Rinse at low pressure, following the grain.</li><li>Let the wood dry fully before any stain or sealer.</li></ol>
+<p>Cleaning before staining is the most important step for a stain that soaks in evenly and lasts.</p>
+""",
+    photos=["rooftop-terrace-pressure-washing-crew", "rooftop-concrete-deck-pressure-washing", "wind-damage-deck-tree"],
+    faqs=[("Should a deck be cleaned before staining?", "Yes. Cleaning removes grey fibres, mildew and old residue so new stain penetrates evenly."),
+          ("Can composite decks be pressure washed?", "Yes, at low pressure with a suitable cleaner. Check your manufacturer's guidelines."),
+          ("How long before I can stain after cleaning?", "Wood usually needs 24–48 hours of dry weather; the stain manufacturer's instructions take priority.")],
+    service_type="Deck and fence cleaning")
+
+svc("paver-stone-sealing", group="sub", parent="stone-restoration", nav="Paver & Stone Sealing", short="Sealing",
+    title="Paver & Natural Stone Sealing Toronto & GTA | Living Water",
+    desc="Interlock, paver, natural stone and pool coping sealing in the GTA: deep clean, efflorescence check, then breathable sealer for colour and stain protection.",
+    h1="Paver, Interlock & Natural Stone Sealing",
+    sub="Protect colour and resist stains on interlock, natural stone patios and pool coping — sealed only after a proper clean and dry-out.",
+    hero="stone-patio-cleaning-after", card="stone-patio-cleaning-after",
+    card_text="Clean, dry, then seal — interlock, natural stone and pool coping protected.",
+    answer="Living Water seals interlock, concrete pavers, natural stone patios and pool coping across Toronto and the GTA. Surfaces are deep cleaned, checked for efflorescence, re-sanded and fully dried before a breathable sealer is applied, which enriches colour and makes oil, food and organic stains easier to clean.",
+    body="""
+<p>Sealing is the last step of a good clean, not a shortcut around one. Sealer applied over dirt, efflorescence or damp pavers traps them — leading to white haze, peeling and blotchy colour.</p>
+<h2>What we seal</h2>
+<ul class="ticks cols"><li>Interlock driveways and walkways</li><li>Concrete paver patios</li><li>Natural stone and flagstone</li><li>Pool decks and coping</li><li>Precast steps and caps</li><li>Removal of old, failing sealer</li></ul>
+<h2>Our process</h2>
+<ol class="ticks"><li><strong>Deep clean</strong> and stain pre-treatment</li><li><strong>Efflorescence check</strong> and treatment if present</li><li><strong>Re-sand</strong> joints with polymeric sand</li><li><strong>Dry-out</strong> — sealer goes on dry surfaces only</li><li><strong>Seal</strong> with a breathable sealer suited to the material and the finish you want</li></ol>
+<h2>Is sealing worth it?</h2>
+<p>For driveways, pool decks and light-coloured stone, sealing makes cleaning easier and keeps colour richer. For some natural stone a breathable penetrating sealer is better than a film-forming one. We'll tell you honestly whether your surface benefits.</p>
+""",
+    photos=["stone-patio-cleaning-before|stone-patio-cleaning-after", "garden-stone-pathway-cleaned", "precast-stone-coping-cleaning"],
+    faqs=[("How long does paver sealer last?", "It depends on the product, traffic and sun exposure; most sealed surfaces need re-application every few years."),
+          ("Can you seal over efflorescence?", "No. Efflorescence must be removed first, or the sealer traps it and turns cloudy."),
+          ("Will sealing make pavers slippery?", "Some glossy sealers can; matte and penetrating sealers, or added anti-slip additive, keep traction on steps and pool decks.")],
+    service_type="Paver and stone sealing")
+
+svc("parking-garage-cleaning", group="sub", parent="commercial-power-washing", nav="Parking Garage Cleaning", short="Garages",
+    title="Parking Garage Cleaning Toronto & GTA | Condos & Commercial",
+    desc="Underground parking garage washing for condos and commercial buildings in the GTA: winter salt, oil and grime removed, drains flushed, after hours.",
+    h1="Parking Garage Cleaning for Condos & Commercial Buildings",
+    sub="Winter salt, sand, oil and grime washed out of underground and above-ground garages — scheduled with your residents and tenants in mind.",
+    hero="parking-lot-pressure-washing-crew", card="parking-lot-pressure-washing-crew",
+    card_text="Spring salt clean-up, oil and grime removal, drains flushed — for condos and commercial garages.",
+    answer="Living Water power washes underground and above-ground parking garages for condominium corporations, property managers and commercial buildings across Toronto and the GTA, removing winter road salt, sand, oil and tire grime from slabs, ramps, curbs and walls, flushing drains and working level by level after hours to keep the garage usable.",
+    body="""
+<p>Road salt carried in on tires and slush sits on garage slabs all winter. Left in place, chlorides soak into concrete and attack the reinforcing steel — one of the main causes of costly garage repairs. A thorough spring wash removes salt before it does more damage.</p>
+<h2>What's included</h2>
+<ul class="ticks cols"><li>Hot-water washing of slabs, ramps and drive aisles</li><li>Salt, sand and grit removal</li><li>Oil and tire mark treatment</li><li>Curbs, columns and lower walls</li><li>Trench and floor drain flushing</li><li>Stairwells and vestibules</li><li>Elevator lobby and pit cleaning</li><li>Level-by-level scheduling and signage</li></ul>
+<h2>Built for property managers</h2>
+<ul class="ticks"><li>Certificate of Insurance ($5M CGL) and WSIB clearance with every quote</li><li>Overnight and weekend scheduling, one level or zone at a time</li><li>Before-and-after photos for the board and reserve-fund records</li><li>One contractor for garages and <a href="/elevator-pit-cleaning/">elevator pits</a></li></ul>
+<h2>When to wash a garage</h2>
+<p>Most buildings book a full wash in spring after salt season. High-traffic garages often add a fall wash or a mid-winter flush of entrances and ramps.</p>
+""",
+    photos=["parking-lot-pressure-washing-crew", "concrete-surface-cleaning-residue-removal", "commercial-building-exterior-washing", "condo-column-pressure-washing"],
+    faqs=[("How often should a condo parking garage be washed?", "At least once a year, usually in spring after road salt season. Busy garages often add a fall wash."),
+          ("Why is salt bad for parking garages?", "Chlorides from road salt soak into concrete and corrode the reinforcing steel, leading to spalling and expensive repairs."),
+          ("Can residents keep using the garage during cleaning?", "Yes. We work level by level or zone by zone, usually overnight or on weekends, with signage and notice templates for residents."),
+          ("Do you also clean elevator pits?", "Yes — many buildings book garage washing and elevator pit cleaning together.")],
+    related=["elevator-pit-cleaning", "commercial-power-washing", "elevator-pit-water-removal", "graffiti-removal"],
+    service_type="Parking garage cleaning")
+
+SERVICE_ORDER_SUB = ["driveway-interlock-cleaning", "house-washing", "roof-cleaning", "deck-fence-cleaning", "paver-stone-sealing", "parking-garage-cleaning"]

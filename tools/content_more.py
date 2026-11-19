@@ -34,6 +34,12 @@ INDUSTRIES = [
 
 # per service: (best for, methods, clients, availability)
 SERVICE_FACTS = {
+    "driveway-interlock-cleaning": ("Concrete and interlock driveways, walkways, patios, stone paths", "Hot-water surface cleaning, stain pre-treatment, polymeric re-sanding, sealing", "Homeowners, HOAs", "Spring and fall most popular; booked within 2–5 days"),
+    "house-washing": ("Vinyl and aluminium siding, brick, stone, stucco, soffits and trim", "Low-pressure soft washing with biodegradable cleaners", "Homeowners", "Spring to fall"),
+    "roof-cleaning": ("Asphalt shingle, cedar, ceramic tile, metal and flat roofs", "Soft washing — never high pressure on shingles", "Homeowners, property managers", "Spring and fall"),
+    "deck-fence-cleaning": ("Wood, composite and PVC decks, fences, railings and pergolas", "Wood-safe cleaners, low-pressure rinse along the grain", "Homeowners", "Spring and summer, before staining"),
+    "paver-stone-sealing": ("Interlock, pavers, natural stone, pool decks and coping", "Deep clean, efflorescence check, re-sand, breathable sealer", "Homeowners, builders", "Dry weather, late spring to early fall"),
+    "parking-garage-cleaning": ("Underground and above-ground garages, ramps, drains", "Hot-water washing, salt and oil removal, drain flushing", "Condo boards, property managers, commercial owners", "Overnight and weekend, level by level"),
     "residential-power-washing": ("Driveways, interlock, patios, siding, roofs, decks, brick and stone", "Soft washing, hot-water pressure washing, surface cleaners, sealing", "Homeowners, HOAs", "Usually booked within 2–5 days"),
     "commercial-power-washing": ("Plazas, storefronts, sidewalks, parking lots and garages, schools, restaurants", "Hot-water pressure washing, degreasing, gum and graffiti removal", "Property managers, condo boards, businesses", "Overnight and weekend scheduling; 24/7 emergency line"),
     "industrial-power-washing": ("Plants, silos and tanks, food facilities, bridges, heavy equipment", "High-pressure washing, hydro jetting, degreasing, sanitation", "Manufacturers, plants, municipalities", "24/7 emergency response"),

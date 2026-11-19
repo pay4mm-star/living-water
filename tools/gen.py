@@ -84,7 +84,7 @@ BUSINESS = {
     "slogan": "Trusted surface restoration, done with integrity.",
     "priceRange": "$$",
     "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Pressure washing and restoration services",
-                        "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": SERVICES[s]["nav"], "url": f"{SITE}/{s}/"}} for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL]},
+                        "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": SERVICES[s]["nav"], "url": f"{SITE}/{s}/"}} for s in SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL + SERVICE_ORDER_SUB]},
 }
 WEBSITE = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME, "publisher": {"@id": ORG_ID}, "inLanguage": "en-CA"}
 
@@ -113,7 +113,7 @@ def nav_html(current):
 <ul>
 <li>{a("/", "Home")}</li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-services">Services ▾</button>
-<ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised Cleaning</li>{spec}</ul></li>
+<ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised Cleaning</li>{spec}<li class="sub-label">Popular</li>{"".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_SUB)}</ul></li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
 <ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
 <li>{a("/guides/", "Guides")}</li>
@@ -133,7 +133,7 @@ def footer_html():
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul>{core}</ul></div>
-<div><h3>Specialised</h3><ul>{spec}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Specialised</h3><ul>{spec}{"".join(f'<li><a href="/{x}/">{SERVICES[x]["nav"]}</a></li>' for x in SERVICE_ORDER_SUB)}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
 <div><h3>Service Areas</h3><ul>{"".join(f'<li><a href="/pressure-washing-{c["slug"]}/">{c["name"]}</a></li>' for c in CITIES)}<li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li>
@@ -190,6 +190,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="en-ca" href="{canonical}"><link rel="alternate" hreflang="x-default" href="{canonical}">
 <meta name="robots" content="{robots}">
 <meta name="geo.region" content="CA-ON"><meta name="geo.placename" content="Toronto">
 <meta property="og:type" content="{og_type}"><meta property="og:locale" content="en_CA"><meta property="og:site_name" content="{NAME}">
@@ -369,15 +370,23 @@ def guide_aside(s):
     if not gs: return ""
     return '<div><h3>Expert guides</h3><nav class="related" aria-label="Guides">' + "".join(f'<a href="/guides/{g["slug"]}/">{esc(g["title"])}</a>' for g in gs) + "</nav></div>"
 
+def sub_cards(s):
+    kids = [x for x in SERVICE_ORDER_SUB if SERVICES[x].get("parent") == s]
+    if not kids: return ""
+    return f'<section><div class="wrap"><div class="section-head"><span class="pill light">Popular</span><h2>Popular {esc(SERVICES[s]["short"].lower())} services</h2></div>{service_cards(kids)}</div></section>'
+
 def service_page(s):
     d = SERVICES[s]
-    group = "Specialised Cleaning" if d["group"] == "special" else "Services"
-    trail = [("Home", "/"), ("Services", "/power-washing-services/"), (d["nav"], f"/{s}/")]
+    group = {"special": "Specialised Cleaning", "sub": "Popular Service"}.get(d["group"], "Services")
+    trail = [("Home", "/"), ("Services", "/power-washing-services/")] + ([(SERVICES[d["parent"]]["nav"], f"/{d['parent']}/")] if d.get("parent") else []) + [(d["nav"], f"/{s}/")]
     photos = "".join(photo(p) for p in d["photos"])
-    pool = SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL
+    pool = SERVICE_ORDER_CORE + SERVICE_ORDER_SPECIAL + SERVICE_ORDER_SUB
     related = [x for x in pool if x != s][:]
+    fam = [x for x in pool if x != s and (SERVICES[x].get("parent") == s or x == d.get("parent") or (d.get("parent") and SERVICES[x].get("parent") == d.get("parent")))]
+    fam = d.get("related", []) + [x for x in fam if x not in d.get("related", [])]
+    related = fam + [x for x in related if x not in fam]
     # prefer same group first
-    related = sorted(related, key=lambda x: SERVICES[x]["group"] != d["group"])[:5]
+    related = (related[:len(fam)] + sorted(related[len(fam):], key=lambda x: SERVICES[x]["group"] != d["group"]))[:6]
     rel_html = "".join(f'<a href="/{x}/">{SERVICES[x]["nav"]} →</a>' for x in related)
     body = f'''
 <section class="page-hero"><picture>{hero_img(d["hero"], "100vw", eager=True, alt="")}</picture>
@@ -387,6 +396,7 @@ def service_page(s):
 <article class="prose"><p class="answer">{esc(d["answer"])}</p>{reviewed_line()}{facts_table(s)}{toc(d["body"])}{d["body"]}</article>
 <aside class="side">{quote_aside()}<div><h2 class="h3">Related services</h2><nav class="related" aria-label="Related services">{rel_html}</nav></div>{guide_aside(s)}</aside>
 </div></section>
+{sub_cards(s)}
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Our Work</span><h2>{esc(d["nav"])} Projects</h2><p>Real photos from Living Water jobs across Toronto and the GTA.</p></div>
 <div class="grid g3">{photos}</div></div></section>
 {process_block() if d["group"]=="core" else ""}
@@ -426,6 +436,7 @@ def services_hub():
 <ul class="ticks"><li>Restores curb appeal and a fresh, clean appearance</li><li>Removes dirt, grime, algae, grease, stains and stubborn build-up</li><li>Helps protect exterior surfaces from premature wear</li><li>Improves safety by removing slippery contaminants</li><li>Uses professional equipment and surface-specific techniques</li><li>Saves time with efficient, consistent, reliable results</li></ul></div>
 <div>{img("parking-lot-pressure-washing-crew", "(max-width:1000px) 100vw, 45vw")}</div></div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Comprehensive Capabilities</span><h2>Pressure Washing, Restoration &amp; Sandblasting</h2></div>{service_cards(SERVICE_ORDER_CORE)}</div></section>
+<section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">Popular</span><h2>Most-Requested Cleaning Services</h2><p>Driveways, house washing, roofs, decks, sealing and parking garages.</p></div>{service_cards(SERVICE_ORDER_SUB)}</div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Specialised Cleaning</span><h2>Specialised Cleaning Services</h2><p>The right technique for each surface — elevator pits, efflorescence, graffiti, stone and metal.</p></div>{service_cards(SERVICE_ORDER_SPECIAL)}</div></section>
 <section><div class="wrap"><div class="section-head"><span class="pill light">Compare</span><h2>Which service do you need?</h2><p>A quick guide to matching the problem to the right method.</p></div>
 <div class="prose" style="max-width:1000px;margin:0 auto"><table>
