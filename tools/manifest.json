@@ -934,5 +934,2706 @@
    960,
    1280
   ]
+ },
+ "block-wall-steam-cleaning-1": {
+  "alt": "Steam cleaning a long block wall",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "block-wall-steam-cleaning-video-1-poster": {
+  "alt": "Block wall steam cleaning \u2014 video",
+  "w": 848,
+  "h": 480,
+  "sizes": [
+   320,
+   640
+  ]
+ },
+ "grey-paint-removal-from-a-brick-home-video-1-poster": {
+  "alt": "Grey paint removal from a brick home \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "grey-paint-removal-from-a-brick-home-video-2-poster": {
+  "alt": "Grey paint removal from a brick home \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "commercial-building-sign-cleaning-video-1-poster": {
+  "alt": "Commercial building sign cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "commercial-building-sign-cleaning-video-2-poster": {
+  "alt": "Commercial building sign cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "concrete-retaining-wall-blasting-before-1": {
+  "alt": "Concrete retaining wall blasting \u2014 before",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "concrete-retaining-wall-blasting-after-1": {
+  "alt": "Concrete retaining wall blasting \u2014 after",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "concrete-retaining-wall-blasting-video-1-poster": {
+  "alt": "Concrete retaining wall blasting \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "concrete-retaining-wall-blasting-video-2-poster": {
+  "alt": "Concrete retaining wall blasting \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "concrete-retaining-wall-blasting-video-3-poster": {
+  "alt": "Concrete retaining wall blasting \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-podium-column-cleaning-1": {
+  "alt": "Condo column before cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-podium-column-cleaning-2": {
+  "alt": "Condo column during cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-podium-column-cleaning-3": {
+  "alt": "Living Water van at a condo podium",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-podium-column-cleaning-video-1-poster": {
+  "alt": "Condo podium column cleaning \u2014 video",
+  "w": 720,
+  "h": 1280,
+  "sizes": [
+   320,
+   640
+  ]
+ },
+ "condo-elevator-pit-clean-out-before-1": {
+  "alt": "Condo elevator pit clean-out \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-after-1": {
+  "alt": "Condo elevator pit clean-out \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-before-2": {
+  "alt": "Condo elevator pit clean-out \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-after-2": {
+  "alt": "Condo elevator pit clean-out \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-1": {
+  "alt": "Elevator pit with sludge and rust before cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-2": {
+  "alt": "Elevator pit with hydraulic jacks before cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "condo-elevator-pit-clean-out-3": {
+  "alt": "Technician pressure washing an elevator pit floor",
+  "w": 3520,
+  "h": 1980,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "condo-elevator-pit-clean-out-4": {
+  "alt": "Flooded elevator pit with pump",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-5": {
+  "alt": "Elevator pit water pump-out",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "condo-elevator-pit-clean-out-video-1-poster": {
+  "alt": "Condo elevator pit clean-out \u2014 video",
+  "w": 720,
+  "h": 1280,
+  "sizes": [
+   320,
+   640
+  ]
+ },
+ "flagstone-garden-path-cleaning-before-1": {
+  "alt": "Flagstone garden path cleaning \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "flagstone-garden-path-cleaning-after-1": {
+  "alt": "Flagstone garden path cleaning \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "flagstone-garden-path-cleaning-1": {
+  "alt": "Flagstone garden path during cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "flagstone-garden-path-cleaning-2": {
+  "alt": "Flagstone path under pergola",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "industrial-plant-cleaning-at-night-1": {
+  "alt": "Night shift at an industrial plant",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "industrial-plant-cleaning-at-night-2": {
+  "alt": "Industrial plant cleaning at night",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "industrial-plant-cleaning-at-night-3": {
+  "alt": "Plant site with Living Water vans",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "industrial-plant-cleaning-at-night-4": {
+  "alt": "Industrial machinery degreasing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "limestone-mansion-facade-restoration-before-1": {
+  "alt": "Limestone mansion facade restoration \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-after-1": {
+  "alt": "Limestone mansion facade restoration \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-1": {
+  "alt": "Mansion entrance contained for blasting",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "limestone-mansion-facade-restoration-2": {
+  "alt": "Limestone mansion entrance during restoration",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-3": {
+  "alt": "Limestone mansion with scaffolding",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-4": {
+  "alt": "Scaffolding on a limestone facade",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-5": {
+  "alt": "Limestone entrance after restoration",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "limestone-mansion-facade-restoration-6": {
+  "alt": "Restored limestone mansion entrance",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-7": {
+  "alt": "Media blasting stone with full protective gear",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "limestone-mansion-facade-restoration-8": {
+  "alt": "Interior containment for media blasting",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "sandblasting-on-a-modern-home-1": {
+  "alt": "Modern home with sandblasting set-up",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "sandblasting-on-a-modern-home-2": {
+  "alt": "Sandblasting with landscaping protected",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "sandblasting-on-a-modern-home-3": {
+  "alt": "Sandblasting a modern home wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "sandblasting-on-a-modern-home-4": {
+  "alt": "Modern home during sandblasting",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "sandblasting-on-a-modern-home-5": {
+  "alt": "Pool covered for blasting",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paint-stripping-on-a-painted-brick-house-before-1": {
+  "alt": "Paint stripping on a painted brick house \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paint-stripping-on-a-painted-brick-house-after-1": {
+  "alt": "Paint stripping on a painted brick house \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paint-stripping-on-a-painted-brick-house-1": {
+  "alt": "Layers of old paint on brick before stripping",
+  "w": 3000,
+  "h": 2250,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "precast-panel-wall-cleaning-1": {
+  "alt": "Granite panel cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "precast-panel-wall-cleaning-2": {
+  "alt": "Concrete panel and corner cleaning",
+  "w": 1152,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960
+  ]
+ },
+ "precast-panel-wall-cleaning-video-1-poster": {
+  "alt": "Precast panel wall cleaning \u2014 video",
+  "w": 832,
+  "h": 464,
+  "sizes": [
+   320,
+   640
+  ]
+ },
+ "efflorescence-removal-on-precast-steps-before-1": {
+  "alt": "Efflorescence removal on precast steps \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "efflorescence-removal-on-precast-steps-after-1": {
+  "alt": "Efflorescence removal on precast steps \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "roof-moss-removal-before-1": {
+  "alt": "Roof moss removal \u2014 before",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "roof-moss-removal-after-1": {
+  "alt": "Roof moss removal \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "roof-moss-removal-1": {
+  "alt": "Cottage roof and wall soft washing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "roof-moss-removal-video-1-poster": {
+  "alt": "Roof moss removal \u2014 video",
+  "w": 1080,
+  "h": 1920,
+  "sizes": [
+   320,
+   640,
+   960
+  ]
+ },
+ "rooftop-deck-rust-stain-removal-before-1": {
+  "alt": "Rooftop deck rust stain removal \u2014 before",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "rooftop-deck-rust-stain-removal-after-1": {
+  "alt": "Rooftop deck rust stain removal \u2014 after",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "rooftop-deck-rust-stain-removal-1": {
+  "alt": "Rooftop deck rust stain removal \u2014 on the job, photo 1",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "rooftop-deck-rust-stain-removal-2": {
+  "alt": "Rooftop terrace after washing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-cladding-wall-cleaning-1": {
+  "alt": "Technician cleaning stone cladding",
+  "w": 3840,
+  "h": 5120,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-cladding-wall-cleaning-2": {
+  "alt": "Stone cladding after cleaning",
+  "w": 3840,
+  "h": 5120,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-cladding-wall-cleaning-3": {
+  "alt": "Stone wall before cleaning",
+  "w": 5120,
+  "h": 3840,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-cladding-wall-cleaning-4": {
+  "alt": "Stone wall and glass railing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-cladding-wall-cleaning-5": {
+  "alt": "Stone wall after cleaning",
+  "w": 5120,
+  "h": 3840,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-cladding-wall-cleaning-video-1-poster": {
+  "alt": "Stone cladding wall cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-cladding-wall-cleaning-video-2-poster": {
+  "alt": "Stone cladding wall cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-pool-wall-cleaning-1": {
+  "alt": "Stone pool wall cleaning with pool covered",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-pool-wall-cleaning-3": {
+  "alt": "Pool protected with plastic during stone cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-pool-wall-cleaning-4": {
+  "alt": "Cleaning stone tile at a pool",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-pool-wall-cleaning-5": {
+  "alt": "Pool wall tile cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-pool-wall-cleaning-6": {
+  "alt": "Pool covered during stone cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "natural-stone-steps-cleaning-1": {
+  "alt": "Stone steps before cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-2": {
+  "alt": "Stone steps during cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-3": {
+  "alt": "Stone steps with grime and staining",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-4": {
+  "alt": "Stone steps after cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-5": {
+  "alt": "Flagstone landing and steps",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-6": {
+  "alt": "Clean stone steps and railing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-video-1-poster": {
+  "alt": "Natural stone steps cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-steps-cleaning-video-2-poster": {
+  "alt": "Natural stone steps cleaning \u2014 video",
+  "w": 1280,
+  "h": 720,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "efflorescence-removal-on-a-stone-wall-before-1": {
+  "alt": "Efflorescence removal on a stone wall \u2014 before",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "efflorescence-removal-on-a-stone-wall-after-1": {
+  "alt": "Efflorescence removal on a stone wall \u2014 after",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "storage-tank-exterior-cleaning-1": {
+  "alt": "Industrial tank top cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "storage-tank-exterior-cleaning-2": {
+  "alt": "Technician washing a tank roof",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "storage-tank-exterior-cleaning-3": {
+  "alt": "Storage tanks with boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "storage-tank-exterior-cleaning-4": {
+  "alt": "Storage tank exterior washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "hospital-facade-washing-at-sunnybrook-health-sciences-centre-toronto-1": {
+  "alt": "Hospital and building entrance cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "hospital-facade-washing-at-sunnybrook-health-sciences-centre-toronto-video-1-poster": {
+  "alt": "Hospital facade washing at Sunnybrook Health Sciences Centre \u2014 video",
+  "w": 1920,
+  "h": 1080,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "graffiti-removal-on-a-yellow-brick-building-before-1": {
+  "alt": "Graffiti removal on a yellow brick building \u2014 before",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "graffiti-removal-on-a-yellow-brick-building-after-1": {
+  "alt": "Graffiti removal on a yellow brick building \u2014 after",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "pressure-washer-set-up-in-a-parking-garage": {
+  "alt": "Pressure washer set up in a parking garage",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "hot-water-washing-a-condo-terrace-and-planter-wall": {
+  "alt": "Hot-water washing a condo terrace and planter wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "modern-black-brick-home-after-exterior-cleaning": {
+  "alt": "Modern black brick home after exterior cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "black-brick-and-siding-home-exterior-washed": {
+  "alt": "Black brick and siding home exterior washed",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "living-water-van-at-a-commercial-building-entrance": {
+  "alt": "Living Water van at a commercial building entrance",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "graffiti-removal-on-a-light-brick-wall": {
+  "alt": "Graffiti removal on a light brick wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "sidewalk-pressure-washing-beside-a-downtown-building": {
+  "alt": "Sidewalk pressure washing beside a downtown building",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "mural-wall-and-bollards-cleaned-on-a-commercial-lot": {
+  "alt": "Mural wall and bollards cleaned on a commercial lot",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "precast-wall-after-washing": {
+  "alt": "Precast wall after washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "victorian-brick-home-exterior-cleaning": {
+  "alt": "Victorian brick home exterior cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "brick-victorian-house-front": {
+  "alt": "Brick Victorian house front",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "porch-and-stone-steps-on-a-brick-home": {
+  "alt": "Porch and stone steps on a brick home",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-porch-and-flagstone-after-cleaning": {
+  "alt": "Brick porch and flagstone after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-wall-and-flagstone-porch-cleaned": {
+  "alt": "Brick wall and flagstone porch cleaned",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "red-brick-house-exterior-wash": {
+  "alt": "Red brick house exterior wash",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "large-paver-plaza-before-cleaning": {
+  "alt": "Large paver plaza before cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paver-plaza-during-cleaning": {
+  "alt": "Paver plaza during cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paver-plaza-after-pressure-washing": {
+  "alt": "Paver plaza after pressure washing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "clean-paver-rooftop-plaza": {
+  "alt": "Clean paver rooftop plaza",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "boom-lift-washing-of-a-dark-brick-commercial-facade": {
+  "alt": "Boom-lift washing of a dark brick commercial facade",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "yellow-brick-wall-partly-cleaned-showing-the-difference": {
+  "alt": "Yellow brick wall partly cleaned, showing the difference",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "technician-washing-a-storefront-entrance": {
+  "alt": "Technician washing a storefront entrance",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "dark-brick-wall-cleaning-on-a-commercial-building": {
+  "alt": "Dark brick wall cleaning on a commercial building",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "yellow-brick-wall-with-cleaned-and-uncleaned-sections": {
+  "alt": "Yellow brick wall with cleaned and uncleaned sections",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "yellow-brick-wall-after-cleaning": {
+  "alt": "Yellow brick wall after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "washing-a-yellow-brick-heritage-building": {
+  "alt": "Washing a yellow brick heritage building",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "boom-lifts-at-a-yellow-brick-heritage-building": {
+  "alt": "Boom lifts at a yellow brick heritage building",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "sidewalk-and-planter-washing-at-a-commercial-building": {
+  "alt": "Sidewalk and planter washing at a commercial building",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "technician-soft-washing-dark-siding": {
+  "alt": "Technician soft washing dark siding",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "brick-house-rear-wall-with-windows-masked-for-cleaning": {
+  "alt": "Brick house rear wall with windows masked for cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-house-rear-wall-after-paint-removal": {
+  "alt": "Brick house rear wall after paint removal",
+  "w": 696,
+  "h": 870,
+  "sizes": [
+   320,
+   640
+  ]
+ },
+ "crew-washing-a-semi-detached-home": {
+  "alt": "Crew washing a semi-detached home",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "rear-of-a-brick-house-during-paint-stripping": {
+  "alt": "Rear of a brick house during paint stripping",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "brick-wall-after-cleaning": {
+  "alt": "Brick wall after cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "clean-red-brick-side-wall": {
+  "alt": "Clean red brick side wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "brick-house-and-laneway-after-cleaning": {
+  "alt": "Brick house and laneway after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-loggia-with-ladder-during-cleaning": {
+  "alt": "Stone loggia with ladder during cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "ornate-victorian-brick-home-front": {
+  "alt": "Ornate Victorian brick home front",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "house-with-stone-base-and-porch-washed": {
+  "alt": "House with stone base and porch washed",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "side-of-a-brick-home-after-washing": {
+  "alt": "Side of a brick home after washing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-bungalow-front-walk": {
+  "alt": "Natural stone bungalow front walk",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "natural-stone-bungalow-during-cleaning": {
+  "alt": "Natural stone bungalow during cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "natural-stone-house-wall-after-cleaning": {
+  "alt": "Natural stone house wall after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-bungalow-with-living-water-van": {
+  "alt": "Stone bungalow with Living Water van",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "masonry-building-behind-construction-fencing": {
+  "alt": "Masonry building behind construction fencing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "painted-masonry-building-during-restoration": {
+  "alt": "Painted masonry building during restoration",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "building-rear-with-fire-escape-cleaned": {
+  "alt": "Building rear with fire escape cleaned",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "technician-cleaning-precast-pavers": {
+  "alt": "Technician cleaning precast pavers",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   320,
+   640,
+   960
+  ]
+ },
+ "natural-stone-home-facade-after-cleaning": {
+  "alt": "Natural stone home facade after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-and-brick-wall-detail": {
+  "alt": "Stone and brick wall detail",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-column-porch-cleaning": {
+  "alt": "Stone column porch cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-balcony-columns-washed": {
+  "alt": "Stone balcony columns washed",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-estate-home-exterior": {
+  "alt": "Stone estate home exterior",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-estate-home-after-cleaning": {
+  "alt": "Stone estate home after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-and-brick-custom-home": {
+  "alt": "Stone and brick custom home",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-walkway-and-steps-cleaned": {
+  "alt": "Interlock walkway and steps cleaned",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-walkway-pattern-after-cleaning": {
+  "alt": "Interlock walkway pattern after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-driveway-edge-cleaning": {
+  "alt": "Interlock driveway edge cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-side-path-after-washing": {
+  "alt": "Interlock side path after washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-steps-and-garden-beds": {
+  "alt": "Interlock steps and garden beds",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "clean-interlock-walkway-with-landscaping": {
+  "alt": "Clean interlock walkway with landscaping",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-and-asphalt-edge-washed": {
+  "alt": "Interlock and asphalt edge washed",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interlock-side-walkway-after-cleaning": {
+  "alt": "Interlock side walkway after cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-column-and-brick-wall": {
+  "alt": "Stone column and brick wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-pillar-cleaning-detail": {
+  "alt": "Stone pillar cleaning detail",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "stone-house-exterior-before-cleaning": {
+  "alt": "Stone house exterior before cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-house-with-steps": {
+  "alt": "Stone house with steps",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-home-after-cleaning": {
+  "alt": "Stone home after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-facade-and-entry-steps": {
+  "alt": "Stone facade and entry steps",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-wall-and-windows-after-cleaning": {
+  "alt": "Stone wall and windows after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-house-and-modern-addition": {
+  "alt": "Stone house and modern addition",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-house-exterior-washed": {
+  "alt": "Stone house exterior washed",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-house-side-elevation": {
+  "alt": "Stone house side elevation",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-wall-detail-after-cleaning": {
+  "alt": "Stone wall detail after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-building-facade-washing": {
+  "alt": "Office building facade washing",
+  "w": 2160,
+  "h": 3840,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "washing-a-building-entrance": {
+  "alt": "Washing a building entrance",
+  "w": 4032,
+  "h": 3024,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "industrial-building-exterior": {
+  "alt": "Industrial building exterior",
+  "w": 4032,
+  "h": 3024,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "crew-washing-a-plaza": {
+  "alt": "Crew washing a plaza",
+  "w": 4032,
+  "h": 3024,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "hot-water-washing-of-a-plaza": {
+  "alt": "Hot-water washing of a plaza",
+  "w": 4032,
+  "h": 3024,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "pole-washing-a-brick-facade": {
+  "alt": "Pole washing a brick facade",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "bank-branch-entrance-washing": {
+  "alt": "Bank branch entrance washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "bank-branch-facade-after-cleaning": {
+  "alt": "Bank branch facade after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-building-washing-on-a-construction-site": {
+  "alt": "New building washing on a construction site",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "construction-site-building-cleaning": {
+  "alt": "Construction site building cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "wall-protected-with-plastic-before-cleaning": {
+  "alt": "Wall protected with plastic before cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "emergency-garage-clean-up-with-living-water-truck": {
+  "alt": "Emergency garage clean-up with Living Water truck",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "historic-red-brick-building": {
+  "alt": "Historic red brick building",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "boom-lift-washing-of-a-commercial-wall": {
+  "alt": "Boom-lift washing of a commercial wall",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "office-building-exterior-washing": {
+  "alt": "Office building exterior washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "wall-cleaning-from-a-boom-lift": {
+  "alt": "Wall cleaning from a boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "technician-in-a-lift-basket-cleaning-a-facade": {
+  "alt": "Technician in a lift basket cleaning a facade",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "living-water-written-in-grime-on-a-dirty-wall": {
+  "alt": "'Living Water' written in grime on a dirty wall",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-campus-washing": {
+  "alt": "Office campus washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "heritage-brick-building-cleaned-from-a-boom-lift": {
+  "alt": "Heritage brick building cleaned from a boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-campus-after-cleaning": {
+  "alt": "Office campus after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "main-street-brick-storefront-cleaned-from-a-boom-lift": {
+  "alt": "Main street brick storefront cleaned from a boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-facade-washing-from-a-boom-lift": {
+  "alt": "Brick facade washing from a boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "construction-site-washing": {
+  "alt": "Construction site washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "construction-site-and-boom-lift": {
+  "alt": "Construction site and boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "paver-plaza-after-cleaning": {
+  "alt": "Paver plaza after cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "paver-plaza-during-washing": {
+  "alt": "Paver plaza during washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "red-graffiti-on-a-concrete-wall-before-removal": {
+  "alt": "Red graffiti on a concrete wall before removal",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "winter-cleaning-of-an-entrance-ramp": {
+  "alt": "Winter cleaning of an entrance ramp",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "heritage-building-entrance": {
+  "alt": "Heritage building entrance",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-heritage-building-with-arched-door": {
+  "alt": "Brick heritage building with arched door",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "washing-a-stone-clad-office-building": {
+  "alt": "Washing a stone-clad office building",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-building-wash-with-van": {
+  "alt": "Office building wash with van",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-exterior-after-cleaning": {
+  "alt": "Office exterior after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-panel-facade-washing": {
+  "alt": "Stone panel facade washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "crew-on-ladders-washing-a-facade": {
+  "alt": "Crew on ladders washing a facade",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "office-building-after-exterior-wash": {
+  "alt": "Office building after exterior wash",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "modular-building-cleaning-on-site": {
+  "alt": "Modular building cleaning on site",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "school-building-exterior": {
+  "alt": "School building exterior",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "dark-brick-wall-after-washing": {
+  "alt": "Dark brick wall after washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "sidewalk-and-bench-steam-cleaning": {
+  "alt": "Sidewalk and bench steam cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "park-sidewalk-cleaning": {
+  "alt": "Park sidewalk cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "bench-cleaned-in-a-park": {
+  "alt": "Bench cleaned in a park",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "new-school-building-after-washing": {
+  "alt": "New school building after washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-school-exterior-and-yard": {
+  "alt": "New school exterior and yard",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "school-building-facade": {
+  "alt": "School building facade",
+  "w": 4032,
+  "h": 3024,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-building-entrance-after-cleaning": {
+  "alt": "New building entrance after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "crawler-crane-washing": {
+  "alt": "Crawler crane washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "living-water-truck-and-trailer-at-a-warehouse": {
+  "alt": "Living Water truck and trailer at a warehouse",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "painted-brick-wall-before-paint-removal": {
+  "alt": "Painted brick wall before paint removal",
+  "w": 1600,
+  "h": 1200,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "interior-brick-paint-stripping": {
+  "alt": "Interior brick paint stripping",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "interior-brick-wall-paint-removal": {
+  "alt": "Interior brick wall paint removal",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "interior-brick-wall-after-stripping": {
+  "alt": "Interior brick wall after stripping",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "commercial-brick-paint-removal": {
+  "alt": "Commercial brick paint removal",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "graffiti-removal-on-a-brick-wall": {
+  "alt": "Graffiti removal on a brick wall",
+  "w": 1600,
+  "h": 900,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "brick-wall-cleaning-from-a-boom-lift": {
+  "alt": "Brick wall cleaning from a boom lift",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-luxury-home-exterior-cleaning": {
+  "alt": "New luxury home exterior cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-home-post-construction-clean-up": {
+  "alt": "New home post-construction clean-up",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "new-home-exterior-after-cleaning": {
+  "alt": "New home exterior after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "tall-brick-house-before-cleaning": {
+  "alt": "Tall brick house before cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "stone-home-and-landscaping-cleaning": {
+  "alt": "Stone home and landscaping cleaning",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "modern-home-exterior-washing": {
+  "alt": "Modern home exterior washing",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "black-home-exterior-during-washing": {
+  "alt": "Black home exterior during washing",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "black-home-after-cleaning": {
+  "alt": "Black home after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "black-brick-wall-detail": {
+  "alt": "Black brick wall detail",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "modern-home-after-cleaning": {
+  "alt": "Modern home after cleaning",
+  "w": 2048,
+  "h": 1536,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "limestone-column-detail": {
+  "alt": "Limestone column detail",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
  }
 }

@@ -1,0 +1,41 @@
+{
+ "slug": "concrete-retaining-wall-blasting",
+ "title": "Concrete retaining wall blasting",
+ "service": "sandblasting-services",
+ "location": "",
+ "date": "",
+ "description": "A stained concrete retaining wall cleaned by media blasting, with the operator in full protective gear.",
+ "pairs": [
+  [
+   "concrete-retaining-wall-blasting-before-1",
+   "concrete-retaining-wall-blasting-after-1"
+  ]
+ ],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/concrete-retaining-wall-blasting-video-1.mp4",
+   "poster": "concrete-retaining-wall-blasting-video-1-poster",
+   "duration": 20,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/concrete-retaining-wall-blasting-video-2.mp4",
+   "poster": "concrete-retaining-wall-blasting-video-2-poster",
+   "duration": 17,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/concrete-retaining-wall-blasting-video-3.mp4",
+   "poster": "concrete-retaining-wall-blasting-video-3-poster",
+   "duration": 15,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  }
+ ]
+}

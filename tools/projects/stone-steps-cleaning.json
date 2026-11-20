@@ -1,0 +1,35 @@
+{
+ "slug": "stone-steps-cleaning",
+ "title": "Natural stone steps cleaning",
+ "service": "stone-restoration",
+ "location": "",
+ "date": "",
+ "description": "Grime, algae and staining removed from natural stone front steps and landings.",
+ "pairs": [],
+ "photos": [
+  "natural-stone-steps-cleaning-1",
+  "natural-stone-steps-cleaning-2",
+  "natural-stone-steps-cleaning-3",
+  "natural-stone-steps-cleaning-4",
+  "natural-stone-steps-cleaning-5",
+  "natural-stone-steps-cleaning-6"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/natural-stone-steps-cleaning-video-1.mp4",
+   "poster": "natural-stone-steps-cleaning-video-1-poster",
+   "duration": 30,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/natural-stone-steps-cleaning-video-2.mp4",
+   "poster": "natural-stone-steps-cleaning-video-2-poster",
+   "duration": 29,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  }
+ ]
+}

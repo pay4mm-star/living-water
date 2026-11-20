@@ -243,3 +243,4 @@ figure.vid video{width:100%;height:auto;max-height:640px;border-radius:12px;back
 .vids figure.vid video{aspect-ratio:auto}
 .proj-link{display:inline-block;margin-left:6px;font-weight:700;color:var(--teal-d);text-decoration:none}
 .proj-link:hover{text-decoration:underline}
+.masonry .more{display:none}

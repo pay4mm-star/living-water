@@ -136,7 +136,7 @@ svc("industrial-power-washing",
 <h2>Certified for work at height</h2>
 <p>Our technicians are certified boom and scissor lift operators, so tall tanks, silos and facades can be cleaned without scaffolding delays.</p>
 """,
-    photos=["silo-tank-exterior-cleaning-boom-lift", "silo-tank-wash-progress", "industrial-tank-pressure-washing", "crane-heavy-equipment-washing", "crane-track-degreasing", "industrial-pressure-washing-crew-gta"],
+    photos=["silo-tank-exterior-cleaning-boom-lift", "industrial-tank-pressure-washing", "crane-heavy-equipment-washing", "crane-track-degreasing", "industrial-pressure-washing-crew-gta"],
     faqs=[("What is hydro jetting?", "Hydro jetting uses very high-pressure water streams to scour build-up from the inside of pipes, condensers and lines without abrasive media."),
           ("Do you offer emergency industrial cleaning?", "Yes. Industrial and commercial clients can reach our 24/7 emergency line at (647) 833-4343."),
           ("Can you clean food processing plants?", "Yes. We provide pressure washing, sanitation and disinfection for food plants, scheduled around production.")],

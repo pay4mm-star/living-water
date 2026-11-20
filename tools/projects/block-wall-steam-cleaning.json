@@ -1,0 +1,22 @@
+{
+ "slug": "block-wall-steam-cleaning",
+ "title": "Block wall steam cleaning",
+ "service": "commercial-power-washing",
+ "location": "",
+ "date": "",
+ "description": "Steam cleaning of a long split-face block wall on a commercial building.",
+ "pairs": [],
+ "photos": [
+  "block-wall-steam-cleaning-1"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/block-wall-steam-cleaning-video-1.mp4",
+   "poster": "block-wall-steam-cleaning-video-1-poster",
+   "duration": 27,
+   "w": 848,
+   "h": 480,
+   "audio": false
+  }
+ ]
+}

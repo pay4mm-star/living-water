@@ -1,0 +1,24 @@
+{
+ "slug": "condo-column-cleaning",
+ "title": "Condo podium column cleaning",
+ "service": "commercial-power-washing",
+ "location": "",
+ "date": "",
+ "description": "Concrete columns at a condo podium and storefront cleaned, with the sidewalk kept open and signed.",
+ "pairs": [],
+ "photos": [
+  "condo-podium-column-cleaning-1",
+  "condo-podium-column-cleaning-2",
+  "condo-podium-column-cleaning-3"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/condo-podium-column-cleaning-video-1.mp4",
+   "poster": "condo-podium-column-cleaning-video-1-poster",
+   "duration": 25,
+   "w": 720,
+   "h": 1280,
+   "audio": false
+  }
+ ]
+}

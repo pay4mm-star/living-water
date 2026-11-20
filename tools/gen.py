@@ -299,6 +299,17 @@ def quote_aside():
 <ul class="contact-list"><li><b>Main office</b><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li><li><b>24/7 emergency</b><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li></ul></div>'''
 
 # ------------------------------------------------------------ HOME
+def featured_video():
+    p = next((x for x in PROJECTS if "sunnybrook" in x["slug"] and x["videos"]), None)
+    if not p: return ""
+    v = p["videos"][0]
+    return f"""<section class="soft"><div class="wrap split">
+<div><span class="pill light">Featured project</span><h2>{esc(p["title"])}</h2><p>{esc(p.get("description",""))}</p>
+<ul class="ticks"><li>Boom-lift work around an operating hospital</li><li>Site safety plan, fencing and signage</li><li>$5M insured, WSIB covered crews</li></ul>
+<a class="btn" href="/projects/{p["slug"]}/">View the case study</a></div>
+<div><figure class="vid"><video controls playsinline preload="none" poster="{best(v["poster"], 960)}" width="{v["w"]}" height="{v["h"]}" aria-label="{esc(p["title"])} video"><source src="{v["src"]}" type="video/mp4"></video></figure></div>
+</div></section>"""
+
 def home():
     stats = f'''<div class="stats">
 <div class="stat"><b>28</b><span>years in business</span><p>Washing, blasting and restoring across the GTA since 1998.</p></div>
@@ -347,6 +358,7 @@ def home():
 <p class="center" style="margin-top:34px"><a class="btn line" href="/gallery/">See the full gallery</a></p>
 </div></section>
 
+{featured_video()}
 {process_block()}
 
 <section><div class="wrap split rev">
@@ -515,10 +527,17 @@ def gallery():
     used_pairs = {x for pr in GALLERY_PAIRS for x in pr[:2]}
     for b, a, t, c_ in GALLERY_PAIRS:
         items.append((ba(b, a, t, " — " + c_), f"{cat_of_key(a)} pairs"))
+    GEX = json.load(open(os.path.join(HERE, "gallery_extra.json"))) if os.path.exists(os.path.join(HERE, "gallery_extra.json")) else []
+    gex_cat = {e["key"]: e["cat"] for e in GEX}
+    for e in GEX:
+        k = e["key"]
+        if k in M:
+            items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>', f"{e['cat']} photos"))
+    EXCLUDE = {"silo-tank-wash-progress"}
     for k in M:
-        if k in used_pairs or k in proj_keys or k.endswith("-poster"): continue
+        if k in used_pairs or k in proj_keys or k.endswith("-poster") or k in gex_cat or k in EXCLUDE: continue
         items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>', f"{cat_of_key(k)} photos"))
-    grid = "".join(h.replace("<figure", f'<figure data-cat="{c}"', 1) for h, c in items)
+    grid = "".join(h.replace("<figure", f'<figure data-cat="{c}"' + (' class="more"' if i >= 36 else ''), 1) for i, (h, c) in enumerate(items))
     n_pairs = sum(1 for _, c in items if "pairs" in c); n_vid = sum(1 for _, c in items if "videos" in c)
     body = f"""
 <section class="page-hero"><picture>{hero_img("yellow-brick-heritage-building-cleaning")}</picture>
@@ -526,12 +545,13 @@ def gallery():
 <section><div class="wrap">
 <p class="answer">Browse {n_pairs} before-and-after comparisons and {n_vid} job videos of Living Water's brick cleaning, paint stripping, efflorescence removal, stone and rust stain restoration, commercial facade washing and heritage restoration work in the Greater Toronto Area. Drag any slider to compare.</p>
 {filter_bar(extra=(("pairs", "Before &amp; After"), ("videos", "Videos")))}
-<div class="masonry filterable">{grid}</div>
+<div class="masonry filterable" data-page="36">{grid}</div>
+<p class="center" style="margin-top:24px"><button type="button" class="btn line load-more">Show more work</button></p>
 {('<p class="center" style="margin-top:30px"><a class="btn line" href="/projects/">See all case studies</a></p>') if PROJECTS else ""}
 </div></section>
 {cta_block()}"""
     gal_ld = {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Living Water project gallery", "url": SITE + "/gallery/",
-              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M if not k.endswith("-poster")]}
+              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M if not k.endswith("-poster") and k != "silo-tank-wash-progress"]}
     vlds = [video_ld(p, v, i) for p in PROJECTS for i, v in enumerate(p["videos"], 1)]
     page("/gallery/", "Before & After Gallery | Living Water Pressure Washing",
          "Before-and-after photos and videos of brick cleaning, paint stripping, efflorescence and stone restoration projects across Toronto and the GTA.",

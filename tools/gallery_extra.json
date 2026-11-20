@@ -1,0 +1,566 @@
+[
+ {
+  "key": "pressure-washer-set-up-in-a-parking-garage",
+  "cat": "commercial"
+ },
+ {
+  "key": "hot-water-washing-a-condo-terrace-and-planter-wall",
+  "cat": "commercial"
+ },
+ {
+  "key": "modern-black-brick-home-after-exterior-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "black-brick-and-siding-home-exterior-washed",
+  "cat": "residential"
+ },
+ {
+  "key": "living-water-van-at-a-commercial-building-entrance",
+  "cat": "commercial"
+ },
+ {
+  "key": "graffiti-removal-on-a-light-brick-wall",
+  "cat": "brick"
+ },
+ {
+  "key": "sidewalk-pressure-washing-beside-a-downtown-building",
+  "cat": "commercial"
+ },
+ {
+  "key": "mural-wall-and-bollards-cleaned-on-a-commercial-lot",
+  "cat": "brick"
+ },
+ {
+  "key": "precast-wall-after-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "victorian-brick-home-exterior-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "brick-victorian-house-front",
+  "cat": "residential"
+ },
+ {
+  "key": "porch-and-stone-steps-on-a-brick-home",
+  "cat": "residential"
+ },
+ {
+  "key": "brick-porch-and-flagstone-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "brick-wall-and-flagstone-porch-cleaned",
+  "cat": "residential"
+ },
+ {
+  "key": "red-brick-house-exterior-wash",
+  "cat": "residential"
+ },
+ {
+  "key": "large-paver-plaza-before-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "paver-plaza-during-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "paver-plaza-after-pressure-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "clean-paver-rooftop-plaza",
+  "cat": "commercial"
+ },
+ {
+  "key": "boom-lift-washing-of-a-dark-brick-commercial-facade",
+  "cat": "commercial"
+ },
+ {
+  "key": "yellow-brick-wall-partly-cleaned-showing-the-difference",
+  "cat": "brick"
+ },
+ {
+  "key": "technician-washing-a-storefront-entrance",
+  "cat": "commercial"
+ },
+ {
+  "key": "dark-brick-wall-cleaning-on-a-commercial-building",
+  "cat": "brick"
+ },
+ {
+  "key": "yellow-brick-wall-with-cleaned-and-uncleaned-sections",
+  "cat": "brick"
+ },
+ {
+  "key": "yellow-brick-wall-after-cleaning",
+  "cat": "brick"
+ },
+ {
+  "key": "washing-a-yellow-brick-heritage-building",
+  "cat": "heritage"
+ },
+ {
+  "key": "boom-lifts-at-a-yellow-brick-heritage-building",
+  "cat": "heritage"
+ },
+ {
+  "key": "sidewalk-and-planter-washing-at-a-commercial-building",
+  "cat": "commercial"
+ },
+ {
+  "key": "technician-soft-washing-dark-siding",
+  "cat": "residential"
+ },
+ {
+  "key": "brick-house-rear-wall-with-windows-masked-for-cleaning",
+  "cat": "brick"
+ },
+ {
+  "key": "brick-house-rear-wall-after-paint-removal",
+  "cat": "brick"
+ },
+ {
+  "key": "crew-washing-a-semi-detached-home",
+  "cat": "residential"
+ },
+ {
+  "key": "rear-of-a-brick-house-during-paint-stripping",
+  "cat": "brick"
+ },
+ {
+  "key": "brick-wall-after-cleaning",
+  "cat": "brick"
+ },
+ {
+  "key": "clean-red-brick-side-wall",
+  "cat": "brick"
+ },
+ {
+  "key": "brick-house-and-laneway-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "stone-loggia-with-ladder-during-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "ornate-victorian-brick-home-front",
+  "cat": "brick"
+ },
+ {
+  "key": "house-with-stone-base-and-porch-washed",
+  "cat": "residential"
+ },
+ {
+  "key": "side-of-a-brick-home-after-washing",
+  "cat": "residential"
+ },
+ {
+  "key": "natural-stone-bungalow-front-walk",
+  "cat": "stone"
+ },
+ {
+  "key": "natural-stone-bungalow-during-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "natural-stone-house-wall-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-bungalow-with-living-water-van",
+  "cat": "stone"
+ },
+ {
+  "key": "masonry-building-behind-construction-fencing",
+  "cat": "heritage"
+ },
+ {
+  "key": "painted-masonry-building-during-restoration",
+  "cat": "heritage"
+ },
+ {
+  "key": "building-rear-with-fire-escape-cleaned",
+  "cat": "commercial"
+ },
+ {
+  "key": "technician-cleaning-precast-pavers",
+  "cat": "stone"
+ },
+ {
+  "key": "natural-stone-home-facade-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-and-brick-wall-detail",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-column-porch-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-balcony-columns-washed",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-estate-home-exterior",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-estate-home-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-and-brick-custom-home",
+  "cat": "stone"
+ },
+ {
+  "key": "interlock-walkway-and-steps-cleaned",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-walkway-pattern-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-driveway-edge-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-side-path-after-washing",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-steps-and-garden-beds",
+  "cat": "residential"
+ },
+ {
+  "key": "clean-interlock-walkway-with-landscaping",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-and-asphalt-edge-washed",
+  "cat": "residential"
+ },
+ {
+  "key": "interlock-side-walkway-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "stone-column-and-brick-wall",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-pillar-cleaning-detail",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-house-exterior-before-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-house-with-steps",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-home-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-facade-and-entry-steps",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-wall-and-windows-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-house-and-modern-addition",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-house-exterior-washed",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-house-side-elevation",
+  "cat": "stone"
+ },
+ {
+  "key": "stone-wall-detail-after-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "office-building-facade-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "washing-a-building-entrance",
+  "cat": "commercial"
+ },
+ {
+  "key": "industrial-building-exterior",
+  "cat": "commercial"
+ },
+ {
+  "key": "crew-washing-a-plaza",
+  "cat": "commercial"
+ },
+ {
+  "key": "hot-water-washing-of-a-plaza",
+  "cat": "commercial"
+ },
+ {
+  "key": "pole-washing-a-brick-facade",
+  "cat": "commercial"
+ },
+ {
+  "key": "bank-branch-entrance-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "bank-branch-facade-after-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "new-building-washing-on-a-construction-site",
+  "cat": "commercial"
+ },
+ {
+  "key": "construction-site-building-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "wall-protected-with-plastic-before-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "emergency-garage-clean-up-with-living-water-truck",
+  "cat": "commercial"
+ },
+ {
+  "key": "historic-red-brick-building",
+  "cat": "heritage"
+ },
+ {
+  "key": "boom-lift-washing-of-a-commercial-wall",
+  "cat": "commercial"
+ },
+ {
+  "key": "office-building-exterior-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "wall-cleaning-from-a-boom-lift",
+  "cat": "commercial"
+ },
+ {
+  "key": "technician-in-a-lift-basket-cleaning-a-facade",
+  "cat": "commercial"
+ },
+ {
+  "key": "living-water-written-in-grime-on-a-dirty-wall",
+  "cat": "commercial"
+ },
+ {
+  "key": "office-campus-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "heritage-brick-building-cleaned-from-a-boom-lift",
+  "cat": "heritage"
+ },
+ {
+  "key": "office-campus-after-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "main-street-brick-storefront-cleaned-from-a-boom-lift",
+  "cat": "heritage"
+ },
+ {
+  "key": "brick-facade-washing-from-a-boom-lift",
+  "cat": "heritage"
+ },
+ {
+  "key": "construction-site-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "construction-site-and-boom-lift",
+  "cat": "commercial"
+ },
+ {
+  "key": "paver-plaza-after-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "paver-plaza-during-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "red-graffiti-on-a-concrete-wall-before-removal",
+  "cat": "brick"
+ },
+ {
+  "key": "winter-cleaning-of-an-entrance-ramp",
+  "cat": "commercial"
+ },
+ {
+  "key": "heritage-building-entrance",
+  "cat": "heritage"
+ },
+ {
+  "key": "brick-heritage-building-with-arched-door",
+  "cat": "heritage"
+ },
+ {
+  "key": "washing-a-stone-clad-office-building",
+  "cat": "commercial"
+ },
+ {
+  "key": "office-building-wash-with-van",
+  "cat": "commercial"
+ },
+ {
+  "key": "office-exterior-after-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "stone-panel-facade-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "crew-on-ladders-washing-a-facade",
+  "cat": "commercial"
+ },
+ {
+  "key": "office-building-after-exterior-wash",
+  "cat": "commercial"
+ },
+ {
+  "key": "modular-building-cleaning-on-site",
+  "cat": "commercial"
+ },
+ {
+  "key": "school-building-exterior",
+  "cat": "commercial"
+ },
+ {
+  "key": "dark-brick-wall-after-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "sidewalk-and-bench-steam-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "park-sidewalk-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "bench-cleaned-in-a-park",
+  "cat": "commercial"
+ },
+ {
+  "key": "new-school-building-after-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "new-school-exterior-and-yard",
+  "cat": "commercial"
+ },
+ {
+  "key": "school-building-facade",
+  "cat": "commercial"
+ },
+ {
+  "key": "new-building-entrance-after-cleaning",
+  "cat": "commercial"
+ },
+ {
+  "key": "crawler-crane-washing",
+  "cat": "commercial"
+ },
+ {
+  "key": "living-water-truck-and-trailer-at-a-warehouse",
+  "cat": "commercial"
+ },
+ {
+  "key": "painted-brick-wall-before-paint-removal",
+  "cat": "brick"
+ },
+ {
+  "key": "interior-brick-paint-stripping",
+  "cat": "brick"
+ },
+ {
+  "key": "interior-brick-wall-paint-removal",
+  "cat": "brick"
+ },
+ {
+  "key": "interior-brick-wall-after-stripping",
+  "cat": "brick"
+ },
+ {
+  "key": "commercial-brick-paint-removal",
+  "cat": "brick"
+ },
+ {
+  "key": "graffiti-removal-on-a-brick-wall",
+  "cat": "brick"
+ },
+ {
+  "key": "brick-wall-cleaning-from-a-boom-lift",
+  "cat": "brick"
+ },
+ {
+  "key": "new-luxury-home-exterior-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "new-home-post-construction-clean-up",
+  "cat": "residential"
+ },
+ {
+  "key": "new-home-exterior-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "tall-brick-house-before-cleaning",
+  "cat": "brick"
+ },
+ {
+  "key": "stone-home-and-landscaping-cleaning",
+  "cat": "stone"
+ },
+ {
+  "key": "modern-home-exterior-washing",
+  "cat": "residential"
+ },
+ {
+  "key": "black-home-exterior-during-washing",
+  "cat": "residential"
+ },
+ {
+  "key": "black-home-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "black-brick-wall-detail",
+  "cat": "residential"
+ },
+ {
+  "key": "modern-home-after-cleaning",
+  "cat": "residential"
+ },
+ {
+  "key": "limestone-column-detail",
+  "cat": "stone"
+ }
+]

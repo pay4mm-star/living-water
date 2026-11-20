@@ -1,0 +1,35 @@
+{
+ "slug": "condo-elevator-pit-cleaning",
+ "title": "Condo elevator pit clean-out",
+ "service": "elevator-pit-cleaning",
+ "location": "",
+ "date": "",
+ "description": "Debris, sludge and standing water removed from elevator pits, followed by pressure washing and sanitizing.",
+ "pairs": [
+  [
+   "condo-elevator-pit-clean-out-before-1",
+   "condo-elevator-pit-clean-out-after-1"
+  ],
+  [
+   "condo-elevator-pit-clean-out-before-2",
+   "condo-elevator-pit-clean-out-after-2"
+  ]
+ ],
+ "photos": [
+  "condo-elevator-pit-clean-out-1",
+  "condo-elevator-pit-clean-out-2",
+  "condo-elevator-pit-clean-out-3",
+  "condo-elevator-pit-clean-out-4",
+  "condo-elevator-pit-clean-out-5"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/condo-elevator-pit-clean-out-video-1.mp4",
+   "poster": "condo-elevator-pit-clean-out-video-1-poster",
+   "duration": 7,
+   "w": 720,
+   "h": 1280,
+   "audio": false
+  }
+ ]
+}

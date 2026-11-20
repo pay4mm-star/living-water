@@ -1,0 +1,28 @@
+{
+ "slug": "commercial-sign-cleaning",
+ "title": "Commercial building sign cleaning",
+ "service": "commercial-power-washing",
+ "location": "",
+ "date": "",
+ "description": "Hand and pressure cleaning of a raised commercial building sign.",
+ "pairs": [],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/commercial-building-sign-cleaning-video-1.mp4",
+   "poster": "commercial-building-sign-cleaning-video-1-poster",
+   "duration": 30,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/commercial-building-sign-cleaning-video-2.mp4",
+   "poster": "commercial-building-sign-cleaning-video-2-poster",
+   "duration": 30,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "slug": "brick-home-paint-removal-grey",
+ "title": "Grey paint removal from a brick home",
+ "service": "brick-cleaning-paint-removal",
+ "location": "",
+ "date": "",
+ "description": "Grey paint stripped from a brick home's exterior, with windows and doors masked.",
+ "pairs": [],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/grey-paint-removal-from-a-brick-home-video-1.mp4",
+   "poster": "grey-paint-removal-from-a-brick-home-video-1-poster",
+   "duration": 14,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/grey-paint-removal-from-a-brick-home-video-2.mp4",
+   "poster": "grey-paint-removal-from-a-brick-home-video-2-poster",
+   "duration": 6,
+   "w": 1280,
+   "h": 720,
+   "audio": false
+  }
+ ]
+}

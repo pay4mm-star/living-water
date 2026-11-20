@@ -1,0 +1,27 @@
+{
+ "slug": "roof-moss-removal-cottage",
+ "title": "Roof moss removal",
+ "service": "roof-cleaning",
+ "location": "",
+ "date": "",
+ "description": "Thick moss removed from a shingle roof with low-pressure soft washing.",
+ "pairs": [
+  [
+   "roof-moss-removal-before-1",
+   "roof-moss-removal-after-1"
+  ]
+ ],
+ "photos": [
+  "roof-moss-removal-1"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/roof-moss-removal-video-1.mp4",
+   "poster": "roof-moss-removal-video-1-poster",
+   "duration": 30,
+   "w": 1080,
+   "h": 1920,
+   "audio": false
+  }
+ ]
+}

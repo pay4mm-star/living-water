@@ -54,3 +54,23 @@
   // play only one video at a time
   document.addEventListener('play', function (e) { document.querySelectorAll('video').forEach(function (v) { if (v !== e.target) v.pause(); }); }, true);
 })();
+// gallery: show-more pagination that cooperates with filters
+(function () {
+  var grid = document.querySelector('.masonry.filterable[data-page]'), btn = document.querySelector('.load-more');
+  if (!grid || !btn) return;
+  var page = +grid.dataset.page, shown = page;
+  function refresh() {
+    var filtered = document.querySelector('.filters [aria-pressed=true]');
+    var f = filtered ? filtered.dataset.filter : 'all';
+    var n = 0;
+    grid.querySelectorAll('[data-cat]').forEach(function (it) {
+      var match = f === 'all' || (' ' + it.dataset.cat + ' ').indexOf(' ' + f + ' ') > -1;
+      if (match) { n++; it.hidden = n > shown; } else it.hidden = true;
+    });
+    btn.parentElement.style.display = n > shown ? '' : 'none';
+  }
+  btn.addEventListener('click', function () { shown += page; refresh(); });
+  document.querySelectorAll('.filters button').forEach(function (b) { b.addEventListener('click', function () { shown = page; setTimeout(refresh, 0); }); });
+  grid.querySelectorAll('.more').forEach(function (x) { x.classList.remove('more'); });
+  refresh();
+})();

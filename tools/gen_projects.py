@@ -25,7 +25,7 @@ def cover(p):
 
 
 def video_tag(v, title):
-    return (f'<figure class="vid"><video controls muted playsinline preload="none" poster="{best(v["poster"], 640)}" width="{v["w"]}" height="{v["h"]}" aria-label="{esc(title)} video">'
+    return (f'<figure class="vid"><video controls {"" if v.get("audio") else "muted "}playsinline preload="none" poster="{best(v["poster"], 640)}" width="{v["w"]}" height="{v["h"]}" aria-label="{esc(title)} video">'
             f'<source src="{v["src"]}" type="video/mp4"></video><figcaption>{esc(title)} — video ({v["duration"]}s)</figcaption></figure>')
 
 

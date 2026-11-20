@@ -53,17 +53,17 @@ def export(src, key, alt, manifest):
     return key
 
 
-def export_video(src, key, title, manifest):
+def export_video(src, key, title, manifest, max_s=MAX_SECONDS, audio=False):
     os.makedirs(VID, exist_ok=True)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", src], capture_output=True, text=True).stdout.strip() or 0)
     out = f"{VID}/{key}.mp4"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-t", str(MAX_SECONDS), "-vf", "scale='min(720,iw)':-2", "-c:v", "libx264", "-preset", "veryfast", "-crf", "27",
-                    "-pix_fmt", "yuv420p", "-an", "-movflags", "+faststart", out], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-t", str(max_s), "-vf", "scale='min(720,iw)':-2", "-c:v", "libx264", "-preset", "veryfast", "-crf", "27",
+                    "-pix_fmt", "yuv420p"] + (["-c:a", "aac", "-b:a", "96k"] if audio else ["-an"]) + ["-movflags", "+faststart", out], check=True)
     poster = f"/tmp/{key}-poster.jpg"
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(min(2, dur / 3)), "-i", src, "-frames:v", "1", poster], check=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(min(12 if dur > 40 else 2, dur / 3)), "-i", src, "-frames:v", "1", poster], check=True)
     pk = export(poster, f"{key}-poster", f"{title} — video", manifest)
     w, h = manifest[pk]["w"], manifest[pk]["h"]
-    return {"src": f"/assets/video/{key}.mp4", "poster": pk, "duration": round(min(dur, MAX_SECONDS)), "w": w, "h": h}
+    return {"src": f"/assets/video/{key}.mp4", "poster": pk, "duration": round(min(dur, max_s)), "w": w, "h": h, "audio": audio}
 
 
 def main(folder):
@@ -105,7 +105,8 @@ def main(folder):
         for i, f in enumerate(extras, 1):
             k = export(os.path.join(d, f), f"{base}-{i}", f"{title}{where} — on the job, photo {i}", manifest)
             if k: proj["photos"].append(k)
-        proj["videos"] = [export_video(os.path.join(d, f), f"{base}-video-{i}", title, manifest) for i, f in enumerate(vids, 1)]
+        ms = int(notes.get("maxseconds", MAX_SECONDS)); au = notes.get("audio", "").lower().startswith("y")
+        proj["videos"] = [export_video(os.path.join(d, f), f"{base}-video-{i}", title, manifest, ms, au) for i, f in enumerate(vids, 1)]
         json.dump(proj, open(os.path.join(PROJ, pslug + ".json"), "w"), indent=1)
         print(f"project: {pslug}  pairs={len(proj['pairs'])} photos={len(proj['photos'])} videos={len(proj['videos'])}")
     json.dump(manifest, open(MANIFEST, "w"), indent=1)

@@ -1,0 +1,23 @@
+{
+ "slug": "precast-panel-wall-cleaning",
+ "title": "Precast panel wall cleaning",
+ "service": "commercial-power-washing",
+ "location": "",
+ "date": "",
+ "description": "Ribbed precast and granite panels cleaned at a commercial building.",
+ "pairs": [],
+ "photos": [
+  "precast-panel-wall-cleaning-1",
+  "precast-panel-wall-cleaning-2"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/precast-panel-wall-cleaning-video-1.mp4",
+   "poster": "precast-panel-wall-cleaning-video-1-poster",
+   "duration": 13,
+   "w": 832,
+   "h": 464,
+   "audio": false
+  }
+ ]
+}
