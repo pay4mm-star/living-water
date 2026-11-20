@@ -1,0 +1,33 @@
+{
+ "slug": "efflorescence-removal-on-black-granite-stairs",
+ "title": "Efflorescence removal on black granite stairs",
+ "service": "efflorescence-removal",
+ "location": "",
+ "date": "2026-11",
+ "description": "White efflorescence and mineral staining removed from black granite exterior stairs and landings, leaving a clean, uniform dark finish.",
+ "pairs": [
+  [
+   "efflorescence-removal-on-black-granite-stairs-before-1",
+   "efflorescence-removal-on-black-granite-stairs-after-1"
+  ]
+ ],
+ "photos": [
+  "efflorescence-removal-on-black-granite-stairs-1"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/efflorescence-removal-on-black-granite-stairs-video-1.mp4",
+   "poster": "efflorescence-removal-on-black-granite-stairs-video-1-poster",
+   "duration": 30,
+   "w": 464,
+   "h": 832
+  },
+  {
+   "src": "/assets/video/efflorescence-removal-on-black-granite-stairs-video-2.mp4",
+   "poster": "efflorescence-removal-on-black-granite-stairs-video-2-poster",
+   "duration": 14,
+   "w": 464,
+   "h": 832
+  }
+ ]
+}

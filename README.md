@@ -43,6 +43,7 @@ Static, fast, SEO + GEO optimized rebuild of livingwater-pws.com. No WordPress, 
    description: Two-elevator condo pit with salt sludge and standing water.
    ```
 2. `python3 tools/add_photos.py /path/to/photos` then `python3 tools/gen.py .`
+   Videos (.mp4/.mov) in a job folder are compressed (max 30 s, muted) and added with a poster image and VideoObject schema.
 3. Each job becomes a `/projects/<name>/` case study, appears on its service page and matching city page, and is added to the sitemap.
 
 ## Before going live — to do

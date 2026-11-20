@@ -1,0 +1,24 @@
+{
+ "slug": "red-brick-wall-cleaning",
+ "title": "Red brick wall cleaning",
+ "service": "brick-cleaning-paint-removal",
+ "location": "",
+ "date": "2026-11",
+ "description": "Years of grime and dark staining washed from a red brick wall with controlled hot-water cleaning, restoring the brick's original colour.",
+ "pairs": [
+  [
+   "red-brick-wall-cleaning-before-1",
+   "red-brick-wall-cleaning-after-1"
+  ]
+ ],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/red-brick-wall-cleaning-video-1.mp4",
+   "poster": "red-brick-wall-cleaning-video-1-poster",
+   "duration": 7,
+   "w": 464,
+   "h": 832
+  }
+ ]
+}

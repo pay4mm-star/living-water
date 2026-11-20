@@ -305,7 +305,9 @@ def home():
 <div class="stat"><b>7,500+</b><span>properties cleaned</span><p>Residential, commercial, industrial and heritage.</p></div>
 <div class="stat"><b>$5M</b><span>liability insured</span><p>Plus full WSIB coverage. COI issued before we start.</p></div>
 <div class="stat"><b>4.9★</b><span>rating on Google</span><p>From homeowners and property managers across the GTA.</p></div></div>'''
-    work = "".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS[:3])
+    newp = [(pr[0], pr[1], p["title"], "", p["slug"]) for p in PROJECTS for pr in p["pairs"][:1]][:3]
+    work = "".join(ba(b, a, t, "").replace("</figcaption></figure>", f' <a class="proj-link" href="/projects/{s_}/">View case study →</a></figcaption></figure>') for b, a, t, c, s_ in newp)
+    work += "".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS[:max(0, 3 - len(newp))])
     capabilities = ["Residential, commercial & industrial power washing", "Brick acid wash & paint removal", "Efflorescence removal", "Industrial hydro jetting", "Concrete blasting & rust removal", "Swimming pool prep", "Micro & soda blasting", "Fire damage restoration", "Historical, stone & metal restoration", "Monument cleaning"]
     body = f'''
 <section class="hero" aria-labelledby="h1">
@@ -496,21 +498,44 @@ def about():
 # ------------------------------------------------------------ GALLERY
 def gallery():
     trail = [("Home", "/"), ("Gallery", "/gallery/")]
-    pairs = "".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS)
-    used_pairs = {x for p in GALLERY_PAIRS for x in p[:2]}
-    singles = [k for k in M if k not in used_pairs]
-    grid = "".join(f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>' for k in singles)
-    body = f'''
-<section class="page-hero"><picture>{hero_img("yellow-brick-heritage-building-cleaning", "100vw", eager=True, alt="")}</picture>
-<div class="wrap">{crumbs_html(trail)}<span class="pill">Project Gallery</span><h1>Pressure Washing &amp; Restoration Gallery</h1><p>Real before-and-after photos from Living Water projects across Toronto and the GTA — homes, commercial buildings, industrial sites and heritage landmarks.</p></div></section>
-<section><div class="wrap"><div class="section-head"><span class="pill light">Before &amp; After</span><h2>Drag to compare</h2></div><div class="grid g3">{pairs}</div></div></section>
-<section class="soft"><div class="wrap"><div class="section-head"><span class="pill light">On the job</span><h2>Our crews at work</h2><p>Click any photo to enlarge.</p></div><div class="masonry">{grid}</div></div></section>
-{cta_block()}'''
+    items = []  # (html, cats)
+    proj_keys = set()
+    for p in PROJECTS:
+        c = cat_of_service(p.get("service"))
+        link = f'<a class="proj-link" href="/projects/{p["slug"]}/">View case study →</a>'
+        for b, a in p["pairs"]:
+            proj_keys.update([b, a])
+            items.append((ba(b, a, p["title"], "").replace("</figcaption></figure>", link + "</figcaption></figure>"), f"{c} pairs"))
+        for v in p["videos"]:
+            proj_keys.add(v["poster"])
+            items.append((video_tag(v, p["title"]).replace("</figcaption></figure>", " " + link + "</figcaption></figure>"), f"{c} videos"))
+        for k in p["photos"]:
+            proj_keys.add(k)
+            items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(p["title"])} {link}</figcaption></figure>', f"{c} photos"))
+    used_pairs = {x for pr in GALLERY_PAIRS for x in pr[:2]}
+    for b, a, t, c_ in GALLERY_PAIRS:
+        items.append((ba(b, a, t, " — " + c_), f"{cat_of_key(a)} pairs"))
+    for k in M:
+        if k in used_pairs or k in proj_keys or k.endswith("-poster"): continue
+        items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>', f"{cat_of_key(k)} photos"))
+    grid = "".join(h.replace("<figure", f'<figure data-cat="{c}"', 1) for h, c in items)
+    n_pairs = sum(1 for _, c in items if "pairs" in c); n_vid = sum(1 for _, c in items if "videos" in c)
+    body = f"""
+<section class="page-hero"><picture>{hero_img("yellow-brick-heritage-building-cleaning")}</picture>
+<div class="wrap">{crumbs_html(trail)}<span class="pill">Project Gallery</span><h1>Pressure Washing &amp; Restoration Gallery</h1><p>{len(items)} real photos, before-and-after comparisons and videos from Living Water jobs across Toronto and the GTA. Filter by type of work.</p></div></section>
+<section><div class="wrap">
+<p class="answer">Browse {n_pairs} before-and-after comparisons and {n_vid} job videos of Living Water's brick cleaning, paint stripping, efflorescence removal, stone and rust stain restoration, commercial facade washing and heritage restoration work in the Greater Toronto Area. Drag any slider to compare.</p>
+{filter_bar(extra=(("pairs", "Before &amp; After"), ("videos", "Videos")))}
+<div class="masonry filterable">{grid}</div>
+{('<p class="center" style="margin-top:30px"><a class="btn line" href="/projects/">See all case studies</a></p>') if PROJECTS else ""}
+</div></section>
+{cta_block()}"""
     gal_ld = {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Living Water project gallery", "url": SITE + "/gallery/",
-              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M]}
+              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M if not k.endswith("-poster")]}
+    vlds = [video_ld(p, v, i) for p in PROJECTS for i, v in enumerate(p["videos"], 1)]
     page("/gallery/", "Before & After Gallery | Living Water Pressure Washing",
-         "Before and after photos of pressure washing, brick cleaning, paint removal, efflorescence and heritage restoration projects across Toronto and the GTA.",
-         body, schema=[gal_ld, crumbs_ld(trail)], preload="yellow-brick-heritage-building-cleaning", priority="0.7")
+         "Before-and-after photos and videos of brick cleaning, paint stripping, efflorescence and stone restoration projects across Toronto and the GTA.",
+         body, schema=[gal_ld, crumbs_ld(trail)] + vlds, preload="yellow-brick-heritage-building-cleaning", priority="0.8")
 
 # ------------------------------------------------------------ SERVICE AREAS
 def service_areas():
@@ -688,11 +713,12 @@ Sitemap: {SITE}/sitemap.xml
         "icons": [{"src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, indent=1))
     open(OUT + "/humans.txt", "w").write(f"/* TEAM */\nCompany: {LEGAL}\nContact: {EMAIL}\nLocation: Toronto, Ontario, Canada\n")
 
+projects_hub_pages_first = True
 home(); services_hub()
 for s in SERVICES: service_page(s)
 for c in CITIES: city_page(c)
 guides_hub()
 for g in GUIDES: guide_page(g)
-reviews_page(); faq_page(); industries_page(); projects_hub(); glossary_page(); html_sitemap()
-about(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
+reviews_page(); faq_page(); industries_page(); glossary_page(); html_sitemap()
+about(); projects_hub(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")

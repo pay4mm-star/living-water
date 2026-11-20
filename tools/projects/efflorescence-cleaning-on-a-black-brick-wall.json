@@ -1,0 +1,26 @@
+{
+ "slug": "efflorescence-cleaning-on-a-black-brick-wall",
+ "title": "Efflorescence cleaning on a black brick wall",
+ "service": "efflorescence-removal",
+ "location": "",
+ "date": "2026-11",
+ "description": "White efflorescence streaks cleaned from a black brick wall, restoring an even dark finish.",
+ "pairs": [],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/efflorescence-cleaning-on-a-black-brick-wall-video-1.mp4",
+   "poster": "efflorescence-cleaning-on-a-black-brick-wall-video-1-poster",
+   "duration": 26,
+   "w": 464,
+   "h": 832
+  },
+  {
+   "src": "/assets/video/efflorescence-cleaning-on-a-black-brick-wall-video-2.mp4",
+   "poster": "efflorescence-cleaning-on-a-black-brick-wall-video-2-poster",
+   "duration": 30,
+   "w": 576,
+   "h": 1024
+  }
+ ]
+}

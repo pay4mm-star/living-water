@@ -1,0 +1,28 @@
+{
+ "slug": "commercial-facade-washing-from-a-boom-lift",
+ "title": "Commercial facade washing from a boom lift",
+ "service": "commercial-power-washing",
+ "location": "",
+ "date": "2026-11",
+ "description": "Exterior washing of a precast and glass commercial building facade, completed from a boom lift by a certified lift operator.",
+ "pairs": [],
+ "photos": [
+  "commercial-facade-washing-from-a-boom-lift-1"
+ ],
+ "videos": [
+  {
+   "src": "/assets/video/commercial-facade-washing-from-a-boom-lift-video-1.mp4",
+   "poster": "commercial-facade-washing-from-a-boom-lift-video-1-poster",
+   "duration": 19,
+   "w": 832,
+   "h": 464
+  },
+  {
+   "src": "/assets/video/commercial-facade-washing-from-a-boom-lift-video-2.mp4",
+   "poster": "commercial-facade-washing-from-a-boom-lift-video-2-poster",
+   "duration": 14,
+   "w": 832,
+   "h": 464
+  }
+ ]
+}

@@ -121,7 +121,14 @@ def tech_extra():
         meta = PAGE_META.get(p, {})
         imgs = "".join(f"<image:image><image:loc>{SITE}{best(k)}</image:loc><image:title>{esc(M[k]['alt'])}</image:title></image:image>" for k in meta.get("imgs", [])[:20])
         rows.append(f"<url><loc>{SITE}{p}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority>{imgs}</url>")
-    open(OUT + "/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(rows) + "\n</urlset>\n")
+    vrows = {}
+    for p_ in PROJECTS:
+        vrows[f"/projects/{p_['slug']}/"] = "".join(
+            f"<video:video><video:thumbnail_loc>{SITE}{best(v['poster'])}</video:thumbnail_loc><video:title>{esc(p_['title'])} — video {i}</video:title>"
+            f"<video:description>{esc(p_.get('description') or p_['title'])}</video:description><video:content_loc>{SITE}{v['src']}</video:content_loc><video:duration>{v['duration']}</video:duration></video:video>"
+            for i, v in enumerate(p_["videos"], 1))
+    rows = [r.replace("</url>", vrows.get(_re.search(r"<loc>" + _re.escape(SITE) + r"([^<]+)</loc>", r).group(1), "") + "</url>") for r in rows]
+    open(OUT + "/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n' + "\n".join(rows) + "\n</urlset>\n")
 
     # Cloudflare Pages: redirects for old WordPress URLs
     open(OUT + "/_redirects", "w").write("""# Old WordPress URLs -> new pages (301)
