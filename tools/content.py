@@ -432,7 +432,7 @@ GALLERY_PAIRS = [
     ("commercial-brick-paint-removal-before", "commercial-brick-paint-removal-after", "Commercial paint removal", "Patchy paint stripped from a commercial brick facade."),
     ("stone-patio-cleaning-before", "stone-patio-cleaning-after", "Stone patio & loggia", "Residential stone patio cleaned back to its original colour."),
     ("boat-deck-mobile-power-wash-before", "boat-deck-mobile-power-wash-after", "Mobile power wash, boat deck", "Our mobile unit cleaning a sailboat deck."),
-    ("painted-building-paint-removal-before", "painted-building-paint-removal-after", "Paint stripping, downtown Toronto", "Painted masonry stripped to reveal the original brick."),
+    ("painted-building-paint-removal-before", "painted-building-paint-removal-after", "Masonry restoration, downtown Toronto", "Patchy, weathered paint removed and the facade restored to a clean, uniform finish."),
 ]
 
 # Spring campaign (switch on in March): SEASONAL = dict(on=True, text="🌱 Spring cleaning season: driveways, interlock & salt damage clean-up", link="/residential-power-washing/", cta="Get a quote")

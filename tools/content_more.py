@@ -100,7 +100,7 @@ GUIDES_MORE = [
     dict(slug="remove-paint-from-brick",
          title="How to Remove Paint from Brick Without Damaging It",
          meta="Safe ways to strip paint from interior and exterior brick — chemical strippers, low-pressure rinsing and micro blasting — and what to avoid.",
-         hero="painted-building-paint-removal-after", related=["brick-cleaning-paint-removal", "historical-remediation", "sandblasting-services"],
+         hero="commercial-brick-paint-removal-after", related=["brick-cleaning-paint-removal", "historical-remediation", "sandblasting-services"],
          answer="The safest way to remove paint from brick is a chemical paint stripper matched to the coating, left to dwell (often under a cover), then removed with low-pressure rinsing or scraping — with gentle micro or soda blasting only for stubborn residue. Avoid high-pressure washing and coarse sandblasting, which strip the brick's fired face and lead to water damage.",
          body="""
 <h2>Start with a test patch</h2>

@@ -182,17 +182,7 @@
   ]
  },
  "painted-building-paint-removal-before": {
-  "alt": "Downtown Toronto building with painted masonry before paint stripping",
-  "w": 1200,
-  "h": 1600,
-  "sizes": [
-   320,
-   640,
-   960
-  ]
- },
- "painted-building-paint-removal-after": {
-  "alt": "Downtown Toronto building with original brick revealed after paint removal",
+  "alt": "Downtown Toronto masonry building with patchy, weathered paint before restoration",
   "w": 1536,
   "h": 2048,
   "sizes": [
@@ -200,6 +190,16 @@
    640,
    960,
    1280
+  ]
+ },
+ "painted-building-paint-removal-after": {
+  "alt": "Downtown Toronto masonry building with a clean, uniform facade after restoration",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   320,
+   640,
+   960
   ]
  },
  "heritage-red-brick-building-cleaning": {
