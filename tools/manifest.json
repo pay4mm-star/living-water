@@ -181,27 +181,6 @@
    320
   ]
  },
- "painted-building-paint-removal-before": {
-  "alt": "Downtown Toronto masonry building with patchy, weathered paint before restoration",
-  "w": 1536,
-  "h": 2048,
-  "sizes": [
-   320,
-   640,
-   960,
-   1280
-  ]
- },
- "painted-building-paint-removal-after": {
-  "alt": "Downtown Toronto masonry building with a clean, uniform facade after restoration",
-  "w": 1200,
-  "h": 1600,
-  "sizes": [
-   320,
-   640,
-   960
-  ]
- },
  "heritage-red-brick-building-cleaning": {
   "alt": "Red brick heritage building partly cleaned, showing the difference professional brick cleaning makes",
   "w": 1600,
@@ -657,6 +636,27 @@
   "h": 413,
   "sizes": [
    320
+  ]
+ },
+ "downtown-toronto-masonry-restoration-before": {
+  "alt": "Downtown Toronto masonry building with patchy, weathered paint before restoration",
+  "w": 1536,
+  "h": 2048,
+  "sizes": [
+   320,
+   640,
+   960,
+   1280
+  ]
+ },
+ "downtown-toronto-masonry-restoration-after": {
+  "alt": "Downtown Toronto masonry building with a clean, uniform facade after restoration",
+  "w": 1200,
+  "h": 1600,
+  "sizes": [
+   320,
+   640,
+   960
   ]
  }
 }

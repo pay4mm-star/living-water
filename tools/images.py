@@ -28,8 +28,8 @@ IMAGES = {
     "stone-patio-cleaning-after": ("2026/06/Residential-Cleaning-2-After.webp", "Stone patio and loggia after residential pressure washing"),
     "heritage-facade-restoration-before": ("2026/08/12-old.jpg", "Ornate heritage building entrance darkened by decades of soot before restoration"),
     "heritage-facade-restoration-after": ("2026/08/12-edit.jpg", "Heritage building entrance after gentle facade cleaning and restoration"),
-    "painted-building-paint-removal-before": ("2026/10/Paint-Removal-4-After.jpeg", "Downtown Toronto masonry building with patchy, weathered paint before restoration"),
-    "painted-building-paint-removal-after": ("2026/10/Paint-Removal-4-Before.jpeg", "Downtown Toronto masonry building with a clean, uniform facade after restoration"),
+    "downtown-toronto-masonry-restoration-before": ("2026/10/Paint-Removal-4-After.jpeg", "Downtown Toronto masonry building with patchy, weathered paint before restoration"),
+    "downtown-toronto-masonry-restoration-after": ("2026/10/Paint-Removal-4-Before.jpeg", "Downtown Toronto masonry building with a clean, uniform facade after restoration"),
     # project photos
     "heritage-red-brick-building-cleaning": ("2026/08/60787623430__C824A0E2-0610-4BA5-9C61-18E4BF7E14BF-scaled.jpg", "Red brick heritage building partly cleaned, showing the difference professional brick cleaning makes"),
     "concrete-surface-cleaning-residue-removal": ("2026/08/63933091846__CD9F03B4-6AE4-48F6-985D-C7B2BB54C31E.jpeg", "Concrete surface with residue being cleaned by a Living Water crew"),

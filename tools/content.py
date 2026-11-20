@@ -193,7 +193,7 @@ svc("brick-cleaning-paint-removal",
 <li>Exterior brick cleaning</li><li>Interior brick cleaning</li><li>Brick paint removal</li><li>Old coating removal</li><li>Dirt and grime removal</li><li>Efflorescence removal</li><li>Brick stain removal</li><li>Chemical brick cleaning and acid washing</li><li>Sandblasting and abrasive blasting where appropriate</li><li>Brick restoration and surface preparation</li>
 </ul>
 """,
-    photos=["commercial-brick-paint-removal-before|commercial-brick-paint-removal-after", "painted-building-paint-removal-before|painted-building-paint-removal-after", "brick-masonry-house-cleaning-before|brick-masonry-house-cleaning-after", "brick-arch-window-cleaning", "yellow-brick-wall-cleaning", "brick-wall-cleaning-technician"],
+    photos=["commercial-brick-paint-removal-before|commercial-brick-paint-removal-after", "downtown-toronto-masonry-restoration-before|downtown-toronto-masonry-restoration-after", "brick-masonry-house-cleaning-before|brick-masonry-house-cleaning-after", "brick-arch-window-cleaning", "yellow-brick-wall-cleaning", "brick-wall-cleaning-technician"],
     faqs=[("Can paint be removed from brick without damaging it?", "In most cases, yes. We use chemical strippers and controlled low-pressure rinsing, or gentle media blasting for stubborn coatings, after testing a small area."),
           ("What is a brick acid wash?", "An acid wash dissolves mortar smears and mineral stains from new or old brick. It must be correctly diluted, tested and neutralised to avoid burning the brick."),
           ("Do you clean interior brick?", "Yes — interior brick walls and fireplaces can be cleaned with low-moisture methods and full protection of the room.")],
@@ -432,7 +432,7 @@ GALLERY_PAIRS = [
     ("commercial-brick-paint-removal-before", "commercial-brick-paint-removal-after", "Commercial paint removal", "Patchy paint stripped from a commercial brick facade."),
     ("stone-patio-cleaning-before", "stone-patio-cleaning-after", "Stone patio & loggia", "Residential stone patio cleaned back to its original colour."),
     ("boat-deck-mobile-power-wash-before", "boat-deck-mobile-power-wash-after", "Mobile power wash, boat deck", "Our mobile unit cleaning a sailboat deck."),
-    ("painted-building-paint-removal-before", "painted-building-paint-removal-after", "Masonry restoration, downtown Toronto", "Patchy, weathered paint removed and the facade restored to a clean, uniform finish."),
+    ("downtown-toronto-masonry-restoration-before", "downtown-toronto-masonry-restoration-after", "Masonry restoration, downtown Toronto", "Patchy, weathered paint removed and the facade restored to a clean, uniform finish."),
 ]
 
 # Spring campaign (switch on in March): SEASONAL = dict(on=True, text="🌱 Spring cleaning season: driveways, interlock & salt damage clean-up", link="/residential-power-washing/", cta="Get a quote")
