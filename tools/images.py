@@ -80,7 +80,7 @@ IMAGES = {
     "roof-moss-washing-ladder": ("slider/cache/f209caf2aa3a9be969e9f011eaabfa73/slide-5.webp", "Technician on a ladder washing moss off a roof"),
 }
 
-WIDTHS = [320, 640, 960, 1280, 1600]
+WIDTHS = [320, 480, 640, 800, 960, 1280, 1600]
 manifest = {}
 for key, (src, alt) in IMAGES.items():
     im = ImageOps.exif_transpose(Image.open(SRC + src)).convert("RGB")

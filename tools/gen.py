@@ -20,19 +20,20 @@ CSS_INLINE = _r0.sub(r"\s*\n\s*", "", _r0.sub(r"/\*.*?\*/", "", open(os.path.joi
 esc = html.escape
 
 # ------------------------------------------------------------ helpers
-def srcset(k):
-    return ", ".join(f"/assets/img/{k}-{w}.webp {w}w" for w in M[k]["sizes"])
+def srcset(k, maxw=None):
+    ws = [w for w in M[k]["sizes"] if not maxw or w <= maxw] or M[k]["sizes"][:1]
+    return ", ".join(f"/assets/img/{k}-{w}.webp {w}w" for w in ws)
 
 def best(k, maxw=1600):
     s = [w for w in M[k]["sizes"] if w <= maxw]
     return f"/assets/img/{k}-{s[-1]}.webp"
 
-def img(k, sizes="(max-width: 700px) 100vw, 50vw", cls="", eager=False, alt=None):
+def img(k, sizes="(max-width: 700px) 100vw, 50vw", cls="", eager=False, alt=None, maxw=None):
     m = M[k]
     w = m["sizes"][-1]; h = round(m["h"] * w / m["w"])
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
-    return (f'<img src="{best(k, 640)}" srcset="{srcset(k)}" sizes="{sizes}" width="{w}" height="{h}" '
+    return (f'<img src="{best(k, 640)}" srcset="{srcset(k, maxw)}" sizes="{sizes}" width="{w}" height="{h}" '
             f'alt="{esc(alt or m["alt"])}" {load}{c}>')
 
 def hero_img(k, sizes="100vw", eager=True, alt=""):
@@ -508,47 +509,77 @@ def about():
          body, schema=[about_ld, crumbs_ld(trail), faq_ld(GENERAL_FAQ)], preload="century-home-pressure-washing", priority="0.8")
 
 # ------------------------------------------------------------ GALLERY
+CAT_LABEL = dict(CATS) if "CATS" in globals() else {}
+
+def _tile(kind, cats, media, title, cat, link="", extra=""):
+    lab = {"brick": "Brick & Paint", "efflorescence": "Efflorescence", "stone": "Stone & Rust", "residential": "Residential",
+           "commercial": "Commercial", "heritage": "Heritage", "elevator": "Elevator Pits"}.get(cat, "Project")
+    kind_lab = {"pair": "Before &amp; After", "video": "Video", "photo": ""}[kind]
+    return (f'<figure class="tile tile-{kind}" data-cat="{cats}">'
+            f'<div class="media">{media}</div>'
+            f'<figcaption><span class="tags"><span class="tag">{lab}</span>{f"<span class=tag2>{kind_lab}</span>" if kind_lab else ""}</span>'
+            f'<span class="t">{esc(title)}</span>{link}{extra}</figcaption></figure>')
+
+def _photo_media(k):
+    return f'<button type="button" class="zoom" data-full="{best(k)}" aria-label="Enlarge photo: {esc(M[k]["alt"])}">{img(k, "(max-width:640px) 100vw, (max-width:1000px) 50vw, 400px", maxw=800)}</button>'
+
+def _video_media(v, title):
+    mins, secs = divmod(int(v["duration"]), 60)
+    return (f'<button type="button" class="play" data-video="{v["src"]}" data-poster="{best(v["poster"], 960)}" aria-label="Play video: {esc(title)}">'
+            f'{img(v["poster"], "(max-width:640px) 100vw, (max-width:1000px) 50vw, 400px", alt="", maxw=800)}'
+            f'<span class="playbtn" aria-hidden="true"></span><span class="dur">{mins}:{secs:02d}</span></button>')
+
+def _pair_media(b, a):
+    bs = "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 400px"
+    return f'''<div class="ba">{img(b, bs, maxw=800)}<div class="after">{img(a, bs, maxw=800)}</div><span class="lbl b">Before</span><span class="lbl a">After</span><div class="bar"></div><input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after"></div>'''
+
 def gallery():
     trail = [("Home", "/"), ("Gallery", "/gallery/")]
-    items = []  # (html, cats)
+    items = []
     proj_keys = set()
     for p in PROJECTS:
         c = cat_of_service(p.get("service"))
         link = f'<a class="proj-link" href="/projects/{p["slug"]}/">View case study →</a>'
         for b, a in p["pairs"]:
-            proj_keys.update([b, a])
-            items.append((ba(b, a, p["title"], "").replace("</figcaption></figure>", link + "</figcaption></figure>"), f"{c} pairs"))
+            proj_keys.update([b, a]); items.append(_tile("pair", f"{c} pairs", _pair_media(b, a), p["title"], c, link))
         for v in p["videos"]:
-            proj_keys.add(v["poster"])
-            items.append((video_tag(v, p["title"]).replace("</figcaption></figure>", " " + link + "</figcaption></figure>"), f"{c} videos"))
+            proj_keys.add(v["poster"]); items.append(_tile("video", f"{c} videos", _video_media(v, p["title"]), p["title"], c, link))
         for k in p["photos"]:
-            proj_keys.add(k)
-            items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(p["title"])} {link}</figcaption></figure>', f"{c} photos"))
-    used_pairs = {x for pr in GALLERY_PAIRS for x in pr[:2]}
+            proj_keys.add(k); items.append(_tile("photo", f"{c} photos", _photo_media(k), M[k]["alt"], c, link))
     for b, a, t, c_ in GALLERY_PAIRS:
-        items.append((ba(b, a, t, " — " + c_), f"{cat_of_key(a)} pairs"))
+        c = cat_of_key(a); items.append(_tile("pair", f"{c} pairs", _pair_media(b, a), t, c))
     GEX = json.load(open(os.path.join(HERE, "gallery_extra.json"))) if os.path.exists(os.path.join(HERE, "gallery_extra.json")) else []
-    gex_cat = {e["key"]: e["cat"] for e in GEX}
+    gex = {e["key"] for e in GEX}
     for e in GEX:
-        k = e["key"]
-        if k in M:
-            items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>', f"{e['cat']} photos"))
-    EXCLUDE = {"silo-tank-wash-progress"}
+        if e["key"] in M: items.append(_tile("photo", f"{e['cat']} photos", _photo_media(e["key"]), M[e["key"]]["alt"], e["cat"]))
+    used_pairs = {x for pr in GALLERY_PAIRS for x in pr[:2]}
     for k in M:
-        if k in used_pairs or k in proj_keys or k.endswith("-poster") or k in gex_cat or k in EXCLUDE: continue
-        items.append((f'<figure>{img(k, "(max-width:640px) 100vw, 33vw").replace("<img ", f"<img data-full={chr(34)}{best(k)}{chr(34)} ", 1)}<figcaption>{esc(M[k]["alt"])}</figcaption></figure>', f"{cat_of_key(k)} photos"))
-    grid = "".join(h.replace("<figure", f'<figure data-cat="{c}"' + (' class="more"' if i >= 36 else ''), 1) for i, (h, c) in enumerate(items))
-    n_pairs = sum(1 for _, c in items if "pairs" in c); n_vid = sum(1 for _, c in items if "videos" in c)
+        if k in used_pairs or k in proj_keys or k.endswith("-poster") or k in gex or k == "silo-tank-wash-progress": continue
+        c = cat_of_key(k); items.append(_tile("photo", f"{c} photos", _photo_media(k), M[k]["alt"], c))
+    # interleave: pairs and videos first so the top of the gallery shows the best comparisons
+    order = sorted(range(len(items)), key=lambda i: (0 if "tile-pair" in items[i] else 1 if "tile-video" in items[i] else 2, i))
+    ordered = [items[i] for i in order]
+    grid = "".join(ordered[:24]); rest = "".join(ordered[24:])
+    n_pairs = sum(1 for x in items if "tile-pair" in x); n_vid = sum(1 for x in items if "tile-video" in x); n_ph = len(items) - n_pairs - n_vid
+    proj_n = len(PROJECTS)
     body = f"""
 <section class="page-hero"><picture>{hero_img("yellow-brick-heritage-building-cleaning")}</picture>
-<div class="wrap">{crumbs_html(trail)}<span class="pill">Project Gallery</span><h1>Pressure Washing &amp; Restoration Gallery</h1><p>{len(items)} real photos, before-and-after comparisons and videos from Living Water jobs across Toronto and the GTA. Filter by type of work.</p></div></section>
-<section><div class="wrap">
-<p class="answer">Browse {n_pairs} before-and-after comparisons and {n_vid} job videos of Living Water's brick cleaning, paint stripping, efflorescence removal, stone and rust stain restoration, commercial facade washing and heritage restoration work in the Greater Toronto Area. Drag any slider to compare.</p>
-{filter_bar(extra=(("pairs", "Before &amp; After"), ("videos", "Videos")))}
-<div class="masonry filterable" data-page="36">{grid}</div>
-<p class="center" style="margin-top:24px"><button type="button" class="btn line load-more">Show more work</button></p>
-{('<p class="center" style="margin-top:30px"><a class="btn line" href="/projects/">See all case studies</a></p>') if PROJECTS else ""}
+<div class="wrap">{crumbs_html(trail)}<span class="pill">Project Gallery</span><h1>Our Work: Before &amp; After Gallery</h1><p>Real Living Water jobs across Toronto and the GTA — drag the sliders, play the videos and filter by type of work.</p>
+<div class="gstats"><span><b>{n_pairs}</b> before &amp; afters</span><span><b>{n_vid}</b> videos</span><span><b>{n_ph}</b> photos</span><span><b>{proj_n}</b> case studies</span></div></div></section>
+<section class="gallery-sec"><div class="wrap">
+<p class="answer">Browse {n_pairs} before-and-after comparisons, {n_vid} job videos and {n_ph} photos of Living Water's brick cleaning, paint stripping, efflorescence removal, stone restoration, commercial, industrial, heritage and elevator pit work in the Greater Toronto Area.</p>
+<div class="gbar">{filter_bar(extra=(("pairs", "Before &amp; After"), ("videos", "Videos"), ("photos", "Photos")))}<p class="gcount" aria-live="polite"></p></div>
+<div class="tiles filterable" data-page="24">{grid}</div>
+<template id="more-tiles">{rest}</template>
+<p class="center" style="margin-top:28px"><button type="button" class="btn load-more">Show more work</button></p>
+{('<p class="center" style="margin-top:14px"><a class="proj-link" href="/projects/">Browse all ' + str(proj_n) + ' case studies →</a></p>') if PROJECTS else ""}
 </div></section>
+<div class="viewer" role="dialog" aria-modal="true" aria-label="Media viewer" hidden>
+<button type="button" class="v-close" aria-label="Close">×</button>
+<button type="button" class="v-prev" aria-label="Previous">‹</button>
+<div class="v-stage"></div>
+<button type="button" class="v-next" aria-label="Next">›</button>
+<p class="v-cap"></p></div>
 {cta_block()}"""
     gal_ld = {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Living Water project gallery", "url": SITE + "/gallery/",
               "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M if not k.endswith("-poster") and k != "silo-tank-wash-progress"]}
