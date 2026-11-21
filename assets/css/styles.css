@@ -303,3 +303,17 @@ figure.vid video{width:100%;height:auto;max-height:72vh;object-fit:contain;backg
 .map-load:focus-visible span,.map-load:hover span{background:#0e7b87;color:#fff}
 .mapbox iframe{width:100%;height:100%;border:0;display:block}
 @media(max-width:520px){.map-load span{white-space:normal;text-align:center;width:80%}}
+/* ---- mobile polish (Nov 2026) ---- */
+.season .s-short{display:none}
+@media (max-width:640px){
+  .season{font-size:.8rem;padding:7px 12px;gap:8px;flex-wrap:nowrap;justify-content:center}
+  .season .s-long{display:none}.season .s-short{display:inline}
+  .topbar .tb-mail{display:none}.topbar .wrap{justify-content:center;padding-top:5px;padding-bottom:5px}
+  .hero .lead{font-size:1rem;line-height:1.6}
+  /* swipeable card rows instead of a 3,000px stack */
+  .swipe,.reviews{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -20px;padding:4px 20px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .swipe::-webkit-scrollbar,.reviews::-webkit-scrollbar{display:none}
+  .swipe>.card,.reviews>.review{flex:0 0 82%;scroll-snap-align:start;margin:0}
+  .swipe-hint{display:block;text-align:center;font-size:.8rem;color:var(--muted,#5b6b70);margin-top:2px}
+}
+.swipe-hint{display:none}

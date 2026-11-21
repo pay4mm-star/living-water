@@ -445,7 +445,7 @@ GALLERY_PAIRS = [
 ]
 
 # Spring campaign (switch on in March): SEASONAL = dict(on=True, text="🌱 Spring cleaning season: driveways, interlock & salt damage clean-up", link="/residential-power-washing/", cta="Get a quote")
-SEASONAL = dict(on=True, text="❄ Winter booking now open: elevator pit cleaning for condos & commercial buildings", link="/elevator-pit-cleaning/", cta="Book now")
+SEASONAL = dict(on=True, text="❄ Winter booking now open: elevator pit cleaning for condos & commercial buildings", short="❄ Winter elevator pit cleaning", link="/elevator-pit-cleaning/", cta="Book now")
 
 # ---------------------------------------------------------------- focused sub-services (high-volume search intents)
 svc("driveway-interlock-cleaning", group="sub", parent="residential-power-washing", nav="Driveway & Interlock Cleaning", short="Driveways",

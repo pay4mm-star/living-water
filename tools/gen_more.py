@@ -117,7 +117,7 @@ def industries_page():
 def seasonal_bar(path):
     if not SEASONAL.get("on") or path == SEASONAL["link"]:
         return ""
-    return f'<a class="season" href="{SEASONAL["link"]}"><span>{esc(SEASONAL["text"])}</span><b>{esc(SEASONAL["cta"])} →</b></a>'
+    return f'<a class="season" href="{SEASONAL["link"]}"><span class="s-long">{esc(SEASONAL["text"])}</span><span class="s-short">{esc(SEASONAL.get("short", SEASONAL["text"]))}</span><b>{esc(SEASONAL["cta"])} →</b></a>'
 
 
 def winter_feature():

@@ -219,7 +219,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 <body>
 <a class="skip" href="#main">Skip to content</a>
 {seasonal_bar(path)}
-<div class="topbar"><div class="wrap"><span><a href="mailto:{EMAIL}">{EMAIL}</a><span class="hide-sm"> | Serving Toronto &amp; the GTA since 1998</span></span><span>24/7 Emergency: <a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></span></div></div>
+<div class="topbar"><div class="wrap"><span class="tb-mail"><a href="mailto:{EMAIL}">{EMAIL}</a><span class="hide-sm"> | Serving Toronto &amp; the GTA since 1998</span></span><span>24/7 Emergency: <a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></span></div></div>
 <header class="site-header"><div class="wrap">
 <a class="logo" href="/" aria-label="Living Water Pressure Wash Services home"><img src="/assets/img/living-water-logo-440.webp" width="440" height="70" alt="Living Water Pressure Wash Services" fetchpriority="high"></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu ☰</button>
@@ -247,15 +247,15 @@ def service_cards(slugs, tag_attr="short"):
     out = []
     for s in slugs:
         d = SERVICES[s]
-        out.append(f'''<article class="card">{img(d["card"], "(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw")}
+        out.append(f'''<article class="card">{img(d["card"], "(max-width: 640px) 82vw, (max-width: 1000px) 50vw, 33vw")}
 <div class="body"><span class="tag">{esc(d[tag_attr])}</span><h3><a href="/{s}/">{esc(d["nav"])}</a></h3><p>{esc(d["card_text"])}</p><span class="more">Learn more →</span></div></article>''')
-    return '<div class="grid g3">' + "".join(out) + "</div>"
+    return '<div class="grid g3 swipe">' + "".join(out) + '</div><p class="swipe-hint" aria-hidden="true">Swipe for more →</p>'
 
 def reviews_block():
     items = "".join(f'<figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{esc(t)}”</blockquote><figcaption><cite>{esc(n)}</cite><small>Google review</small></figcaption></figure>' for n, t in REVIEWS)
     return f'''<section class="soft"><div class="wrap">
 <div class="section-head"><span class="pill light">Verified Feedback</span><h2>What Our Clients Say</h2><p>Rated 4.9 / 5 on Google by homeowners, property management firms, condominium boards and facility managers across the GTA.</p></div>
-<div class="reviews">{items}</div>
+<div class="reviews">{items}</div><p class="swipe-hint" aria-hidden="true">Swipe for more reviews →</p>
 <p class="center" style="margin-top:30px"><a class="btn line" href="/reviews/">Read all reviews</a></p>
 </div></section>'''
 
