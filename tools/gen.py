@@ -38,7 +38,7 @@ def img(k, sizes="(max-width: 700px) 100vw, 50vw", cls="", eager=False, alt=None
 
 def hero_img(k, sizes="100vw", eager=True, alt=""):
     # dimmed page-hero backgrounds don't need full resolution
-    return img(k, "(max-width: 640px) 100vw, 75vw", eager=eager, alt=alt)
+    return img(k, "(max-width: 640px) 55vw, 75vw", eager=eager, alt=alt)
 
 def ba(before, after, title="", caption=""):
     cap = f"<figcaption><strong>{esc(title)}</strong>{esc(caption)}</figcaption>" if title else ""
@@ -188,7 +188,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
                "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".answer"]}}
     if crumbs: webpage["breadcrumb"] = {"@id": canonical + "#breadcrumb"}
     schema = [webpage] + list(schema)
-    pre = f'<link rel="preload" as="image" href="{best(preload, 640)}" imagesrcset="{srcset(preload)}" imagesizes="{"100vw" if path == "/" else "(max-width: 640px) 100vw, 75vw"}" fetchpriority="high">' if preload else ""
+    pre = f'<link rel="preload" as="image" href="{best(preload, 640)}" imagesrcset="{srcset(preload)}" imagesizes="{"100vw" if path == "/" else "(max-width: 640px) 55vw, 75vw"}" fetchpriority="high">' if preload else ""
     og_url = og_img if og_img.startswith("http") else f"{SITE}/assets/img/{og_img}"
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1"
     doc = f'''<!doctype html>
@@ -660,7 +660,7 @@ def contact():
 <li><b>Service area</b>Toronto &amp; the Greater Toronto Area — <a href="/service-areas/">see all areas</a></li>
 </ul>
 <p style="margin-top:14px"><a class="btn line sm" href="{GBP_MAPS}" target="_blank" rel="noopener">View us on Google Maps</a> <a class="btn line sm" href="{GBP_REVIEW}" target="_blank" rel="noopener">★ Leave a Google review</a></p>
-<div style="margin-top:26px">{img("living-water-van-residential-pressure-washing", "(max-width:1000px) 100vw, 45vw")}</div>
+<div class="mapbox" style="margin-top:26px"><button type="button" class="map-load" data-src="https://maps.google.com/maps?q=Living%20Water%20Pressure%20Wash%20Services%20Ltd.%2C%20130%20Cook%27s%20Mill%20Crescent%2C%20L6A%200L1&amp;z=11&amp;output=embed">{img("living-water-van-residential-pressure-washing", "(max-width:1000px) 100vw, 45vw", alt="")}<span>📍 Show our location &amp; service area on Google Maps</span></button></div>
 </div></div></section>
 {reviews_block()}
 {areas_block()}'''

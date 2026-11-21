@@ -49,6 +49,40 @@ def projects_section(service=None, location=None):
     return f'<section><div class="wrap"><div class="section-head"><span class="pill light">Case studies</span><h2>Recent projects</h2></div><div class="grid g3">{"".join(project_card(p) for p in ps)}</div></div></section>'
 
 
+def meta_desc(p, svc, summary):
+    where = f"in {p['location']}" if p.get("location") else "across the GTA"
+    n = len(p["pairs"]) + len(p["photos"]); v = len(p["videos"])
+    media = (f"{len(p['pairs'])} before & after comparison{'s' if len(p['pairs']) > 1 else ''}" if p["pairs"] else f"{n} job photo{'s' if n != 1 else ''}") + (f" and {v} video{'s' if v > 1 else ''}" if v else "")
+    base = summary.rstrip(".") + "."
+    for tail in (f" See {media} from Living Water {where}. Free quotes.", f" See {media} from Living Water {where}.", f" See {media}.", ""):
+        if len(base + tail) <= 158:
+            return base + tail
+    return base[:155].rsplit(" ", 1)[0] + "…"
+
+
+def approach_html(p, svc):
+    if not svc or p["service"] not in SERVICE_FACTS:
+        return ""
+    best_for, methods, clients, avail = SERVICE_FACTS[p["service"]]
+    return f"""<h2>How we approach {esc(svc["nav"].lower())} jobs like this</h2>
+<p>Every {esc(svc["nav"].lower())} job starts with an on-site assessment of the surface and the soiling, followed by a test patch in an inconspicuous spot so the method and pressure are proven before the full clean. {esc(svc["answer"])}</p>
+<div class="glance"><dl>
+<div><dt>Surfaces</dt><dd>{esc(best_for)}</dd></div>
+<div><dt>Methods</dt><dd>{esc(methods)}</dd></div>
+<div><dt>Typical clients</dt><dd>{esc(clients)}</dd></div>
+<div><dt>Availability</dt><dd>{esc(avail)}</dd></div>
+</dl></div>
+<p>Have a similar surface? <a href="/{p["service"]}/">Read more about our {esc(svc["nav"].lower())} service</a> or <a href="/contact/#quote">request a free, fixed written quote</a>.</p>"""
+
+
+def related_html(p):
+    c = cat_of_service(p.get("service"))
+    rel = [q for q in PROJECTS if q is not p and cat_of_service(q.get("service")) == c][:3]
+    if len(rel) < 3:
+        rel += [q for q in PROJECTS if q is not p and q not in rel][:3 - len(rel)]
+    return f'<section class="soft"><div class="wrap"><div class="section-head"><h2>Related projects</h2></div><div class="grid g3">{"".join(project_card(q) for q in rel)}</div></div></section>'
+
+
 def project_page(p):
     path = f"/projects/{p['slug']}/"
     trail = [("Home", "/"), ("Projects", "/projects/"), (p["title"], path)]
@@ -61,6 +95,8 @@ def project_page(p):
         ("Location", esc(p.get("location", ""))), ("Completed", esc(p.get("date", "")))] if v)
     loc = f" in {p['location']}" if p.get("location") else ""
     summary = p.get("description") or f"{svc['nav'] if svc else 'Cleaning and restoration'} project{loc} completed by Living Water Pressure Wash Services."
+    faqs = (svc["faqs"][:3] if svc else [])
+    faq_html = ('<h2>Common questions about ' + esc(svc["nav"].lower()) + '</h2>' + "".join(f'<details class="faq"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>' for q, a in faqs)) if faqs else ""
     body = f"""
 <section class="page-hero"><picture>{hero_img(hero)}</picture>
 <div class="wrap">{crumbs_html(trail)}<span class="pill">Case study</span><h1>{esc(p["title"])}{esc(loc) if loc and p["location"].lower() not in p["title"].lower() else ""}</h1></div></section>
@@ -70,7 +106,10 @@ def project_page(p):
 {('<h2>Before &amp; after</h2><div class="grid ' + ('g2' if len(p["pairs"]) > 1 else '') + '">' + pairs + '</div>') if pairs else ""}
 {('<h2>On the job</h2><div class="grid g2">' + photos + '</div>') if photos else ""}
 {('<h2>Video</h2><div class="grid g2 vids">' + "".join(video_tag(v, p["title"]) for v in p["videos"]) + '</div>') if p["videos"] else ""}
+{approach_html(p, svc)}
+{faq_html}
 </article><aside class="side">{quote_aside()}{('<div><h3>This service</h3><nav class="related"><a href="/' + p["service"] + '/">' + esc(svc["nav"]) + ' →</a></nav></div>') if svc else ""}</aside></div></section>
+{related_html(p)}
 {cta_block()}"""
     ld_ = {"@context": "https://schema.org", "@type": "CreativeWork", "name": p["title"], "about": svc["service_type"] if svc else "Pressure washing",
            "creator": {"@id": ORG_ID}, "locationCreated": {"@type": "Place", "name": p.get("location") or "Greater Toronto Area"},
@@ -79,7 +118,7 @@ def project_page(p):
     title = f"{p['title']}{loc} | Living Water"
     vlds = [video_ld(p, v, i) for i, v in enumerate(p["videos"], 1)]
     if len(title) > 60: title = p["title"][:60]
-    page(path, title, summary[:158], body, schema=[ld_, crumbs_ld(trail)] + vlds, preload=hero, priority="0.7", crumbs=True)
+    page(path, title, meta_desc(p, svc, summary), body, schema=[ld_, crumbs_ld(trail)] + ([faq_ld(faqs)] if faqs else []) + vlds, preload=hero, priority="0.7", crumbs=True)
 
 
 def projects_hub():

@@ -131,7 +131,11 @@ def tech_extra():
     open(OUT + "/sitemap.xml", "w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n' + "\n".join(rows) + "\n</urlset>\n")
 
     # Cloudflare Pages: redirects for old WordPress URLs
-    open(OUT + "/_redirects", "w").write("""# Old WordPress URLs -> new pages (301)
+    open(OUT + "/_redirects", "w").write("""# Keep build sources private
+/tools/* / 301
+/README.md / 301
+/GOOGLE-SETUP.md / 301
+# Old WordPress URLs -> new pages (301)
 /thankyou /thank-you/ 301
 /thankyou/ /thank-you/ 301
 /power-washing-services-2/ /power-washing-services/ 301
@@ -158,7 +162,7 @@ def tech_extra():
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Strict-Transport-Security: max-age=31536000
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable

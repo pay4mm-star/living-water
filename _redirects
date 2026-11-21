@@ -1,3 +1,7 @@
+# Keep build sources private
+/tools/* / 301
+/README.md / 301
+/GOOGLE-SETUP.md / 301
 # Old WordPress URLs -> new pages (301)
 /thankyou /thank-you/ 301
 /thankyou/ /thank-you/ 301

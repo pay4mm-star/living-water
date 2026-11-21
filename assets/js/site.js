@@ -131,3 +131,13 @@
     var p = e.target.closest && e.target.closest('.tile .play'); if (p) ev('gallery_video_open');
   }, true);
 })();
+
+// click-to-load Google Map (keeps contact page fast and third-party free until requested)
+document.querySelectorAll('.map-load').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = b.dataset.src; f.title = 'Living Water Pressure Wash Services on Google Maps'; f.loading = 'lazy'; f.allowFullscreen = true;
+    f.referrerPolicy = 'no-referrer-when-downgrade';
+    b.replaceWith(f); if (window.gtag) gtag('event', 'map_open');
+  });
+});
