@@ -8,9 +8,9 @@ PHONE_MAIN = ("+1-416-663-8000", "(416) 663-8000")
 PHONE_TOLL = ("+1-833-456-2978", "1-833-456-2978")
 PHONE_EMERG = ("+1-647-833-4343", "(647) 833-4343")
 # Synced with Google Business Profile (navidlivingwater@gmail.com), Nov 2026
-ADDR = {"street": "130 Cook's Mill Crescent", "city": "Toronto", "region": "ON", "postal": "L6A 0L1", "country": "CA"}
+ADDR = {"street": "130 Cook's Mill Crescent", "city": "Vaughan", "region": "ON", "postal": "L6A 0L1", "country": "CA"}
 GEO = (43.847417, -79.4671317)
-HOURS_TXT = "Mon–Sat 7:00 am – 6:00 pm · Emergency line 24/7"
+HOURS_TXT = "Mon–Fri 7:00 am – 6:00 pm · Emergency line 24/7"
 GBP_MAPS = "https://maps.google.com/?cid=3293989718493407238"
 GBP_REVIEW = "https://g.page/r/CQaollgymrYtEBM/review"
 GBP_RATING, GBP_COUNT = "4.9", 38

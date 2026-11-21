@@ -82,7 +82,7 @@ BUSINESS = {
     "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]},
     "hasMap": GBP_MAPS,
     "sameAs": SAME_AS,
-    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "07:00", "closes": "18:00"}],
+    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "18:00"}],
     "areaServed": [{"@type": "City", "name": a} for a in AREAS] + [{"@type": "AdministrativeArea", "name": "Greater Toronto Area"}],
     "knowsAbout": ["Pressure washing", "Soft washing", "Sandblasting", "Dustless blasting", "Soda blasting", "Hydro jetting", "Brick cleaning", "Paint removal", "Efflorescence removal", "Graffiti removal", "Heritage masonry restoration", "Elevator pit cleaning", "Fire damage restoration", "Water damage restoration", "Mould remediation"],
     "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "ISSA GBAC certification"}, {"@type": "EducationalOccupationalCredential", "name": "WSIB coverage (Ontario)"}],
@@ -145,7 +145,7 @@ def footer_html():
 <li>Toll Free<br><a href="tel:{PHONE_TOLL[0]}">{PHONE_TOLL[1]}</a></li>
 <li>24/7 Emergency Line<br><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li>
 <li>Email<br><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-<li>Office hours<br>Mon–Sat 7 am – 6 pm</li>
+<li>Office hours<br>Mon–Fri 7 am – 6 pm<br><small>Emergency line 24/7</small></li>
 <li><a href="{GBP_MAPS}" target="_blank" rel="noopener">{ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}</a></li>
 <li><a class="rv" href="{GBP_REVIEW}" target="_blank" rel="noopener">★ Review us on Google</a></li>
 </ul>
@@ -661,7 +661,7 @@ def contact():
 <li><b>Toll free</b><a href="tel:{PHONE_TOLL[0]}">{PHONE_TOLL[1]}</a></li>
 <li><b>24/7 emergency line</b><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li>
 <li><b>Email</b><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-<li><b>Office hours</b>Monday–Saturday, 7:00 am – 6:00 pm (emergency line 24/7)</li>
+<li><b>Office hours</b>Monday–Friday, 7:00 am – 6:00 pm (emergency line 24/7)</li>
 <li><b>Office</b><a href="{GBP_MAPS}" target="_blank" rel="noopener">{ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}</a></li>
 <li><b>Service area</b>Toronto &amp; the Greater Toronto Area — <a href="/service-areas/">see all areas</a></li>
 </ul>
@@ -753,7 +753,7 @@ Sitemap: {SITE}/sitemap.xml
 ## Key facts
 - Founded: 1998 (28 years in business)
 - Office: {ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}, Canada
-- Office hours: Monday–Saturday 7:00 am–6:00 pm; emergency line 24/7
+- Office hours: Monday–Friday 7:00 am–6:00 pm; emergency line 24/7
 - Google Business Profile: {GBP_MAPS} (rated {GBP_RATING}/5 from {GBP_COUNT} reviews)
 - Phone (main office): {PHONE_MAIN[1]}
 - Toll free: {PHONE_TOLL[1]}
