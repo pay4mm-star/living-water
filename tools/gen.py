@@ -1,4 +1,4 @@
-import json, os, html, sys, datetime
+import json, os, html, sys, datetime, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from content import *
 
@@ -569,6 +569,12 @@ def gallery():
     order = sorted(range(len(items)), key=lambda i: (0 if "tile-pair" in items[i] else 1 if "tile-video" in items[i] else 2, i))
     ordered = [items[i] for i in order]
     grid = "".join(ordered[:24]); rest = "".join(ordered[24:])
+    os.makedirs(os.path.join(OUT, "gallery"), exist_ok=True)
+    open(os.path.join(OUT, "gallery", "more-tiles.html"), "w").write(rest)
+    counts = {"all": len(ordered)}
+    for t in ordered:
+        for c in re.search(r'data-cat="([^"]*)"', t).group(1).split():
+            counts[c] = counts.get(c, 0) + 1
     n_pairs = sum(1 for x in items if "tile-pair" in x); n_vid = sum(1 for x in items if "tile-video" in x); n_ph = len(items) - n_pairs - n_vid
     proj_n = len(PROJECTS)
     body = f"""
@@ -579,7 +585,7 @@ def gallery():
 <p class="answer">Browse {n_pairs} before-and-after comparisons, {n_vid} job videos and {n_ph} photos of Living Water's brick cleaning, paint stripping, efflorescence removal, stone restoration, commercial, industrial, heritage and elevator pit work in the Greater Toronto Area.</p>
 <div class="gbar">{filter_bar(extra=(("pairs", "Before &amp; After"), ("videos", "Videos"), ("photos", "Photos")))}<p class="gcount" aria-live="polite"></p></div>
 <div class="tiles filterable" data-page="24">{grid}</div>
-<template id="more-tiles">{rest}</template>
+<div id="more-tiles" hidden data-src="/gallery/more-tiles.html?v={_h.md5(rest.encode()).hexdigest()[:8]}" data-counts='{json.dumps(counts, separators=(",", ":"))}'></div>
 <p class="center" style="margin-top:28px"><button type="button" class="btn load-more">Show more work</button></p>
 {('<p class="center" style="margin-top:14px"><a class="proj-link" href="/projects/">Browse all ' + str(proj_n) + ' case studies →</a></p>') if PROJECTS else ""}
 </div></section>
@@ -591,7 +597,7 @@ def gallery():
 <p class="v-cap"></p></div>
 {cta_block()}"""
     gal_ld = {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Living Water project gallery", "url": SITE + "/gallery/",
-              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in M if not k.endswith("-poster") and k != "silo-tank-wash-progress"]}
+              "associatedMedia": [{"@type": "ImageObject", "contentUrl": SITE + best(k), "caption": M[k]["alt"]} for k in [k for k in M if not k.endswith("-poster") and k != "silo-tank-wash-progress"][:60]]}
     vlds = [video_ld(p, v, i) for p in PROJECTS for i, v in enumerate(p["videos"], 1)]
     page("/gallery/", "Before & After Gallery | Living Water Pressure Washing",
          "Before-and-after photos and videos of brick cleaning, paint stripping, efflorescence and stone restoration projects across Toronto and the GTA.",
