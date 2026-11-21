@@ -78,7 +78,11 @@ BUSINESS = {
         {"@type": "ContactPoint", "telephone": PHONE_TOLL[0], "contactType": "sales", "contactOption": "TollFree", "areaServed": "CA"},
         {"@type": "ContactPoint", "telephone": PHONE_EMERG[0], "contactType": "emergency", "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}},
     ],
-    "address": {"@type": "PostalAddress", "addressLocality": "Toronto", "addressRegion": "ON", "addressCountry": "CA"},
+    "address": {"@type": "PostalAddress", "streetAddress": ADDR["street"], "addressLocality": ADDR["city"], "addressRegion": ADDR["region"], "postalCode": ADDR["postal"], "addressCountry": ADDR["country"]},
+    "geo": {"@type": "GeoCoordinates", "latitude": GEO[0], "longitude": GEO[1]},
+    "hasMap": GBP_MAPS,
+    "sameAs": SAME_AS,
+    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "07:00", "closes": "18:00"}],
     "areaServed": [{"@type": "City", "name": a} for a in AREAS] + [{"@type": "AdministrativeArea", "name": "Greater Toronto Area"}],
     "knowsAbout": ["Pressure washing", "Soft washing", "Sandblasting", "Dustless blasting", "Soda blasting", "Hydro jetting", "Brick cleaning", "Paint removal", "Efflorescence removal", "Graffiti removal", "Heritage masonry restoration", "Elevator pit cleaning", "Fire damage restoration", "Water damage restoration", "Mould remediation"],
     "hasCredential": [{"@type": "EducationalOccupationalCredential", "name": "ISSA GBAC certification"}, {"@type": "EducationalOccupationalCredential", "name": "WSIB coverage (Ontario)"}],
@@ -141,7 +145,11 @@ def footer_html():
 <li>Toll Free<br><a href="tel:{PHONE_TOLL[0]}">{PHONE_TOLL[1]}</a></li>
 <li>24/7 Emergency Line<br><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li>
 <li>Email<br><a href="mailto:{EMAIL}">{EMAIL}</a></li>
-</ul></div>
+<li>Office hours<br>Mon–Sat 7 am – 6 pm</li>
+<li><a href="{GBP_MAPS}" target="_blank" rel="noopener">{ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}</a></li>
+<li><a class="rv" href="{GBP_REVIEW}" target="_blank" rel="noopener">★ Review us on Google</a></li>
+</ul>
+<p class="social"><a href="{SAME_AS[1]}" target="_blank" rel="noopener">Instagram</a> · <a href="{SAME_AS[3]}" target="_blank" rel="noopener">Facebook</a> · <a href="{SAME_AS[2]}" target="_blank" rel="noopener">LinkedIn</a></p></div>
 </div>
 <div class="wrap copy"><span>© <span id="year">2026</span> {LEGAL} All rights reserved.</span>
 <span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap/">Sitemap</a></span></div>
@@ -224,6 +232,7 @@ def page(path, title, desc, body, schema=(), og_img=None, preload=None, priority
 {footer_html()}
 <div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"><button type="button" aria-label="Close">×</button><img alt=""><p></p></div>
 <script src="/assets/js/site.js?v={JS_V}" defer></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}(function(){{var h=location.hostname;if(!/(^|\\.)livingwater-pws\\.com$/.test(h)&&!/[?&]ga=1/.test(location.search))return;gtag('js',new Date());gtag('config','{GA_ID}');addEventListener('load',function(){{setTimeout(function(){{var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id={GA_ID}';document.head.appendChild(s)}},1500)}})}})()</script>
 </body>
 </html>'''
     fn = OUT + path + ("index.html" if path.endswith("/") else "")
@@ -646,8 +655,11 @@ def contact():
 <li><b>Toll free</b><a href="tel:{PHONE_TOLL[0]}">{PHONE_TOLL[1]}</a></li>
 <li><b>24/7 emergency line</b><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li>
 <li><b>Email</b><a href="mailto:{EMAIL}">{EMAIL}</a></li>
+<li><b>Office hours</b>Monday–Saturday, 7:00 am – 6:00 pm (emergency line 24/7)</li>
+<li><b>Office</b><a href="{GBP_MAPS}" target="_blank" rel="noopener">{ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}</a></li>
 <li><b>Service area</b>Toronto &amp; the Greater Toronto Area — <a href="/service-areas/">see all areas</a></li>
 </ul>
+<p style="margin-top:14px"><a class="btn line sm" href="{GBP_MAPS}" target="_blank" rel="noopener">View us on Google Maps</a> <a class="btn line sm" href="{GBP_REVIEW}" target="_blank" rel="noopener">★ Leave a Google review</a></p>
 <div style="margin-top:26px">{img("living-water-van-residential-pressure-washing", "(max-width:1000px) 100vw, 45vw")}</div>
 </div></div></section>
 {reviews_block()}
@@ -678,7 +690,7 @@ def legal():
 <h2>Information we collect</h2><p>When you request a quote we collect the details you provide — name, email, phone number, location and project information — so we can respond. Our web host may log standard technical data such as IP address and browser type for security.</p>
 <h2>Confidentiality and use</h2><p>We keep your personal information confidential. We do not send unsolicited emails or sell your contact information. Information is used only to respond to you and provide our services.</p>
 <h2>Form processing</h2><p>Quote requests are delivered to our inbox by a third-party form service, which processes the data only to deliver it to us.</p>
-<h2>Cookies</h2><p>This site does not use advertising or tracking cookies.</p>
+<h2>Analytics and cookies</h2><p>We use Google Analytics to understand how visitors use this site (for example, which pages are viewed and whether a quote form or phone link was used). Google Analytics sets first-party cookies and receives your IP address, which Google uses to estimate your general location. We do not use this data to identify you, and we do not use advertising or remarketing cookies. You can block analytics with your browser settings or the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out add-on</a>.</p>
 <h2>Your rights</h2><p>You may ask for a copy of the personal information we hold about you, or ask us to delete it, subject to legal record-keeping obligations.</p>
 <h2>Contact us</h2><p>Questions about this policy: <a href="mailto:{EMAIL}">{EMAIL}</a> or <a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a>.</p>''', "Privacy Policy")
     simple("/thank-you/", "Thank You | Living Water", "Thanks for your quote request.", "Thank you — we've got your request",
@@ -734,7 +746,9 @@ Sitemap: {SITE}/sitemap.xml
 
 ## Key facts
 - Founded: 1998 (28 years in business)
-- Headquarters / service base: Toronto, Ontario, Canada
+- Office: {ADDR["street"]}, {ADDR["city"]}, {ADDR["region"]} {ADDR["postal"]}, Canada
+- Office hours: Monday–Saturday 7:00 am–6:00 pm; emergency line 24/7
+- Google Business Profile: {GBP_MAPS} (rated {GBP_RATING}/5 from {GBP_COUNT} reviews)
 - Phone (main office): {PHONE_MAIN[1]}
 - Toll free: {PHONE_TOLL[1]}
 - 24/7 emergency line: {PHONE_EMERG[1]}

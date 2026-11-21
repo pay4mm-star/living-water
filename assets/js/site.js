@@ -109,3 +109,25 @@
   v.addEventListener('click', function (e) { if (e.target === v) close(); });
   document.addEventListener('keydown', function (e) { if (v.hidden) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(idx - 1); if (e.key === 'ArrowRight') show(idx + 1); });
 })();
+
+// ---- analytics events (GA4; no-ops when gtag isn't loaded) ----
+(function () {
+  function ev(name, p) { if (window.gtag) gtag('event', name, p || {}); }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a'); if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0) ev('phone_call_click', { phone_number: h.slice(4), link_location: a.closest('header,footer,.topbar,.cta-bar') ? 'site_chrome' : 'page' });
+    else if (h.indexOf('mailto:') === 0) ev('email_click', { link_location: location.pathname });
+    else if (/g\.page\/r\/.+\/review/.test(h)) ev('review_link_click');
+    else if (/maps\.google|google\.com\/maps/.test(h)) ev('map_click');
+    else if (/\/contact\/#quote/.test(h)) ev('quote_cta_click', { link_text: (a.textContent || '').trim().slice(0, 60), page_path: location.pathname });
+  }, true);
+  document.addEventListener('submit', function (e) {
+    var f = e.target; if (!f || !f.matches('form')) return;
+    var s = f.querySelector('[name=service]');
+    ev('generate_lead', { form_id: f.id || 'quote', service: s ? s.value : '', currency: 'CAD', value: 1 });
+  }, true);
+  document.addEventListener('click', function (e) {
+    var p = e.target.closest && e.target.closest('.tile .play'); if (p) ev('gallery_video_open');
+  }, true);
+})();

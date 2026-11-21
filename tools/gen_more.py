@@ -58,11 +58,11 @@ def reviews_page():
     items = "".join(f'<figure class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{esc(t)}”</blockquote><figcaption><cite>{esc(n)}</cite><small>Google review</small></figcaption></figure>' for n, t in REVIEWS_FULL)
     body = f"""
 <section class="page-hero"><picture>{hero_img("stone-patio-cleaning-after", "100vw", eager=True, alt="")}</picture>
-<div class="wrap">{crumbs_html(trail)}<span class="pill">Verified Feedback</span><h1>Living Water Reviews</h1><p>Rated 4.9 out of 5 on Google by homeowners, property managers and businesses across Toronto and the GTA.</p></div></section>
+<div class="wrap">{crumbs_html(trail)}<span class="pill">Verified Feedback</span><h1>Living Water Reviews</h1><p>Rated 4.9 out of 5 across {GBP_COUNT} Google reviews by homeowners, property managers and businesses across Toronto and the GTA.</p></div></section>
 <section><div class="wrap">
 <p class="answer">Living Water Pressure Wash Services is rated 4.9 / 5 on Google. Customers most often mention meticulous work, professionalism, fair pricing and results that make old patios, driveways and stone look new again.</p>
 <div class="reviews">{items}</div>
-<p class="center" style="margin-top:30px"><a class="btn line" href="https://www.google.com/search?q=Living+Water+Pressure+Wash+Services+reviews" rel="noopener" target="_blank">See all reviews on Google</a></p>
+<p class="center" style="margin-top:30px"><a class="btn line" href="{GBP_MAPS}" rel="noopener" target="_blank">Read all {GBP_COUNT} reviews on Google</a> <a class="btn" href="{GBP_REVIEW}" rel="noopener" target="_blank">★ Leave us a review</a></p>
 </div></section>
 <section class="soft"><div class="wrap"><div class="section-head"><h2>See the results for yourself</h2></div><div class="grid g3">{"".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS[:3])}</div></div></section>
 {cta_block()}"""
