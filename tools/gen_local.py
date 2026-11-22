@@ -141,6 +141,16 @@ def tech_extra():
 /post-sitemap.xml /sitemap.xml 301
 /wp-sitemap.xml /sitemap.xml 301
 # Old WordPress URLs -> new pages (301)
+/writer/* /about-us/ 301
+/author/* /about-us/ 301
+/about /about-us/ 301
+/about/ /about-us/ 301
+/blog /guides/ 301
+/blog/ /guides/ 301
+/blog/* /guides/ 301
+/tag/* /guides/ 301
+/wp-json/* / 301
+/xmlrpc.php / 301
 /thankyou /thank-you/ 301
 /thankyou/ /thank-you/ 301
 /power-washing-services-2/ /power-washing-services/ 301
