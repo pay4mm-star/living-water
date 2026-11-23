@@ -4,6 +4,7 @@ SITE = "https://livingwater-pws.com"
 NAME = "Living Water Pressure Wash Services"
 LEGAL = "Living Water Pressure Wash Services Ltd."
 EMAIL = "info@livingwater-pws.com"
+W3F_KEY = "9c35da72-cad7-40be-b4a1-4fca8875ec20"  # Web3Forms public access key — delivers to info@
 PHONE_MAIN = ("+1-416-663-8000", "(416) 663-8000")
 PHONE_TOLL = ("+1-833-456-2978", "1-833-456-2978")
 PHONE_EMERG = ("+1-647-833-4343", "(647) 833-4343")

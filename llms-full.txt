@@ -1,6 +1,6 @@
 # Living Water Pressure Wash Services — full site content
 
-Source: https://livingwater-pws.com/ · Updated 2026-11-22
+Source: https://livingwater-pws.com/ · Updated 2026-11-23
 
 
 ---
@@ -2423,7 +2423,6 @@ Address or postal code *
 Number of elevators
 Pit conditionRoutine cleaningStanding waterOil / hydraulic fluidSewage backupDebris / garbageNot sure
 Preferred timingAfter hours / overnightWeekday daytimeWeekendAs soon as possible
-Pit photo (optional)
 Notes
 Get my elevator pit quote
 Questions
@@ -2683,7 +2682,6 @@ Address or postal code *
 Number of elevators
 Pit conditionRoutine cleaningStanding waterOil / hydraulic fluidSewage backupDebris / garbageNot sure
 Preferred timingAfter hours / overnightWeekday daytimeWeekendAs soon as possible
-Pit photo (optional)
 Notes
 Send emergency request
 Questions
@@ -17252,7 +17250,7 @@ Phone *
 Service *Choose a service…Residential Power WashCommercial Power WashIndustrial Power WashSandblastingBrick Cleaning & Paint RemovalHistorical RemediationDisaster RestorationElevator Pit CleaningElevator Pit Water Removal (emergency)Efflorescence RemovalGraffiti RemovalStone RestorationMetal RestorationOther
 Postal code / city
 Tell us about the surface and project
-Photo of the area (optional — helps us quote faster)
+Have photos? Reply to our email with them — they help us quote faster.
 Send my quote request
 We never share or sell your information. See our privacy policy.
 ## Call or email

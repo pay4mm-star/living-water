@@ -142,11 +142,12 @@ def pm_form_block(slug):
 <ul class="ticks"><li>Fixed price per pit, or a portfolio program</li><li>After-hours scheduling with your elevator contractor</li><li>Before-and-after photo report for the board</li></ul>
 {facts_block()}</div>
 <div class="contact-card">
-<form action="https://formsubmit.co/{EMAIL}" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="{"EMERGENCY elevator pit" if emergency else "Elevator pit quote"} — livingwater-pws.com">
-<input type="hidden" name="_next" value="{SITE}/thank-you/"><input type="hidden" name="_template" value="table">
+<form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="{W3F_KEY}"><input type="hidden" name="from_name" value="Living Water website">
+<input type="hidden" name="subject" value="{"EMERGENCY elevator pit" if emergency else "Elevator pit quote"} — livingwater-pws.com">
+<input type="hidden" name="redirect" value="{SITE}/thank-you/">
 <input type="hidden" name="service" value="{"Elevator Pit Water Removal" if emergency else "Elevator Pit Cleaning"}">
-<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 <div class="row"><div class="field"><label for="pm-n">Name *</label><input id="pm-n" name="name" autocomplete="name" required></div>
 <div class="field"><label for="pm-r">Role</label><select id="pm-r" name="role"><option>Property manager</option><option>Condo board member</option><option>Building superintendent</option><option>Elevator contractor</option><option>Owner</option><option>Other</option></select></div></div>
 <div class="row"><div class="field"><label for="pm-e">Email *</label><input id="pm-e" type="email" name="email" autocomplete="email" required></div>
@@ -156,7 +157,6 @@ def pm_form_block(slug):
 <div class="row"><div class="field"><label for="pm-c">Number of elevators</label><input id="pm-c" type="number" min="1" name="elevators" inputmode="numeric"></div>
 <div class="field"><label for="pm-i">Pit condition</label><select id="pm-i" name="condition"><option>Routine cleaning</option><option>Standing water</option><option>Oil / hydraulic fluid</option><option>Sewage backup</option><option>Debris / garbage</option><option>Not sure</option></select></div></div>
 <div class="field"><label for="pm-t">Preferred timing</label><select id="pm-t" name="timing"><option>After hours / overnight</option><option>Weekday daytime</option><option>Weekend</option><option>As soon as possible</option></select></div>
-<div class="field"><label for="pm-f">Pit photo (optional)</label><input id="pm-f" type="file" name="attachment" accept="image/*"></div>
 <div class="field"><label for="pm-m">Notes</label><textarea id="pm-m" name="message" rows="3"></textarea></div>
 <button class="btn" type="submit">{"Send emergency request" if emergency else "Get my elevator pit quote"}</button>
 </form></div></div></section>"""

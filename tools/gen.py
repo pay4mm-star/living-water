@@ -639,11 +639,12 @@ def contact():
 <section><div class="wrap split" style="align-items:start">
 <div class="contact-card" id="quote">
 <h2>Request a free quote</h2><p>Takes two minutes. We reply within one business day.</p>
-<form action="https://formsubmit.co/{EMAIL}" method="POST" enctype="multipart/form-data">
-<input type="hidden" name="_subject" value="New quote request — livingwater-pws.com">
-<input type="hidden" name="_next" value="{SITE}/thank-you/">
-<input type="hidden" name="_template" value="table">
-<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<form action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="{W3F_KEY}">
+<input type="hidden" name="subject" value="New quote request — livingwater-pws.com">
+<input type="hidden" name="from_name" value="Living Water website">
+<input type="hidden" name="redirect" value="{SITE}/thank-you/">
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 <div class="row"><div class="field"><label for="fn">First name *</label><input id="fn" name="first_name" autocomplete="given-name" required></div>
 <div class="field"><label for="ln">Last name *</label><input id="ln" name="last_name" autocomplete="family-name" required></div></div>
 <div class="row"><div class="field"><label for="em">Email *</label><input id="em" type="email" name="email" autocomplete="email" required></div>
@@ -651,7 +652,7 @@ def contact():
 <div class="row"><div class="field"><label for="sv">Service *</label><select id="sv" name="service" required><option value="">Choose a service…</option>{opt_html}</select></div>
 <div class="field"><label for="pc">Postal code / city</label><input id="pc" name="location" autocomplete="postal-code"></div></div>
 <div class="field"><label for="msg">Tell us about the surface and project</label><textarea id="msg" name="message" rows="5" placeholder="e.g. interlock driveway about 600 sq ft, moss and oil stains"></textarea></div>
-<div class="field"><label for="att">Photo of the area (optional — helps us quote faster)</label><input id="att" type="file" name="attachment" accept="image/*"></div>
+<p style="font-size:.9rem">Have photos? Reply to our email with them — they help us quote faster.</p>
 <button class="btn" type="submit">Send my quote request</button>
 <p style="font-size:.85rem;margin-top:12px">We never share or sell your information. See our <a href="/privacy-policy/">privacy policy</a>.</p>
 </form></div>
