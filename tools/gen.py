@@ -123,6 +123,7 @@ def nav_html(current):
 <ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised &amp; Restoration</li>{spec}<li class="sub-label">Popular</li>{"".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_SUB)}</ul></li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
 <ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
+<li>{a("/pressure-washing-prices-toronto/", "Pricing")}</li>
 <li>{a("/guides/", "Guides")}</li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-about">About ▾</button>
 <ul class="sub" id="sub-about"><li>{a("/about-us/", "About Living Water")}</li><li>{a("/reviews/", "Customer Reviews")}</li><li>{a("/industries/", "Industries We Serve")}</li><li>{a("/gallery/", "Project Gallery")}</li>{("<li>" + a("/projects/", "Case Studies") + "</li>") if PROJECTS else ""}<li>{a("/faq/", "FAQ")}</li></ul></li>
@@ -308,6 +309,7 @@ def facts_block():
 def quote_aside():
     return f'''<div class="contact-card"><h2 class="h3">Get a free quote</h2><p>Fixed written price before any work starts.</p>
 <p><a class="btn" style="width:100%;justify-content:center" href="/contact/#quote">Request a quote</a></p>
+<p style="text-align:center;margin:-6px 0 14px"><a href="/pressure-washing-prices-toronto/">See pricing &amp; what affects cost →</a></p>
 <ul class="contact-list"><li><b>Main office</b><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li><li><b>24/7 emergency</b><a href="tel:{PHONE_EMERG[0]}">{PHONE_EMERG[1]}</a></li></ul></div>'''
 
 # ------------------------------------------------------------ HOME
@@ -411,7 +413,7 @@ def sub_cards(s):
     return f'<section><div class="wrap"><div class="section-head"><span class="pill light">Popular</span><h2>Popular {esc(SERVICES[s]["short"].lower())} services</h2></div>{service_cards(kids)}</div></section>'
 
 HERO_V2 = set()
-HERO_VIDEO = {"commercial-power-washing": "commercial-facade-washing-from-a-boom-lift-video-1"}  # video banner test
+HERO_VIDEO = {}  # video hero test removed
 
 def hero_video(s):
     v = HERO_VIDEO.get(s)
