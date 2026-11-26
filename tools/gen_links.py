@@ -3,6 +3,9 @@ import re as _re2
 
 # phrase (case-insensitive) -> url. First match per page is linked, longest phrases first.
 LINK_MAP = {
+    "interlock cleaning cost": "/interlock-cleaning-sealing-cost-calculator/",
+    "interlock cost calculator": "/interlock-cleaning-sealing-cost-calculator/",
+    "wash, sand and seal": "/interlock-wash-sand-seal-3-50-per-sq-ft/",
     "soft washing": "/guides/soft-washing-vs-pressure-washing/",
     "soft wash": "/guides/soft-washing-vs-pressure-washing/",
     "efflorescence": "/efflorescence-removal/",
