@@ -44,6 +44,12 @@ def project_card(p):
 
 def projects_section(service=None, location=None):
     ps = projects_for(service, location)[:3]
+    if len(ps) < 3 and PROJECTS:
+        # top up with other case studies, rotated per page, so every project gets internal links and pages differ
+        import hashlib as _hl
+        off = int(_hl.md5((service or location or "x").encode()).hexdigest(), 16) % len(PROJECTS)
+        rest = [q for q in PROJECTS[off:] + PROJECTS[:off] if q not in ps]
+        ps = (ps + rest)[:3]
     if not ps:
         return ""
     return f'<section><div class="wrap"><div class="section-head"><span class="pill light">Case studies</span><h2>Recent projects</h2></div><div class="grid g3">{"".join(project_card(p) for p in ps)}</div></div></section>'
@@ -128,7 +134,7 @@ def projects_hub():
     trail = [("Home", "/"), ("Projects", path)]
     body = f"""
 <section class="page-hero"><div class="wrap">{crumbs_html(trail)}<span class="pill">Case studies</span><h1>Recent Projects &amp; Case Studies</h1><p>Real Living Water jobs across Toronto and the GTA — before and after.</p></div></section>
-<section><div class="wrap">{filter_bar([p.get("service") for p in PROJECTS])}<div class="grid g3 filterable">{"".join(project_card(p).replace('<article class="card">', '<article class="card" data-cat="' + cat_of_service(p.get("service")) + '">', 1) for p in PROJECTS)}</div></div></section>
+<section><div class="wrap"><h2 class="sr-only">All case studies</h2>{filter_bar([p.get("service") for p in PROJECTS])}<div class="grid g3 filterable">{"".join(project_card(p).replace('<article class="card">', '<article class="card" data-cat="' + cat_of_service(p.get("service")) + '">', 1) for p in PROJECTS)}</div></div></section>
 {cta_block()}"""
     page(path, "Projects & Case Studies | Living Water Pressure Washing",
          "Before-and-after case studies of Living Water pressure washing, elevator pit cleaning, brick, stone and heritage restoration projects across the GTA.",
