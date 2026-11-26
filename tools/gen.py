@@ -154,8 +154,8 @@ def footer_html():
 <div class="wrap copy"><span>© <span id="year">2026</span> {LEGAL} All rights reserved.</span>
 <span><a href="/safety-policy/">Safety Policy</a> · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/sitemap/">Sitemap</a></span></div>
 </footer>
-<a class="btn float-cta" href="/contact/#quote">✉ Get a Free Quote</a>
-<nav class="mobile-bar" aria-label="Quick contact"><a href="tel:{PHONE_MAIN[0]}">📞 Call</a><a href="tel:{PHONE_EMERG[0]}">🚨 24/7</a><a class="q" href="/contact/#quote">Free Quote</a></nav>'''
+<a class="btn float-cta wa" href="https://wa.me/16478334343?text=Hi%20Living%20Water%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener" data-wa aria-label="Chat with Living Water on WhatsApp"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.38 4 15c0 2.12.56 4.19 1.62 6.02L4 29l8.17-1.58A12.05 12.05 0 0 0 16.04 27C22.66 27 28 21.62 28 15S22.66 3 16.04 3zm0 21.9c-1.8 0-3.56-.48-5.1-1.4l-.37-.22-3.82.74.78-3.7-.24-.38A9.8 9.8 0 0 1 6.2 15c0-5.42 4.42-9.84 9.84-9.84S25.9 9.58 25.9 15s-4.42 9.9-9.86 9.9zm5.4-7.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.75-.72 2-1.4.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg><span>Chat on WhatsApp</span></a>
+<nav class="mobile-bar" aria-label="Quick contact"><a href="tel:{PHONE_MAIN[0]}">📞 Call</a><a href="tel:{PHONE_EMERG[0]}">🚨 24/7</a><a class="wa-m" href="https://wa.me/16478334343?text=Hi%20Living%20Water%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener" data-wa>WhatsApp</a><a class="q" href="/contact/#quote">Free Quote</a></nav>'''
 
 OG_DONE = set()
 def og_for(key):

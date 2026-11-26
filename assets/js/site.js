@@ -159,3 +159,5 @@ document.querySelectorAll('.map-load').forEach(function (b) {
   v.addEventListener('playing', function () { v.classList.add('on'); });
   var p = v.play(); if (p && p.catch) p.catch(function () {});
 })();
+
+document.addEventListener('click', function (e) { if (e.target.closest('[data-wa]') && window.gtag) gtag('event', 'whatsapp_click'); });
