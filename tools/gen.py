@@ -718,6 +718,7 @@ exec(open(os.path.join(HERE, "gen_local.py")).read())
 exec(open(os.path.join(HERE, "gen_more.py")).read())
 exec(open(os.path.join(HERE, "gen_links.py")).read())
 exec(open(os.path.join(HERE, "gen_projects.py")).read())
+exec(open(os.path.join(HERE, "gen_seo.py")).read())
 exec(open(os.path.join(HERE, "gen_interlock.py")).read())
 
 # ------------------------------------------------------------ technical SEO / GEO files
