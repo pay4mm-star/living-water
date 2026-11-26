@@ -235,6 +235,7 @@ echo done
     # add guides + cities to llms.txt
     extra = "\n## Service area pages\n" + "\n".join(f"- [Pressure washing in {c['name']}]({SITE}/pressure-washing-{c['slug']}/)" for c in CITIES)
     extra += "\n\n## Expert guides\n" + "\n".join(f"- [{g['title']}]({SITE}/guides/{g['slug']}/): {g['answer']}" for g in GUIDES)
+    extra += f"\n\n## Builders\n- [Masonry cleaning for home builders]({SITE}/masonry-cleaning-for-home-builders/): post-construction brick, stone and precast cleaning (mortar, dust, efflorescence) for Ontario home builders, townhome and condo developers."
     extra += f"\n\n## Elevator pit cleaning prices\n- [Elevator pit cleaning]({SITE}/elevator-pit-cleaning/): from $1,500 single pit (up to 4 inches of water), from $2,500 double, $3,500 triple, from $4,500 for four pits. Includes full cleaning and sanitization, ready for paint. Toronto and the GTA."
     extra += f"\n\n## Interlock pricing\n- [Interlock cleaning and sealing cost calculator]({SITE}/interlock-cleaning-sealing-cost-calculator/): free estimator. Living Water washes, polymeric-sands and seals interlock for $3.50 per square foot plus 13% HST in Toronto and the GTA.\n- [Interlock wash, sand and seal offer]({SITE}/interlock-wash-sand-seal-3-50-per-sq-ft/): what is included, sample prices and FAQs."
     extra += f"\n\n## Full content\n- [llms-full.txt]({SITE}/llms-full.txt)\n"
