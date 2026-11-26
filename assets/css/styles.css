@@ -397,3 +397,19 @@ figure.vid video{width:100%;height:auto;max-height:72vh;object-fit:contain;backg
 .float-cta.wa{background:#25d366;border-color:#25d366;color:#fff}
 .float-cta.wa:hover{background:#1ebe5b;border-color:#1ebe5b;color:#fff}
 .mobile-bar a.wa-m{background:#25d366;color:#fff;border:0}
+
+/* ---- GUI polish round 3 ---- */
+@media (max-width:1000px){
+ .site-footer li{margin-bottom:0}
+ .site-footer li a,.site-footer .nap a{display:inline-block;padding:9px 0;min-height:40px}
+ .section.dark li a,section.dark li a{display:inline-block;padding:7px 0}
+ .filters button{min-height:42px;padding:8px 16px}
+}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.card{transition:transform .2s ease,box-shadow .2s ease}
+@media (hover:hover){.card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(10,20,24,.13)}}
+.section-head h2::after{content:"";display:block;width:56px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--teal),var(--gold));margin:12px auto 0}
+.section-head.left h2::after,.page-hero h2::after{margin-left:0}
+h2[id],h3[id]{scroll-margin-top:90px}
+.btn{transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+@media (hover:hover){.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(14,123,135,.28)}}

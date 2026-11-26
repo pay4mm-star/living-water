@@ -1,0 +1,60 @@
+# Additional expert guides (round 3). Plain-fact content only: no invented stats or prices.
+GUIDES_3 = [
+ dict(slug="pool-shell-sandblasting-and-prep", title="Pool Shell Sandblasting & Surface Prep: What to Know Before Resurfacing",
+  meta="How abrasive blasting prepares a concrete pool shell for resurfacing or repainting: what it removes, dust control, timing and what to ask a contractor.",
+  hero="technician-abrasive-blasting-the-inside-of-a-pool-shell", related=["sandblasting-services","stone-restoration"],
+  answer="Abrasive blasting strips old paint, coatings, plaster residue and surface contamination from a concrete pool shell so a new finish can bond. It is done with the pool empty, with dust and media contained, and is normally followed by cleaning, repairs and the new surface or coating.",
+  body="""
+<h2>Why prep matters more than the new finish</h2>
+<p>A new plaster, epoxy or paint finish is only as good as the surface under it. Old coatings, chalky paint, algae stains and loose material stop the new layer from bonding, and that is a common reason finishes peel or blister early. Blasting exposes clean, sound concrete with a profile the new finish can grip.</p>
+<h2>What abrasive blasting removes</h2>
+<ul class="ticks"><li>Failing pool paint and epoxy coatings</li><li>Loose or hollow plaster residue</li><li>Algae, mineral scale and stains</li><li>Rust stains from metal fittings</li><li>Surface contamination that blocks adhesion</li></ul>
+<h2>How the job runs</h2>
+<ol class="steps-list"><li><strong>Inspect.</strong> We look at the shell, the existing coating and access for equipment.</li><li><strong>Drain and protect.</strong> The pool is emptied by the owner or pool contractor, and fittings, skimmers and surrounding surfaces are protected.</li><li><strong>Blast.</strong> The media and pressure are chosen to suit the surface, with dust contained as far as the site allows.</li><li><strong>Clean up.</strong> Spent media and debris are removed so the pool contractor can inspect, repair and resurface.</li></ol>
+<h2>Blasting vs pressure washing a pool</h2>
+<p>Pressure washing cleans algae and dirt from a surface that is sound. Blasting is for removing coatings and re-profiling the surface. Many jobs use both: blasting the shell, then a final wash. See our <a href="/sandblasting-services/">sandblasting services</a> and <a href="/stone-restoration/">stone restoration</a> for pool decks and coping.</p>
+<h2>Questions to ask any contractor</h2>
+<ul class="ticks"><li>Which media and pressure will you use on my surface, and why?</li><li>How is dust and spent media controlled and removed?</li><li>Do you carry liability insurance and WSIB clearance?</li><li>Who inspects the shell before the new finish goes on?</li></ul>""",
+  faqs=[("Do you need to drain the pool before blasting?","Yes. Shell blasting is done with the pool empty so the coating and surface can be reached and inspected."),("Can you blast around skimmers and lights?","Yes. Fittings are masked and protected, and we confirm what the pool contractor wants removed first."),("Do you resurface the pool too?","Living Water prepares the surface. Plastering, epoxy or paint is normally done by your pool contractor, and we coordinate timing with them."),("Is blasting needed for every resurfacing?","Not always. A sound plaster shell may only need cleaning and light prep, which is why we inspect before recommending a method.")]),
+ dict(slug="condo-parking-garage-cleaning-guide", title="Condo Parking Garage Cleaning: Frequency, Methods and Planning",
+  meta="A guide for condo boards and property managers: why parking garages need washing, how it is done, how often, and how to plan around residents.",
+  hero="pressure-washer-set-up-in-a-parking-garage", related=["parking-garage-cleaning","commercial-power-washing"],
+  answer="Condo parking garages collect road salt, oil and grit that stain concrete, clog drains and track into lobbies. Most buildings schedule a full wash in spring after the salt season, with spot cleaning of oil and drive lanes as needed, planned in zones so residents can still park.",
+  body="""
+<h2>Why garages need regular washing</h2>
+<p>In Ontario winters, vehicles carry road salt and slush into garages. As it dries it leaves white residue and gritty film, and salt-laden water is hard on concrete, rebar and drains. Oil drips stain parking stalls and become slip hazards. A clean garage is also easier to inspect for cracks, leaks and drainage problems.</p>
+<h2>How a garage wash is done</h2>
+<ul class="ticks"><li>Sweep and remove loose debris and grit first</li><li>Pre-treat oil and grease stains with degreaser</li><li>Hot-water pressure washing of floors, drive lanes, ramps and curbs</li><li>Wall, column and ceiling washing where needed</li><li>Water recovery or drain protection according to building and municipal requirements</li></ul>
+<h2>Planning around residents</h2>
+<p>Work is usually done in zones, with notice to residents of which levels and stalls are affected and when. Evenings and weekends can reduce disruption. We coordinate with property managers on access, signage and timing.</p>
+<h2>When to schedule</h2>
+<p>Many buildings book a wash in spring, after the salt season ends, and add a fall clean before winter. High-traffic entrances and oil-prone areas may need extra attention. See our <a href="/parking-garage-cleaning/">parking garage cleaning service</a> and <a href="/commercial-power-washing/">commercial power washing</a>.</p>""",
+  faqs=[("Do residents have to move their cars?","Usually yes, for the zone being washed. We work with the property manager on notice and timing so only part of the garage is affected at a time."),("Can you remove oil stains from garage floors?","Yes. We pre-treat with degreaser and use hot-water washing. Old, deep stains may lighten rather than disappear completely."),("Do you handle the wastewater?","We follow the building's drainage and applicable requirements, and confirm the approach with the property manager before work starts."),("Can you also clean the elevator pits?","Yes. See our elevator pit cleaning service; it can be scheduled alongside garage work.")]),
+ dict(slug="roof-moss-removal-ontario", title="Roof Moss Removal in Ontario: Safe Methods and What to Avoid",
+  meta="How to remove moss and algae from Ontario roofs safely: why high-pressure washing damages shingles, soft washing, prevention and when to call a pro.",
+  hero="roof-moss-removal-soft-wash", related=["roof-cleaning","house-washing"],
+  answer="Moss and algae on Ontario roofs should be removed with low-pressure soft washing and a roof-safe cleaning solution, never a high-pressure jet, which strips granules and shortens shingle life. Shade, damp and tree debris cause regrowth, so trimming branches and periodic treatment help keep it from returning.",
+  body="""
+<h2>Why moss grows on roofs</h2>
+<p>Moss and algae thrive on shaded, damp north-facing slopes, under overhanging trees and where debris holds moisture. Moss lifts shingle edges and holds water against the roof, and black streaks are usually algae.</p>
+<h2>What not to do</h2>
+<ul class="ticks"><li>Do not high-pressure wash shingles; it removes protective granules</li><li>Do not scrape moss off aggressively</li><li>Do not work on a steep or wet roof without proper fall protection</li></ul>
+<h2>Soft washing: the safer method</h2>
+<p>Soft washing applies a roof-safe cleaning solution at low pressure, lets it work on the moss and algae, then rinses gently. It cleans without damaging the shingle surface. Read more in our guide on <a href="/guides/soft-washing-vs-pressure-washing/">soft washing vs pressure washing</a>.</p>
+<h2>Keeping moss from coming back</h2>
+<ul class="ticks"><li>Trim branches to let sun and air reach the roof</li><li>Keep gutters and valleys clear of leaves</li><li>Consider periodic treatment on shaded slopes</li></ul>
+<p>See our <a href="/roof-cleaning/">roof cleaning service</a> for Toronto and the GTA.</p>""",
+  faqs=[("Does moss damage a roof?","It can. Moss holds moisture against shingles and can lift edges, so removing it protects the roof."),("Will soft washing void my shingle warranty?","Warranty terms vary by manufacturer. Soft washing at low pressure is the commonly recommended approach, but check your warranty and ask us if you want us to review it with you."),("How long before moss returns?","It depends on shade and moisture. Shaded slopes regrow sooner, and trimming trees helps."),("Can you clean a roof in winter?","Roof cleaning is normally done in milder months when the roof is safe to access and the solution can work.")]),
+ dict(slug="pressure-washing-before-selling-your-home", title="Pressure Washing Before Selling Your Home: What to Clean First",
+  meta="Which exterior surfaces to pressure wash before listing a home in Toronto or the GTA: driveway, siding, patio, brick, deck and roof, and in what order.",
+  hero="estate-home-driveway-washing", related=["residential-power-washing","house-washing"],
+  answer="Before listing a home, clean the surfaces buyers see first: the driveway and walkway, front entrance and steps, siding or brick, the patio or deck and any visibly stained roof slopes. Washing is quick, low-cost compared with most pre-sale work, and photographs well, so book it before listing photos.",
+  body="""
+<h2>Clean what buyers see first</h2>
+<ol class="steps-list"><li><strong>Driveway, walkway and steps.</strong> Remove oil, algae and winter salt staining.</li><li><strong>Front entrance and porch.</strong> Wash doors, railings and stone or brick around the entry.</li><li><strong>Siding, brick or stone.</strong> Use a method matched to the material.</li><li><strong>Patio, deck and fence.</strong> Back yards sell homes too.</li><li><strong>Roof and gutters.</strong> Remove moss and black streaks that make a home look neglected.</li></ol>
+<h2>Timing</h2>
+<p>Book the cleaning before listing photos and showings. Let surfaces dry fully; if you plan to seal interlock or stone, do it after cleaning. See our <a href="/interlock-wash-sand-seal-3-50-per-sq-ft/">interlock wash, sand and seal offer</a>.</p>
+<h2>Use the right method</h2>
+<p>Soft washing suits siding and roofs; hot-water pressure suits concrete and interlock; soft surfaces like heritage brick need care. Learn more at <a href="/residential-power-washing/">residential power washing</a> and <a href="/house-washing/">house washing</a>.</p>""",
+  faqs=[("Does pressure washing help a home sell?","A clean exterior improves first impressions and listing photos. We cannot promise a particular sale price."),("How long does a typical home take?","Most homes can be done in a day, depending on how many surfaces are included."),("Should I seal the driveway before selling?","If your interlock or stone is clean and dry, sealing can restore colour and protect it. We can advise after an inspection."),("Can you work around a listing date?","Yes. Tell us your photo or open-house date and we will schedule accordingly.")]),
+]

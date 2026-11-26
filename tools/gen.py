@@ -8,6 +8,8 @@ M = json.load(open(os.path.join(HERE, "manifest.json")))
 from content_local import CITIES, GUIDES, LOCAL
 from content_more import REVIEWS_FULL, INDUSTRIES, SERVICE_FACTS, GUIDES_MORE
 GUIDES.extend(GUIDES_MORE)
+from content_guides3 import GUIDES_3
+GUIDES.extend(GUIDES_3)
 CITY = {c["slug"]: c for c in CITIES}
 GUIDE = {g["slug"]: g for g in GUIDES}
 TODAY = datetime.date.today().isoformat()
