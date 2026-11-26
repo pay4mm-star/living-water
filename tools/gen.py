@@ -140,7 +140,7 @@ def footer_html():
 <div class="badges"><span>Since 1998</span><span>$5M Insured</span><span>WSIB</span><span>ISSA-GBAC</span><span>4.9★ Google</span></div>
 </div>
 <div><h3>Services</h3><ul>{core}</ul></div>
-<div><h3>Specialised</h3><ul>{spec}{"".join(f'<li><a href="/{x}/">{SERVICES[x]["nav"]}</a></li>' for x in SERVICE_ORDER_SUB)}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/interlock-cleaning-sealing-cost-calculator/">Interlock Cost Calculator</a></li><li><a href="/masonry-cleaning-for-home-builders/">For Home Builders</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
+<div><h3>Specialised</h3><ul>{spec}{"".join(f'<li><a href="/{x}/">{SERVICES[x]["nav"]}</a></li>' for x in SERVICE_ORDER_SUB)}</ul><h3 style="margin-top:22px">Resources</h3><ul><li><a href="/guides/">Expert Guides</a></li><li><a href="/pressure-washing-prices-toronto/">Pricing</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="/industries/">Industries</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/glossary/">Glossary</a></li><li><a href="/gallery/">Project Gallery</a></li><li><a href="/interlock-cleaning-sealing-cost-calculator/">Interlock Cost Calculator</a></li><li><a href="/masonry-cleaning-for-home-builders/">For Home Builders</a></li><li><a href="/about-us/">About Us</a></li></ul></div>
 <div><h3>Service Areas</h3><ul>{"".join(f'<li><a href="/pressure-washing-{c["slug"]}/">{c["name"]}</a></li>' for c in CITIES)}<li><a href="/service-areas/">All areas →</a></li></ul></div>
 <div><h3>Get in Touch</h3><ul class="nap">
 <li>Main Office<br><a href="tel:{PHONE_MAIN[0]}">{PHONE_MAIN[1]}</a></li>
@@ -747,6 +747,7 @@ exec(open(os.path.join(HERE, "gen_projects.py")).read())
 exec(open(os.path.join(HERE, "gen_seo.py")).read())
 exec(open(os.path.join(HERE, "gen_interlock.py")).read())
 exec(open(os.path.join(HERE, "gen_builders.py")).read())
+exec(open(os.path.join(HERE, "gen_pricing.py")).read())
 
 # ------------------------------------------------------------ technical SEO / GEO files
 def tech():
