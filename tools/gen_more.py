@@ -100,6 +100,9 @@ def industries_page():
     cards = ""
     for name, text, svcs, im in INDUSTRIES:
         links = " · ".join(f'<a href="/{x}/">{SERVICES[x]["nav"]}</a>' for x in svcs)
+        dedicated = {"Property managers & condominium boards": ("/condo-property-manager-pressure-washing-toronto/", "Condo &amp; property manager page"), "Elevator service companies": ("/elevator-company-pit-cleaning-subcontractor-gta/", "Elevator company page"), "General contractors & builders": ("/masonry-cleaning-for-home-builders/", "Home builder page")}
+        if name in dedicated:
+            links += f' · <a href="{dedicated[name][0]}"><strong>{dedicated[name][1]} →</strong></a>'
         cards += f'<article class="card ind">{img(im, "(max-width: 640px) 100vw, 33vw")}<div class="body"><h2 style="font-size:1.3rem">{esc(name)}</h2><p>{esc(text)}</p><p class="svc-links">{links}</p></div></article>'
     body = f"""
 <section class="page-hero"><picture>{hero_img("boom-lift-brick-facade-cleaning", "100vw", eager=True, alt="")}</picture>
@@ -187,7 +190,7 @@ def html_sitemap():
               ("Service areas", [("All service areas", "/service-areas/")] + [(c["name"], f"/pressure-washing-{c['slug']}/") for c in CITIES]),
               ("Guides", [("All guides", "/guides/")] + [(g["title"], f"/guides/{g['slug']}/") for g in GUIDES]),
               ("Case studies", [("All case studies", "/projects/")] + [(q["title"], f"/projects/{q['slug']}/") for q in PROJECTS]),
-              ("Company", [("About", "/about-us/"), ("Reviews", "/reviews/"), ("Industries", "/industries/"), ("Gallery", "/gallery/"), ("Pressure washing prices", "/pressure-washing-prices-toronto/"), ("Interlock cost calculator", "/interlock-cleaning-sealing-cost-calculator/"), ("Masonry cleaning for home builders", "/masonry-cleaning-for-home-builders/"), ("Interlock wash, sand & seal $3.50/sq ft", "/interlock-wash-sand-seal-3-50-per-sq-ft/"), ("FAQ", "/faq/"), ("Glossary", "/glossary/"), ("Contact", "/contact/"), ("Safety policy", "/safety-policy/"), ("Privacy policy", "/privacy-policy/")])]
+              ("Company", [("About", "/about-us/"), ("Reviews", "/reviews/"), ("Industries", "/industries/"), ("Gallery", "/gallery/"), ("Pressure washing prices", "/pressure-washing-prices-toronto/"), ("Condo & property managers", "/condo-property-manager-pressure-washing-toronto/"), ("Elevator companies", "/elevator-company-pit-cleaning-subcontractor-gta/"), ("Interlock cost calculator", "/interlock-cleaning-sealing-cost-calculator/"), ("Masonry cleaning for home builders", "/masonry-cleaning-for-home-builders/"), ("Interlock wash, sand & seal $3.50/sq ft", "/interlock-wash-sand-seal-3-50-per-sq-ft/"), ("FAQ", "/faq/"), ("Glossary", "/glossary/"), ("Contact", "/contact/"), ("Safety policy", "/safety-policy/"), ("Privacy policy", "/privacy-policy/")])]
     cols = "".join(f'<div><h2 style="font-size:1.3rem">{n}</h2><ul class="ticks">{"".join(f"<li><a href={chr(34)}{u}{chr(34)}>{esc(t)}</a></li>" for t, u in links)}</ul></div>' for n, links in groups)
     body = f"""<section class="page-hero"><div class="wrap">{crumbs_html(trail)}<h1>Sitemap</h1></div></section>
 <section><div class="wrap grid g2">{cols}</div></section>"""

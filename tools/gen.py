@@ -748,6 +748,7 @@ exec(open(os.path.join(HERE, "gen_seo.py")).read())
 exec(open(os.path.join(HERE, "gen_interlock.py")).read())
 exec(open(os.path.join(HERE, "gen_builders.py")).read())
 exec(open(os.path.join(HERE, "gen_pricing.py")).read())
+exec(open(os.path.join(HERE, "gen_audience.py")).read())
 
 # ------------------------------------------------------------ technical SEO / GEO files
 def tech():
