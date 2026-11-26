@@ -437,6 +437,11 @@ def service_page(s):
                   "url": f"{SITE}/{s}/", "provider": {"@id": ORG_ID}, "image": f"{SITE}{best(d['hero'])}",
                   "areaServed": [{"@type": "City", "name": a} for a in AREAS],
                   "offers": {"@type": "Offer", "priceCurrency": "CAD", "description": "Free assessment and fixed written quote"}}
+    if s == "elevator-pit-cleaning":
+        _pits = [("Single elevator pit (up to 4 inches of water)", "1500"), ("Double elevator pit", "2500"), ("Triple elevator pit", "3500"), ("Four elevator pits", "4500")]
+        service_ld["offers"] = {"@type": "OfferCatalog", "name": "Elevator pit cleaning prices", "itemListElement": [
+            {"@type": "Offer", "url": f"{SITE}/{s}/#pm-quote", "priceCurrency": "CAD", "availability": "https://schema.org/InStock", "description": "Full cleaning and sanitization, ready for paint. Starting price before HST.",
+             "itemOffered": {"@type": "Service", "name": n}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": pr, "priceCurrency": "CAD", "valueAddedTaxIncluded": False}} for n, pr in _pits]}
     if s.startswith("elevator-pit"):
         service_ld["audience"] = {"@type": "BusinessAudience", "audienceType": "Condominium corporations, property managers, building owners and elevator contractors"}
         service_ld["hoursAvailable"] = {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}

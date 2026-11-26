@@ -126,7 +126,7 @@ def winter_feature():
     return f"""<section class="winter"><div class="wrap split">
 <div><span class="pill">Winter service · Condos &amp; commercial buildings</span>
 <h2>Elevator pit cleaning for condo &amp; property managers</h2>
-<p>Salt slush, meltwater and debris end up in elevator pits all winter. We pump, clean and sanitize pits after hours, coordinate with your elevator contractor, and send a before-and-after photo report — with COI and WSIB clearance included.</p>
+<p>Salt slush, meltwater and debris end up in elevator pits all winter. We pump, clean and sanitize pits after hours — <strong>from $1,500 per pit, ready for paint</strong> — coordinate with your elevator contractor, and send a before-and-after photo report, with COI and WSIB clearance included.</p>
 <ul class="ticks"><li>After-hours scheduling, minimal downtime</li><li>Water, oil, sludge and sewage clean-up</li><li>Seasonal programs for multi-building portfolios</li><li>24/7 emergency line: {PHONE_EMERG[1]}</li></ul>
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="/elevator-pit-cleaning/#pm-quote">Get an elevator pit quote</a><a class="btn line" href="/guides/winter-elevator-pit-checklist/">Winter pit checklist</a></div></div>
 <div>{img("elevator-pit-cleaning-toronto", "(max-width:1000px) 100vw, 45vw")}</div>

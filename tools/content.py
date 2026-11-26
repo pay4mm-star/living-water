@@ -267,13 +267,13 @@ svc("disaster-restoration",
 
 svc("elevator-pit-cleaning",
     group="special", nav="Elevator Pit Cleaning", short="Elevator Pits",
-    title="Elevator Pit Cleaning Toronto & GTA | Condos & Buildings",
-    desc="Elevator pit cleaning for condos and commercial buildings in Toronto & the GTA: water, oil, sludge and debris removal, after hours, COI + WSIB, 24/7.",
+    title="Elevator Pit Cleaning Toronto – From $1,500 | Condos & GTA",
+    desc="Elevator pit cleaning in Toronto & the GTA from $1,500 per pit: full cleaning and sanitizing, ready for paint. After hours, COI + WSIB, 24/7 emergency line.",
     h1="Elevator Pit Cleaning for Condos & Commercial Buildings",
     sub="Winter is pit season. Salt slush, meltwater and debris end up in your elevator pits — we clean, pump and sanitize them after hours, with the paperwork property managers need.",
     hero="elevator-pit-cleaning-toronto", card="elevator-pit-pressure-washing",
     card_text="Water, oil, sludge and debris removed — the trusted referral of large GTA elevator companies.",
-    answer="Living Water cleans elevator pits for condominium corporations, property managers and commercial buildings across Toronto and the GTA — removing debris, standing water, oil, sludge and sewage, then pressure washing, sanitizing and deodorizing the pit. Work is coordinated with your elevator contractor, scheduled after hours, and documented with before-and-after photos. Emergency line: (647) 833-4343, 24/7.",
+    answer="Elevator pit cleaning with Living Water starts at $1,500 for a single pit (up to 4 inches of water), $2,500 for a double, $3,500 for a triple and $4,500 for four pits, each including full cleaning and sanitizing so the pit is ready for paint. Living Water cleans elevator pits for condominium corporations, property managers and commercial buildings across Toronto and the GTA — removing debris, standing water, oil, sludge and sewage, then pressure washing, sanitizing and deodorizing the pit. Work is coordinated with your elevator contractor, scheduled after hours, and documented with before-and-after photos. Emergency line: (647) 833-4343, 24/7.",
     body="""
 <h2>Why winter is elevator pit season</h2>
 <p>From December to April, GTA buildings track in snow, slush and road salt every day. Meltwater runs through door sills and into the hoistway, salt and grit settle in the pit, and freeze-thaw cycles and spring melt push groundwater through cracks and failing sumps. Left alone, that mix becomes corrosive sludge around buffers, rails and pit equipment — and a slip hazard for the mechanics who have to work there.</p>
@@ -287,8 +287,17 @@ svc("elevator-pit-cleaning",
 <div><h3>Multi-building portfolios</h3><p>One contractor for every building in your portfolio, with seasonal or recurring programs.</p></div>
 <div><h3>Trusted by elevator companies</h3><p>Some of Ontario's leading elevator service providers refer their most difficult pits to us — oil spills, floods and sewage backups.</p></div>
 </div>
+<h2>Elevator pit cleaning prices</h2>
+<p>Straightforward pricing for condo boards and property managers. Every price includes <strong>full cleaning and sanitization, leaving the pit ready for paint</strong>.</p>
+<table class="price-table"><caption class="sr-only">Elevator pit cleaning prices in Toronto and the GTA</caption><thead><tr><th scope="col">Pits in the building</th><th scope="col">Starting price</th><th scope="col">Includes</th></tr></thead><tbody>
+<tr><td>Single pit</td><td>From $1,500</td><td>Up to 4 inches of water, full clean and sanitize, ready for paint</td></tr>
+<tr><td>Double pit</td><td>From $2,500</td><td>Full clean and sanitize, ready for paint</td></tr>
+<tr><td>Triple pit</td><td>$3,500</td><td>Full clean and sanitize, ready for paint</td></tr>
+<tr><td>Four pits</td><td>From $4,500</td><td>Full clean and sanitize, ready for paint</td></tr>
+<tr><td>5+ pits or multiple buildings</td><td>Custom program</td><td>Portfolio pricing, seasonal or recurring</td></tr></tbody></table>
+<p>Prices are before HST. Deeper standing water, oil or hydraulic fluid, sewage or unusual access can change the price, and we tell you before work starts. For flooded pits see <a href="/elevator-pit-water-removal/">emergency elevator pit water removal</a>. <a href="#pm-quote">Request a fixed written quote</a> or call <a href="tel:+1-647-833-4343">(647) 833-4343</a>.</p>
 <h2>What's included</h2>
-<ul class="ticks cols"><li>Debris, garbage and dust removal</li><li>Standing water pump-out</li><li>Sludge and salt residue removal</li><li>Oil and hydraulic fluid spill clean-up</li><li>Proper disposal of oily and hazardous waste</li><li>Pressure washing and degreasing</li><li>Sanitizing and deodorizing</li><li>Sewage backup clean-up</li><li>Crack repair</li><li>Elevator pit painting</li></ul>
+<ul class="ticks cols"><li>Pit left ready for paint</li><li>Debris, garbage and dust removal</li><li>Standing water pump-out</li><li>Sludge and salt residue removal</li><li>Oil and hydraulic fluid spill clean-up</li><li>Proper disposal of oily and hazardous waste</li><li>Pressure washing and degreasing</li><li>Sanitizing and deodorizing</li><li>Sewage backup clean-up</li><li>Crack repair</li><li>Elevator pit painting</li></ul>
 <h2>How a pit cleaning works</h2>
 <ol class="ticks"><li><strong>Quote</strong> — send the number of elevators, pit photos if you have them, and the building address. Fixed written price.</li><li><strong>Schedule</strong> — we book a time with you and your elevator contractor, often after hours.</li><li><strong>Lock-out</strong> — the elevator contractor takes the car out of service and secures it.</li><li><strong>Clean</strong> — debris and water removed, oil and sludge cleaned up, pit washed, degreased and sanitized.</li><li><strong>Report</strong> — before-and-after photos and notes on anything we see, such as leaks, cracks or sump issues.</li></ol>
 <h2>Standards and warranty context in Ontario</h2>
@@ -297,7 +306,7 @@ svc("elevator-pit-cleaning",
 <h2>Buildings we serve</h2>
 <ul class="ticks cols"><li>Condominium towers and townhouse complexes</li><li>Rental apartment buildings</li><li>Office towers and commercial buildings</li><li>Retail plazas and shopping centres</li><li>Hospitals, schools and institutions</li><li>Industrial and warehouse facilities</li></ul>
 <h2>What affects the price of elevator pit cleaning?</h2>
-<p>Every pit is quoted as a fixed written price. The main factors are:</p>
+<p>The starting prices above cover a standard pit. Every job is confirmed as a fixed written price. The main factors that can move it are:</p>
 <ul class="ticks"><li><strong>Number of elevators</strong> and pits per building — multi-pit and multi-building programs are priced together</li><li><strong>Condition</strong> — routine debris versus standing water, oil, sludge or sewage</li><li><strong>Waste disposal</strong> — oily or contaminated water and material must be disposed of properly</li><li><strong>Pit size and depth</strong>, and access for pumps and equipment</li><li><strong>Timing</strong> — overnight, weekend or 24/7 emergency response</li><li><strong>Extras</strong> — pit painting, crack repair or deodorizing</li></ul>
 <h2>Elevator pit cleaning across the GTA</h2>
 <p>We clean elevator pits in condominium towers and commercial buildings across <a href="/pressure-washing-toronto/">downtown Toronto</a>, <a href="/pressure-washing-north-york/">North York</a> along the Yonge corridor, <a href="/pressure-washing-etobicoke/">Etobicoke</a>'s Humber Bay Shores, <a href="/pressure-washing-scarborough/">Scarborough</a>, <a href="/pressure-washing-mississauga/">Mississauga</a> City Centre, <a href="/pressure-washing-vaughan/">Vaughan</a> Metropolitan Centre, <a href="/pressure-washing-markham/">Markham</a>, <a href="/pressure-washing-richmond-hill/">Richmond Hill</a>, <a href="/pressure-washing-oakville/">Oakville</a>, <a href="/pressure-washing-burlington/">Burlington</a> and <a href="/pressure-washing-hamilton/">Hamilton</a>.</p>
@@ -305,7 +314,11 @@ svc("elevator-pit-cleaning",
 <p><strong>Water in a pit right now?</strong> See <a href="/elevator-pit-water-removal/">emergency elevator pit water removal</a> or call <a href="tel:+1-647-833-4343">(647) 833-4343</a>, 24/7.</p>
 """,
     photos=["elevator-pit-cleaning-toronto", "elevator-pit-pressure-washing", "elevator-pit-buffer-cleaning", "elevator-pit-springs-cleaned", "condo-column-pressure-washing", "commercial-building-exterior-washing"],
-    faqs=[("How often should a condo clean its elevator pits?", "At least once a year, and more often in high-traffic buildings. Many property managers book a cleaning after winter to remove salt and meltwater residue, and immediately after any flood, leak or sewage backup."),
+    faqs=[("How much does elevator pit cleaning cost in Toronto?", "Living Water's elevator pit cleaning starts at $1,500 for a single pit (up to 4 inches of water), $2,500 for a double pit, $3,500 for a triple pit and $4,500 for four pits. Every price includes full cleaning and sanitizing so the pit is ready for paint. Prices are before HST and we confirm a fixed written quote."),
+          ("What is included in the elevator pit cleaning price?", "Debris and water removal, sludge and salt cleaning, pressure washing and degreasing, and sanitizing, leaving the pit clean and ready for paint. The single-pit price covers up to 4 inches of standing water."),
+          ("Can you paint the elevator pit after cleaning?", "Our cleaning and sanitizing leaves the pit ready for paint, and elevator pit painting and crack repair are available as add-ons."),
+          ("What if the pit has more than 4 inches of water?", "Deeper water, oil, hydraulic fluid or sewage needs extra pumping and disposal, so we quote it separately and tell you before work starts. For active flooding call (647) 833-4343, 24/7."),
+          ("How often should a condo clean its elevator pits?", "At least once a year, and more often in high-traffic buildings. Many property managers book a cleaning after winter to remove salt and meltwater residue, and immediately after any flood, leak or sewage backup."),
           ("Who is responsible for cleaning the elevator pit?", "The building owner or property manager usually arranges pit cleaning. The elevator contractor maintains the equipment and controls access, so the cleaning is coordinated with them."),
           ("Do you work after hours?", "Yes. We regularly schedule overnight, early-morning and weekend pit cleaning so residents and tenants are not inconvenienced."),
           ("How long is the elevator out of service?", "Routine pit cleaning is usually completed in a few hours per elevator. Flood, oil or sewage clean-ups take longer depending on volume and disposal."),
