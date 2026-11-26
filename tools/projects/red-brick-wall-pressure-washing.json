@@ -1,0 +1,20 @@
+{
+ "slug": "red-brick-wall-pressure-washing",
+ "title": "Red brick wall pressure washing",
+ "service": "brick-cleaning-paint-removal",
+ "location": "",
+ "date": "2026-11",
+ "description": "Low-pressure washing of a red brick wall to lift dirt and staining without damaging the masonry.",
+ "pairs": [],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/red-brick-wall-pressure-washing-video-1.mp4",
+   "poster": "red-brick-wall-pressure-washing-video-1-poster",
+   "duration": 14,
+   "w": 3840,
+   "h": 2160,
+   "audio": false
+  }
+ ]
+}

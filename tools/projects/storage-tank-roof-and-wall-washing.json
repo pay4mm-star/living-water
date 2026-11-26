@@ -1,0 +1,28 @@
+{
+ "slug": "storage-tank-roof-and-wall-washing",
+ "title": "Storage tank roof and wall washing",
+ "service": "industrial-power-washing",
+ "location": "",
+ "date": "2026-11",
+ "description": "Crews pressure washing the roof deck and painted exterior of a large storage tank, using a boom lift to reach the upper walls.",
+ "pairs": [],
+ "photos": [],
+ "videos": [
+  {
+   "src": "/assets/video/storage-tank-roof-and-wall-washing-video-1.mp4",
+   "poster": "storage-tank-roof-and-wall-washing-video-1-poster",
+   "duration": 15,
+   "w": 3840,
+   "h": 2160,
+   "audio": false
+  },
+  {
+   "src": "/assets/video/storage-tank-roof-and-wall-washing-video-2.mp4",
+   "poster": "storage-tank-roof-and-wall-washing-video-2-poster",
+   "duration": 16,
+   "w": 3840,
+   "h": 2160,
+   "audio": false
+  }
+ ]
+}

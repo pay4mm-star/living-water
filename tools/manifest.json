@@ -4645,5 +4645,89 @@
    960,
    1280
   ]
+ },
+ "storage-tank-roof-and-wall-washing-video-1-poster": {
+  "alt": "Storage tank roof and wall washing \u2014 video",
+  "w": 3840,
+  "h": 2160,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "storage-tank-roof-and-wall-washing-video-2-poster": {
+  "alt": "Storage tank roof and wall washing \u2014 video",
+  "w": 3840,
+  "h": 2160,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "ghost-sign-cleaning-on-a-concrete-facade-video-1-poster": {
+  "alt": "Ghost sign cleaning on a concrete facade \u2014 video",
+  "w": 1920,
+  "h": 1080,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "red-brick-facade-washing-from-a-boom-lift-video-1-poster": {
+  "alt": "Red brick facade washing from a boom lift \u2014 video",
+  "w": 1920,
+  "h": 1080,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "red-brick-house-washing-with-windows-masked-video-1-poster": {
+  "alt": "Red brick house washing with windows masked \u2014 video",
+  "w": 3840,
+  "h": 2160,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
+ },
+ "red-brick-wall-pressure-washing-video-1-poster": {
+  "alt": "Red brick wall pressure washing \u2014 video",
+  "w": 3840,
+  "h": 2160,
+  "sizes": [
+   320,
+   480,
+   640,
+   800,
+   960,
+   1280,
+   1600
+  ]
  }
 }
