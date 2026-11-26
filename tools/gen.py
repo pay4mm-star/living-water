@@ -112,13 +112,13 @@ def nav_html(current):
     def a(href, label):
         cur = ' aria-current="page"' if href == current else ""
         return f'<a href="{href}"{cur}>{label}</a>'
-    core = "".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_CORE)
-    spec = "".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_SPECIAL)
+    core = "".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_CORE if s != 'disaster-restoration')
+    spec = "".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in ['disaster-restoration'] + SERVICE_ORDER_SPECIAL)  # 6+6+6 keeps the 2-col menu gap-free
     return f'''<nav class="nav" id="nav" aria-label="Main">
 <ul>
 <li>{a("/", "Home")}</li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-services">Services ▾</button>
-<ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised Cleaning</li>{spec}<li class="sub-label">Popular</li>{"".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_SUB)}</ul></li>
+<ul class="sub" id="sub-services"><li>{a("/power-washing-services/", "<strong>All Services</strong>")}</li>{core}<li class="sub-label">Specialised &amp; Restoration</li>{spec}<li class="sub-label">Popular</li>{"".join(f"<li>{a('/'+s+'/', SERVICES[s]['nav'])}</li>" for s in SERVICE_ORDER_SUB)}</ul></li>
 <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="sub-areas">Areas ▾</button>
 <ul class="sub" id="sub-areas"><li>{a("/service-areas/", "<strong>All Service Areas</strong>")}</li>{"".join(f"<li>{a('/pressure-washing-'+c['slug']+'/', c['name'])}</li>" for c in CITIES)}</ul></li>
 <li>{a("/guides/", "Guides")}</li>
