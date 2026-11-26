@@ -23,6 +23,8 @@ def city_page(c):
          f"Residential pressure washing in {name} is usually booked within 2–5 days, with same-week service standard. Commercial and emergency clients can call our 24/7 line at {PHONE_EMERG[1]}."),
         (f"Do you charge for quotes in {name}?",
          "No. Assessments are free and you receive a fixed written quote — with our Certificate of Insurance and WSIB clearance — before any work starts."),
+        (f"How much does pressure washing cost in {name}?",
+         f"Pricing in {name} depends on the surface, area, access and how soiled it is, so we give a free fixed written quote before work starts. Published starting prices: interlock wash, sand and seal at $3.50 per sq ft, and elevator pit cleaning from $1,500 per pit, both before HST."),
         (f"Which services are most requested in {name}?",
          "Most requested here: " + ", ".join(SERVICES[x]["nav"] for x in c["services"][:4]) + "."),
     ]
@@ -37,6 +39,7 @@ def city_page(c):
 {reviewed_line()}
 {intro}
 <h2>Local considerations in {esc(name)}</h2><ul class="ticks">{"".join(f"<li>{esc(x)}</li>" for x in LOCAL.get(c["slug"], []))}</ul>
+<p>Wondering about cost? See our <a href="/pressure-washing-prices-toronto/">pressure washing prices</a> or try the <a href="/interlock-cleaning-sealing-cost-calculator/">interlock cost calculator</a>.</p>
 <h2>Neighbourhoods we serve in {esc(name)}</h2><ul class="areas" style="justify-content:flex-start">{hoods}</ul>
 <h2>Why {esc(name)} property owners choose Living Water</h2>
 <ul class="ticks"><li>28 years of experience and 7,500+ properties cleaned across the GTA</li><li>Surface-specific methods — soft wash, hot-water pressure, steam and media blasting</li><li>$5M liability insurance, WSIB coverage and ISSA-GBAC certification</li><li>Fixed written quotes, before-and-after photos and a free re-clean guarantee</li><li>24/7 emergency line for commercial, industrial and disaster restoration</li></ul>
