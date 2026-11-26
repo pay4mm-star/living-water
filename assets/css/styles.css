@@ -378,3 +378,10 @@ figure.vid video{width:100%;height:auto;max-height:72vh;object-fit:contain;backg
 .promo-inline h2{margin:0 0 6px;font-size:1.35rem}.promo-inline p{margin:0 0 12px}
 @media(max-width:900px){.est{grid-template-columns:1fr}.est-result{position:static}.steps3{grid-template-columns:1fr}}
 @media(max-width:640px){.est-main,.est-result,.est-quote{padding:22px 18px}.est-row{grid-template-columns:1fr 1fr;gap:10px}.est-row .r-t{grid-column:1/-1}.r-out{grid-column:1}.r-del{justify-self:end}.price-table{font-size:.88rem}.price-table th,.price-table td{padding:9px 8px}.offer-box{padding:22px}}
+
+/* client logos */
+.clients{padding:48px 0;background:#fff}
+.logos{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.logos li{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px;aspect-ratio:2/1}
+.logos img{max-width:100%;height:auto;max-height:100%;object-fit:contain}
+@media(max-width:900px){.logos{grid-template-columns:repeat(2,1fr)}}

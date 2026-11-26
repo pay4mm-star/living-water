@@ -320,6 +320,8 @@ def featured_video():
 <div><figure class="vid"><video controls playsinline preload="none" poster="{best(v["poster"], 960)}" width="{v["w"]}" height="{v["h"]}" aria-label="{esc(p["title"])} video"><source src="{v["src"]}" type="video/mp4"></video></figure></div>
 </div></section>"""
 
+CLIENT_LOGOS = [("city-of-toronto", "City of Toronto"), ("cbre", "CBRE"), ("thyssenkrupp-elevator", "ThyssenKrupp Elevator"), ("rbc", "RBC"), ("mcdonalds", "McDonald's"), ("permacon", "Permacon"), ("atlas", "Atlas"), ("oaks-landscape-products", "Oaks Landscape Products")]
+
 def home():
     stats = f'''<div class="stats">
 <div class="stat"><b>28</b><span>years in business</span><p>Washing, blasting and restoring across the GTA since 1998.</p></div>
@@ -361,6 +363,11 @@ def home():
 <div>{img("living-water-van-residential-pressure-washing", "(max-width:1000px) 100vw, 45vw")}</div>
 </div>
 <div class="wrap" style="margin-top:50px">{stats}</div></section>
+
+<section class="clients" aria-labelledby="clients-h"><div class="wrap">
+<div class="section-head"><span class="pill light">Trusted By</span><h2 id="clients-h">Trusted by Property Owners, Brands and Municipalities</h2></div>
+<ul class="logos">{"".join(f'<li><img src="/assets/img/clients/{k}.webp" alt="{esc(n)} logo" width="300" height="150" loading="lazy" decoding="async"></li>' for k, n in CLIENT_LOGOS)}</ul>
+</div></section>
 
 <section><div class="wrap">
 <div class="section-head"><span class="pill light">The Work</span><h2>Quality Work. Proven Results.</h2><p>Drag the slider to compare real Living Water projects, before and after.</p></div>
