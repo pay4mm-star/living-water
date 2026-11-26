@@ -148,3 +148,14 @@ document.querySelectorAll('.map-load').forEach(function (b) {
     b.replaceWith(f); if (window.gtag) gtag('event', 'map_open');
   });
 });
+
+// hero video: load only on wide screens, no reduced-motion, no data-saver
+(function () {
+  var v = document.querySelector('.hero-video[data-src]');
+  if (!v) return;
+  var c = navigator.connection || {};
+  if (!window.matchMedia('(min-width:701px)').matches || window.matchMedia('(prefers-reduced-motion:reduce)').matches || c.saveData) return;
+  v.src = v.dataset.src;
+  v.addEventListener('playing', function () { v.classList.add('on'); });
+  var p = v.play(); if (p && p.catch) p.catch(function () {});
+})();

@@ -408,7 +408,15 @@ def sub_cards(s):
     if not kids: return ""
     return f'<section><div class="wrap"><div class="section-head"><span class="pill light">Popular</span><h2>Popular {esc(SERVICES[s]["short"].lower())} services</h2></div>{service_cards(kids)}</div></section>'
 
-HERO_V2 = {"driveway-interlock-cleaning"}  # test of the livelier banner; extend to more pages once approved
+HERO_V2 = set()
+HERO_VIDEO = {"commercial-power-washing": "commercial-facade-washing-from-a-boom-lift-video-1"}  # video banner test
+
+def hero_video(s):
+    v = HERO_VIDEO.get(s)
+    if not v:
+        return ""
+    return f'<video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/video/{v}.mp4"></video>'
+  # test of the livelier banner; extend to more pages once approved
 HERO_PRICE_CHIP = {"driveway-interlock-cleaning": "$3.50/sq ft wash, sand &amp; seal"}
 
 def hero_chips(s):
@@ -431,7 +439,7 @@ def service_page(s):
     related = (related[:len(fam)] + sorted(related[len(fam):], key=lambda x: SERVICES[x]["group"] != d["group"]))[:6]
     rel_html = "".join(f'<a href="/{x}/">{SERVICES[x]["nav"]} →</a>' for x in related)
     body = f'''
-<section class="page-hero{" hero-v2" if s in HERO_V2 else ""}"><picture>{hero_img(d["hero"], "100vw", eager=True, alt="")}</picture>
+<section class="page-hero{" hero-v2" if s in HERO_V2 else ""}{" hero-vid" if s in HERO_VIDEO else ""}"><picture>{hero_img(d["hero"], "100vw", eager=True, alt="")}</picture>{hero_video(s)}
 <div class="wrap">{crumbs_html(trail)}<span class="pill">{esc(group)}</span><h1>{esc(d["h1"])}</h1><p>{esc(d["sub"])}</p>{hero_chips(s) if s in HERO_V2 else ""}
 <div class="cta-row" style="justify-content:flex-start"><a class="btn" href="{"#pm-quote" if s.startswith("elevator-pit") else "/contact/#quote"}">{"Get an Elevator Pit Quote" if s.startswith("elevator-pit") else "Get a Free Quote"}</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div></div></section>
 <section><div class="wrap layout">
