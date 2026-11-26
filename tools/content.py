@@ -560,7 +560,7 @@ svc("paver-stone-sealing", group="sub", parent="stone-restoration", nav="Paver &
     desc="Interlock, paver, natural stone and pool coping sealing in the GTA: deep clean, efflorescence check, then breathable sealer for colour and stain protection.",
     h1="Paver, Interlock & Natural Stone Sealing",
     sub="Protect colour and resist stains on interlock, natural stone patios and pool coping — sealed only after a proper clean and dry-out.",
-    hero="large-patterned-paver-patio-with-raised-steps-after-cleaning", card="pale-paver-walkway-through-a-landscaped-garden-after-cleaning",
+    hero="large-patterned-paver-patio-with-raised-steps-after-cleaning", card="large-patterned-paver-patio-with-raised-steps-after-cleaning",
     card_text="Clean, dry, then seal — interlock, natural stone and pool coping protected.",
     answer="Living Water seals interlock, concrete pavers, natural stone patios and pool coping across Toronto and the GTA. Surfaces are deep cleaned, checked for efflorescence, re-sanded and fully dried before a breathable sealer is applied, which enriches colour and makes oil, food and organic stains easier to clean.",
     body="""
