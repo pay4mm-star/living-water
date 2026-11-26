@@ -57,4 +57,31 @@ GUIDES_3 = [
 <h2>Use the right method</h2>
 <p>Soft washing suits siding and roofs; hot-water pressure suits concrete and interlock; soft surfaces like heritage brick need care. Learn more at <a href="/residential-power-washing/">residential power washing</a> and <a href="/house-washing/">house washing</a>.</p>""",
   faqs=[("Does pressure washing help a home sell?","A clean exterior improves first impressions and listing photos. We cannot promise a particular sale price."),("How long does a typical home take?","Most homes can be done in a day, depending on how many surfaces are included."),("Should I seal the driveway before selling?","If your interlock or stone is clean and dry, sealing can restore colour and protect it. We can advise after an inspection."),("Can you work around a listing date?","Yes. Tell us your photo or open-house date and we will schedule accordingly.")]),
+ dict(slug="winter-pressure-washing-ontario", title="Can You Pressure Wash in Winter in Ontario?",
+  meta="Can you pressure wash in an Ontario winter? What works, what doesn't below freezing, and why hot water and indoor or sheltered jobs make sense.",
+  hero="winter-cleaning-of-an-entrance-ramp", related=["commercial-power-washing","elevator-pit-cleaning"],
+  answer="Yes, some pressure washing can be done in an Ontario winter, but not every job. Hot-water equipment, sheltered or indoor areas such as garages and elevator pits, and above-freezing days work well. Exterior jobs that would leave water to freeze into ice on walkways are better booked for milder weather.",
+  body="""
+<h2>What works in winter</h2>
+<ul class="ticks"><li>Parking garages, loading docks and mechanical areas that are sheltered from freezing</li><li>Elevator pits, which are indoors and often need attention after salt and meltwater</li><li>Hot-water cleaning of commercial entrances and ramps, with immediate water control</li><li>Interior industrial cleaning and sandblasting prep</li></ul>
+<h2>What to wait for</h2>
+<ul class="ticks"><li>Exterior residential washing when temperatures are below freezing and water would turn to ice</li><li>Sealing interlock or stone, which needs dry surfaces and suitable temperatures</li><li>Roof cleaning, which should not be done on icy or snowy roofs</li></ul>
+<h2>Why hot water helps</h2>
+<p>Hot water lifts oil, grease and salt residue more effectively in cold weather and reduces how long surfaces stay wet. It still needs careful water control so runoff does not freeze on walkways. See <a href="/commercial-power-washing/">commercial power washing</a> and <a href="/elevator-pit-cleaning/">elevator pit cleaning</a>, and use our <a href="/guides/winter-elevator-pit-checklist/">winter elevator pit checklist</a>.</p>""",
+  faqs=[("Is it safe to pressure wash when it is freezing?","Only where runoff will not freeze into ice on walkways or entrances. We assess the site and schedule accordingly."),("Can you clean elevator pits in winter?","Yes. Pits are indoors, and winter salt and meltwater often make a clean worthwhile."),("When is the best time for exterior residential washing?","Typically spring through fall, when temperatures are above freezing and surfaces dry properly."),("Do you offer emergency service in winter?","Yes. Our 24/7 line is (647) 833-4343 for water cleanup and urgent jobs.")]),
+ dict(slug="sandblasting-vs-soda-vs-dry-ice-blasting", title="Sandblasting vs Soda Blasting vs Dry Ice Blasting: Which Is Right?",
+  meta="Compare abrasive sandblasting, soda blasting, micro-abrasive and dry ice blasting: what each removes, which surfaces they suit and when to choose one.",
+  hero="technician-abrasive-blasting-the-inside-of-a-pool-shell", related=["sandblasting-services","metal-restoration"],
+  answer="Abrasive (sand-type) blasting is the most aggressive and suits steel, concrete and heavy coatings. Soda and micro-abrasive blasting are gentler and suit brick, stone and delicate surfaces. Dry ice blasting cleans without leaving media residue and suits equipment and sensitive areas. The right choice depends on the surface and what must come off.",
+  body="""
+<h2>Quick comparison</h2>
+<table class="price-table"><thead><tr><th scope="col">Method</th><th scope="col">Best for</th><th scope="col">Consider</th></tr></thead><tbody>
+<tr><td>Abrasive blasting</td><td>Steel, concrete, heavy paint, rust and coatings</td><td>Aggressive; can damage soft masonry</td></tr>
+<tr><td>Soda blasting</td><td>Paint and grime on brick, stone and softer surfaces</td><td>Gentler; media must be rinsed or removed</td></tr>
+<tr><td>Micro-abrasive blasting</td><td>Fine detail, heritage and delicate surfaces</td><td>Slower, precise</td></tr>
+<tr><td>Dry ice blasting</td><td>Equipment and areas where residue is a concern</td><td>Cleans without leaving media; not for heavy coatings</td></tr></tbody></table>
+<h2>How to choose</h2>
+<p>Start with the surface. Hard surfaces such as steel and concrete can take more aggressive media. Soft brick, limestone and heritage masonry need gentler methods, and a test patch first. Read <a href="/guides/is-sandblasting-safe-for-brick/">is sandblasting safe for brick?</a> and <a href="/guides/remove-paint-from-brick/">how to remove paint from brick</a>.</p>
+<p>See our <a href="/sandblasting-services/">sandblasting services</a> and <a href="/metal-restoration/">metal restoration</a>.</p>""",
+  faqs=[("Which method is safest for old brick?","Gentler methods such as soda or micro-abrasive blasting, with a test patch first, are generally safer for older, softer brick."),("Which method removes rust best?","Abrasive blasting is typically used for rust and heavy coatings on steel."),("Is dry ice blasting messy?","The dry ice turns to gas, so no blasting media remains, though the removed coating or dirt still needs cleanup."),("Can you test a small area first?","Yes. We test an inconspicuous area to choose the method and settings before starting the full job.")]),
 ]
