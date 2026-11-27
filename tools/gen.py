@@ -398,7 +398,7 @@ def home():
 {faq_block(GENERAL_FAQ)}
 {cta_block()}'''
     page("/", "Pressure Washing & Sandblasting Toronto & GTA | Living Water",
-         "Pressure washing, sandblasting, brick cleaning, heritage and disaster restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
+         "Pressure washing & power washing, sandblasting, brick cleaning and restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
          body, schema=[faq_ld(GENERAL_FAQ)], preload="heritage-stone-wall-pressure-washing-toronto", priority="1.0")
 
 # ------------------------------------------------------------ SERVICE PAGES
@@ -832,3 +832,4 @@ for g in GUIDES: guide_page(g)
 reviews_page(); faq_page(); industries_page(); glossary_page(); html_sitemap()
 about(); projects_hub(); gallery(); service_areas(); contact(); legal(); tech(); tech_extra()
 print(len(PAGES), "indexable pages")
+exec(open(os.path.join(HERE, "stamp_dates.py")).read())

@@ -142,8 +142,8 @@ GUIDES_MORE = [
          faqs=[("Will graffiti removal leave a shadow?", "Fresh graffiti usually leaves no trace. Old tags on porous brick may leave light ghosting, reduced with poultices or gentle blasting."),
                ("Who removes graffiti on private property in Toronto?", "Property owners are generally responsible for removing graffiti from their buildings; check your municipality's current graffiti bylaw for timelines.")]),
     dict(slug="pressure-washing-cost-factors",
-         title="What Affects the Cost of Pressure Washing in Toronto?",
-         meta="What sets the price of pressure washing, sandblasting and restoration in the GTA: size, surface, staining, access, method and timing.",
+         title="Pressure Washing Cost in Toronto: What Affects the Price",
+         meta="How much does pressure washing cost in Toronto? What sets the price: surface, size, staining, access and method, plus Living Water's published starting prices.",
          hero="living-water-van-residential-pressure-washing", related=["residential-power-washing", "commercial-power-washing", "sandblasting-services"],
          answer="Pressure washing prices in the GTA depend mainly on the area and type of surface, how heavy the staining or growth is, the cleaning method required (soft wash, hot water, chemical or blasting), access and height (ladders, lifts, containment), extras like re-sanding or sealing, and scheduling such as after-hours or emergency work. A site-specific, fixed written quote is the only reliable number.",
          body="""
