@@ -3,6 +3,8 @@ import re as _re2
 
 # phrase (case-insensitive) -> url. First match per page is linked, longest phrases first.
 LINK_MAP = {
+    "commercial pressure washing": "/commercial-power-washing/",
+    "industrial pressure washing": "/industrial-power-washing/",
     "elevator service companies": "/elevator-company-pit-cleaning-subcontractor-gta/",
     "elevator companies": "/elevator-company-pit-cleaning-subcontractor-gta/",
     "condo boards": "/condo-property-manager-pressure-washing-toronto/",

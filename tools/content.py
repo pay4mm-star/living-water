@@ -94,7 +94,7 @@ svc("residential-power-washing",
     service_type="Residential pressure washing")
 
 svc("commercial-power-washing",
-    group="core", nav="Commercial Power Washing", short="Commercial",
+    group="core", nav="Commercial Pressure Washing", short="Commercial",
     title="Commercial Pressure Washing Toronto & GTA | Living Water",
     desc="Commercial pressure washing for plazas, storefronts, parking garages, schools, restaurants and warehouses across the GTA. $5M insured, WSIB covered.",
     h1="Commercial Pressure Washing for GTA Properties",
@@ -128,7 +128,7 @@ svc("commercial-power-washing",
     service_type="Commercial pressure washing")
 
 svc("industrial-power-washing",
-    group="core", nav="Industrial Power Washing", short="Industrial",
+    group="core", nav="Industrial Pressure Washing", short="Industrial",
     title="Industrial Pressure Washing Toronto & GTA | Hydro Jetting",
     desc="Industrial pressure washing, hydro jetting and degreasing for plants, silos, tanks and food facilities in Toronto & the GTA. 24/7 emergency. Free quotes.",
     h1="Industrial Pressure Washing & Hydro Jetting",
