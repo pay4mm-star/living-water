@@ -142,4 +142,32 @@ dict(slug="cleaning-heritage-brick-and-stone-toronto",
         ("How do I know if my brick is soft?", "Soft brick often looks rounded or pitted, crumbles at edges and absorbs water quickly. A cleaner or mason can check it with a small test."),
         ("Do I need a permit to clean a heritage building?", "Routine cleaning often does not, but designated heritage properties can have rules about exterior changes. Check with your municipality before starting."),
         ("Do you clean heritage buildings in Toronto?", "Yes. We clean and restore historic masonry, statues and landmarks across Toronto and the GTA and recommend an on-site assessment first.")]),
+
+dict(slug="remove-oil-and-rust-stains-from-concrete",
+  title="How to Remove Oil and Rust Stains from Concrete and Pavers",
+  meta="How to remove oil, grease and rust stains from driveways, garage floors and pavers: what works, what to avoid, when pressure washing is not enough, and when to call a pro.",
+  hero="estate-home-driveway-washing", related=["driveway-interlock-cleaning", "residential-power-washing", "industrial-power-washing"],
+  answer="Fresh oil is best blotted and absorbed with an absorbent powder, then treated with a degreaser and scrubbed. Rust stains need a rust-specific remover rather than a degreaser. Water pressure alone rarely lifts a stain that has soaked into porous concrete or pavers; hot-water washing and the right cleaner work better, and old stains may only lighten.",
+  body="""
+<h2>First, identify the stain</h2>
+<ul class="ticks"><li><strong>Oil and grease:</strong> dark, often with a halo that spreads into the surface. Needs a degreaser or absorbent poultice.</li><li><strong>Rust:</strong> orange or brown, often from metal furniture, fertilizer, well water or sprinkler water. Needs a rust remover that works on iron stains.</li><li><strong>Tire marks and general grime:</strong> usually lift with a cleaner and hot water.</li></ul>
+<p>Using the wrong product can set a stain or change the colour of the surface, so check which one you have before you start.</p>
+<h2>Removing fresh oil</h2>
+<ol class="ticks"><li>Blot the spill and cover it with an absorbent such as cat litter, sawdust or a commercial absorbent. Leave it for several hours, then sweep it up.</li><li>Apply a concrete degreaser and scrub with a stiff brush.</li><li>Rinse thoroughly and let the surface dry before judging the result.</li></ol>
+<h2>Old oil stains</h2>
+<p>Oil that has soaked in for months or years may only lighten. Repeating the degreaser step, using a poultice that draws oil out of the pores, or hot-water washing gives the best chance. Be wary of leaving harsh chemicals on pavers or decorative concrete; test a small area first and follow the product label.</p>
+<h2>Removing rust stains</h2>
+<p>Rust remover products convert or dissolve the iron stain. Choose one that is safe for your surface (concrete, brick, natural stone and coloured pavers react differently), apply it as directed and rinse well. Avoid mixing cleaners. Remove the source, such as metal furniture or the leaking fitting, or the stain will return.</p>
+<h2>Why pressure washing alone often is not enough</h2>
+<p>Water removes loose dirt, not oil that has soaked into the pores. Too much pressure can etch concrete and strip the surface of pavers, leaving lighter patches or a rough look. A cleaner plus controlled pressure, and sometimes hot water, works better than pressure alone. For the difference between the methods, see <a href="/guides/power-washing-vs-pressure-washing/">power washing vs pressure washing</a>.</p>
+<h2>After cleaning: protect the surface</h2>
+<p>Sealing concrete or pavers after cleaning makes it harder for new stains to soak in. See our <a href="/guides/interlock-paver-sealing-guide/">paver sealing guide</a> and <a href="/driveway-interlock-cleaning/">driveway and interlock cleaning</a> page.</p>
+<h2>When to call a professional</h2>
+<p>Large or old stains, decorative or stamped concrete, natural stone and commercial floors are worth a professional assessment. Living Water uses hot-water washing and the right cleaner for the surface, is $5M insured and WSIB-covered, and gives free written quotes: <a href="/contact/">request one here</a>.</p>
+""",
+  faqs=[("What removes oil stains from a concrete driveway?", "Absorb fresh oil with cat litter or sawdust, then scrub with a concrete degreaser and rinse. Old stains may need repeat treatment, a poultice or hot-water washing and may only lighten."),
+        ("Can a pressure washer remove oil stains?", "Not by itself. Water pressure removes loose dirt but not oil that has soaked into the surface. A degreaser and hot water work better."),
+        ("How do I remove rust stains from pavers?", "Use a rust remover suited to your paver or concrete type, test a small area, apply as directed and rinse well. Remove the rust source to stop it returning."),
+        ("Will sealing prevent stains?", "Sealing does not make a surface stain-proof but it slows absorption, so spills are easier to clean before they soak in."),
+        ("Do you remove oil stains from commercial floors and loading docks?", "Yes. We use hot-water washing and degreasing for commercial and industrial surfaces across Toronto and the GTA.")]),
 ]
