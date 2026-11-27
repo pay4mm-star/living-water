@@ -53,3 +53,11 @@ Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4
 - GSC indexing review: the 53 non-indexed are legacy WP/staging URLs (wildcards, feeds, plugins); real redirects (/testimonials/, /power-washing-services-2/, sitemap_index.xml) already 301 correctly. The pricing page is already indexed.
 - New guide: cleaning heritage brick and stone in Toronto (supports Historical Remediation page).
 - Re-check GSC around Dec 10 for: Commercial vs Industrial page for "commercial pressure washing"; roof/deck positions.
+
+## 2026-11-27 (afternoon)
+- New guide: remove oil and rust stains from concrete and pavers (homeowner-intent, links to driveway/sealing/power-vs-pressure).
+- Homepage title shortened to 54 chars ("Pressure Washing & Power Washing Toronto | Living Water").
+- GBP: uploaded 5 job photos (interlock walkway, condo terrace hot-water wash, roof moss after, rust stain removal after, commercial lobby); 3+ visible as Pending Google review (grid lazy-loads, count unconfirmed).
+- Content-depth scan: no thin pages (smallest real pages ~400 words, case studies).
+- Note: Cloudflare Pages deploy time varies 1–8 min; check via `gh api .../check-runs` before verifying live.
+- Still open for owner: Cloudflare login is signed out in Chrome (not needed unless deploys fail); GBP description says "over 25 years" vs site "since 1998".
