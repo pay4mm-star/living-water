@@ -324,6 +324,7 @@ def featured_video():
 <div><figure class="vid"><video controls playsinline preload="none" poster="{best(v["poster"], 960)}" width="{v["w"]}" height="{v["h"]}" aria-label="{esc(p["title"])} video"><source src="{v["src"]}" type="video/mp4"></video></figure></div>
 </div></section>"""
 
+LOGO_SCALE = {"atlas": 1.3, "rbc": 1.3, "mcdonalds": 1.45, "permacon": 1.3}  # mobile only: balances logos that sit small inside their 300x150 canvas
 CLIENT_LOGOS = [("city-of-toronto", "City of Toronto"), ("cbre", "CBRE"), ("thyssenkrupp-elevator", "ThyssenKrupp Elevator"), ("rbc", "RBC"), ("mcdonalds", "McDonald's"), ("permacon", "Permacon"), ("atlas", "Atlas"), ("oaks-landscape-products", "Oaks Landscape Products")]
 
 HERO_STYLE = "slider"   # "classic" = original photo-background banner (see docs/hero-backup/)
@@ -404,7 +405,7 @@ def home():
 
 <section class="clients" aria-labelledby="clients-h"><div class="wrap">
 <div class="section-head"><span class="pill light">Trusted By</span><h2 id="clients-h">Trusted by Property Owners, Brands and Municipalities</h2></div>
-<ul class="logos">{"".join(f'<li><img src="/assets/img/clients/{k}.webp" alt="{esc(n)} logo" width="300" height="150" loading="lazy" decoding="async"></li>' for k, n in CLIENT_LOGOS)}</ul>
+<ul class="logos">{"".join(f'<li><img src="/assets/img/clients/{k}.webp" alt="{esc(n)} logo" width="300" height="150" loading="lazy" decoding="async" style="--s:{LOGO_SCALE.get(k, 0.95)}"></li>' for k, n in CLIENT_LOGOS)}</ul>
 </div></section>
 
 <section><div class="wrap">

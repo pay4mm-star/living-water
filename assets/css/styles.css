@@ -385,6 +385,7 @@ figure.vid video{width:100%;height:auto;max-height:72vh;object-fit:contain;backg
 .logos li{display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:8px;aspect-ratio:2/1}
 .logos img{max-width:100%;height:auto;max-height:100%;object-fit:contain}
 @media(max-width:900px){.logos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.logos{gap:12px}.logos li{aspect-ratio:3/2;padding:6px;overflow:hidden}.logos img{width:100%;transform:scale(var(--s,1))}}
 
 /* video hero: poster photo shows first; video fades in on desktop only */
 .hero-vid picture img{opacity:.55}
