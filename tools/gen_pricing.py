@@ -50,7 +50,7 @@ def pricing_page():
 {faq_block(PRICE_FAQS, "Pressure Washing Prices FAQ")}
 {areas_block()}
 {cta_block()}'''
-    page(path, "Pressure Washing Prices Toronto & GTA | Living Water",
+    page(path, "Pressure Washing Cost & Prices Toronto & GTA | Living Water",
          "Pressure washing prices in Toronto & the GTA: interlock wash, sand and seal $3.50/sq ft, elevator pit cleaning from $1,500. Free fixed quotes.",
          body, schema=[crumbs_ld(trail), faq_ld(PRICE_FAQS)], preload=hero, priority="0.9", crumbs=True)
 

@@ -397,7 +397,7 @@ def home():
 {areas_block()}
 {faq_block(GENERAL_FAQ)}
 {cta_block()}'''
-    page("/", "Pressure Washing & Sandblasting Toronto & GTA | Living Water",
+    page("/", "Pressure Washing, Power Washing & Sandblasting Toronto | Living Water",
          "Pressure washing & power washing, sandblasting, brick cleaning and restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
          body, schema=[faq_ld(GENERAL_FAQ)], preload="heritage-stone-wall-pressure-washing-toronto", priority="1.0")
 
