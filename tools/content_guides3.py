@@ -115,4 +115,31 @@ GUIDES_3 = [
 <h2>How long it lasts</h2>
 <p>Life depends on the product, sun exposure, traffic and snow clearing. Ask your contractor for the specific product and recommended re-seal interval.</p>""",
   faqs=[("Should I seal new pavers right away?","Efflorescence can appear on new pavers as they dry out, so it is often better to clean first and seal once it has finished. Ask us to inspect."),("Can I seal over old sealer?","It depends on the existing product and its condition. We check first and may need to strip or clean before re-sealing."),("Will sealing stop weeds?","It helps, especially with polymeric sand in the joints, but nothing is permanent."),("Can you seal in cold weather?","Most sealers need dry surfaces and suitable temperatures, so exterior sealing is usually done in spring through fall.")]),
+
+dict(slug="cleaning-heritage-brick-and-stone-toronto",
+  title="Cleaning Heritage Brick & Stone in Toronto: Safe Methods and What to Avoid",
+  meta="How to clean old brick and stone safely: why historic masonry needs gentler methods, what damages it, how to test, and how to hire a restoration cleaner in Toronto.",
+  hero="heritage-stone-wall-pressure-washing-toronto", related=["historical-remediation", "brick-cleaning-paint-removal", "stone-restoration"],
+  answer="Historic brick and stone should be cleaned with the gentlest method that works: low-pressure water, steam or specialist cleaners, tested on a small hidden patch first. Aggressive pressure washing or abrasive blasting can strip the hard fired face of old brick, open the pores and erode soft lime mortar, causing damage that is expensive to reverse.",
+  body="""
+<h2>Why old masonry is different</h2>
+<p>Many older Toronto buildings use soft, lower-fired brick, sandstone, limestone or lime-based mortar. The outer face of a brick protects the softer interior. Once that face is stripped, the brick absorbs more water, weathers faster and can spall in freeze-thaw cycles. Mortar softer than modern cement-based mixes can wash out under pressure, leaving open joints.</p>
+<h2>What not to do</h2>
+<ul class="ticks"><li>Do not use high-pressure washing or dry abrasive blasting on soft brick or stone.</li><li>Do not use strong acids without testing; they can etch stone and leave salts behind.</li><li>Do not seal damp masonry with a film-forming sealer, which can trap moisture.</li><li>Do not repoint with hard modern cement mortar over lime mortar without advice from a mason.</li></ul>
+<h2>Gentler methods that work</h2>
+<ul class="ticks"><li><strong>Low-pressure water washing</strong> with a masonry-safe cleaner for general soiling and biological growth.</li><li><strong>Steam and hot-water cleaning</strong> for grime and some coatings with minimal abrasion.</li><li><strong>Poultices</strong> to draw out stains from porous stone.</li><li><strong>Soda or fine media blasting</strong> at low pressure for coatings such as paint, chosen only after a test patch. See <a href="/guides/is-sandblasting-safe-for-brick/">is sandblasting safe for brick?</a></li></ul>
+<h2>Always test first</h2>
+<p>A responsible cleaner tests the method on a small, inconspicuous area and checks the result in dry daylight before touching the main facade. The test shows whether the surface is changing, which pressure and cleaner are safe, and how much paint or staining will come off.</p>
+<h2>Paint removal from heritage brick</h2>
+<p>Old paint on historic brick is often the hardest job. The method depends on the paint type, the brick hardness and whether lead paint may be present. Read our guide to <a href="/guides/remove-paint-from-brick/">removing paint from brick</a> for how the options compare, and our <a href="/historical-remediation/">heritage restoration</a> page for the work we do on historic buildings.</p>
+<h2>Efflorescence and salts</h2>
+<p>White salt deposits are common on older masonry and are a sign of moisture moving through the wall. Cleaning removes the deposit, but the moisture source should be fixed too. See <a href="/guides/how-to-remove-efflorescence/">how to remove efflorescence</a>.</p>
+<h2>Choosing a contractor</h2>
+<p>Ask which methods they would use and why, whether they do a test patch, how they protect windows and landscaping, and whether they carry liability insurance and WSIB clearance. For heritage-designated buildings, check whether your municipality requires approvals before changes to the exterior. Living Water has been cleaning and restoring masonry in Toronto and the GTA since 1998 and carries $5M liability insurance; <a href="/contact/">request a free assessment</a>.</p>
+""",
+  faqs=[("Can you pressure wash old brick?", "Only at low pressure and after a test. High pressure can strip the protective face of soft brick and erode lime mortar, so gentler methods are usually safer."),
+        ("Is sandblasting safe for historic brick?", "Dry abrasive blasting is generally not recommended on soft historic brick. Low-pressure soda or fine media blasting can be suitable for paint removal after a test patch."),
+        ("How do I know if my brick is soft?", "Soft brick often looks rounded or pitted, crumbles at edges and absorbs water quickly. A cleaner or mason can check it with a small test."),
+        ("Do I need a permit to clean a heritage building?", "Routine cleaning often does not, but designated heritage properties can have rules about exterior changes. Check with your municipality before starting."),
+        ("Do you clean heritage buildings in Toronto?", "Yes. We clean and restore historic masonry, statues and landmarks across Toronto and the GTA and recommend an on-site assessment first.")]),
 ]
