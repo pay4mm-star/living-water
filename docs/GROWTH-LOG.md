@@ -15,6 +15,7 @@ Clicks 9 · Impressions 1.04K · Avg position 27.9 · Indexed 98 · Not indexed 
 - Instagram bio says 'over 20 years'; site says since 1998 (28 years); GBP says 'over 25 years'. Align.
 
 ## Backlog (ranked)
+(GBP post submitted 2026-11-27)
 1. GBP: products added 2026-11-27 (done). Still to do: post about winter elevator pit / spring interlock offer – high value
 2. Reviews: Google + HomeStars follow-up process – high value
 3. Directory/citation profiles: HomeStars, BBB, Houzz, Yellow Pages – needs user accounts
@@ -36,3 +37,11 @@ Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4
   2. Interlock Wash, Sand & Seal, $3.50 per sq ft before HST, category "Interlock Cleaning and Sealing", links to the $3.50 page.
 - Landing URLs carry UTM (utm_campaign=gbp-products) for GA4 tracking.
 - Next: verify products are live; GBP post for winter elevator-pit / spring interlock; possible condo garage cleaning product (quote-based).
+
+## 2026-11-27 (later) — Search Console first query data + anchor fix
+- GBP: both products confirmed in the products list; post (winter elevator pit + spring interlock, UTM-tagged button) submitted, pending Google review.
+- GSC (6 days of data): top queries "pressure washing toronto" 92 impr pos 23; "power washing toronto" 52 pos 11; "commercial pressure washing" 46 pos 23; homepage is 417 impr, pos 15.9; Industrial page 117 impr pos 27.
+- Finding: for "commercial pressure washing" Google served the Industrial page (pos 25) and Commercial page ranked ~62. All internal anchors said "Commercial Power Washing".
+- Fix (live, IndexNow pinged): nav/anchor text now "Commercial Pressure Washing" and "Industrial Pressure Washing"; autolink for those exact phrases. Re-check in ~2 weeks whether Commercial page overtakes Industrial for that query.
+- Watch: queries with pos 3-5 but 0 clicks ("power washing companies toronto", "pressure washer near toronto") — likely personalized/tiny samples; revisit when volume grows.
+- Next: refresh roof/deck/cost-guide pages (pos 50-75), homepage for "pressure washing toronto" pos 23.
