@@ -29,3 +29,10 @@ Clicks 9 · Impressions 1.04K · Avg position 27.9 · Indexed 98 · Not indexed 
 
 ## Open questions for owner
 Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4 yr reseal, elevator-company subcontracting. $3.50/sq ft is at the high end of third-party ranges. Missing client logos.
+
+## 2026-11-27 — Google Business Profile products
+- Added 2 GBP products using site photos (submitted; Google shows them within ~30 min):
+  1. Elevator Pit Cleaning - Single Pit, $1,500 CAD (from, before HST), category "Elevator Pit Cleaning", links to /elevator-pit-cleaning/.
+  2. Interlock Wash, Sand & Seal, $3.50 per sq ft before HST, category "Interlock Cleaning and Sealing", links to the $3.50 page.
+- Landing URLs carry UTM (utm_campaign=gbp-products) for GA4 tracking.
+- Next: verify products are live; GBP post for winter elevator-pit / spring interlock; possible condo garage cleaning product (quote-based).
