@@ -173,6 +173,9 @@ def tech_extra():
 /wp-admin/* / 301
 /wp-content/uploads/* /gallery/ 301
 /index.php / 301
+# Short link for review requests (texts, invoices, QR codes)
+/review https://g.page/r/CQaollgymrYtEBM/review 302
+/review/ https://g.page/r/CQaollgymrYtEBM/review 302
 """)
     # Cloudflare Pages: caching + security headers
     open(OUT + "/_headers", "w").write("""/*
