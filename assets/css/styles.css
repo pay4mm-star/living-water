@@ -394,9 +394,9 @@ figure.vid video{width:100%;height:auto;max-height:72vh;object-fit:contain;backg
 .hero-vid .wrap{z-index:2}
 @media(max-width:700px),(prefers-reduced-motion:reduce){.hero-video{display:none}}
 
-.float-cta.wa{background:#25d366;border-color:#25d366;color:#fff}
-.float-cta.wa:hover{background:#1ebe5b;border-color:#1ebe5b;color:#fff}
-.mobile-bar a.wa-m{background:#25d366;color:#fff;border:0}
+.float-cta.wa{background:#0a7d4a;border-color:#0a7d4a;color:#fff}
+.float-cta.wa:hover{background:#08693e;border-color:#08693e;color:#fff}
+.mobile-bar a.wa-m{background:#0a7d4a;color:#fff;border:0}
 
 /* ---- GUI polish round 3 ---- */
 @media (max-width:1000px){

@@ -333,7 +333,7 @@ def home():
 <div class="stat"><b>$5M</b><span>liability insured</span><p>Plus full WSIB coverage. COI issued before we start.</p></div>
 <div class="stat"><b>4.9★</b><span>rating on Google</span><p>From homeowners and property managers across the GTA.</p></div></div>'''
     newp = [(pr[0], pr[1], p["title"], "", p["slug"]) for p in PROJECTS for pr in p["pairs"][:1]][:3]
-    work = "".join(ba(b, a, t, "").replace("</figcaption></figure>", f' <a class="proj-link" href="/projects/{s_}/">View case study →</a></figcaption></figure>') for b, a, t, c, s_ in newp)
+    work = "".join(ba(b, a, t, "").replace("</figcaption></figure>", f' <a class="proj-link" href="/projects/{s_}/" aria-label="View case study: {t.replace(chr(34), chr(39))}">View case study →</a></figcaption></figure>') for b, a, t, c, s_ in newp)
     work += "".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS[:max(0, 3 - len(newp))])
     capabilities = ["Residential, commercial & industrial power washing", "Brick acid wash & paint removal", "Efflorescence removal", "Industrial hydro jetting", "Concrete blasting & rust removal", "Swimming pool prep", "Micro & soda blasting", "Fire damage restoration", "Historical, stone & metal restoration", "Monument cleaning"]
     body = f'''
@@ -581,7 +581,7 @@ def gallery():
     proj_keys = set()
     for p in PROJECTS:
         c = cat_of_service(p.get("service"))
-        link = f'<a class="proj-link" href="/projects/{p["slug"]}/">View case study →</a>'
+        link = f'<a class="proj-link" href="/projects/{p["slug"]}/" aria-label="View case study: {p["title"].replace(chr(34), chr(39))}">View case study →</a>'
         for b, a in p["pairs"]:
             proj_keys.update([b, a]); items.append(_tile("pair", f"{c} pairs", _pair_media(b, a), p["title"], c, link))
         for v in p["videos"]:
