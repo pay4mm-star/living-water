@@ -15,7 +15,7 @@ Clicks 9 · Impressions 1.04K · Avg position 27.9 · Indexed 98 · Not indexed 
 - Instagram bio says 'over 20 years'; site says since 1998 (28 years); GBP says 'over 25 years'. Align.
 
 ## Backlog (ranked)
-1. GBP: add Products with confirmed prices (elevator pit, interlock) + photos, post about winter elevator pit / spring interlock offer – high value
+1. GBP: products added 2026-11-27 (done). Still to do: post about winter elevator pit / spring interlock offer – high value
 2. Reviews: Google + HomeStars follow-up process – high value
 3. Directory/citation profiles: HomeStars, BBB, Houzz, Yellow Pages – needs user accounts
 4. Lock staging.livingwater-pws.com – needs DNS/hosting access
