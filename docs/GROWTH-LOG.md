@@ -7,10 +7,15 @@ Clicks 9 · Impressions 1.04K · Avg position 27.9 · Indexed 98 · Not indexed 
 
 ## Completed
 - 2026-11-26: interlock calculator + $3.50 offer page; elevator pit pricing; image audit on 19 service pages + extra FAQs; builders page; client logos; WhatsApp button; pricing page; condo + elevator-company pages; 6 new guides; mobile tap targets, hover/focus polish; Pricing in nav; city-page cost FAQs; case-study rotation.
+- 2026-11-27 (later): GBP verified—website link already https+UTM; added services 'Interlock cleaning, sanding and sealing' and 'Paver and stone sealing' (pending Google review); 39 Google reviews seen; new guides: power vs pressure washing, interlock/paver sealing.
 - 2026-11-27: honest dateModified/lastmod registry; new titles (industrial, cost guide, home description); full reassessment doc.
 
+## Findings to fix (needs owner)
+- NAP inconsistency: BBB listing shows 11 Wedgewood Dr, North York; Toronto Jobs shows 637 Petrolia Rd; Hotfrog/Indeed/ConstructConnect old listings. Claim and correct to 130 Cook's Mill Cres, Vaughan, (416) 663-8000.
+- Instagram bio says 'over 20 years'; site says since 1998 (28 years); GBP says 'over 25 years'. Align.
+
 ## Backlog (ranked)
-1. Google Business Profile: https+UTM website link, services/pricing, posts (needs user session) – high value, easy
+1. GBP: add Products with confirmed prices (elevator pit, interlock) + photos, post about winter elevator pit / spring interlock offer – high value
 2. Reviews: Google + HomeStars follow-up process – high value
 3. Directory/citation profiles: HomeStars, BBB, Houzz, Yellow Pages – needs user accounts
 4. Lock staging.livingwater-pws.com – needs DNS/hosting access

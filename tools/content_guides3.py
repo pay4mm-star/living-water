@@ -84,4 +84,35 @@ GUIDES_3 = [
 <p>Start with the surface. Hard surfaces such as steel and concrete can take more aggressive media. Soft brick, limestone and heritage masonry need gentler methods, and a test patch first. Read <a href="/guides/is-sandblasting-safe-for-brick/">is sandblasting safe for brick?</a> and <a href="/guides/remove-paint-from-brick/">how to remove paint from brick</a>.</p>
 <p>See our <a href="/sandblasting-services/">sandblasting services</a> and <a href="/metal-restoration/">metal restoration</a>.</p>""",
   faqs=[("Which method is safest for old brick?","Gentler methods such as soda or micro-abrasive blasting, with a test patch first, are generally safer for older, softer brick."),("Which method removes rust best?","Abrasive blasting is typically used for rust and heavy coatings on steel."),("Is dry ice blasting messy?","The dry ice turns to gas, so no blasting media remains, though the removed coating or dirt still needs cleanup."),("Can you test a small area first?","Yes. We test an inconspicuous area to choose the method and settings before starting the full job.")]),
+ dict(slug="power-washing-vs-pressure-washing", title="Power Washing vs Pressure Washing: What's the Difference?",
+  meta="Power washing vs pressure washing: the real difference is water temperature. Learn which suits driveways, brick, grease and delicate surfaces in Toronto.",
+  hero="estate-home-driveway-washing", related=["residential-power-washing","commercial-power-washing","industrial-power-washing"],
+  answer="Pressure washing uses high-pressure water, usually at normal temperature. Power washing uses the same pressure plus heated water, which cuts grease, oil and gum better. Both are used in Toronto, but heated water is not right for every surface, so the method should match the material and the stain.",
+  body="""
+<h2>The short version</h2>
+<p>People often use the two terms interchangeably, and many contractors do too. The technical difference is heat: <strong>power washing</strong> adds hot water to the pressure, while <strong>pressure washing</strong> normally uses cold or ambient water.</p>
+<h2>When hot water helps</h2>
+<ul class="ticks"><li>Oil, grease and gum on concrete, garage floors and loading docks</li><li>Commercial and industrial equipment and kitchens exteriors</li><li>Winter jobs, where hot water works better in cold weather</li></ul>
+<h2>When to use less pressure or no heat</h2>
+<ul class="ticks"><li>Siding, stucco and roofs, which are better cleaned by <a href="/guides/soft-washing-vs-pressure-washing/">soft washing</a></li><li>Older brick, soft stone and mortar that high pressure can damage</li><li>Wood decks and fences, which need lower pressure</li></ul>
+<h2>What matters more than the name</h2>
+<p>The right pressure, water temperature, nozzle and cleaner for the surface matter far more than the label. A contractor should be able to tell you which method they will use on your surface and why. See our <a href="/residential-power-washing/">residential power washing</a>, <a href="/commercial-power-washing/">commercial power washing</a> and <a href="/industrial-power-washing/">industrial power washing</a> services, and our <a href="/pressure-washing-prices-toronto/">pressure washing prices</a>.</p>""",
+  faqs=[("Is power washing better than pressure washing?","Not always. Hot water is better for grease and oil, but many surfaces need lower pressure or no heat."),("Does Living Water offer both?","Yes. We use hot-water pressure washing, soft washing and other methods matched to each surface."),("Which is better for a driveway?","Concrete and interlock driveways can usually take pressure washing; hot water helps with oil stains."),("Can hot water damage surfaces?","It can on delicate or painted surfaces, which is why we test and choose the method first.")]),
+ dict(slug="interlock-paver-sealing-guide", title="Interlock & Paver Sealing: Finishes, Timing and What to Expect",
+  meta="Interlock and paver sealing guide for Ontario: natural vs enhanced finishes, when to seal, how long to wait after cleaning and sanding, and maintenance.",
+  hero="large-patterned-paver-patio-with-raised-steps-after-cleaning", related=["paver-stone-sealing","driveway-interlock-cleaning"],
+  answer="Seal interlock or pavers only after they are fully cleaned, re-sanded with polymeric sand and completely dry. A natural-look sealer protects with little change in appearance, while an enhanced or wet-look sealer deepens colour. Sealing helps resist stains, salt and weed growth, and needs reapplying every few years depending on sun, traffic and the product.",
+  body="""
+<h2>Why seal interlock and pavers</h2>
+<p>Sealing helps protect the surface and joint sand from oil, salt, stains and weathering, and makes regular cleaning easier. It does not fix settled or uneven stones.</p>
+<h2>Choosing a finish</h2>
+<table class="price-table"><thead><tr><th scope="col">Finish</th><th scope="col">Look</th><th scope="col">Consider</th></tr></thead><tbody>
+<tr><td>Natural / matte</td><td>Looks like clean, unsealed stone</td><td>Subtle protection</td></tr>
+<tr><td>Enhanced / wet look</td><td>Deepens colour, adds sheen</td><td>Shows wear and needs timely re-coating</td></tr></tbody></table>
+<h2>The right order of work</h2>
+<ol class="steps-list"><li><strong>Wash.</strong> Remove dirt, algae, efflorescence and old sand.</li><li><strong>Re-sand.</strong> Fill joints with polymeric sand and activate as directed.</li><li><strong>Dry.</strong> The surface must be dry before sealing, which depends on weather.</li><li><strong>Seal.</strong> Apply evenly in suitable temperatures.</li></ol>
+<p>Our <a href="/interlock-wash-sand-seal-3-50-per-sq-ft/">wash, sand and seal offer</a> covers all three steps, and you can estimate it with the <a href="/interlock-cleaning-sealing-cost-calculator/">interlock cost calculator</a>. For cleaning and re-sanding on their own, read the <a href="/guides/interlock-cleaning-and-resanding/">interlock cleaning and re-sanding guide</a>.</p>
+<h2>How long it lasts</h2>
+<p>Life depends on the product, sun exposure, traffic and snow clearing. Ask your contractor for the specific product and recommended re-seal interval.</p>""",
+  faqs=[("Should I seal new pavers right away?","Efflorescence can appear on new pavers as they dry out, so it is often better to clean first and seal once it has finished. Ask us to inspect."),("Can I seal over old sealer?","It depends on the existing product and its condition. We check first and may need to strip or clean before re-sealing."),("Will sealing stop weeds?","It helps, especially with polymeric sand in the joints, but nothing is permanent."),("Can you seal in cold weather?","Most sealers need dry surfaces and suitable temperatures, so exterior sealing is usually done in spring through fall.")]),
 ]
