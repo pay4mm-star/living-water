@@ -12,7 +12,7 @@
   // before/after sliders
   document.querySelectorAll('.ba').forEach(function (ba) {
     var r = ba.querySelector('input'), a = ba.querySelector('.after'), bar = ba.querySelector('.bar');
-    function set() { a.style.clipPath = 'inset(0 0 0 ' + r.value + '%)'; bar.style.left = r.value + '%'; }
+    function set() { a.style.clipPath = 'inset(0 0 0 ' + r.value + '%)'; bar.style.left = r.value + '%'; ba.style.setProperty('--p', r.value + '%'); }
     r.addEventListener('input', set); set();
   });
   // lightbox
@@ -73,7 +73,7 @@
     root.querySelectorAll('.ba').forEach(function (ba) {
       if (ba.dataset.bound) return; ba.dataset.bound = 1;
       var r = ba.querySelector('input'), a = ba.querySelector('.after'), bar = ba.querySelector('.bar');
-      function set() { a.style.clipPath = 'inset(0 0 0 ' + r.value + '%)'; bar.style.left = r.value + '%'; }
+      function set() { a.style.clipPath = 'inset(0 0 0 ' + r.value + '%)'; bar.style.left = r.value + '%'; ba.style.setProperty('--p', r.value + '%'); }
       r.addEventListener('input', set); set();
     });
   }

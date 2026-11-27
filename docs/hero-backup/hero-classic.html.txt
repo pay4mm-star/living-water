@@ -1,0 +1,12 @@
+    body = f'''
+<section class="hero" aria-labelledby="h1">
+<picture>{img("heritage-stone-wall-pressure-washing-toronto", "100vw", eager=True, alt="")}</picture>
+<div class="wrap">
+<span class="pill">Professional Pressure Washing · Since 1998</span>
+<h1 id="h1">Pressure Washing, Restoration &amp; Sandblasting <em>across Toronto &amp; the GTA</em></h1>
+<p class="lead">Living Water has cleaned and restored more than 7,500 homes, commercial buildings, industrial sites and heritage landmarks across the Greater Toronto Area since 1998 — $5M insured, WSIB covered and rated 4.9★ on Google.</p>
+<div class="cta-row"><a class="btn" href="/contact/#quote">Get Your Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div>
+</div></section>
+{TRUST}
+{winter_feature()}
+

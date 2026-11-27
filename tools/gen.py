@@ -326,6 +326,47 @@ def featured_video():
 
 CLIENT_LOGOS = [("city-of-toronto", "City of Toronto"), ("cbre", "CBRE"), ("thyssenkrupp-elevator", "ThyssenKrupp Elevator"), ("rbc", "RBC"), ("mcdonalds", "McDonald's"), ("permacon", "Permacon"), ("atlas", "Atlas"), ("oaks-landscape-products", "Oaks Landscape Products")]
 
+HERO_STYLE = "slider"   # "classic" = original photo-background banner (see docs/hero-backup/)
+HERO_PAIR = ("efflorescence-removal-on-a-stone-wall-before-1", "efflorescence-removal-on-a-stone-wall-after-1")
+_I = lambda p: '<svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + '</svg>'
+HERO_ICONS = [
+    (_I('<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>'), "Residential &amp; Commercial"),
+    (_I('<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>'), "Safe &amp; Eco-Friendly Methods"),
+    (_I('<circle cx="12" cy="9" r="5.5"/><path d="M9 14l-1.5 7 4.5-2.5 4.5 2.5L15 14"/>'), "Experienced &amp; Insured"),
+    (_I('<path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/>'), "Serving Toronto &amp; the GTA"),
+]
+HERO_BENEFITS = ["Enhance Curb Appeal", "Prevent Long-Term Damage", "Increase Property Value", "A Cleaner, Healthier Space"]
+
+def hero_block():
+    if HERO_STYLE == "classic":
+        return f'''<section class="hero" aria-labelledby="h1">
+<picture>{img("heritage-stone-wall-pressure-washing-toronto", "100vw", eager=True, alt="")}</picture>
+<div class="wrap">
+<span class="pill">Professional Pressure Washing · Since 1998</span>
+<h1 id="h1">Pressure Washing, Restoration &amp; Sandblasting <em>across Toronto &amp; the GTA</em></h1>
+<p class="lead">Living Water has cleaned and restored more than 7,500 homes, commercial buildings, industrial sites and heritage landmarks across the Greater Toronto Area since 1998 — $5M insured, WSIB covered and rated 4.9★ on Google.</p>
+<div class="cta-row"><a class="btn" href="/contact/#quote">Get Your Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div>
+</div></section>'''
+    b, a = HERO_PAIR
+    sz = "100vw"
+    icons = "".join(f'<li>{i}<span>{t}</span></li>' for i, t in HERO_ICONS)
+    ben = "".join(f'<li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.500"/><path d="M8 12.500l3 3 5-6"/></svg>{t}</li>' for t in HERO_BENEFITS)
+    return f'''<section class="hero2" aria-labelledby="h1">
+<div class="hero2-ba ba" id="hero-ba">{img(b, sz, eager=True, alt="Stone wall covered in white efflorescence before cleaning")}
+<div class="after">{img(a, sz, eager=True, alt="The same stone wall after professional efflorescence removal")}</div>
+<span class="lbl b">Before</span><span class="lbl a">After</span><div class="bar"></div>
+<input type="range" min="0" max="100" value="62" aria-label="Drag to compare before and after: stone wall efflorescence removal">
+</div>
+<div class="hero2-copy">
+<span class="pill">Professional Pressure Washing · Since 1998</span>
+<h1 id="h1">Pressure Washing, Restoration &amp; Sandblasting <em>Across Toronto &amp; the GTA</em></h1>
+<p class="lead">Bring back the beauty and protect your property with our expert cleaning and restoration services. $5M insured, WSIB covered and rated 4.9★ on Google.</p>
+<ul class="hero2-icons">{icons}</ul>
+<div class="cta-row"><a class="btn" href="/contact/#quote">Get a Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div>
+</div>
+</section>
+<div class="hero2-strip"><ul>{ben}</ul></div>'''
+
 def home():
     stats = f'''<div class="stats">
 <div class="stat"><b>28</b><span>years in business</span><p>Washing, blasting and restoring across the GTA since 1998.</p></div>
@@ -337,14 +378,7 @@ def home():
     work += "".join(ba(b, a, t, " — " + c) for b, a, t, c in GALLERY_PAIRS[:max(0, 3 - len(newp))])
     capabilities = ["Residential, commercial & industrial power washing", "Brick acid wash & paint removal", "Efflorescence removal", "Industrial hydro jetting", "Concrete blasting & rust removal", "Swimming pool prep", "Micro & soda blasting", "Fire damage restoration", "Historical, stone & metal restoration", "Monument cleaning"]
     body = f'''
-<section class="hero" aria-labelledby="h1">
-<picture>{img("heritage-stone-wall-pressure-washing-toronto", "100vw", eager=True, alt="")}</picture>
-<div class="wrap">
-<span class="pill">Professional Pressure Washing · Since 1998</span>
-<h1 id="h1">Pressure Washing, Restoration &amp; Sandblasting <em>across Toronto &amp; the GTA</em></h1>
-<p class="lead">Living Water has cleaned and restored more than 7,500 homes, commercial buildings, industrial sites and heritage landmarks across the Greater Toronto Area since 1998 — $5M insured, WSIB covered and rated 4.9★ on Google.</p>
-<div class="cta-row"><a class="btn" href="/contact/#quote">Get Your Free Quote</a><a class="btn ghost" href="tel:{PHONE_MAIN[0]}">Call {PHONE_MAIN[1]}</a></div>
-</div></section>
+{hero_block()}
 {TRUST}
 {winter_feature()}
 
@@ -399,7 +433,7 @@ def home():
 {cta_block()}'''
     page("/", "Pressure Washing & Power Washing Toronto | Living Water",
          "Pressure washing & power washing, sandblasting, brick cleaning and restoration across Toronto & the GTA since 1998. $5M insured, 4.9★ Google. Free quotes.",
-         body, schema=[faq_ld(GENERAL_FAQ)], preload="heritage-stone-wall-pressure-washing-toronto", priority="1.0")
+         body, schema=[faq_ld(GENERAL_FAQ)], preload=(HERO_PAIR[0] if HERO_STYLE == "slider" else "heritage-stone-wall-pressure-washing-toronto"), priority="1.0")
 
 # ------------------------------------------------------------ SERVICE PAGES
 def guide_aside(s):
