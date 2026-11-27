@@ -45,3 +45,11 @@ Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4
 - Fix (live, IndexNow pinged): nav/anchor text now "Commercial Pressure Washing" and "Industrial Pressure Washing"; autolink for those exact phrases. Re-check in ~2 weeks whether Commercial page overtakes Industrial for that query.
 - Watch: queries with pos 3-5 but 0 clicks ("power washing companies toronto", "pressure washer near toronto") — likely personalized/tiny samples; revisit when volume grows.
 - Next: refresh roof/deck/cost-guide pages (pos 50-75), homepage for "pressure washing toronto" pos 23.
+
+## 2026-11-27 (midday)
+- Roof and deck pages deepened (identification, timing, process, 3 new FAQs each, internal links); roof title now leads with "Roof Moss Removal" (GSC: pos ~70-75).
+- Titles: homepage adds "Power Washing" (query pos 11); pricing page adds "Cost".
+- GSC "Request indexing" done for Commercial, Roof and Home pages (works from the Chrome session; ~10/day limit).
+- GSC indexing review: the 53 non-indexed are legacy WP/staging URLs (wildcards, feeds, plugins); real redirects (/testimonials/, /power-washing-services-2/, sitemap_index.xml) already 301 correctly. The pricing page is already indexed.
+- New guide: cleaning heritage brick and stone in Toronto (supports Historical Remediation page).
+- Re-check GSC around Dec 10 for: Commercial vs Industrial page for "commercial pressure washing"; roof/deck positions.
