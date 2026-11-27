@@ -65,3 +65,9 @@ Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4
 - 2026-11-27: PageSpeed (mobile, lab): home perf 98 / a11y 96 / BP 100 / SEO 100 (LCP 2.3s, CLS 0, TBT 30ms). Fixed WhatsApp button contrast (#0a7d4a) and unique aria-labels on "View case study" links; Commercial page now a11y 100. Remaining unscored: caption track on 1 hospital video (no captions file exists; job footage).
 - Process: working continuously within a turn; stop only on a real blocker (login, owner decision).
 - 2026-11-27: Review-request kit (docs/REVIEW-REQUEST-KIT.md) + /review short link live. Backlink and citation target list researched (docs/BACKLINK-TARGETS.md): CCI Toronto, ACMO, municipal heritage contractor lists (Markham/Oakville/Caledon), BOMA Toronto, Vaughan Chamber, York Region directory; nothing contacted.
+
+## 2026-11-27 — Homepage hero redesign (before/after slider)
+- Homepage banner rebuilt to match owner's mockup: full-width draggable before/after slider (stone wall efflorescence pair, framing matches exactly), dark-gradient headline panel, 4-icon trust row, CTA buttons, benefits strip.
+- Original hero kept for revert: set `HERO_STYLE = "classic"` in tools/gen.py and regenerate. Also saved in docs/hero-backup/ and git branch `hero-classic-backup`.
+- Hero preload now points to the slider's before image (LCP). Re-check PageSpeed mobile on the homepage.
+- Third-party listings: Cylex claim submitted (waiting on moderator, email goes to navidlivingwater@gmail.com); Yellow Pages account exists but login email unknown; BBB/HomeStars/ZoomInfo not started. Backlink and NAP findings listed in the earlier reply.
