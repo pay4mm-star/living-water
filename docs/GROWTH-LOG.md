@@ -61,3 +61,4 @@ Confirm: HST extra, "from" pricing, re-clean guarantee, 2–5 day booking, 2–4
 - Content-depth scan: no thin pages (smallest real pages ~400 words, case studies).
 - Note: Cloudflare Pages deploy time varies 1–8 min; check via `gh api .../check-runs` before verifying live.
 - Still open for owner: Cloudflare login is signed out in Chrome (not needed unless deploys fail); GBP description says "over 25 years" vs site "since 1998".
+- 2026-11-27: Decision (owner delegated): standard wording is "since 1998" (specific, verifiable, never goes stale). GBP description rewritten with "since 1998", $5M insured/WSIB, full service list incl. interlock sealing and roof moss; submitted, pending Google review (opening date already June 1998). Remaining: Instagram bio still says "over 20 years" -> change to "Since 1998" (needs Instagram login).
