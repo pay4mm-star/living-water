@@ -511,7 +511,7 @@ svc("house-washing", group="sub", parent="residential-power-washing", nav="House
     service_type="House washing")
 
 svc("roof-cleaning", group="sub", parent="residential-power-washing", nav="Roof Cleaning & Moss Removal", short="Roofs",
-    title="Roof Cleaning & Moss Removal Toronto & GTA | Living Water",
+    title="Roof Moss Removal & Roof Cleaning Toronto & GTA | Living Water",
     desc="Roof cleaning and moss removal in Toronto & the GTA: soft washing for asphalt shingles, cedar shakes, ceramic tile and metal roofs. No high pressure.",
     h1="Roof Cleaning & Moss Removal",
     sub="Moss, algae streaks and lichen removed from asphalt, cedar, ceramic and metal roofs — with low-pressure soft washing, never a high-pressure wand.",
@@ -526,11 +526,22 @@ svc("roof-cleaning", group="sub", parent="residential-power-washing", nav="Roof 
 <ul class="ticks"><li>High pressure blasts off protective granules, shortening roof life.</li><li>It can lift and break shingles and force water under them.</li><li>Cedar shakes split and fur when hit with high pressure.</li></ul>
 <h2>Our soft-wash process</h2>
 <p>Treatment is applied at low pressure, dwells to kill moss and algae, and the dead growth is gently rinsed or left to weather away. Landscaping is pre-wet and protected, and gutters are cleared of debris.</p>
+<h2>Moss, algae or lichen: what is growing on your roof?</h2>
+<ul class="ticks"><li><strong>Algae</strong> shows as black or dark streaks, usually on the shaded or north-facing slope. It is mostly cosmetic early on, but it spreads.</li><li><strong>Moss</strong> forms thick green or brown cushions that hold water against the shingles and lift their edges. This is the one that does real damage.</li><li><strong>Lichen</strong> is flat, crusty grey-green patches that grip the surface and are the hardest to remove.</li></ul>
+<h2>Signs your roof needs moss removal</h2>
+<ul class="ticks"><li>Green, brown or black patches on shaded slopes</li><li>Shingle edges that look lifted or curled under moss</li><li>Granules collecting in gutters</li><li>Overhanging trees keeping the roof damp and shaded</li><li>An insurer or home inspector flagging roof growth</li></ul>
+<h2>Best time to remove roof moss in Toronto and the GTA</h2>
+<p>Spring and fall are ideal: moss is actively growing, it is not frozen, and the treatment can work for several weeks. Roofs are not cleaned in icy conditions for safety. Booking before a house sale or a roof inspection is also a good trigger. <a href="/guides/roof-moss-removal-ontario/">Read our full roof moss removal guide for Ontario</a>.</p>
+<h2>What to expect</h2>
+<p>We assess the roof type and pitch, protect plants and fixtures, apply the treatment from the ground or ladder where safe, rinse at low pressure and clear the gutters. You get a free written quote first; see <a href="/pressure-washing-prices-toronto/">pressure washing prices and what affects cost</a>. We are fully insured ($5M liability) and WSIB-covered.</p>
 """,
     photos=["roof-moss-removal-soft-wash", "roof-moss-washing-ladder", "roof-moss-removal-before-1|roof-moss-removal-after-1", "roof-moss-removal-1"],
     faqs=[("Does moss damage a roof?", "Yes. Moss holds moisture, lifts shingle edges and can let water in, shortening the life of the roof."),
           ("Is roof soft washing safe for shingles?", "Yes. Low pressure and the right cleaner remove growth without stripping granules."),
-          ("When is the best time to clean a roof?", "Spring and fall, when moss is actively growing and temperatures are above freezing.")],
+          ("When is the best time to clean a roof?", "Spring and fall, when moss is actively growing and temperatures are above freezing."),
+          ("How do you remove moss from a roof without damaging it?", "We apply a low-pressure cleaner that kills moss, algae and lichen at the root, then rinse gently. We never use a high-pressure wand on shingles, which strips protective granules."),
+          ("Will moss grow back after roof cleaning?", "It can return on shaded, damp slopes over time. Trimming overhanging branches and keeping gutters clear slows regrowth, and a repeat soft wash every few years keeps it under control."),
+          ("Do you clean roofs across the whole GTA?", "Yes: Toronto, Vaughan, Markham, Richmond Hill, Mississauga, Brampton, Oakville and surrounding areas.")],
     service_type="Roof cleaning")
 
 svc("deck-fence-cleaning", group="sub", parent="residential-power-washing", nav="Deck & Fence Cleaning", short="Decks",
@@ -548,11 +559,19 @@ svc("deck-fence-cleaning", group="sub", parent="residential-power-washing", nav=
 <h2>Our approach</h2>
 <ol class="ticks"><li>Apply a wood-safe cleaner to lift grey fibres, mildew and stains.</li><li>Rinse at low pressure, following the grain.</li><li>Let the wood dry fully before any stain or sealer.</li></ol>
 <p>Cleaning before staining is the most important step for a stain that soaks in evenly and lasts.</p>
+<h2>Wood, composite or PVC: how the cleaning differs</h2>
+<ul class="ticks"><li><strong>Pressure-treated and cedar:</strong> lower pressure, working with the grain, so the wood is cleaned without furring or gouging.</li><li><strong>Composite and PVC:</strong> a suitable cleaner and gentle rinse lift mould, pollen and grime out of the textured surface. Check the board manufacturer's guidelines.</li><li><strong>Fences:</strong> wood, vinyl and composite panels each get a cleaner and pressure matched to the material.</li></ul>
+<h2>Signs your deck or fence needs cleaning</h2>
+<ul class="ticks"><li>Grey, silvered boards that have lost their colour</li><li>Green or black mildew in shaded spots and between boards</li><li>Slippery surfaces after rain</li><li>Old stain peeling or blotchy</li><li>You are planning to stain or seal this season</li></ul>
+<h2>When to clean a deck in Ontario</h2>
+<p>Late spring through early fall, once the wood has dried out and nights stay above freezing, gives the best result and lets stain cure properly. If you plan to stain, book the cleaning first and allow the wood to dry fully. For help with what drives the price, see <a href="/pressure-washing-prices-toronto/">pressure washing prices in Toronto</a>. Every job comes with a free written quote, $5M liability insurance and WSIB clearance.</p>
 """,
     photos=["stamped-concrete-garden-path-beside-a-cedar-deck-after-cleaning", "boat-deck-mobile-power-wash-before|boat-deck-mobile-power-wash-after", "rooftop-deck-rust-stain-removal-before-1|rooftop-deck-rust-stain-removal-after-1", "rooftop-terrace-pressure-washing-crew", "hot-water-washing-a-condo-terrace-and-planter-wall", "flagstone-garden-path-cleaning-2"],
     faqs=[("Should a deck be cleaned before staining?", "Yes. Cleaning removes grey fibres, mildew and old residue so new stain penetrates evenly."),
           ("Can composite decks be pressure washed?", "Yes, at low pressure with a suitable cleaner. Check your manufacturer's guidelines."),
-          ("How long before I can stain after cleaning?", "Wood usually needs 24–48 hours of dry weather; the stain manufacturer's instructions take priority.")],
+          ("How long before I can stain after cleaning?", "Wood usually needs 24–48 hours of dry weather; the stain manufacturer's instructions take priority."),
+          ("How do you clean a grey deck without damaging the wood?", "We use a wood-safe cleaner to lift grey fibres and mildew, then rinse at low pressure along the grain. High pressure furs and gouges wood, so we avoid it."),
+          ("Do you clean decks and fences across the GTA?", "Yes: Toronto, Vaughan, Markham, Richmond Hill, Mississauga, Brampton, Oakville and nearby areas. Request a free quote and we will confirm timing.")],
     service_type="Deck and fence cleaning")
 
 svc("paver-stone-sealing", group="sub", parent="stone-restoration", nav="Paver & Stone Sealing", short="Sealing",
